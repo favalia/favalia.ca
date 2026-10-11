@@ -40,9 +40,5 @@ game turns into the App Store badge.
 `tools/` also holds the helpers that prepare images and videos, and `tools/og.html` draws the 1200×630
 social share cards.
 
-## Publishing
-
-GitHub Pages serves this repository with the custom domain in `CNAME`. The domain's DNS uses GitHub's
-Pages addresses (`A` records `185.199.108.153`–`185.199.111.153`, `www` → `favalia.github.io`).
 
 © Favalia. Game names, artwork, screenshots and videos are not licensed for reuse.
