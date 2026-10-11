@@ -3,8 +3,8 @@
 The website of **Favalia**, an independent game studio: a home page for our games, a page for each game
 (Word Duel, Inki Run, Inki Ace) with a small playable demo, and support and privacy pages.
 
-Plain HTML, CSS and JavaScript: no framework, no cookies, no analytics. Hosted on GitHub Pages at
-**https://favalia.ca**.
+Plain HTML, CSS and JavaScript with no framework. Hosted on GitHub Pages at **https://favalia.ca**.
+Google Tag Manager is loaded on every page; its container ID is `gtm` in `src/site.json`.
 
 ## Run it locally
 
