@@ -4,8 +4,19 @@ The website of **Favalia**, an independent game studio: a home page for our game
 (Word Duel, Inki Run, Inki Ace) with a small playable demo, and support and privacy pages.
 
 Plain HTML, CSS and JavaScript with no framework. Hosted on GitHub Pages at **https://favalia.ca**.
-Every page loads Google Analytics 4 (`ga4` in `src/site.json`) and Google Tag Manager (`gtm`).
-Don't also add the same GA4 ID as a Google tag inside Tag Manager, or page views are counted twice.
+## Privacy and consent
+
+Google Analytics 4 (`ga4` in `src/site.json`) and Google Tag Manager (`gtm`) only load after a visitor
+agrees in the cookie banner (`assets/js/consent.js`, English/French). The loader at the top of
+`src/partials/head.html` sets Google Consent Mode v2 to "denied" first and applies the saved choice
+(`favalia-consent` in local storage, asked again after 12 months or when `VERSION` changes).
+Every page has a "Cookie settings" link; withdrawing consent deletes Google's cookies. The website privacy
+policy is `src/pages/privacy.html` (English and French); update it whenever you add tools or cookies.
+
+- Don't also add the GA4 ID as a Google tag inside Tag Manager (page views would count twice).
+- Tag Manager loads once analytics or marketing is accepted. Google tags respect Consent Mode on their
+  own; give any other tag (Meta pixel, etc.) a consent check (`ad_storage`) or the `favalia_consent`
+  event with `consent_marketing` = true as its trigger.
 
 ## Run it locally
 

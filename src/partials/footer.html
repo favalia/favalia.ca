@@ -20,6 +20,8 @@
           <li><a href="{{game:word-duel:privacy}}">Word Duel privacy</a></li>
           <li><a href="{{root}}inki-run/privacy/">Inki Run privacy</a></li>
           <li><a href="{{root}}inki-ace/privacy/">Inki Ace privacy</a></li>
+          <li><a href="{{root}}privacy/">Website privacy</a></li>
+          <li><button class="link-btn" type="button" data-consent-open>Cookie settings</button></li>
         </ul>
       </div>
       <div class="foot-col">
@@ -33,10 +35,11 @@
     <div class="foot-word" aria-hidden="true">Favalia</div>
   </div>
   <div class="wrap foot-legal">
-    <span>© <span data-year>2026</span> Favalia · <strong class="made">Proudly made in {{site:city}}, {{site:region}}! <span aria-hidden="true">⚜</span></strong></span>
+    <span>© <span data-year>2026</span> Favalia · <button class="link-btn" type="button" data-consent-open>Cookie settings</button> · <strong class="made">Proudly made in {{site:city}}, {{site:region}}! <span aria-hidden="true">⚜</span></strong></span>
     <span>Apple, the Apple logo, iPhone and iPad are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</span>
   </div>
 </footer>
+<script src="{{root}}assets/js/consent.js?v={{v:assets/js/consent.js}}" data-privacy="{{root}}privacy/" defer></script>
 <script src="{{root}}assets/js/site.js?v={{v:assets/js/site.js}}" defer></script>
 {{scripts}}
 </body>
