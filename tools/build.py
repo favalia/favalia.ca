@@ -64,7 +64,8 @@ def json_ld(page):
         return ""
     org = {"@type": "Organization", "name": site["studio"], "url": site["domain"] + "/",
            "logo": site["domain"] + "/apple-touch-icon.png", "email": site["email"],
-           "sameAs": [site["developerPage"]]}
+           "address": {"@type": "PostalAddress", "addressLocality": site["city"],
+                       "addressRegion": site["region"], "addressCountry": "CA"}}
     if kind == "org":
         data = {"@context": "https://schema.org", **org}
     else:

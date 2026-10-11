@@ -1,9 +1,7 @@
 {
   "domain": "https://favalia.ca",
   "studio": "Favalia",
-  "owner": "Hamzeh Rayej",
   "email": "supportwordduel@gmail.com",
-  "developerPage": "https://apps.apple.com/us/developer/hamzeh-rayej/id6814167262",
   "games": {
     "word-duel": {
       "name": "Word Duel",
@@ -36,5 +34,7 @@
       "genre": "Arcade plane shooter",
       "age": "13+"
     }
-  }
+  },
+  "city": "Montréal",
+  "region": "Québec"
 }

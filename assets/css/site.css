@@ -938,3 +938,7 @@ h1, h2, h3, h4, p, ul, ol, figure { margin: 0; }
   .wd-row { gap: 4px; }
   .wd-key { height: 46px; font-size: 16px; border-radius: 7px; }
 }
+
+/* Footer: made in Montréal */
+.foot-legal .made { color: #fff; font-weight: 700; font-size: 15px; white-space: nowrap; }
+.foot-legal .made span { color: var(--hi); font-size: 1.35em; line-height: 0; vertical-align: -.1em; }
