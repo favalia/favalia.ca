@@ -1,0 +1,23 @@
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Main">
+    <a class="brand" href="{{root}}" aria-label="Favalia home">{{svg:logo}}<span>Favalia</span></a>
+    <ul class="nav-links">
+      <li><a href="{{root}}word-duel/"{{cur:word-duel}}><img src="{{root}}assets/img/word-duel/icon.webp" alt="" width="22" height="22">Word Duel</a></li>
+      <li><a href="{{root}}inki-run/"{{cur:inki-run}}><img src="{{root}}assets/img/inki-run/icon.webp" alt="" width="22" height="22">Inki Run</a></li>
+      <li><a href="{{root}}inki-ace/"{{cur:inki-ace}}><img src="{{root}}assets/img/inki-ace/icon.webp" alt="" width="22" height="22">Inki Ace</a></li>
+      <li><a href="{{root}}support/"{{cur:support}}>Support</a></li>
+    </ul>
+    <div class="nav-tools">
+      <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch theme">{{svg:sun}}{{svg:moon}}</button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-controls="site-menu" aria-expanded="false" aria-label="Open menu">{{svg:bars}}{{svg:x}}</button>
+    </div>
+  </nav>
+</header>
+<div class="mobile-menu" id="site-menu" hidden>
+  <a href="{{root}}word-duel/"><img src="{{root}}assets/img/word-duel/icon.webp" alt="" width="44" height="44"><span>Word Duel<small>Word game · {{status:word-duel}}</small></span></a>
+  <a href="{{root}}inki-run/"><img src="{{root}}assets/img/inki-run/icon.webp" alt="" width="44" height="44"><span>Inki Run<small>Drawing runner · {{status:inki-run}}</small></span></a>
+  <a href="{{root}}inki-ace/"><img src="{{root}}assets/img/inki-ace/icon.webp" alt="" width="44" height="44"><span>Inki Ace<small>Plane shooter · {{status:inki-ace}}</small></span></a>
+  <a href="{{root}}support/"><span>Support<small>Help, privacy and contact</small></span></a>
+  <p class="mm-foot">Games for iPhone and iPad · <a href="mailto:{{site:email}}" style="all:unset;cursor:pointer;text-decoration:underline">{{site:email}}</a></p>
+</div>

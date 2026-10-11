@@ -1,0 +1,40 @@
+{
+  "domain": "https://favalia.ca",
+  "studio": "Favalia",
+  "owner": "Hamzeh Rayej",
+  "email": "supportwordduel@gmail.com",
+  "developerPage": "https://apps.apple.com/us/developer/hamzeh-rayej/id6814167262",
+  "games": {
+    "word-duel": {
+      "name": "Word Duel",
+      "subtitle": "Letter Battle",
+      "appStoreId": "6814167260",
+      "appStoreSlug": "word-duel-letter-battle",
+      "support": "https://worddue-production.up.railway.app/support",
+      "privacy": "https://worddue-production.up.railway.app/privacy",
+      "terms": "https://worddue-production.up.railway.app/terms",
+      "genre": "Word game",
+      "age": "4+"
+    },
+    "inki-run": {
+      "name": "Inki Run",
+      "subtitle": "Draw Lines. Save the Runner.",
+      "appStoreId": null,
+      "appStoreSlug": "inki-run",
+      "support": "inki-run/support/",
+      "privacy": "inki-run/privacy/",
+      "genre": "Drawing runner",
+      "age": "4+"
+    },
+    "inki-ace": {
+      "name": "Inki Ace",
+      "subtitle": "Arcade Doodle Plane Shooter",
+      "appStoreId": null,
+      "appStoreSlug": "inki-ace",
+      "support": "inki-ace/support/",
+      "privacy": "inki-ace/privacy/",
+      "genre": "Arcade plane shooter",
+      "age": "13+"
+    }
+  }
+}

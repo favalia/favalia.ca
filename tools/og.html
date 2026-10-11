@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Social card</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700;800&family=Nunito:wght@800;900&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+<style>
+  /* 1200x630 social cards, rendered by headless Chrome (see README). */
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  .card { position: relative; width: 1200px; height: 630px; overflow: hidden; background: #f6f5f1; color: #1b1b1d; }
+  .card[hidden] { display: none; }
+  .foot { position: absolute; left: 64px; bottom: 44px; display: flex; align-items: center; gap: 12px; font: 800 22px/1 var(--f-display); letter-spacing: .2em; text-transform: uppercase; }
+  .foot svg { width: 40px; height: 40px; }
+  .url { position: absolute; right: 64px; bottom: 48px; font: 700 20px/1 var(--f-display); letter-spacing: .06em; }
+  /* Studio */
+  .og-studio .hero-title { position: absolute; left: 64px; top: 92px; margin: 0; font-size: 92px; }
+  .og-studio .tag { position: absolute; left: 64px; top: 52px; }
+  .og-studio .icons { position: absolute; right: 70px; top: 120px; width: 380px; height: 380px; }
+  .og-studio .icons img { position: absolute; width: 196px; height: 196px; border-radius: 44px; box-shadow: 0 0 0 2px #1b1b1d, 10px 10px 0 #1b1b1d; }
+  .og-studio .i1 { left: 0; top: 30px; rotate: -10deg; }
+  .og-studio .i2 { right: 0; top: 0; rotate: 8deg; }
+  .og-studio .i3 { left: 92px; bottom: 0; rotate: -2deg; }
+  /* Creative-based */
+  .og-art { background-size: cover; background-position: center; }
+  .og-art .badge { position: absolute; left: 50%; bottom: 40px; translate: -50% 0; background: #1b1b1d; color: #fff; padding: 12px 18px; font: 800 18px/1 var(--f-display); letter-spacing: .14em; text-transform: uppercase; }
+  .og-wd { background-image: url(../assets/img/word-duel/header.webp); }
+  .og-wd .badge { background: #fff; color: #2a1276; }
+  .og-ia { background-image: url(../assets/img/inki-ace/header.webp); }
+  /* Inki Run */
+  .og-ir .ink-word { position: absolute; left: 64px; top: 70px; font-size: 120px; }
+  .og-ir .g-sub { position: absolute; left: 68px; top: 390px; margin: 0; font-size: 22px; }
+  .og-ir .device { position: absolute; right: 56px; top: 150px; width: 560px; rotate: -3deg; }
+  .og-ir .ground { position: absolute; left: 0; right: 0; bottom: 0; height: 40px; border-top: 3px solid #1b1b1d; }
+</style>
+</head>
+<body>
+<div class="card og-studio" id="favalia">
+  <span class="tag">Independent game studio</span>
+  <h1 class="hero-title">
+    <span class="ht-line"><span class="ht-tiles"><b style="--i:0;animation:none">S</b><b style="--i:1;animation:none">P</b><b style="--i:2;animation:none">E</b><b style="--i:3;animation:none">L</b><b style="--i:4;animation:none">L</b></span>it.</span>
+    <span class="ht-line">Draw it.</span>
+    <span class="ht-line">Fly it.</span>
+  </h1>
+  <div class="icons"><img class="i1" src="../assets/img/inki-ace/icon.png" alt=""><img class="i2" src="../assets/img/word-duel/icon.png" alt=""><img class="i3" src="../assets/img/inki-run/icon.png" alt=""></div>
+  <div class="foot"><svg viewBox="0 0 40 40"><g transform="rotate(-8 20 20)"><rect x="7.5" y="7.5" width="28" height="28" rx="7" fill="#1b1b1d"/><rect x="4.5" y="4.5" width="28" height="28" rx="7" fill="#ffd84a" stroke="#1b1b1d" stroke-width="2.6"/><path d="M12.5 10.5h12.2v4.1h-7.6v3h6.6v3.9h-6.6v7h-4.6z" fill="#1b1b1d"/></g></svg>Favalia</div>
+  <div class="url">favalia.ca</div>
+</div>
+<div class="card og-art og-wd" id="word-duel" hidden><span class="badge">Free on iPhone &amp; iPad</span></div>
+<div class="card og-art og-ia" id="inki-ace" hidden><span class="badge">Arcade doodle plane shooter</span></div>
+<div class="card og-ir" id="inki-run" hidden>
+  <h1 class="ink-word"><span class="ln">Inki</span><span class="ln">Run</span></h1>
+  <p class="g-sub">Draw lines. Save the runner.</p>
+  <div class="device device--land"><div class="screen"><img src="../assets/img/inki-run/01-draw-the-way.webp" alt=""></div></div>
+  <div class="ground"></div>
+</div>
+<script>
+  var g = new URLSearchParams(location.search).get("g") || "favalia";
+  document.querySelectorAll(".card").forEach(function (c) { c.hidden = c.id !== g; });
+</script>
+</body>
+</html>

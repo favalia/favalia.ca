@@ -1,0 +1,203 @@
+<!--{
+  "out": "inki-ace/index.html",
+  "title": "Inki Ace · Arcade doodle plane shooter · Favalia",
+  "ogTitle": "Inki Ace: hold and drag to fly. Your guns do the rest.",
+  "description": "A black-and-white vertical plane shooter. Hold and drag to fly, refuel in the sky, grab weapons in the air and beat 10 bosses in 100 stages. For iPhone and iPad. Play the demo.",
+  "og": "inki-ace",
+  "nav": "inki-ace",
+  "jsonld": "game:inki-ace",
+  "scripts": ["demo-inki-ace.js"]
+}-->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="mini-jet" viewBox="-24 -24 48 48"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><polygon points="0,-21 2.6,-15 4,-6 16,4 16,8.5 4,6.5 3.6,11 9.5,16.5 9.5,19.5 0.8,17.5 -0.8,17.5 -9.5,19.5 -9.5,16.5 -3.6,11 -4,6.5 -16,8.5 -16,4 -4,-6 -2.6,-15" fill="var(--card)"/><ellipse cx="0" cy="-9" rx="1.8" ry="4.4"/></g></symbol>
+  <symbol id="fuel-can" viewBox="0 0 40 46"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a13 13 0 0 1 26 0z" fill="var(--card)"/><path d="M7 18l8 12M33 18l-8 12"/><rect x="13" y="29" width="14" height="16" rx="3" fill="var(--card)"/><path d="M18 33v8M18 33h5M18 37h4"/></g></symbol>
+  <symbol id="crate" viewBox="0 0 40 50"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="12" r="10" fill="var(--card)"/><path d="M20 22v6"/><rect x="9" y="28" width="22" height="20" fill="var(--card)"/><text x="20" y="43.5" fill="currentColor" stroke="none" font-family="JetBrains Mono, ui-monospace, monospace" font-weight="800" font-size="15" text-anchor="middle">S</text></g></symbol>
+</svg>
+<main id="main">
+
+  <section class="g-hero ink-hero">
+    <svg class="contrail" viewBox="0 0 1200 600" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M-20 580C360 560 700 380 1220 120" vector-effect="non-scaling-stroke"/><path d="M-20 610C370 590 720 410 1220 150" vector-effect="non-scaling-stroke"/></svg>
+    <svg class="cloud" style="left:40%;top:8%;width:130px" viewBox="0 0 120 50" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 44h108M16 44a13 13 0 0 1 15-17 19 19 0 0 1 36-7 15 15 0 0 1 29 9 11 11 0 0 1 11 15"/></svg>
+    <svg class="cloud" style="left:4%;bottom:10%;width:100px" viewBox="0 0 120 50" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 44h108M16 44a13 13 0 0 1 15-17 19 19 0 0 1 36-7 15 15 0 0 1 29 9 11 11 0 0 1 11 15"/></svg>
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="../">Favalia</a><span aria-hidden="true">/</span><a href="../#games">Games</a><span aria-hidden="true">/</span><span aria-current="page">Inki Ace</span></nav>
+      <div class="g-hero-grid">
+        <div>
+          <h1 class="ink-word ia-word" aria-label="Inki Ace">
+            <span class="ln" aria-hidden="true">Inki</span>
+            <span class="ln" aria-hidden="true">Ace<svg class="jet" viewBox="-24 -24 48 48"><g transform="rotate(38)"><use href="#mini-jet" x="-24" y="-24" width="48" height="48"/></g></svg></span>
+          </h1>
+          <p class="g-sub">Arcade doodle plane shooter</p>
+          <p class="g-pitch">Hold and drag to fly. Your guns do the rest. Refuel at gas stations in the sky, grab weapons in the air and take on 10 bosses in 100 stages.</p>
+          <div class="g-ctas">
+            {{cta:inki-ace}}
+            <a class="btn btn--ghost" href="#play">Play the demo</a>
+          </div>
+          <div class="chips">
+            <span class="chip">Free</span><span class="chip">iPhone &amp; iPad</span><span class="chip">Ages 13+</span><span class="chip">Day &amp; night</span>
+          </div>
+        </div>
+        <div class="g-media">
+          <div class="device"><div class="screen"><video data-autoplay muted loop playsinline preload="none" poster="../assets/video/inki-ace-poster.webp" aria-label="Inki Ace gameplay"><source src="../assets/video/inki-ace.mp4" type="video/mp4"></video></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="play">
+    <div class="wrap play-layout">
+      <div data-reveal>
+        <span class="tag">Play the demo</span>
+        <h2 class="h2" style="margin-top:18px">Take off.</h2>
+        <p class="lede" style="margin-top:18px">Hold anywhere on the sky and drag: your plane follows your finger and the guns fire on their own. Let go and time slows down, then the game pauses until you're back.</p>
+        <div class="legend">
+          <div><svg viewBox="0 0 56 40" aria-hidden="true"><use href="#fuel-can" x="12" y="-2" width="34" height="42"/></svg><p><b>Fuel can</b><span>Your tank drains as you fly. Catch these to refill.</span></p></div>
+          <div><svg viewBox="0 0 56 40" aria-hidden="true"><use href="#crate" x="12" y="-2" width="34" height="42"/></svg><p><b>Weapon crate</b><span>Catch S for Splatter, M for Twin Nib. Again to power up.</span></p></div>
+          <div><svg viewBox="0 0 56 40" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="28" cy="20" r="9"/><circle cx="28" cy="20" r="3.4" fill="currentColor"/></svg><p><b>Enemy fire</b><span>Three hits and you're shot down. Keep moving.</span></p></div>
+        </div>
+        <p class="muted" style="margin-top:26px;font-size:15px">Keyboard: arrow keys or WASD. The full game adds bosses, special missions, rolls, ink bombs and 25 aircraft.</p>
+      </div>
+      <div class="demo-frame ia-demo" data-ia-demo>
+        <div class="demo-stage">
+          <canvas aria-label="Inki Ace demo. Hold and drag to fly the plane." tabindex="-1"></canvas>
+          <div class="demo-overlay" data-overlay><noscript><p>Turn on JavaScript to play the demo.</p></noscript></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div><span class="tag">How it works</span><h2 class="h2">Fly. Refuel.<br>Survive.</h2></div>
+        <p>One finger flies the plane. Everything else is about reading the sky: what to catch, what to shoot, and what to stay well away from.</p>
+      </div>
+      <div class="rules" data-reveal>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#mini-jet" x="76" y="18" width="48" height="48"/><path d="M62 42H40m6-6-6 6 6 6M138 42h22m-6-6 6 6-6 6M100 14V2m-6 6 6-6 6 6" /><path d="M86 6v-4M114 6v-4" stroke-dasharray="2 4" opacity=".5"/></svg>
+          <b>Fly</b><p>Hold anywhere and drag. Your plane follows your finger and the guns fire on their own.</p>
+        </div>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#fuel-can" x="44" y="10" width="56" height="66"/><rect x="112" y="38" width="70" height="12"/><rect x="112" y="38" width="48" height="12" fill="currentColor"/><path d="M112 62h18" opacity=".6"/></svg>
+          <b>Fuel</b><p>Your tank drains as you fly. Catch fuel cans and drums, and fly under the Sky Pump balloon to refill.</p>
+        </div>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" aria-hidden="true"><use href="#mini-jet" x="34" y="20" width="44" height="44"/><use href="#mini-jet" x="78" y="20" width="44" height="44"/><g opacity=".25"><use href="#mini-jet" x="122" y="20" width="44" height="44"/></g></svg>
+          <b>Lives</b><p>Three hits and you're shot down. Armor plates soak a hit; double-tap to barrel roll through bullets.</p>
+        </div>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><use href="#crate" x="36" y="10" width="54" height="68"/><path d="M144 80V58M144 80l-16-22M144 80l16-22M144 50v-6M124 48l-4-5M164 48l4-5"/></svg>
+          <b>Weapons</b><p>Shoot open crates in the air and catch the letter you want. Catch it again to power it up.</p>
+        </div>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="100" cy="44" r="24"/><path d="M100 30c6 8 9 12 9 17a9 9 0 0 1-18 0c0-5 3-9 9-17z" fill="currentColor"/><path d="M56 44h-14M144 44h14M66 16l-9-9M134 16l9-9M66 72l-9 9M134 72l9 9"/></svg>
+          <b>Ink bomb</b><p>Clears the sky when it gets crowded. Save it for when you really need it.</p>
+        </div>
+      </div>
+      <p class="rules-note">Lift your finger and time slows down, then the game pauses until you're back.</p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div><span class="tag">What's inside</span><h2 class="h2">A whole sky<br>of it.</h2></div>
+        <p>Ten worlds, each with its own weather, enemies and boss, drawn in the same crisp ink as Inki Run.</p>
+      </div>
+      <div class="features">
+        <div class="feature" data-reveal><span class="big">100</span><h3>Stages</h3><p>10 worlds from Harbor Bay to the Blot Citadel, with sandstorms, blizzards, lightning and lava. Three stars to earn on every stage.</p></div>
+        <div class="feature" data-reveal style="--delay:60ms"><span class="big">10</span><h3>Bosses</h3><p>Sky Fortress, Iron Serpent, Mega Zeppelin, The Inkwell and more. Shoot them apart piece by piece.</p></div>
+        <div class="feature" data-reveal style="--delay:120ms"><span class="big">6</span><h3>Special missions</h3><p>Rescue pilots, bombing runs, escorts, recon photos, fuel rushes and Gauntlets.</p></div>
+        <div class="feature" data-reveal><span class="big">25</span><h3>Aircraft</h3><p>Propeller planes, helicopters, modern jets and future craft, plus a secret paper plane. Each one flies differently.</p></div>
+        <div class="feature" data-reveal style="--delay:60ms"><span class="big">✎</span><h3>Make it yours</h3><p>Paints, wing emblems, contrails and extras like scarves, flags and tip tanks.</p></div>
+        <div class="feature" data-reveal style="--delay:120ms"><span class="big">12</span><h3>Flight School</h3><p>Twelve quick lessons that wait for you to do each move, then send you off to your first mission.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap shots-wrap" data-rail>
+      <div class="sec-head" data-reveal>
+        <div><span class="tag">Screenshots</span><h2 class="h2">See it fly</h2></div>
+        <div class="shots-nav">
+          <button class="icon-btn" type="button" data-rail-step="-1" aria-label="Previous screenshots">{{svg:chev-left}}</button>
+          <button class="icon-btn" type="button" data-rail-step="1" aria-label="Next screenshots">{{svg:chev-right}}</button>
+        </div>
+      </div>
+      <div class="shots shots--portrait">
+        <button class="shot" type="button" data-lightbox="../assets/img/inki-ace/01-hold-and-drag.webp"><img src="../assets/img/inki-ace/01-hold-and-drag.webp" alt="Flying through a wave of helicopters" width="720" height="1565" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../assets/img/inki-ace/02-giant-bosses.webp"><img src="../assets/img/inki-ace/02-giant-bosses.webp" alt="The Sky Fortress boss" width="720" height="1565" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../assets/img/inki-ace/03-refuel-in-the-sky.webp"><img src="../assets/img/inki-ace/03-refuel-in-the-sky.webp" alt="Refuelling under the Sky Pump balloon" width="720" height="1565" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../assets/img/inki-ace/04-new-weapons.webp"><img src="../assets/img/inki-ace/04-new-weapons.webp" alt="The Scribble weapon firing zigzag bolts" width="720" height="1565" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../assets/img/inki-ace/05-land-sea-air.webp"><img src="../assets/img/inki-ace/05-land-sea-air.webp" alt="Targets on land, at sea and in the air" width="720" height="1565" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../assets/img/inki-ace/06-flight-school.webp"><img src="../assets/img/inki-ace/06-flight-school.webp" alt="A Flight School lesson" width="720" height="1565" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../assets/img/inki-ace/07-25-planes.webp"><img src="../assets/img/inki-ace/07-25-planes.webp" alt="Picking a plane in Settings" width="720" height="1565" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../assets/img/inki-ace/08-100-stages.webp"><img src="../assets/img/inki-ace/08-100-stages.webp" alt="The stage map of World 2, Green Valley" width="720" height="1565" loading="lazy"></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap" style="max-width:920px">
+      <div data-reveal><span class="tag">Questions</span><h2 class="h2" style="margin:18px 0 32px">Good to know</h2></div>
+      <div class="faq" data-reveal>
+        <details>
+          <summary>The game slowed down and paused</summary>
+          <div class="answer"><p>That happens when you lift your finger: time slows down, then the game pauses. Put your finger back on the screen to fly on. Leaving the app also pauses the game.</p></div>
+        </details>
+        <details>
+          <summary>How do fuel and lives work?</summary>
+          <div class="answer"><ul>
+            <li><b>Fuel</b> drains while you fly. Catch parachute fuel cans and drums, and fly under the Sky Pump balloon to refill. An empty tank ends the stage.</li>
+            <li><b>Lives</b> are the small planes at the top left. Every hit costs one; the last one means you're shot down. An armor plate takes a hit for you.</li>
+          </ul></div>
+        </details>
+        <details>
+          <summary>What do the weapon letters mean?</summary>
+          <div class="answer"><p>M Twin Nib, S Splatter, H Scribble, C Ink Cannon, L Quill Beam, Z Zigzag Bolt. Catching the same letter again powers it up.</p></div>
+        </details>
+        <details>
+          <summary>How do I open the next world?</summary>
+          <div class="answer"><p>Beat the world's boss (stage 10) and collect enough stars: 20 stars for every world you've finished. Replay stages to earn all three stars.</p></div>
+        </details>
+        <details>
+          <summary>When do ads appear?</summary>
+          <div class="answer"><p>Ads only come between stages, never during a flight, and not in your first few stages. Every 7 minutes the game offers a deal: watch one short ad and you won't see any other ads for the next 7 minutes.</p></div>
+        </details>
+      </div>
+      <div class="faq-foot">
+        <a class="arrow-link" href="support/">All support questions {{svg:arrow}}</a>
+        <a class="arrow-link" href="privacy/">Privacy Policy {{svg:arrow}}</a>
+      </div>
+    </div>
+  </section>
+
+  <!--live:inki-ace-->
+  <section class="cta-band">
+    <div class="wrap">
+      <div><h2>Cleared for takeoff.</h2><p>Download Inki Ace free on iPhone and iPad and take on the Sky Fortress.</p></div>
+      <div class="actions">{{cta:inki-ace}}<a class="btn btn--ghost" href="#play">Play the demo</a></div>
+    </div>
+  </section>
+  <!--else-->
+  <section class="cta-band">
+    <div class="wrap">
+      <div><h2>Coming soon to<br>the App Store.</h2><p>Want to know the day Inki Ace launches? Send us a note and we'll write back when it's out.</p></div>
+      <div class="actions">
+        <a class="btn" href="mailto:{{site:email}}?subject=Tell%20me%20when%20Inki%20Ace%20launches">Tell me at launch</a>
+        <a class="btn btn--ghost" href="#play">Play the demo</a>
+      </div>
+    </div>
+  </section>
+  <!--/live-->
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div data-reveal style="margin-bottom:28px"><span class="tag">More from Favalia</span></div>
+      <div class="more">
+        <a href="../word-duel/" data-reveal><img src="../assets/img/word-duel/icon.webp" alt="" width="76" height="76" loading="lazy"><span><b>Word Duel</b><small>Guess the word. Duel your friends.</small></span>{{svg:arrow}}</a>
+        <a href="../inki-run/" data-reveal style="--delay:80ms"><img src="../assets/img/inki-run/icon.webp" alt="" width="76" height="76" loading="lazy"><span><b>Inki Run</b><small>Draw lines. Save the runner.</small></span>{{svg:arrow}}</a>
+      </div>
+    </div>
+  </section>
+</main>
