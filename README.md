@@ -4,7 +4,8 @@ The website of **Favalia**, an independent game studio: a home page for our game
 (Word Duel, Inki Run, Inki Ace) with a small playable demo, and support and privacy pages.
 
 Plain HTML, CSS and JavaScript with no framework. Hosted on GitHub Pages at **https://favalia.ca**.
-Google Tag Manager is loaded on every page; its container ID is `gtm` in `src/site.json`.
+Every page loads Google Analytics 4 (`ga4` in `src/site.json`) and Google Tag Manager (`gtm`).
+Don't also add the same GA4 ID as a Google tag inside Tag Manager, or page views are counted twice.
 
 ## Run it locally
 
