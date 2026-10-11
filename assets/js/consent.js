@@ -1,4 +1,4 @@
-/* Cookie consent banner (English / French).
+/* Cookie consent banner, in the page's language (English, French or Spanish).
    The loader in <head> keeps Google Analytics and Tag Manager off until a choice is saved here.
    "Reject all" is as easy as "Accept all"; [data-consent-open] links reopen the choices at any time. */
 (() => {
@@ -12,32 +12,38 @@
       title: "Cookies: your call",
       text: "We'd like to use Google Analytics to count visits and see which games people enjoy. It stays off unless you say yes, and you can change your mind any time with “Cookie settings” at the bottom of every page.",
       policy: "Privacy policy",
-      other: "Français",
-      necessary: ["Necessary", "Remember your theme, demo scores and this choice, in your browser only. Always on."],
+      necessary: ["Necessary", "Remember your theme, demo scores, language and this choice, in your browser only. Always on."],
       analytics: ["Analytics", "Google Analytics: pages viewed, device type and approximate location. No ads."],
       marketing: ["Marketing", "Lets us measure our ad campaigns with Google. Off unless you turn it on."],
       reject: "Reject all", accept: "Accept all", choose: "Choose", save: "Save choices",
-      saved: "Saved. Change it any time with “Cookie settings”.",
       status: (c) => !c ? "You haven't made a choice yet." :
         `Your choice: analytics ${c.analytics ? "on" : "off"}, marketing ${c.marketing ? "on" : "off"} (saved ${new Date(c.t).toLocaleDateString("en-CA")}).`,
     },
     fr: {
-      title: "Témoins : à vous de choisir",
-      text: "Nous aimerions utiliser Google Analytics pour compter les visites et voir quels jeux vous plaisent. C'est désactivé tant que vous ne dites pas oui, et vous pouvez changer d'avis en tout temps avec « Paramètres des témoins » au bas de chaque page.",
+      title: "Témoins\u00a0: à toi de choisir",
+      text: "Nous aimerions utiliser Google Analytics pour compter les visites et voir quels jeux te plaisent. C'est désactivé tant que tu ne dis pas oui, et tu peux changer d'avis en tout temps avec «\u00a0Paramètres des témoins\u00a0» au bas de chaque page.",
       policy: "Politique de confidentialité",
-      other: "English",
-      necessary: ["Nécessaires", "Mémorisent votre thème, vos scores des démos et ce choix, dans votre navigateur seulement. Toujours actifs."],
-      analytics: ["Mesure d'audience", "Google Analytics : pages vues, type d'appareil et emplacement approximatif. Aucune publicité."],
-      marketing: ["Marketing", "Nous permet de mesurer nos campagnes publicitaires avec Google. Désactivé sauf si vous l'activez."],
+      necessary: ["Nécessaires", "Mémorisent ton thème, tes scores des démos, ta langue et ce choix, dans ton navigateur seulement. Toujours actifs."],
+      analytics: ["Mesure d'audience", "Google Analytics\u00a0: pages vues, type d'appareil et emplacement approximatif. Aucune publicité."],
+      marketing: ["Marketing", "Nous permet de mesurer nos campagnes publicitaires avec Google. Désactivé sauf si tu l'actives."],
       reject: "Tout refuser", accept: "Tout accepter", choose: "Personnaliser", save: "Enregistrer mes choix",
-      saved: "C'est noté. Modifiez votre choix en tout temps avec « Paramètres des témoins ».",
-      status: (c) => !c ? "Vous n'avez pas encore fait de choix." :
-        `Votre choix : mesure d'audience ${c.analytics ? "activée" : "désactivée"}, marketing ${c.marketing ? "activé" : "désactivé"} (enregistré le ${new Date(c.t).toLocaleDateString("fr-CA")}).`,
+      status: (c) => !c ? "Tu n'as pas encore fait de choix." :
+        `Ton choix\u00a0: mesure d'audience ${c.analytics ? "activée" : "désactivée"}, marketing ${c.marketing ? "activé" : "désactivé"} (enregistré le ${new Date(c.t).toLocaleDateString("fr-CA")}).`,
+    },
+    es: {
+      title: "Cookies: tú decides",
+      text: "Nos gustaría usar Google Analytics para contar las visitas y ver qué juegos gustan más. Está desactivado a menos que digas que sí, y puedes cambiar de opinión cuando quieras con «Configuración de cookies» al final de cada página.",
+      policy: "Política de privacidad",
+      necessary: ["Necesarias", "Recuerdan tu tema, tus récords de las demos, tu idioma y esta elección, solo en tu navegador. Siempre activas."],
+      analytics: ["Analítica", "Google Analytics: páginas vistas, tipo de dispositivo y ubicación aproximada. Sin anuncios."],
+      marketing: ["Marketing", "Nos permite medir nuestras campañas publicitarias con Google. Desactivado a menos que lo actives."],
+      reject: "Rechazar todo", accept: "Aceptar todo", choose: "Elegir", save: "Guardar mi elección",
+      status: (c) => !c ? "Aún no has elegido." :
+        `Tu elección: analítica ${c.analytics ? "activada" : "desactivada"}, marketing ${c.marketing ? "activado" : "desactivado"} (guardada el ${new Date(c.t).toLocaleDateString("es-ES")}).`,
     },
   };
-  const docFr = (document.documentElement.lang || "").startsWith("fr");
-  const navFr = (navigator.languages || [navigator.language || ""]).some((l) => String(l).toLowerCase().startsWith("fr"));
-  let lang = docFr || navFr ? "fr" : "en";
+  const pageLang = (document.documentElement.lang || "en").slice(0, 2);
+  const lang = T[pageLang] ? pageLang : "en";
 
   let box = null, returnFocus = null;
 
@@ -56,9 +62,8 @@
       <div class="consent-card">
         <div class="consent-head">
           <h2 id="consent-title">${t.title}</h2>
-          <button class="consent-lang" type="button" data-act="lang" lang="${lang === "en" ? "fr" : "en"}">${t.other}</button>
         </div>
-        <p id="consent-text">${t.text} <a href="${privacy}${lang === "fr" ? "#fr" : ""}">${t.policy}</a></p>
+        <p id="consent-text">${t.text} <a href="${privacy}">${t.policy}</a></p>
         <div class="consent-choices" ${showChoices ? "" : "hidden"}>
           ${row("necessary", true, true)}
           ${row("analytics", c ? c.analytics : false)}
@@ -120,12 +125,7 @@
     const b = e.target.closest("[data-act]");
     if (!b) return;
     const act = b.dataset.act;
-    if (act === "lang") {
-      const open = !box.querySelector(".consent-choices").hidden;
-      lang = lang === "en" ? "fr" : "en";
-      render(open);
-      box.querySelector('[data-act="lang"]').focus();
-    } else if (act === "accept") choose(true, true);
+    if (act === "accept") choose(true, true);
     else if (act === "reject") choose(false, false);
     else if (act === "choose") { render(true); box.querySelector("input:not([disabled])")?.focus(); }
     else if (act === "save") choose(box.querySelector('[data-c="analytics"]').checked, box.querySelector('[data-c="marketing"]').checked);
@@ -133,8 +133,7 @@
 
   function updateStatus() {
     document.querySelectorAll("[data-consent-status]").forEach((el) => {
-      const l = el.closest("[lang]")?.lang?.startsWith("fr") ? "fr" : "en";
-      el.textContent = T[l].status(api.get());
+      el.textContent = T[lang].status(api.get());
     });
   }
 
@@ -142,7 +141,6 @@
     const a = e.target.closest("[data-consent-open]");
     if (!a) return;
     e.preventDefault();
-    if (a.dataset.consentLang) lang = a.dataset.consentLang;
     open(true, a);
   });
 

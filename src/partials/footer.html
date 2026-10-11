@@ -2,44 +2,49 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a class="brand" href="{{root}}">{{svg:logo}}<span>Favalia</span></a>
-        <p>Small, polished games for iPhone and iPad. One thumb to play, a minute to learn.</p>
+        <a class="brand" href="{{l}}">{{svg:logo}}<span>Favalia</span></a>
+        <p>{{t:foot.blurb}}</p>
       </div>
       <div class="foot-col">
-        <h4>Games</h4>
+        <h4>{{t:foot.games}}</h4>
         <ul>
-          <li><a href="{{root}}word-duel/">Word Duel</a></li>
-          <li><a href="{{root}}inki-run/">Inki Run</a></li>
-          <li><a href="{{root}}inki-ace/">Inki Ace</a></li>
+          <li><a href="{{l}}word-duel/">Word Duel</a></li>
+          <li><a href="{{l}}inki-run/">Inki Run</a></li>
+          <li><a href="{{l}}inki-ace/">Inki Ace</a></li>
         </ul>
       </div>
       <div class="foot-col">
-        <h4>Help</h4>
+        <h4>{{t:foot.help}}</h4>
         <ul>
-          <li><a href="{{root}}support/">Support</a></li>
-          <li><a href="{{game:word-duel:privacy}}">Word Duel privacy</a></li>
-          <li><a href="{{root}}inki-run/privacy/">Inki Run privacy</a></li>
-          <li><a href="{{root}}inki-ace/privacy/">Inki Ace privacy</a></li>
-          <li><a href="{{root}}privacy/">Website privacy</a></li>
-          <li><button class="link-btn" type="button" data-consent-open>Cookie settings</button></li>
+          <li><a href="{{l}}support/">{{t:foot.support}}</a></li>
+          <li><a href="{{game:word-duel:privacy}}">{{t:foot.wdprivacy}}</a></li>
+          <li><a href="{{l}}inki-run/privacy/">{{t:foot.irprivacy}}</a></li>
+          <li><a href="{{l}}inki-ace/privacy/">{{t:foot.iaprivacy}}</a></li>
+          <li><a href="{{l}}privacy/">{{t:foot.siteprivacy}}</a></li>
+          <li><button class="link-btn" type="button" data-consent-open>{{t:foot.cookies}}</button></li>
         </ul>
       </div>
       <div class="foot-col">
-        <h4>Say hello</h4>
+        <h4>{{t:foot.hello}}</h4>
         <ul>
           <li><a href="mailto:{{site:email}}">{{site:email}}</a></li>
-          <li><a href="{{root}}#studio">About the studio</a></li>
+          <li><a href="{{l}}#studio">{{t:foot.studio}}</a></li>
         </ul>
+        <div class="foot-lang" role="group" aria-label="{{t:lang.label}}">
+          <a href="{{alt:en}}" hreflang="en" lang="en" data-lang-switch="en"{{curlang:en}}>English</a>
+          <a href="{{alt:fr}}" hreflang="fr" lang="fr" data-lang-switch="fr"{{curlang:fr}}>Français</a>
+          <a href="{{alt:es}}" hreflang="es" lang="es" data-lang-switch="es"{{curlang:es}}>Español</a>
+        </div>
       </div>
     </div>
     <div class="foot-word" aria-hidden="true">Favalia</div>
   </div>
   <div class="wrap foot-legal">
-    <span>© <span data-year>2026</span> Favalia · <button class="link-btn" type="button" data-consent-open>Cookie settings</button> · <strong class="made">Proudly made in {{site:city}}, {{site:region}}! <span aria-hidden="true">⚜</span></strong></span>
-    <span>Apple, the Apple logo, iPhone and iPad are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</span>
+    <span>© <span data-year>2026</span> Favalia · <button class="link-btn" type="button" data-consent-open>{{t:foot.cookies}}</button> · <strong class="made">{{t:foot.made}} <span aria-hidden="true">⚜</span></strong></span>
+    <span>{{t:foot.legal}}</span>
   </div>
 </footer>
-<script src="{{root}}assets/js/consent.js?v={{v:assets/js/consent.js}}" data-privacy="{{root}}privacy/" defer></script>
+<script src="{{root}}assets/js/consent.js?v={{v:assets/js/consent.js}}" data-privacy="{{l}}privacy/" defer></script>
 <script src="{{root}}assets/js/site.js?v={{v:assets/js/site.js}}" defer></script>
 {{scripts}}
 </body>

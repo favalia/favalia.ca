@@ -5,33 +5,65 @@
   "games": {
     "word-duel": {
       "name": "Word Duel",
-      "subtitle": "Letter Battle",
+      "subtitle": {
+        "en": "Letter Battle",
+        "fr": "Bataille de lettres",
+        "es": "Batalla de letras"
+      },
       "appStoreId": "6814167260",
       "appStoreSlug": "word-duel-letter-battle",
-      "support": "https://worddue-production.up.railway.app/support",
-      "privacy": "https://worddue-production.up.railway.app/privacy",
+      "support": {
+        "en": "https://worddue-production.up.railway.app/support",
+        "fr": "https://worddue-production.up.railway.app/fr/support",
+        "es": "https://worddue-production.up.railway.app/es/support"
+      },
+      "privacy": {
+        "en": "https://worddue-production.up.railway.app/privacy",
+        "fr": "https://worddue-production.up.railway.app/fr/privacy",
+        "es": "https://worddue-production.up.railway.app/es/privacy"
+      },
       "terms": "https://worddue-production.up.railway.app/terms",
-      "genre": "Word game",
+      "genre": {
+        "en": "Word game",
+        "fr": "Jeu de mots",
+        "es": "Juego de palabras"
+      },
       "age": "4+"
     },
     "inki-run": {
       "name": "Inki Run",
-      "subtitle": "Draw Lines. Save the Runner.",
+      "subtitle": {
+        "en": "Draw Lines. Save the Runner.",
+        "fr": "Trace la voie. Sauve le coureur.",
+        "es": "Dibuja líneas. Salva al corredor."
+      },
       "appStoreId": null,
       "appStoreSlug": "inki-run",
       "support": "inki-run/support/",
       "privacy": "inki-run/privacy/",
-      "genre": "Drawing runner",
+      "genre": {
+        "en": "Drawing runner",
+        "fr": "Course à dessiner",
+        "es": "Carrera de dibujo"
+      },
       "age": "4+"
     },
     "inki-ace": {
       "name": "Inki Ace",
-      "subtitle": "Arcade Doodle Plane Shooter",
+      "subtitle": {
+        "en": "Arcade Doodle Plane Shooter",
+        "fr": "Combat aérien d'arcade à l'encre",
+        "es": "Combate aéreo arcade a tinta"
+      },
       "appStoreId": null,
       "appStoreSlug": "inki-ace",
       "support": "inki-ace/support/",
       "privacy": "inki-ace/privacy/",
-      "genre": "Arcade plane shooter",
+      "genre": {
+        "en": "Arcade plane shooter",
+        "fr": "Combat aérien d'arcade",
+        "es": "Combate aéreo arcade"
+      },
       "age": "13+"
     }
   },

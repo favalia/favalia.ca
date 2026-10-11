@@ -1,23 +1,33 @@
-<a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main">{{t:skip}}</a>
 <header class="site-header">
-  <nav class="wrap nav" aria-label="Main">
-    <a class="brand" href="{{root}}" aria-label="Favalia home">{{svg:logo}}<span>Favalia</span></a>
+  <nav class="wrap nav" aria-label="{{t:nav.main}}">
+    <a class="brand" href="{{l}}" aria-label="{{t:nav.home}}">{{svg:logo}}<span>Favalia</span></a>
     <ul class="nav-links">
-      <li><a href="{{root}}word-duel/"{{cur:word-duel}}><img src="{{root}}assets/img/word-duel/icon.webp" alt="" width="22" height="22">Word Duel</a></li>
-      <li><a href="{{root}}inki-run/"{{cur:inki-run}}><img src="{{root}}assets/img/inki-run/icon.webp" alt="" width="22" height="22">Inki Run</a></li>
-      <li><a href="{{root}}inki-ace/"{{cur:inki-ace}}><img src="{{root}}assets/img/inki-ace/icon.webp" alt="" width="22" height="22">Inki Ace</a></li>
-      <li><a href="{{root}}support/"{{cur:support}}>Support</a></li>
+      <li><a href="{{l}}word-duel/"{{cur:word-duel}}><img src="{{root}}assets/img/word-duel/icon.webp" alt="" width="22" height="22">Word Duel</a></li>
+      <li><a href="{{l}}inki-run/"{{cur:inki-run}}><img src="{{root}}assets/img/inki-run/icon.webp" alt="" width="22" height="22">Inki Run</a></li>
+      <li><a href="{{l}}inki-ace/"{{cur:inki-ace}}><img src="{{root}}assets/img/inki-ace/icon.webp" alt="" width="22" height="22">Inki Ace</a></li>
+      <li><a href="{{l}}support/"{{cur:support}}>{{t:nav.support}}</a></li>
     </ul>
     <div class="nav-tools">
-      <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch theme">{{svg:sun}}{{svg:moon}}</button>
-      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-controls="site-menu" aria-expanded="false" aria-label="Open menu">{{svg:bars}}{{svg:x}}</button>
+      <div class="lang-nav" role="group" aria-label="{{t:lang.label}}">
+        <a href="{{alt:en}}" hreflang="en" lang="en" title="English" data-lang-switch="en"{{curlang:en}}>EN</a>
+        <a href="{{alt:fr}}" hreflang="fr" lang="fr" title="Français" data-lang-switch="fr"{{curlang:fr}}>FR</a>
+        <a href="{{alt:es}}" hreflang="es" lang="es" title="Español" data-lang-switch="es"{{curlang:es}}>ES</a>
+      </div>
+      <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="{{t:theme}}">{{svg:sun}}{{svg:moon}}</button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-controls="site-menu" aria-expanded="false" aria-label="{{t:menu.open}}">{{svg:bars}}{{svg:x}}</button>
     </div>
   </nav>
 </header>
 <div class="mobile-menu" id="site-menu" hidden>
-  <a href="{{root}}word-duel/"><img src="{{root}}assets/img/word-duel/icon.webp" alt="" width="44" height="44"><span>Word Duel<small>Word game · {{status:word-duel}}</small></span></a>
-  <a href="{{root}}inki-run/"><img src="{{root}}assets/img/inki-run/icon.webp" alt="" width="44" height="44"><span>Inki Run<small>Drawing runner · {{status:inki-run}}</small></span></a>
-  <a href="{{root}}inki-ace/"><img src="{{root}}assets/img/inki-ace/icon.webp" alt="" width="44" height="44"><span>Inki Ace<small>Plane shooter · {{status:inki-ace}}</small></span></a>
-  <a href="{{root}}support/"><span>Support<small>Help, privacy and contact</small></span></a>
-  <p class="mm-foot">Games for iPhone and iPad · <a href="mailto:{{site:email}}" style="all:unset;cursor:pointer;text-decoration:underline">{{site:email}}</a></p>
+  <a href="{{l}}word-duel/"><img src="{{root}}assets/img/word-duel/icon.webp" alt="" width="44" height="44"><span>Word Duel<small>{{t:menu.wd}} · {{status:word-duel}}</small></span></a>
+  <a href="{{l}}inki-run/"><img src="{{root}}assets/img/inki-run/icon.webp" alt="" width="44" height="44"><span>Inki Run<small>{{t:menu.ir}} · {{status:inki-run}}</small></span></a>
+  <a href="{{l}}inki-ace/"><img src="{{root}}assets/img/inki-ace/icon.webp" alt="" width="44" height="44"><span>Inki Ace<small>{{t:menu.ia}} · {{status:inki-ace}}</small></span></a>
+  <a href="{{l}}support/"><span>{{t:nav.support}}<small>{{t:menu.support}}</small></span></a>
+  <div class="mm-lang" role="group" aria-label="{{t:lang.label}}">
+    <a href="{{alt:en}}" hreflang="en" lang="en" data-lang-switch="en"{{curlang:en}}>English</a>
+    <a href="{{alt:fr}}" hreflang="fr" lang="fr" data-lang-switch="fr"{{curlang:fr}}>Français</a>
+    <a href="{{alt:es}}" hreflang="es" lang="es" data-lang-switch="es"{{curlang:es}}>Español</a>
+  </div>
+  <p class="mm-foot">{{t:menu.foot}} · <a href="mailto:{{site:email}}" style="all:unset;cursor:pointer;text-decoration:underline">{{site:email}}</a></p>
 </div>

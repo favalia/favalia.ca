@@ -1,6 +1,7 @@
-/* Word Duel — browser demo of the solo game.
+/* Word Duel — browser demo of the solo game, in the page's language (English, French or Spanish).
    Pick letters: right ones fly onto every dash they belong to, wrong ones bounce off the word and drop
-   into the misses tray, and a heart goes with them. Six misses and the word is gone. */
+   into the misses tray, and a heart goes with them. Six misses and the word is gone.
+   Like the app: AZERTY in French, an Ñ key in Spanish, words played without accents. */
 (() => {
   const host = document.querySelector("[data-wd-demo]");
   if (!host) return;
@@ -8,14 +9,79 @@
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const APP_URL = host.dataset.appstore || "https://apps.apple.com/app/id6814167260";
   const MAX_MISSES = 6;
-  const ROWS = ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"];
-  const WORDS = (
-    "PLANET GARDEN PILLOW BRIDGE CASTLE ROCKET PENCIL ORANGE JACKET TURTLE WINDOW KITTEN BASKET CAMERA " +
-    "DRAGON FOREST GUITAR ISLAND LADDER MIRROR RABBIT CANDLE COFFEE MONKEY PUZZLE SUMMER WINTER BUTTER " +
-    "DOCTOR FLOWER HELMET JUNGLE PARROT SPIDER TOMATO VIOLIN YELLOW CLOUD BREAD TIGER CHAIR MUSIC SMILE " +
-    "LEMON OCEAN PIANO ROBOT TRAIN HONEY PIZZA SNAKE WHALE BEACH GHOST HOUSE PAPER QUEEN STORM CIRCUS " +
-    "BALLOON BLANKET RAINBOW KITCHEN DOLPHIN LIBRARY PICTURE MORNING CHICKEN TEACHER"
-  ).split(" ");
+  const LANG = ["fr", "es"].includes((document.documentElement.lang || "").slice(0, 2)) ? document.documentElement.lang.slice(0, 2) : "en";
+  const LOCALE = { en: "en-CA", fr: "fr-CA", es: "es-ES" }[LANG];
+  const ROWS = {
+    en: ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"],
+    fr: ["AZERTYUIOP", "QSDFGHJKLM", "WXCVBN"],
+    es: ["QWERTYUIOP", "ASDFGHJKLÑ", "ZXCVBNM"],
+  }[LANG];
+  const WORDS = {
+    en: "PLANET GARDEN PILLOW BRIDGE CASTLE ROCKET PENCIL ORANGE JACKET TURTLE WINDOW KITTEN BASKET CAMERA " +
+      "DRAGON FOREST GUITAR ISLAND LADDER MIRROR RABBIT CANDLE COFFEE MONKEY PUZZLE SUMMER WINTER BUTTER " +
+      "DOCTOR FLOWER HELMET JUNGLE PARROT SPIDER TOMATO VIOLIN YELLOW CLOUD BREAD TIGER CHAIR MUSIC SMILE " +
+      "LEMON OCEAN PIANO ROBOT TRAIN HONEY PIZZA SNAKE WHALE BEACH GHOST HOUSE PAPER QUEEN STORM CIRCUS " +
+      "BALLOON BLANKET RAINBOW KITCHEN DOLPHIN LIBRARY PICTURE MORNING CHICKEN TEACHER",
+    fr: "MAISON JARDIN CHEVAL BATEAU FROMAGE CHAPEAU POMME LAPIN NUAGE SOLEIL MUSIQUE VOYAGE CERISE TORTUE " +
+      "BOUGIE COUSSIN CITRON ORANGE GUITARE DRAGON CAMION SINGE BALEINE RENARD HIBOU CAROTTE BANANE PAPIER " +
+      "CRAYON LIVRE TIGRE POISSON MONTAGNE PLAGE NEIGE HIVER AUTOMNE CUISINE BONBON SOURIS PIANO ROBOT TRAIN " +
+      "AVION BALLON JOUET CADEAU FLEUR ARBRE OISEAU GIRAFE LOUTRE CANARD COCHON MOUTON POULET VACHE FOURMI",
+    es: "MANZANA CABALLO PLANETA CASTILLO COHETE NARANJA TORTUGA VENTANA CESTA BOSQUE GUITARRA ESPEJO CONEJO " +
+      "VERANO INVIERNO SELVA ARAÑA TOMATE AMARILLO TIGRE SILLA SONRISA PIANO SERPIENTE BALLENA MONTAÑA PIÑA " +
+      "SUEÑO LLUVIA PLAYA ZAPATO PERRO GALLETA CAMISA PELOTA MARIPOSA CARACOL CEBRA BARCO COCHE CIUDAD PUERTA " +
+      "LIBRO QUESO HUEVO LECHE JIRAFA CAMELLO PALOMA REGALO DULCE FRESA BANANA CEREZA RATONES CUADERNO",
+  }[LANG].split(" ");
+  const TEXT = {
+    en: {
+      chip: "Everyday · Easy", skip: "Skip to a new word", newWord: "New word", score: "Score", streak: "Streak",
+      misses: "Misses", letters: "Letters", hidden: (n) => `Hidden word, ${n} letters`, hearts: (n) => `${n} hearts left`,
+      sayNew: (n) => `New word: ${n} letters.`,
+      sayHit: (l, n) => n > 1 ? `${l} is in the word ${n} times.` : `${l} is in the word.`,
+      sayMiss: (l, n) => `No ${l}. ${n} hearts left.`,
+      perfect: "Perfect!", nice: "Nice one!", phew: "Phew!", out: "Out of hearts",
+      stars: (n) => `${n} of 3 stars`, solved: "Solved", accuracy: "Accuracy",
+      missesTxt: (m) => m === 0 ? "no misses" : `${m} miss${m > 1 ? "es" : ""}`,
+      bonus: "Perfect bonus", bonusNote: "not a single miss", total: "Total",
+      lost: (w) => `The word was <b>${w}</b>. Six misses and it's gone, but your next word is waiting.`,
+      next: "Next word →", share: "Share your result", copied: "Copied", sayCopied: "Result copied.",
+      cta: "Duel a friend on the same words in the app.", get: "Get Word Duel",
+      sayWon: (t, w, p) => `${t} The word was ${w}. ${p} points.`, sayLost: (w) => `Out of hearts. The word was ${w}.`,
+      shareText: (n, m) => `Word Duel · ${n} letters · ${m === 0 ? "perfect" : m + " misses"}`,
+    },
+    fr: {
+      chip: "Quotidien · Facile", skip: "Passer à un nouveau mot", newWord: "Nouveau mot", score: "Score", streak: "Série",
+      misses: "Ratés", letters: "Lettres", hidden: (n) => `Mot caché, ${n} lettres`, hearts: (n) => `${n} cœurs restants`,
+      sayNew: (n) => `Nouveau mot\u00a0: ${n} lettres.`,
+      sayHit: (l, n) => n > 1 ? `La lettre ${l} est ${n} fois dans le mot.` : `La lettre ${l} est dans le mot.`,
+      sayMiss: (l, n) => `Pas de ${l}. Encore ${n} cœurs.`,
+      perfect: `Parfait\u202f!`, nice: `Bien joué\u202f!`, phew: `Ouf\u202f!`, out: "Plus de cœurs",
+      stars: (n) => `${n} étoiles sur 3`, solved: "Trouvé", accuracy: "Précision",
+      missesTxt: (m) => m === 0 ? "aucun raté" : `${m} raté${m > 1 ? "s" : ""}`,
+      bonus: "Bonus parfait", bonusNote: "pas un seul raté", total: "Total",
+      lost: (w) => `Le mot était <b>${w}</b>. Six ratés et il est perdu, mais ton prochain mot t'attend.`,
+      next: "Mot suivant →", share: "Partager ton résultat", copied: "Copié", sayCopied: "Résultat copié.",
+      cta: "Défie un ami sur les mêmes mots dans l'app.", get: "Obtenir Word Duel",
+      sayWon: (t, w, p) => `${t} Le mot était ${w}. ${p} points.`, sayLost: (w) => `Plus de cœurs. Le mot était ${w}.`,
+      shareText: (n, m) => `Word Duel · ${n} lettres · ${m === 0 ? "parfait" : m + " raté" + (m > 1 ? "s" : "")}`,
+    },
+    es: {
+      chip: "Cotidianas · Fácil", skip: "Pasar a otra palabra", newWord: "Nueva palabra", score: "Puntos", streak: "Racha",
+      misses: "Fallos", letters: "Letras", hidden: (n) => `Palabra oculta, ${n} letras`, hearts: (n) => `Quedan ${n} corazones`,
+      sayNew: (n) => `Nueva palabra: ${n} letras.`,
+      sayHit: (l, n) => n > 1 ? `La ${l} está ${n} veces en la palabra.` : `La ${l} está en la palabra.`,
+      sayMiss: (l, n) => `No hay ${l}. Quedan ${n} corazones.`,
+      perfect: "¡Perfecto!", nice: "¡Bien hecho!", phew: "¡Uf!", out: "Sin corazones",
+      stars: (n) => `${n} de 3 estrellas`, solved: "Resuelta", accuracy: "Precisión",
+      missesTxt: (m) => m === 0 ? "sin fallos" : `${m} fallo${m > 1 ? "s" : ""}`,
+      bonus: "Bonus perfecto", bonusNote: "ni un solo fallo", total: "Total",
+      lost: (w) => `La palabra era <b>${w}</b>. Seis fallos y se pierde, pero tu próxima palabra te espera.`,
+      next: "Siguiente palabra →", share: "Compartir tu resultado", copied: "Copiado", sayCopied: "Resultado copiado.",
+      cta: "Reta a un amigo con las mismas palabras en la app.", get: "Descargar Word Duel",
+      sayWon: (t, w, p) => `${t} La palabra era ${w}. ${p} puntos.`, sayLost: (w) => `Sin corazones. La palabra era ${w}.`,
+      shareText: (n, m) => `Word Duel · ${n} letras · ${m === 0 ? "perfecta" : m + " fallo" + (m > 1 ? "s" : "")}`,
+    },
+  }[LANG];
+  const LETTER = /^[A-ZÑ]$/;
 
   const store = {
     get(k) { try { return localStorage.getItem(k); } catch { return null; } },
@@ -31,19 +97,19 @@
 
   host.innerHTML = `
     <div class="wd-top">
-      <span class="wd-chip">${icon.chat} Everyday · Easy</span>
-      <button class="wd-skip" type="button" data-skip aria-label="Skip to a new word" title="New word">${icon.redo}</button>
+      <span class="wd-chip">${icon.chat} ${TEXT.chip}</span>
+      <button class="wd-skip" type="button" data-skip aria-label="${TEXT.skip}" title="${TEXT.newWord}">${icon.redo}</button>
     </div>
     <div class="wd-stats">
-      <div><small>Score</small><b data-score>0</b></div>
-      <div><small>Streak</small><b data-streak>0</b></div>
+      <div><small>${TEXT.score}</small><b data-score>0</b></div>
+      <div><small>${TEXT.streak}</small><b data-streak>0</b></div>
     </div>
-    <div class="wd-hearts" data-hearts role="img" aria-label="6 hearts left"></div>
+    <div class="wd-hearts" data-hearts role="img" aria-label="${TEXT.hearts(6)}"></div>
     <div class="wd-board">
-      <div class="wd-word" data-word role="group" aria-label="Hidden word"></div>
-      <div class="wd-misses"><small>Misses</small><div class="wd-miss-row" data-misses></div></div>
+      <div class="wd-word" data-word role="group" aria-label="${TEXT.hidden(6)}"></div>
+      <div class="wd-misses"><small>${TEXT.misses}</small><div class="wd-miss-row" data-misses></div></div>
     </div>
-    <div class="wd-keys" data-keys role="group" aria-label="Letters"></div>
+    <div class="wd-keys" data-keys role="group" aria-label="${TEXT.letters}"></div>
     <div class="wd-layer" data-layer aria-hidden="true"></div>
     <div class="wd-result" data-result hidden></div>
     <p class="sr-only" aria-live="polite" data-live></p>`;
@@ -83,7 +149,7 @@
 
   // ?word=PLANET plays that word first (handy for testing a solve).
   let forced = (new URLSearchParams(location.search).get("word") || "").toUpperCase();
-  if (!/^[A-Z]{3,9}$/.test(forced)) forced = "";
+  if (!/^[A-ZÑ]{3,9}$/.test(forced)) forced = "";
 
   const nextWord = () => {
     if (forced) { const f = forced; forced = ""; return (last = f); }
@@ -107,13 +173,13 @@
     result.innerHTML = "";
     layer.innerHTML = "";
     wordEl.innerHTML = [...word].map(() => '<div class="wd-slot"><span class="wd-tile"></span></div>').join("");
-    wordEl.setAttribute("aria-label", `Hidden word, ${word.length} letters`);
+    wordEl.setAttribute("aria-label", TEXT.hidden(word.length));
     missEl.innerHTML = Array.from({ length: MAX_MISSES }, () => '<div class="wd-miss"><span class="wd-tile"></span></div>').join("");
     heartsEl.innerHTML = Array.from({ length: MAX_MISSES }, () => icon.heart).join("");
-    heartsEl.setAttribute("aria-label", `${MAX_MISSES} hearts left`);
+    heartsEl.setAttribute("aria-label", TEXT.hearts(MAX_MISSES));
     Object.values(keys).forEach((k) => { k.className = "wd-key"; k.disabled = false; });
     sizeTiles();
-    say(`New word: ${word.length} letters.`);
+    say(TEXT.sayNew(word.length));
   }
 
   const say = (t) => { live.textContent = t; };
@@ -176,14 +242,14 @@
   function loseHeart(i) {
     const h = heartsEl.children[MAX_MISSES - 1 - i];
     h?.classList.add("is-gone");
-    heartsEl.setAttribute("aria-label", `${MAX_MISSES - i - 1} hearts left`);
+    heartsEl.setAttribute("aria-label", TEXT.hearts(MAX_MISSES - i - 1));
     wordEl.classList.remove("is-bonk");
     void wordEl.offsetWidth;
     wordEl.classList.add("is-bonk");
   }
 
   function guess(letter) {
-    if (done || !/^[A-Z]$/.test(letter) || tried.includes(letter)) return;
+    if (done || !LETTER.test(letter) || !keys[letter] || tried.includes(letter)) return;
     tried.push(letter);
     const key = keys[letter];
     key.disabled = true;
@@ -193,7 +259,7 @@
     if (at.length) {
       key.classList.add("is-hit");
       found += at.length;
-      say(at.length > 1 ? `${letter} is in the word ${at.length} times.` : `${letter} is in the word.`);
+      say(TEXT.sayHit(letter, at.length));
       at.forEach((i, n) => {
         flyHit(key, slots[i], letter, n * 70).then(() => {
           slots[i].querySelector(".wd-tile").textContent = letter;
@@ -210,7 +276,7 @@
       const i = misses.length;
       misses.push(letter);
       const slot = missEl.children[i];
-      say(`No ${letter}. ${MAX_MISSES - misses.length} hearts left.`);
+      say(TEXT.sayMiss(letter, MAX_MISSES - misses.length));
       flyMiss(key, slot, letter, () => loseHeart(i)).then(() => {
         slot.querySelector(".wd-tile").textContent = letter;
         slot.classList.add("is-filled");
@@ -239,37 +305,37 @@
     const perfect = won && m === 0;
     const total = won ? (400 + acc + (perfect ? 250 : 0)) * (perfect ? 2 : 1) : 0;
     const stars = !won ? 0 : m === 0 ? 3 : m <= 2 ? 2 : 1;
-    const title = !won ? "Out of hearts" : perfect ? "Perfect!" : m <= 2 ? "Nice one!" : "Phew!";
+    const title = !won ? TEXT.out : perfect ? TEXT.perfect : m <= 2 ? TEXT.nice : TEXT.phew;
     if (won) { streak += 1; score += total; } else { streak = 0; }
     if (score > best) store.set("favalia.wordduel.best", String(score));
 
     const tile = Math.max(22, Math.min(38, Math.floor(300 / word.length) - 5));
     const answer = [...word].map((c) => `<span class="wd-tile">${c}</span>`).join("");
-    const missesTxt = m === 0 ? "no misses" : `${m} miss${m > 1 ? "es" : ""}`;
+    const missesTxt = TEXT.missesTxt(m);
     result.innerHTML = `
       <div class="wd-card" role="dialog" aria-modal="false" aria-labelledby="wd-title">
-        <div class="wd-stars" aria-label="${stars} of 3 stars">${[0, 1, 2].map((i) => `<span class="${i < stars ? "on" : ""}" style="--i:${i}">★</span>`).join("")}</div>
+        <div class="wd-stars" aria-label="${TEXT.stars(stars)}">${[0, 1, 2].map((i) => `<span class="${i < stars ? "on" : ""}" style="--i:${i}">★</span>`).join("")}</div>
         <h3 class="wd-title ${won ? "" : "is-lost"}" id="wd-title">${title}</h3>
         <div class="wd-answer ${won ? (perfect ? "is-gold" : "is-green") : "is-red"}" style="--tile:${tile}px">${answer}</div>
         ${won ? `
         <dl class="wd-rows">
-          <div><dt>Solved</dt><dd>+400</dd></div>
-          <div><dt>Accuracy <small>${missesTxt}</small></dt><dd>+${acc}</dd></div>
-          ${perfect ? '<div><dt>Perfect bonus <small>not a single miss</small></dt><dd class="gold">+250</dd></div>' : ""}
+          <div><dt>${TEXT.solved}</dt><dd>+400</dd></div>
+          <div><dt>${TEXT.accuracy} <small>${missesTxt}</small></dt><dd>+${acc}</dd></div>
+          ${perfect ? `<div><dt>${TEXT.bonus} <small>${TEXT.bonusNote}</small></dt><dd class="gold">+250</dd></div>` : ""}
         </dl>
-        <div class="wd-total"><span>Total${perfect ? "<em>×2</em>" : ""}</span><b data-total>0</b></div>` : `
-        <p class="wd-lost">The word was <b>${word}</b>. Six misses and it's gone, but your next word is waiting.</p>`}
+        <div class="wd-total"><span>${TEXT.total}${perfect ? "<em>×2</em>" : ""}</span><b data-total>0</b></div>` : `
+        <p class="wd-lost">${TEXT.lost(word)}</p>`}
         <div class="wd-actions">
-          <button class="wd-next" type="button" data-next>Next word →</button>
-          <button class="wd-share" type="button" data-share aria-label="Share your result">${icon.share}</button>
+          <button class="wd-next" type="button" data-next>${TEXT.next}</button>
+          <button class="wd-share" type="button" data-share aria-label="${TEXT.share}">${icon.share}</button>
         </div>
-        <p class="wd-cta">Duel a friend on the same words in the app. <a href="${APP_URL}">Get Word Duel</a></p>
+        <p class="wd-cta">${TEXT.cta} <a href="${APP_URL}">${TEXT.get}</a></p>
       </div>`;
     result.hidden = false;
     result.querySelector("[data-next]").focus({ preventScroll: true });
-    scoreEl.textContent = score.toLocaleString();
+    scoreEl.textContent = score.toLocaleString(LOCALE);
     streakEl.textContent = String(streak);
-    say(won ? `${title} The word was ${word}. ${total} points.` : `Out of hearts. The word was ${word}.`);
+    say(won ? TEXT.sayWon(title, word, total) : TEXT.sayLost(word));
 
     const totalEl = result.querySelector("[data-total]");
     if (totalEl) countUp(totalEl, total);
@@ -277,11 +343,11 @@
   }
 
   function countUp(el, to) {
-    if (reduce) { el.textContent = to.toLocaleString(); return; }
+    if (reduce) { el.textContent = to.toLocaleString(LOCALE); return; }
     const t0 = performance.now(), dur = 700;
     const step = (t) => {
       const p = Math.min(1, (t - t0) / dur);
-      el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))).toLocaleString();
+      el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))).toLocaleString(LOCALE);
       if (p < 1) requestAnimationFrame(step);
     };
     requestAnimationFrame(step);
@@ -304,8 +370,8 @@
 
   async function share(btn) {
     const squares = tried.map((l) => (word.includes(l) ? "🟩" : "🟥")).join("");
-    const text = `Word Duel · ${word.length} letters · ${misses.length === 0 ? "perfect" : misses.length + " misses"}\n${squares}`;
-    const url = "https://favalia.ca/word-duel/";
+    const text = `${TEXT.shareText(word.length, misses.length)}\n${squares}`;
+    const url = `https://favalia.ca/${LANG === "en" ? "" : LANG + "/"}word-duel/`;
     try {
       if (navigator.share && matchMedia("(pointer: coarse)").matches) {
         await navigator.share({ text, url });
@@ -313,9 +379,9 @@
       }
       await navigator.clipboard.writeText(`${text}\n${url}`);
       btn.classList.add("is-copied");
-      btn.setAttribute("aria-label", "Copied");
-      say("Result copied.");
-      setTimeout(() => { btn.classList.remove("is-copied"); btn.setAttribute("aria-label", "Share your result"); }, 1600);
+      btn.setAttribute("aria-label", TEXT.copied);
+      say(TEXT.sayCopied);
+      setTimeout(() => { btn.classList.remove("is-copied"); btn.setAttribute("aria-label", TEXT.share); }, 1600);
     } catch { /* cancelled or blocked */ }
   }
 
@@ -335,7 +401,7 @@
     if (!onScreen || e.metaKey || e.ctrlKey || e.altKey) return;
     if (e.target.closest?.("input, textarea, select, [contenteditable], dialog[open]") || document.querySelector("dialog[open]")) return;
     const k = e.key.toUpperCase();
-    if (/^[A-Z]$/.test(k)) { e.preventDefault(); guess(k); }
+    if (LETTER.test(k) && keys[k]) { e.preventDefault(); guess(k); }
     else if (e.key === "Enter" && !result.hidden && document.activeElement?.closest?.("[data-result]") == null) { e.preventDefault(); newWord(); }
   });
 

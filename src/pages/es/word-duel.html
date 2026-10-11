@@ -1,0 +1,151 @@
+<!--{
+  "out": "word-duel/index.html",
+  "title": "Word Duel: Batalla de letras · Adivina la palabra, reta a tus amigos · Favalia",
+  "ogTitle": "Word Duel: una palabra oculta, seis corazones, una letra cada vez",
+  "description": "Una palabra oculta. Seis corazones. Una letra cada vez. Juega en solitario o reta a tus amigos con las mismas palabras, en español, inglés o francés. Gratis en iPhone y iPad. Prueba la demo aquí.",
+  "og": "word-duel",
+  "nav": "word-duel",
+  "jsonld": "game:word-duel",
+  "scripts": [
+    "demo-word-duel.js"
+  ],
+  "extraHead": "<meta name=\"apple-itunes-app\" content=\"app-id=6814167260\">"
+}-->
+<main id="main">
+
+  <section class="g-hero wd-hero">
+    <div class="confetti-dots" aria-hidden="true"></div>
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Ruta de navegación"><a href="../">Favalia</a><span aria-hidden="true">/</span><a href="../#games">Juegos</a><span aria-hidden="true">/</span><span aria-current="page">Word Duel</span></nav>
+      <div class="g-hero-grid">
+        <div>
+          <h1 class="wd-logo" aria-label="Word Duel">
+            <span class="row" aria-hidden="true"><b style="--i:0">W</b><b style="--i:1">O</b><b style="--i:2">R</b><b style="--i:3">D</b></span>
+            <span class="row" aria-hidden="true"><b style="--i:4">D</b><b style="--i:5">U</b><b style="--i:6">E</b><b style="--i:7">L</b></span>
+          </h1>
+          <p class="g-sub">Batalla de letras</p>
+          <p class="g-pitch">Una palabra oculta. Seis corazones. Una letra cada vez. Toca una letra y volará a cada raya donde va. Si fallas, cae entre tus fallos y se lleva un corazón.</p>
+          <div class="g-ctas">
+            {{cta:word-duel}}
+            <a class="btn btn--clear" href="#play">Prueba la demo</a>
+          </div>
+          <div class="chips">
+            <span class="chip">Gratis</span><span class="chip">iPhone y iPad</span><span class="chip">Desde 4 años</span><span class="chip">English · Français · Español</span>
+          </div>
+        </div>
+        <div class="g-media">
+          <div class="device"><div class="screen"><video data-autoplay muted loop playsinline preload="none" poster="{{root}}assets/video/word-duel-poster.webp" aria-label="Partida de Word Duel"><source src="{{root}}assets/video/word-duel.mp4" type="video/mp4"></video></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="play">
+    <div class="wrap play-layout">
+      <div data-reveal>
+        <span class="tag">Demo jugable</span>
+        <h2 class="h2" style="margin-top:18px">Adivina<br>la palabra.</h2>
+        <p class="lede" style="margin-top:18px">Elige letras en el teclado (o escríbelas). Seis fallos y la palabra se pierde. Resuélvela sin un solo fallo y tu puntuación se duplica.</p>
+        <div class="legend">
+          <div><svg viewBox="0 0 56 40" aria-hidden="true"><rect x="12" y="2" width="32" height="34" rx="8" fill="#27c48b"/><text x="28" y="27" fill="#fff" font-family="Nunito, system-ui" font-weight="900" font-size="20" text-anchor="middle">E</text></svg><p><b>Letra correcta</b><span>Vuela a cada raya donde va.</span></p></div>
+          <div><svg viewBox="0 0 56 40" aria-hidden="true"><rect x="12" y="2" width="32" height="34" rx="8" fill="#ffc3ce"/><text x="28" y="27" fill="#c3244a" font-family="Nunito, system-ui" font-weight="900" font-size="20" text-anchor="middle">Q</text></svg><p><b>Letra incorrecta</b><span>Cae entre tus fallos y se lleva un corazón.</span></p></div>
+          <div><svg viewBox="0 0 56 40" aria-hidden="true"><g fill="#f6b93b"><path d="M10 12l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 25.4l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z"/><path d="M28 6l3 6.2 6.8.9-5 4.7 1.2 6.7-6-3.2-6 3.2 1.2-6.7-5-4.7 6.8-.9z"/><path d="M46 12l2.6 5.4 5.9.8-4.3 4.1 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z"/></g></svg><p><b>Palabra perfecta</b><span>Sin ningún fallo duplicas tu puntuación.</span></p></div>
+        </div>
+        <p class="muted" style="margin-top:26px;font-size:15px">La app añade duelos, tres niveles de dificultad, 500 niveles de jugador, avatares, estadísticas y palabras en inglés y francés.</p>
+      </div>
+      <div class="wd-demo" data-wd-demo data-appstore="{{appurl:word-duel}}">
+        <noscript><p style="padding:24px;text-align:center">Activa JavaScript para jugar la demo.</p></noscript>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div><span class="tag">Dos formas de jugar</span><h2 class="h2">En solitario.<br>O en duelo.</h2></div>
+        <p>Juega a tu ritmo o pon tus letras en juego contra un amigo. Mismas palabras, mismo reloj, y deciden los puntos.</p>
+      </div>
+      <div class="features">
+        <div class="feature" data-reveal><span class="big">Sin reloj</span><h3>Juega en solitario</h3><p>Las palabras en solitario no tienen reloj. Tómate tu tiempo, busca la palabra perfecta y encadena rachas. No necesitas cuenta: abre la app y juega.</p></div>
+        <div class="feature" data-reveal style="--delay:60ms"><span class="big">3 · 5 · 7</span><h3>Reta a un amigo con las mismas palabras</h3><p>A 3, 5 o 7 palabras. Los dos tienen las mismas palabras y los mismos dos minutos cada uno. Reta a un amigo, envía un enlace o enfréntate a un rival de tu nivel.</p></div>
+        <div class="feature" data-reveal style="--delay:120ms"><span class="big">×1 ×1.5 ×2</span><h3>Tres niveles</h3><p>Palabras cotidianas, de fáciles a difíciles. Las más difíciles dan más puntos, y una palabra perfecta lo duplica todo.</p></div>
+        <div class="feature" data-reveal><span class="big">1.ª letra</span><h3>Descubre cómo juegas de verdad</h3><p>Con qué frecuencia acierta tu primera letra, y la segunda, y la tercera, además de tus fallos por palabra, tus mejores categorías y tu racha más larga.</p></div>
+        <div class="feature" data-reveal style="--delay:60ms"><span class="big">ES EN FR</span><h3>Tu idioma</h3><p>Las palabras, el teclado (con la tecla Ñ en español y AZERTY en francés) y toda la app siguen tu idioma. No hacen falta tildes.</p></div>
+        <div class="feature" data-reveal style="--delay:120ms"><span class="big">500</span><h3>Niveles para subir</h3><p>Gana XP con cada palabra. Desbloquea 71 avatares, cinco insignias de Bronce a Diamante y estilos para tus fichas, tu teclado y tu confeti.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight section--alt">
+    <div class="wrap shots-wrap" data-rail>
+      <div class="sec-head" data-reveal>
+        <div><span class="tag">Capturas</span><h2 class="h2">Míralo en acción</h2></div>
+        <div class="shots-nav">
+          <button class="icon-btn" type="button" data-rail-step="-1" aria-label="Capturas anteriores">{{svg:chev-left}}</button>
+          <button class="icon-btn" type="button" data-rail-step="1" aria-label="Capturas siguientes">{{svg:chev-right}}</button>
+        </div>
+      </div>
+      <div class="shots shots--portrait">
+        <button class="shot" type="button" data-lightbox="{{root}}assets/img/word-duel/6-home.webp"><img src="{{root}}assets/img/word-duel/6-home.webp" alt="Pantalla de inicio con tu nivel, tu racha y un botón para jugar una palabra" width="720" height="1564" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="{{root}}assets/img/word-duel/2-game.webp"><img src="{{root}}assets/img/word-duel/2-game.webp" alt="Una palabra en curso: G, A y R encontradas, Q y Z falladas" width="720" height="1564" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="{{root}}assets/img/word-duel/3-perfect.webp"><img src="{{root}}assets/img/word-duel/3-perfect.webp" alt="Una palabra perfecta, PLANET, que vale 2100 puntos" width="720" height="1564" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="{{root}}assets/img/word-duel/4-duels.webp"><img src="{{root}}assets/img/word-duel/4-duels.webp" alt="Un duelo a 3 palabras entre dos jugadores" width="720" height="1564" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="{{root}}assets/img/word-duel/5-stats.webp"><img src="{{root}}assets/img/word-duel/5-stats.webp" alt="Estadísticas: letra a letra y fallos por palabra" width="720" height="1564" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="{{root}}assets/img/word-duel/1-name.webp"><img src="{{root}}assets/img/word-duel/1-name.webp" alt="El logo de Word Duel" width="720" height="1564" loading="lazy"></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap" style="max-width:920px">
+      <div data-reveal><span class="tag">Preguntas</span><h2 class="h2" style="margin:18px 0 32px">Lo que hay que saber</h2></div>
+      <div class="faq" data-reveal>
+        <details>
+          <summary>¿Word Duel es gratis?</summary>
+          <div class="answer"><p>Sí, Word Duel es gratis. Las compras opcionales quitan los anuncios (al mes o para siempre) o dan monedas, que te dan un corazón más en una palabra. Las monedas nunca son necesarias para jugar. Los precios se muestran en el App Store antes de comprar.</p></div>
+        </details>
+        <details>
+          <summary>¿Necesito una cuenta?</summary>
+          <div class="answer"><p>No para jugar en solitario: abre la app y juega. Con una cuenta puedes retar a tus amigos, enfrentarte a rivales, aparecer en la clasificación y conservar tu progreso. Tu progreso en solitario se mantiene al registrarte.</p></div>
+        </details>
+        <details>
+          <summary>¿Cómo se decide un duelo?</summary>
+          <div class="answer"><p>Tú y tu rival tienen las mismas palabras, con dos minutos cada uno por palabra. Los puntos dependen de lo rápido que resuelves, de las pocas letras que desperdicias y de si lo lograste sin un solo fallo. Gana el total más alto, y todos reciben una puntuación en la clasificación.</p></div>
+        </details>
+        <details>
+          <summary>¿En qué idiomas puedo jugar?</summary>
+          <div class="answer"><p>En español, inglés y francés. Elige tu idioma y las palabras, el teclado y toda la app cambian con él. Las tildes son opcionales mientras juegas: la respuesta las muestra al final.</p></div>
+        </details>
+        <details>
+          <summary>Necesito ayuda con mi cuenta o una compra</summary>
+          <div class="answer"><p>Visita el <a href="{{game:word-duel:support}}">soporte de Word Duel</a> o escribe a <a href="mailto:{{site:email}}?subject=Word%20Duel">{{site:email}}</a>. Incluye tu nombre de jugador y lo que pasó.</p></div>
+        </details>
+      </div>
+      <div class="faq-foot">
+        <a class="arrow-link" href="{{game:word-duel:support}}">Soporte {{svg:arrow}}</a>
+        <a class="arrow-link" href="{{game:word-duel:privacy}}">Política de privacidad {{svg:arrow}}</a>
+        <a class="arrow-link" href="{{game:word-duel:terms}}">Términos de uso (en inglés) {{svg:arrow}}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <div>
+        <h2>¿Listo para un duelo?</h2>
+        <p>Descarga Word Duel gratis, juega tu primera palabra en segundos y luego reta a un amigo con las mismas palabras.</p>
+      </div>
+      <div class="actions">{{cta:word-duel}}<a class="btn btn--ghost" href="#play">Prueba la demo</a></div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div data-reveal style="margin-bottom:28px"><span class="tag">Más de Favalia</span></div>
+      <div class="more">
+        <a href="../inki-run/" data-reveal><img src="{{root}}assets/img/inki-run/icon.webp" alt="" width="76" height="76" loading="lazy"><span><b>Inki Run</b><small>Dibuja líneas. Salva al corredor.</small></span>{{svg:arrow}}</a>
+        <a href="../inki-ace/" data-reveal style="--delay:80ms"><img src="{{root}}assets/img/inki-ace/icon.webp" alt="" width="76" height="76" loading="lazy"><span><b>Inki Ace</b><small>Combate aéreo arcade a tinta.</small></span>{{svg:arrow}}</a>
+      </div>
+    </div>
+  </section>
+</main>

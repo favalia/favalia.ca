@@ -1,13 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://favalia.ca/</loc></url>
-  <url><loc>https://favalia.ca/inki-ace/privacy/</loc></url>
-  <url><loc>https://favalia.ca/inki-ace/support/</loc></url>
-  <url><loc>https://favalia.ca/inki-ace/</loc></url>
-  <url><loc>https://favalia.ca/inki-run/privacy/</loc></url>
-  <url><loc>https://favalia.ca/inki-run/support/</loc></url>
-  <url><loc>https://favalia.ca/inki-run/</loc></url>
-  <url><loc>https://favalia.ca/privacy/</loc></url>
-  <url><loc>https://favalia.ca/support/</loc></url>
-  <url><loc>https://favalia.ca/word-duel/</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://favalia.ca/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/"/>
+  </url>
+  <url><loc>https://favalia.ca/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/"/>
+  </url>
+  <url><loc>https://favalia.ca/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/"/>
+  </url>
+  <url><loc>https://favalia.ca/inki-ace/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/inki-ace/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/inki-ace/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/inki-ace/privacy/"/>
+  </url>
+  <url><loc>https://favalia.ca/fr/inki-ace/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/inki-ace/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/inki-ace/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/inki-ace/privacy/"/>
+  </url>
+  <url><loc>https://favalia.ca/es/inki-ace/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/inki-ace/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/inki-ace/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/inki-ace/privacy/"/>
+  </url>
+  <url><loc>https://favalia.ca/inki-ace/support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/inki-ace/support/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/inki-ace/support/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/inki-ace/support/"/>
+  </url>
+  <url><loc>https://favalia.ca/fr/inki-ace/support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/inki-ace/support/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/inki-ace/support/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/inki-ace/support/"/>
+  </url>
+  <url><loc>https://favalia.ca/es/inki-ace/support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/inki-ace/support/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/inki-ace/support/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/inki-ace/support/"/>
+  </url>
+  <url><loc>https://favalia.ca/inki-ace/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/inki-ace/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/inki-ace/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/inki-ace/"/>
+  </url>
+  <url><loc>https://favalia.ca/fr/inki-ace/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/inki-ace/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/inki-ace/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/inki-ace/"/>
+  </url>
+  <url><loc>https://favalia.ca/es/inki-ace/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/inki-ace/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/inki-ace/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/inki-ace/"/>
+  </url>
+  <url><loc>https://favalia.ca/inki-run/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/inki-run/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/inki-run/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/inki-run/privacy/"/>
+  </url>
+  <url><loc>https://favalia.ca/fr/inki-run/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/inki-run/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/inki-run/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/inki-run/privacy/"/>
+  </url>
+  <url><loc>https://favalia.ca/es/inki-run/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/inki-run/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/inki-run/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/inki-run/privacy/"/>
+  </url>
+  <url><loc>https://favalia.ca/inki-run/support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/inki-run/support/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/inki-run/support/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/inki-run/support/"/>
+  </url>
+  <url><loc>https://favalia.ca/fr/inki-run/support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/inki-run/support/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/inki-run/support/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/inki-run/support/"/>
+  </url>
+  <url><loc>https://favalia.ca/es/inki-run/support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/inki-run/support/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/inki-run/support/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/inki-run/support/"/>
+  </url>
+  <url><loc>https://favalia.ca/inki-run/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/inki-run/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/inki-run/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/inki-run/"/>
+  </url>
+  <url><loc>https://favalia.ca/fr/inki-run/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/inki-run/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/inki-run/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/inki-run/"/>
+  </url>
+  <url><loc>https://favalia.ca/es/inki-run/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/inki-run/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/inki-run/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/inki-run/"/>
+  </url>
+  <url><loc>https://favalia.ca/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/privacy/"/>
+  </url>
+  <url><loc>https://favalia.ca/fr/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/privacy/"/>
+  </url>
+  <url><loc>https://favalia.ca/es/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/privacy/"/>
+  </url>
+  <url><loc>https://favalia.ca/support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/support/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/support/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/support/"/>
+  </url>
+  <url><loc>https://favalia.ca/fr/support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/support/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/support/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/support/"/>
+  </url>
+  <url><loc>https://favalia.ca/es/support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/support/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/support/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/support/"/>
+  </url>
+  <url><loc>https://favalia.ca/word-duel/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/word-duel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/word-duel/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/word-duel/"/>
+  </url>
+  <url><loc>https://favalia.ca/fr/word-duel/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/word-duel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/word-duel/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/word-duel/"/>
+  </url>
+  <url><loc>https://favalia.ca/es/word-duel/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/word-duel/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/word-duel/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/word-duel/"/>
+  </url>
 </urlset>

@@ -16,6 +16,7 @@
   .url { position: absolute; right: 64px; bottom: 48px; font: 700 20px/1 var(--f-display); letter-spacing: .06em; }
   /* Studio */
   .og-studio .hero-title { position: absolute; left: 64px; top: 92px; margin: 0; font-size: 92px; }
+  html[lang="fr"] .og-studio .hero-title, html[lang="es"] .og-studio .hero-title { font-size: 84px; }
   .og-studio .tag { position: absolute; left: 64px; top: 52px; }
   .og-studio .icons { position: absolute; right: 70px; top: 120px; width: 380px; height: 380px; }
   .og-studio .icons img { position: absolute; width: 196px; height: 196px; border-radius: 44px; box-shadow: 0 0 0 2px #1b1b1d, 10px 10px 0 #1b1b1d; }
@@ -30,7 +31,7 @@
   .og-ia { background-image: url(../assets/img/inki-ace/header.webp); }
   /* Inki Run */
   .og-ir .ink-word { position: absolute; left: 64px; top: 70px; font-size: 120px; }
-  .og-ir .g-sub { position: absolute; left: 68px; top: 390px; margin: 0; font-size: 22px; }
+  .og-ir .g-sub { position: absolute; left: 68px; top: 384px; margin: 0; font-size: 22px; max-width: 470px; line-height: 1.45; }
   .og-ir .device { position: absolute; right: 56px; top: 150px; width: 560px; rotate: -3deg; }
   .og-ir .ground { position: absolute; left: 0; right: 0; bottom: 0; height: 40px; border-top: 3px solid #1b1b1d; }
 </style>
@@ -56,7 +57,23 @@
   <div class="ground"></div>
 </div>
 <script>
-  var g = new URLSearchParams(location.search).get("g") || "favalia";
+  var q = new URLSearchParams(location.search);
+  var g = q.get("g") || "favalia", l = q.get("l") || "en";
+  var T = {
+    en: { tag: "Independent game studio", tiles: "SPELL", lines: ["it.", "Draw it.", "Fly it."], wd: "Free on iPhone &amp; iPad", ia: "Arcade doodle plane shooter", ir: "Draw lines. Save the runner.", url: "favalia.ca" },
+    fr: { tag: "Studio de jeux indépendant", tiles: "DEVINE", lines: [".", "Dessine.", "Pilote."], wd: "Gratuit sur iPhone et iPad", ia: "Combat aérien d'arcade à l'encre", ir: "Trace la voie. Sauve le coureur.", url: "favalia.ca/fr" },
+    es: { tag: "Estudio de juegos independiente", tiles: "ADIVINA", lines: [".", "Dibuja.", "Vuela."], wd: "Gratis en iPhone y iPad", ia: "Combate aéreo arcade a tinta", ir: "Dibuja líneas. Salva al corredor.", url: "favalia.ca/es" }
+  }[l];
+  document.documentElement.lang = l;
+  document.querySelector("#favalia .tag").textContent = T.tag;
+  var tiles = T.tiles.split("").map(function (c, i) { return '<b style="--i:' + i + ';animation:none">' + c + "</b>"; }).join("");
+  var h = document.querySelector("#favalia .hero-title");
+  h.classList.toggle("ht-tight", l !== "en");
+  h.innerHTML = '<span class="ht-line"><span class="ht-tiles">' + tiles + "</span>" + T.lines[0] + '</span><span class="ht-line">' + T.lines[1] + '</span><span class="ht-line">' + T.lines[2] + "</span>";
+  document.querySelector("#favalia .url").textContent = T.url;
+  document.querySelector("#word-duel .badge").innerHTML = T.wd;
+  document.querySelector("#inki-ace .badge").textContent = T.ia;
+  document.querySelector("#inki-run .g-sub").textContent = T.ir;
   document.querySelectorAll(".card").forEach(function (c) { c.hidden = c.id !== g; });
 </script>
 </body>

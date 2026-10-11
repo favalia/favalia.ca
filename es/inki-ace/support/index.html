@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+
+<!-- Consent first: Google Analytics 4 (G-HVNQKNVL5X) and Tag Manager (GTM-NFJ4XBCJ) only load after the visitor
+     agrees (assets/js/consent.js shows the banner). Google Consent Mode v2 starts with everything denied. -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+  analytics_storage: 'denied', personalization_storage: 'denied',
+  functionality_storage: 'granted', security_storage: 'granted'
+});
+gtag('set', 'ads_data_redaction', true);
+(function (w, d) {
+  var GA = 'G-HVNQKNVL5X', GTM = 'GTM-NFJ4XBCJ', KEY = 'favalia-consent', VERSION = 1, MAX_AGE = 365 * 864e5;
+  var loaded = {}, choice = null;
+  function add(src) { var s = d.createElement('script'); s.async = true; s.src = src; d.head.appendChild(s); }
+  function apply(c) {
+    gtag('consent', 'update', {
+      analytics_storage: c.analytics ? 'granted' : 'denied',
+      ad_storage: c.marketing ? 'granted' : 'denied',
+      ad_user_data: c.marketing ? 'granted' : 'denied',
+      ad_personalization: c.marketing ? 'granted' : 'denied'
+    });
+    if (c.analytics && !loaded.ga) { loaded.ga = 1; add('https://www.googletagmanager.com/gtag/js?id=' + GA); gtag('js', new Date()); gtag('config', GA); }
+    if ((c.analytics || c.marketing) && !loaded.gtm) { loaded.gtm = 1; w.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); add('https://www.googletagmanager.com/gtm.js?id=' + GTM); }
+    w.dataLayer.push({ event: 'favalia_consent', consent_analytics: !!c.analytics, consent_marketing: !!c.marketing });
+  }
+  try { choice = JSON.parse(localStorage.getItem(KEY)); } catch (e) {}
+  if (!choice || choice.v !== VERSION || !(Date.now() - choice.t < MAX_AGE)) choice = null;
+  w.favaliaConsent = {
+    get: function () { return choice; },
+    save: function (analytics, marketing) {
+      choice = { v: VERSION, t: Date.now(), analytics: !!analytics, marketing: !!marketing };
+      try { localStorage.setItem(KEY, JSON.stringify(choice)); } catch (e) {}
+      apply(choice);
+      return choice;
+    }
+  };
+  if (choice) apply(choice);
+})(window, document);
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Soporte de Inki Ace · Favalia</title>
+<meta name="description" content="Ayuda con Inki Ace: cómo se juega, anuncios, progreso, notificaciones y cómo contactarnos.">
+<link rel="canonical" href="https://favalia.ca/es/inki-ace/support/">
+<meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f0f10" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Favalia">
+<meta property="og:locale" content="es_ES">
+<link rel="alternate" hreflang="en" href="https://favalia.ca/inki-ace/support/">
+<link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/inki-ace/support/">
+<link rel="alternate" hreflang="es" href="https://favalia.ca/es/inki-ace/support/">
+<link rel="alternate" hreflang="x-default" href="https://favalia.ca/inki-ace/support/">
+<meta property="og:locale:alternate" content="en_CA">
+<meta property="og:locale:alternate" content="fr_CA">
+<meta property="og:title" content="Soporte de Inki Ace · Favalia">
+<meta property="og:description" content="Ayuda con Inki Ace: cómo se juega, anuncios, progreso, notificaciones y cómo contactarnos.">
+<meta property="og:url" content="https://favalia.ca/es/inki-ace/support/">
+<meta property="og:image" content="https://favalia.ca/assets/img/og/inki-ace-es.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Soporte de Inki Ace · Favalia">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="manifest" href="../../../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700;800&family=Nunito:wght@800;900&display=swap">
+<link rel="stylesheet" href="../../../assets/css/site.css?v=651d44ea">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('favalia-theme');if(t==='light'||t==='dark')d.dataset.theme=t;}catch(e){}})();</script>
+
+</head>
+<body class="">
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Menú principal">
+    <a class="brand" href="../../../es/" aria-label="Inicio de Favalia"><svg class="logo-tile" viewBox="0 0 40 40" aria-hidden="true"><g transform="rotate(-8 20 20)"><rect class="s" x="7.5" y="7.5" width="28" height="28" rx="7"/><rect class="t" x="4.5" y="4.5" width="28" height="28" rx="7" stroke-width="2.6"/><path class="f" d="M12.5 10.5h12.2v4.1h-7.6v3h6.6v3.9h-6.6v7h-4.6z"/></g></svg><span>Favalia</span></a>
+    <ul class="nav-links">
+      <li><a href="../../../es/word-duel/"><img src="../../../assets/img/word-duel/icon.webp" alt="" width="22" height="22">Word Duel</a></li>
+      <li><a href="../../../es/inki-run/"><img src="../../../assets/img/inki-run/icon.webp" alt="" width="22" height="22">Inki Run</a></li>
+      <li><a href="../../../es/inki-ace/" aria-current="page"><img src="../../../assets/img/inki-ace/icon.webp" alt="" width="22" height="22">Inki Ace</a></li>
+      <li><a href="../../../es/support/">Soporte</a></li>
+    </ul>
+    <div class="nav-tools">
+      <div class="lang-nav" role="group" aria-label="Idioma">
+        <a href="../../../inki-ace/support/" hreflang="en" lang="en" title="English" data-lang-switch="en">EN</a>
+        <a href="../../../fr/inki-ace/support/" hreflang="fr" lang="fr" title="Français" data-lang-switch="fr">FR</a>
+        <a href="./" hreflang="es" lang="es" title="Español" data-lang-switch="es" aria-current="true">ES</a>
+      </div>
+      <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Cambiar tema"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.6A8.3 8.3 0 0 1 9.4 4a8.3 8.3 0 1 0 10.6 10.6z"/><path d="M16.5 3.5l.5 1.5 1.5.5-1.5.5-.5 1.5-.5-1.5-1.5-.5 1.5-.5z" fill="currentColor" stroke-width="1"/></svg></button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-controls="site-menu" aria-expanded="false" aria-label="Abrir el menú"><svg class="bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+  </nav>
+</header>
+<div class="mobile-menu" id="site-menu" hidden>
+  <a href="../../../es/word-duel/"><img src="../../../assets/img/word-duel/icon.webp" alt="" width="44" height="44"><span>Word Duel<small>Juego de palabras · En el App Store</small></span></a>
+  <a href="../../../es/inki-run/"><img src="../../../assets/img/inki-run/icon.webp" alt="" width="44" height="44"><span>Inki Run<small>Carrera de dibujo · Próximamente</small></span></a>
+  <a href="../../../es/inki-ace/"><img src="../../../assets/img/inki-ace/icon.webp" alt="" width="44" height="44"><span>Inki Ace<small>Combate aéreo · Próximamente</small></span></a>
+  <a href="../../../es/support/"><span>Soporte<small>Ayuda, privacidad y contacto</small></span></a>
+  <div class="mm-lang" role="group" aria-label="Idioma">
+    <a href="../../../inki-ace/support/" hreflang="en" lang="en" data-lang-switch="en">English</a>
+    <a href="../../../fr/inki-ace/support/" hreflang="fr" lang="fr" data-lang-switch="fr">Français</a>
+    <a href="./" hreflang="es" lang="es" data-lang-switch="es" aria-current="true">Español</a>
+  </div>
+  <p class="mm-foot">Juegos para iPhone y iPad · <a href="mailto:supportwordduel@gmail.com" style="all:unset;cursor:pointer;text-decoration:underline">supportwordduel@gmail.com</a></p>
+</div>
+<main id="main">
+  <section class="doc-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Ruta de navegación"><a href="../../">Favalia</a><span aria-hidden="true">/</span><a href="../">Inki Ace</a><span aria-hidden="true">/</span><span aria-current="page">Soporte</span></nav>
+      <div class="row"><img src="../../../assets/img/inki-ace/icon.webp" alt="" width="60" height="60"><span class="tag">Inki Ace · Soporte</span></div>
+      <h1>¿Necesitas ayuda?</h1>
+      <p class="meta">Preguntas, errores o ideas: escríbenos cuando quieras.</p>
+      <nav class="doc-tabs" aria-label="Páginas de Inki Ace"><a href="../">El juego</a><a href="../support/" aria-current="page">Soporte</a><a href="../privacy/">Política de privacidad</a></nav>
+    </div>
+  </section>
+  <div class="wrap">
+    <article class="doc">
+    <div class="note">
+    <p><b>Correo</b></p>
+    <p><a class="mail" href="mailto:supportwordduel@gmail.com?subject=Inki%20Ace">supportwordduel@gmail.com</a></p>
+    <p class="muted" style="font-size:15px">Incluye tu modelo de iPhone o iPad, tu versión de iOS, la etapa (por ejemplo 3-5) y lo que pasó (una captura de pantalla ayuda).</p>
+    </div>
+
+    <h2>VOLAR</h2>
+    <h3>¿Cómo se juega?</h3>
+    <p>Mantén el dedo en cualquier parte de la pantalla y arrastra: tu avión sigue tu dedo a la izquierda, a la derecha, hacia delante y hacia atrás. Las armas disparan solas. Toca dos veces para hacer un tonel (los puntos junto a ROLL indican cuántos te quedan) y toca el botón redondo de abajo a la derecha para soltar una bomba de tinta.</p>
+    <h3>El juego fue más lento y luego se pausó</h3>
+    <p>Eso pasa cuando levantas el dedo: el tiempo va más lento y luego el juego se pausa. Vuelve a poner el dedo en la pantalla para seguir volando. Salir de la app también pausa el juego.</p>
+    <h3>Combustible y vidas</h3>
+    <ul>
+    <li>El <b>combustible</b> se gasta mientras vuelas. Atrapa los bidones y barriles con paracaídas, y pasa bajo el globo Sky Pump para repostar. Si el tanque se vacía, termina la etapa.</li>
+    <li>Las <b>vidas</b> son los avioncitos de arriba a la izquierda. Cada impacto cuesta una; con la última te derriban. Una placa de blindaje aguanta un golpe por ti.</li>
+    </ul>
+    <h3>Armas</h3>
+    <p>Abre a disparos las cajas que flotan en el aire y atrapa la letra que quieras: M Twin Nib, S Splatter, H Scribble, C Ink Cannon, L Quill Beam, Z Zigzag Bolt. Atrapar la misma letra otra vez la mejora.</p>
+    <h3>Velocidad de movimiento</h3>
+    <p>Si el avión se mueve demasiado o muy poco con tu dedo, cambia MOVE SPEED en los ajustes.</p>
+
+    <h2>ETAPAS Y AVIONES</h2>
+    <h3>¿Cómo abro el siguiente mundo?</h3>
+    <p>Vence al jefe del mundo (etapa 10) y reúne suficientes estrellas: 20 estrellas por cada mundo terminado. Repite etapas para ganar las tres estrellas.</p>
+    <h3>¿Cómo desbloqueo aviones?</h3>
+    <p>Abre SETTINGS en la pantalla de inicio. Cada avión, pintura y extra bloqueado muestra lo que necesita: un número de estrellas, vencer a un jefe o un secreto.</p>
+
+    <h2>ANUNCIOS</h2>
+    <h3>¿Cuándo aparecen los anuncios?</h3>
+    <p>Los anuncios solo aparecen entre etapas, nunca durante un vuelo, y no en tus primeras etapas. Cada 7 minutos el juego te ofrece un trato: mira un anuncio corto y no verás ningún otro durante los 7 minutos siguientes. Si dices que no, de vez en cuando se reproduce un anuncio corto entre etapas (como mucho cada 2 etapas y 2 minutos).</p>
+    <h3>¿Cómo desactivo los anuncios personalizados?</h3>
+    <p>En tu iPhone o iPad, abre <b>Ajustes › Privacidad y seguridad › Rastreo</b> y desactiva Inki Ace. En el EEE, el Reino Unido y Suiza también puedes cambiar tus opciones con <b>AD CHOICES</b> en los ajustes del juego. Más detalles en la <a href="../privacy/">política de privacidad</a>.</p>
+
+    <h2>PROGRESO Y AJUSTES</h2>
+    <h3>¿Dónde se guarda mi progreso?</h3>
+    <p>Las etapas, las estrellas, los aviones desbloqueados y el aspecto de tu avión se guardan en tu dispositivo. Vuelven con una copia de seguridad de iCloud o del ordenador, pero borrar la app los elimina. No hay cuenta.</p>
+    <h3>¿No hay sonido?</h3>
+    <p>Comprueba que SOUND esté activado (ON) en los ajustes del juego. En iPhone, el juego respeta el interruptor de silencio.</p>
+    <h3>Notificaciones</h3>
+    <p>Con las notificaciones activadas, recibes algunos recordatorios después de dejar de jugar (un día, 3 días, una semana y dos semanas después, nunca de noche, y luego se detienen) y, de vez en cuando, alguna novedad del juego, como un mundo nuevo. Actívalas o desactívalas con NOTIFICATIONS en los ajustes del juego, pestaña GAME. Si no se activan, permite las notificaciones de Inki Ace en Ajustes › Notificaciones de tu dispositivo.</p>
+    <h3>¿Claro u oscuro?</h3>
+    <p>En los ajustes del juego, THEME puede ser DAY (día), NIGHT (noche) o AUTO (sigue la apariencia de tu dispositivo).</p>
+    </article>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="../../../es/"><svg class="logo-tile" viewBox="0 0 40 40" aria-hidden="true"><g transform="rotate(-8 20 20)"><rect class="s" x="7.5" y="7.5" width="28" height="28" rx="7"/><rect class="t" x="4.5" y="4.5" width="28" height="28" rx="7" stroke-width="2.6"/><path class="f" d="M12.5 10.5h12.2v4.1h-7.6v3h6.6v3.9h-6.6v7h-4.6z"/></g></svg><span>Favalia</span></a>
+        <p>Juegos pequeños y cuidados para iPhone y iPad. Un pulgar para jugar, un minuto para aprender.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Juegos</h4>
+        <ul>
+          <li><a href="../../../es/word-duel/">Word Duel</a></li>
+          <li><a href="../../../es/inki-run/">Inki Run</a></li>
+          <li><a href="../../../es/inki-ace/">Inki Ace</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Ayuda</h4>
+        <ul>
+          <li><a href="../../../es/support/">Soporte</a></li>
+          <li><a href="https://worddue-production.up.railway.app/es/privacy">Privacidad de Word Duel</a></li>
+          <li><a href="../../../es/inki-run/privacy/">Privacidad de Inki Run</a></li>
+          <li><a href="../../../es/inki-ace/privacy/">Privacidad de Inki Ace</a></li>
+          <li><a href="../../../es/privacy/">Privacidad del sitio</a></li>
+          <li><button class="link-btn" type="button" data-consent-open>Configuración de cookies</button></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Escríbenos</h4>
+        <ul>
+          <li><a href="mailto:supportwordduel@gmail.com">supportwordduel@gmail.com</a></li>
+          <li><a href="../../../es/#studio">Sobre el estudio</a></li>
+        </ul>
+        <div class="foot-lang" role="group" aria-label="Idioma">
+          <a href="../../../inki-ace/support/" hreflang="en" lang="en" data-lang-switch="en">English</a>
+          <a href="../../../fr/inki-ace/support/" hreflang="fr" lang="fr" data-lang-switch="fr">Français</a>
+          <a href="./" hreflang="es" lang="es" data-lang-switch="es" aria-current="true">Español</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-word" aria-hidden="true">Favalia</div>
+  </div>
+  <div class="wrap foot-legal">
+    <span>© <span data-year>2026</span> Favalia · <button class="link-btn" type="button" data-consent-open>Configuración de cookies</button> · <strong class="made">¡Hecho con orgullo en Montreal, Quebec! <span aria-hidden="true">⚜</span></strong></span>
+    <span>Apple, el logotipo de Apple, iPhone y iPad son marcas comerciales de Apple Inc., registradas en EE. UU. y otros países. App Store es una marca de servicio de Apple Inc.</span>
+  </div>
+</footer>
+<script src="../../../assets/js/consent.js?v=ab2a3d40" data-privacy="../../../es/privacy/" defer></script>
+<script src="../../../assets/js/site.js?v=1b4f1c9e" defer></script>
+
+</body>
+</html>

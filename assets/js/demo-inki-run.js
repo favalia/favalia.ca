@@ -10,6 +10,36 @@
   const overlay = host.querySelector("[data-overlay]");
   const ctx = canvas.getContext("2d");
 
+  const LANG = ["fr", "es"].includes((document.documentElement.lang || "").slice(0, 2)) ? document.documentElement.lang.slice(0, 2) : "en";
+  const TX = {
+    en: {
+      tag: "Inki Run · Demo", title: "Draw the way",
+      intro: "Your runner never jumps. Draw a <b>bridge</b> over each hole and a <b>ramp</b> over each rock. Time slows down while you draw.",
+      start: "Start running", again: "Run again", best: "New best", over: "Run over", crash: "Crash!", fell: "He fell in!",
+      score: (m, b) => `${m} m · Best ${b} m`,
+      tipRock: "Start ramps on the ground, before the rock, then go up and over.",
+      tipHole: "Draw from edge to edge, and start a little before the hole.",
+      bridge: "DRAW A BRIDGE", ramp: "DRAW A RAMP", slow: "TIME SLOWED · KEEP DRAWING", noInk: "OUT OF INK · CLEAR AN OBSTACLE", hi: "HI",
+    },
+    fr: {
+      tag: "Inki Run · Démo", title: "Trace la voie",
+      intro: "Ton coureur ne saute jamais. Trace un <b>pont</b> au-dessus de chaque trou et une <b>rampe</b> par-dessus chaque rocher. Le temps ralentit pendant que tu dessines.",
+      start: "C'est parti", again: "Recommencer", best: "Nouveau record", over: "Fin de la course", crash: "Aïe\u202f!", fell: "Il est tombé\u202f!",
+      score: (m, b) => `${m} m · Record ${b} m`,
+      tipRock: "Commence tes rampes au sol, avant le rocher, puis monte par-dessus.",
+      tipHole: "Trace d'un bord à l'autre, en commençant un peu avant le trou.",
+      bridge: "TRACE UN PONT", ramp: "TRACE UNE RAMPE", slow: "TEMPS RALENTI · CONTINUE", noInk: "PLUS D'ENCRE · PASSE UN OBSTACLE", hi: "REC",
+    },
+    es: {
+      tag: "Inki Run · Demo", title: "Dibuja el camino",
+      intro: "Tu corredor nunca salta. Dibuja un <b>puente</b> sobre cada agujero y una <b>rampa</b> sobre cada roca. El tiempo va más lento mientras dibujas.",
+      start: "A correr", again: "Correr otra vez", best: "Nuevo récord", over: "Fin de la carrera", crash: "¡Choque!", fell: "¡Se cayó!",
+      score: (m, b) => `${m} m · Récord ${b} m`,
+      tipRock: "Empieza las rampas en el suelo, antes de la roca, y pasa por encima.",
+      tipHole: "Dibuja de borde a borde, empezando un poco antes del agujero.",
+      bridge: "DIBUJA UN PUENTE", ramp: "DIBUJA UNA RAMPA", slow: "TIEMPO LENTO · SIGUE DIBUJANDO", noInk: "SIN TINTA · SUPERA UN OBSTÁCULO", hi: "MÁX",
+    },
+  }[LANG];
   const H = 300, GROUND = 214;
   let RUN_AT = 0.24;
   const STEP = 22, SNAP = 7, GRAVITY = 1500, MAX_SLOPE = 1.9;
@@ -158,16 +188,14 @@
     const m = Math.floor(runner.x / 10);
     const isBest = m > best;
     if (isBest) { best = m; store.set("favalia.inkirun.best", String(best)); }
-    const title = reason === "rock" ? "Crash!" : "He fell in!";
-    const tip = reason === "rock"
-      ? "Start ramps on the ground, before the rock, then go up and over."
-      : "Draw from edge to edge, and start a little before the hole.";
+    const title = reason === "rock" ? TX.crash : TX.fell;
+    const tip = reason === "rock" ? TX.tipRock : TX.tipHole;
     showOverlay(`
-      <span class="tag">${isBest ? "New best" : "Run over"}</span>
+      <span class="tag">${isBest ? TX.best : TX.over}</span>
       <h3>${title}</h3>
-      <p class="score">${m} m · Best ${best} m</p>
+      <p class="score">${TX.score(m, best)}</p>
       <p>${tip}</p>
-      <button class="btn" type="button" data-start>Run again</button>`);
+      <button class="btn" type="button" data-start>${TX.again}</button>`);
   }
 
   // ---------- Input ----------
@@ -323,7 +351,7 @@
     ctx.setLineDash([]);
     const lx = o.type === "hole" ? (o.x0 + o.x1) / 2 : o.x0 - 40;
     const ly = o.type === "hole" ? GROUND - 40 : GROUND - o.h - 42;
-    label(lx, ly, o.type === "hole" ? "DRAW A BRIDGE" : "DRAW A RAMP");
+    label(lx, ly, o.type === "hole" ? TX.bridge : TX.ramp);
     ctx.restore();
   }
 
@@ -438,17 +466,17 @@
     const m = Math.max(0, Math.floor((runner?.x || 0) / 10));
     ctx.textAlign = "right";
     ctx.fillStyle = col.ink;
-    ctx.fillText(`HI ${String(best).padStart(5, "0")}  ${String(m).padStart(5, "0")}`, W - 14, 26);
+    ctx.fillText(`${TX.hi} ${String(best).padStart(5, "0")}  ${String(m).padStart(5, "0")}`, W - 14, 26);
     if (drawing) {
       ctx.textAlign = "center";
-      label(W / 2, 28, "TIME SLOWED · KEEP DRAWING");
+      label(W / 2, 28, TX.slow);
       ctx.strokeStyle = col.ink;
       ctx.setLineDash([10, 8]);
       ctx.lineWidth = 2;
       ctx.strokeRect(5, 5, W - 10, H - 10);
       ctx.setLineDash([]);
     }
-    if (state === "run" && inkFlash > 0) label(W / 2, 62, "OUT OF INK · CLEAR AN OBSTACLE");
+    if (state === "run" && inkFlash > 0) label(W / 2, 62, TX.noInk);
   }
 
   // ---------- Loop ----------
@@ -489,10 +517,10 @@
   else addEventListener("resize", resize);
   if ("IntersectionObserver" in window) new IntersectionObserver(([e]) => { visible = e.isIntersecting; }).observe(stage);
   showOverlay(`
-    <span class="tag">Inki Run · Demo</span>
-    <h3>Draw the way</h3>
-    <p>Your runner never jumps. Draw a <b>bridge</b> over each hole and a <b>ramp</b> over each rock. Time slows down while you draw.</p>
-    <button class="btn" type="button" data-start>Start running</button>`);
+    <span class="tag">${TX.tag}</span>
+    <h3>${TX.title}</h3>
+    <p>${TX.intro}</p>
+    <button class="btn" type="button" data-start>${TX.start}</button>`);
   requestAnimationFrame(frame);
 
   // Test hook: open the page with ?debug to inspect the demo from the console.

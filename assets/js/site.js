@@ -2,6 +2,15 @@
 (() => {
   const root = document.documentElement;
   const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)");
+  const WORDS = {
+    en: { day: "Day", night: "Night", toDay: "Switch to day theme", toNight: "Switch to night theme", open: "Open menu", close: "Close menu",
+          play: "Play video", shot: "Screenshot", closeShot: "Close", prev: "Previous screenshot", next: "Next screenshot" },
+    fr: { day: "Jour", night: "Nuit", toDay: "Passer au thème jour", toNight: "Passer au thème nuit", open: "Ouvrir le menu", close: "Fermer le menu",
+          play: "Lire la vidéo", shot: "Capture d'écran", closeShot: "Fermer", prev: "Capture précédente", next: "Capture suivante" },
+    es: { day: "Día", night: "Noche", toDay: "Cambiar al tema de día", toNight: "Cambiar al tema de noche", open: "Abrir el menú", close: "Cerrar el menú",
+          play: "Reproducir video", shot: "Captura de pantalla", closeShot: "Cerrar", prev: "Captura anterior", next: "Captura siguiente" },
+  };
+  const W = WORDS[(root.lang || "en").slice(0, 2)] || WORDS.en;
   const darkQuery = matchMedia("(prefers-color-scheme: dark)");
 
   /* ---------- Day / Night ---------- */
@@ -14,8 +23,8 @@
     const dark = isDark();
     document.querySelectorAll("[data-theme-toggle]").forEach((b) => {
       b.setAttribute("aria-pressed", String(dark));
-      b.setAttribute("aria-label", dark ? "Switch to day theme" : "Switch to night theme");
-      b.title = dark ? "Day" : "Night";
+      b.setAttribute("aria-label", dark ? W.toDay : W.toNight);
+      b.title = dark ? W.day : W.night;
     });
     window.dispatchEvent(new CustomEvent("themechange", { detail: { dark } }));
   };
@@ -42,7 +51,7 @@
     menu.hidden = !open;
     header.classList.toggle("is-open", open);
     menuBtn.setAttribute("aria-expanded", String(open));
-    menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    menuBtn.setAttribute("aria-label", open ? W.close : W.open);
     document.body.style.overflow = open ? "hidden" : "";
   };
   menuBtn?.addEventListener("click", () => setMenu(menu.hidden));
@@ -70,7 +79,7 @@
       const btn = document.createElement("button");
       btn.className = "tap-play";
       btn.type = "button";
-      btn.setAttribute("aria-label", "Play video");
+      btn.setAttribute("aria-label", W.play);
       btn.innerHTML = '<span><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>';
       btn.addEventListener("click", () => { v.controls = true; v.play(); btn.remove(); });
       v.parentElement.appendChild(btn);
@@ -106,13 +115,13 @@
   if (shots.length && typeof HTMLDialogElement === "function") {
     const dlg = document.createElement("dialog");
     dlg.className = "lightbox";
-    dlg.setAttribute("aria-label", "Screenshot");
+    dlg.setAttribute("aria-label", W.shot);
     const chev = (d) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${d}"/></svg>`;
     dlg.innerHTML = `
       <img alt="">
-      <button class="lb-btn lb-close" type="button" aria-label="Close">${chev("M6 6l12 12M18 6L6 18")}</button>
-      <button class="lb-btn lb-prev" type="button" aria-label="Previous screenshot">${chev("M15 5l-7 7 7 7")}</button>
-      <button class="lb-btn lb-next" type="button" aria-label="Next screenshot">${chev("M9 5l7 7-7 7")}</button>`;
+      <button class="lb-btn lb-close" type="button" aria-label="${W.closeShot}">${chev("M6 6l12 12M18 6L6 18")}</button>
+      <button class="lb-btn lb-prev" type="button" aria-label="${W.prev}">${chev("M15 5l-7 7 7 7")}</button>
+      <button class="lb-btn lb-next" type="button" aria-label="${W.next}">${chev("M9 5l7 7-7 7")}</button>`;
     document.body.appendChild(dlg);
     const img = dlg.querySelector("img");
     let group = [], index = 0;
@@ -138,6 +147,12 @@
       if (e.key === "ArrowRight") show(index + 1);
     });
   }
+
+  /* ---------- Language: remember the visitor's explicit choice ---------- */
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest("[data-lang-switch]");
+    if (a) store.set("favalia-lang", a.dataset.langSwitch);
+  });
 
   /* ---------- Footer year ---------- */
   document.querySelectorAll("[data-year]").forEach((el) => { el.textContent = String(new Date().getFullYear()); });

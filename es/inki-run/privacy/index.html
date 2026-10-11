@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+
+<!-- Consent first: Google Analytics 4 (G-HVNQKNVL5X) and Tag Manager (GTM-NFJ4XBCJ) only load after the visitor
+     agrees (assets/js/consent.js shows the banner). Google Consent Mode v2 starts with everything denied. -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+  analytics_storage: 'denied', personalization_storage: 'denied',
+  functionality_storage: 'granted', security_storage: 'granted'
+});
+gtag('set', 'ads_data_redaction', true);
+(function (w, d) {
+  var GA = 'G-HVNQKNVL5X', GTM = 'GTM-NFJ4XBCJ', KEY = 'favalia-consent', VERSION = 1, MAX_AGE = 365 * 864e5;
+  var loaded = {}, choice = null;
+  function add(src) { var s = d.createElement('script'); s.async = true; s.src = src; d.head.appendChild(s); }
+  function apply(c) {
+    gtag('consent', 'update', {
+      analytics_storage: c.analytics ? 'granted' : 'denied',
+      ad_storage: c.marketing ? 'granted' : 'denied',
+      ad_user_data: c.marketing ? 'granted' : 'denied',
+      ad_personalization: c.marketing ? 'granted' : 'denied'
+    });
+    if (c.analytics && !loaded.ga) { loaded.ga = 1; add('https://www.googletagmanager.com/gtag/js?id=' + GA); gtag('js', new Date()); gtag('config', GA); }
+    if ((c.analytics || c.marketing) && !loaded.gtm) { loaded.gtm = 1; w.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); add('https://www.googletagmanager.com/gtm.js?id=' + GTM); }
+    w.dataLayer.push({ event: 'favalia_consent', consent_analytics: !!c.analytics, consent_marketing: !!c.marketing });
+  }
+  try { choice = JSON.parse(localStorage.getItem(KEY)); } catch (e) {}
+  if (!choice || choice.v !== VERSION || !(Date.now() - choice.t < MAX_AGE)) choice = null;
+  w.favaliaConsent = {
+    get: function () { return choice; },
+    save: function (analytics, marketing) {
+      choice = { v: VERSION, t: Date.now(), analytics: !!analytics, marketing: !!marketing };
+      try { localStorage.setItem(KEY, JSON.stringify(choice)); } catch (e) {}
+      apply(choice);
+      return choice;
+    }
+  };
+  if (choice) apply(choice);
+})(window, document);
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Política de privacidad de Inki Run · Favalia</title>
+<meta name="description" content="Cómo trata Inki Run tu información: qué se guarda en tu dispositivo, los anuncios de Google AdMob, las notificaciones y tus opciones.">
+<link rel="canonical" href="https://favalia.ca/es/inki-run/privacy/">
+<meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f0f10" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Favalia">
+<meta property="og:locale" content="es_ES">
+<link rel="alternate" hreflang="en" href="https://favalia.ca/inki-run/privacy/">
+<link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/inki-run/privacy/">
+<link rel="alternate" hreflang="es" href="https://favalia.ca/es/inki-run/privacy/">
+<link rel="alternate" hreflang="x-default" href="https://favalia.ca/inki-run/privacy/">
+<meta property="og:locale:alternate" content="en_CA">
+<meta property="og:locale:alternate" content="fr_CA">
+<meta property="og:title" content="Política de privacidad de Inki Run · Favalia">
+<meta property="og:description" content="Cómo trata Inki Run tu información: qué se guarda en tu dispositivo, los anuncios de Google AdMob, las notificaciones y tus opciones.">
+<meta property="og:url" content="https://favalia.ca/es/inki-run/privacy/">
+<meta property="og:image" content="https://favalia.ca/assets/img/og/inki-run-es.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Política de privacidad de Inki Run · Favalia">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="manifest" href="../../../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700;800&family=Nunito:wght@800;900&display=swap">
+<link rel="stylesheet" href="../../../assets/css/site.css?v=651d44ea">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('favalia-theme');if(t==='light'||t==='dark')d.dataset.theme=t;}catch(e){}})();</script>
+
+</head>
+<body class="">
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Menú principal">
+    <a class="brand" href="../../../es/" aria-label="Inicio de Favalia"><svg class="logo-tile" viewBox="0 0 40 40" aria-hidden="true"><g transform="rotate(-8 20 20)"><rect class="s" x="7.5" y="7.5" width="28" height="28" rx="7"/><rect class="t" x="4.5" y="4.5" width="28" height="28" rx="7" stroke-width="2.6"/><path class="f" d="M12.5 10.5h12.2v4.1h-7.6v3h6.6v3.9h-6.6v7h-4.6z"/></g></svg><span>Favalia</span></a>
+    <ul class="nav-links">
+      <li><a href="../../../es/word-duel/"><img src="../../../assets/img/word-duel/icon.webp" alt="" width="22" height="22">Word Duel</a></li>
+      <li><a href="../../../es/inki-run/" aria-current="page"><img src="../../../assets/img/inki-run/icon.webp" alt="" width="22" height="22">Inki Run</a></li>
+      <li><a href="../../../es/inki-ace/"><img src="../../../assets/img/inki-ace/icon.webp" alt="" width="22" height="22">Inki Ace</a></li>
+      <li><a href="../../../es/support/">Soporte</a></li>
+    </ul>
+    <div class="nav-tools">
+      <div class="lang-nav" role="group" aria-label="Idioma">
+        <a href="../../../inki-run/privacy/" hreflang="en" lang="en" title="English" data-lang-switch="en">EN</a>
+        <a href="../../../fr/inki-run/privacy/" hreflang="fr" lang="fr" title="Français" data-lang-switch="fr">FR</a>
+        <a href="./" hreflang="es" lang="es" title="Español" data-lang-switch="es" aria-current="true">ES</a>
+      </div>
+      <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Cambiar tema"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.6A8.3 8.3 0 0 1 9.4 4a8.3 8.3 0 1 0 10.6 10.6z"/><path d="M16.5 3.5l.5 1.5 1.5.5-1.5.5-.5 1.5-.5-1.5-1.5-.5 1.5-.5z" fill="currentColor" stroke-width="1"/></svg></button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-controls="site-menu" aria-expanded="false" aria-label="Abrir el menú"><svg class="bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+  </nav>
+</header>
+<div class="mobile-menu" id="site-menu" hidden>
+  <a href="../../../es/word-duel/"><img src="../../../assets/img/word-duel/icon.webp" alt="" width="44" height="44"><span>Word Duel<small>Juego de palabras · En el App Store</small></span></a>
+  <a href="../../../es/inki-run/"><img src="../../../assets/img/inki-run/icon.webp" alt="" width="44" height="44"><span>Inki Run<small>Carrera de dibujo · Próximamente</small></span></a>
+  <a href="../../../es/inki-ace/"><img src="../../../assets/img/inki-ace/icon.webp" alt="" width="44" height="44"><span>Inki Ace<small>Combate aéreo · Próximamente</small></span></a>
+  <a href="../../../es/support/"><span>Soporte<small>Ayuda, privacidad y contacto</small></span></a>
+  <div class="mm-lang" role="group" aria-label="Idioma">
+    <a href="../../../inki-run/privacy/" hreflang="en" lang="en" data-lang-switch="en">English</a>
+    <a href="../../../fr/inki-run/privacy/" hreflang="fr" lang="fr" data-lang-switch="fr">Français</a>
+    <a href="./" hreflang="es" lang="es" data-lang-switch="es" aria-current="true">Español</a>
+  </div>
+  <p class="mm-foot">Juegos para iPhone y iPad · <a href="mailto:supportwordduel@gmail.com" style="all:unset;cursor:pointer;text-decoration:underline">supportwordduel@gmail.com</a></p>
+</div>
+<main id="main">
+  <section class="doc-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Ruta de navegación"><a href="../../">Favalia</a><span aria-hidden="true">/</span><a href="../">Inki Run</a><span aria-hidden="true">/</span><span aria-current="page">Política de privacidad</span></nav>
+      <div class="row"><img src="../../../assets/img/inki-run/icon.webp" alt="" width="60" height="60"><span class="tag">Inki Run · Política de privacidad</span></div>
+      <h1>Tu privacidad</h1>
+      <p class="meta">Última actualización: 11 de octubre de 2026</p>
+      <nav class="doc-tabs" aria-label="Páginas de Inki Run"><a href="../">El juego</a><a href="../support/">Soporte</a><a href="../privacy/" aria-current="page">Política de privacidad</a></nav>
+    </div>
+  </section>
+  <div class="wrap">
+    <article class="doc">
+    <p>Inki Run («el juego») está hecho por Favalia («nosotros»). Esta política explica qué información usa el juego, por qué y qué opciones tienes.</p>
+
+    <div class="note">
+    <p><b>En resumen</b></p>
+    <ul>
+    <li>No hay cuenta ni inicio de sesión. No recopilamos tu nombre, tu correo, tus contactos, tus fotos ni tu ubicación precisa.</li>
+    <li>Tu progreso y tus ajustes se guardan solo en tu dispositivo.</li>
+    <li>El juego muestra anuncios de Google AdMob. Google puede recopilar cierta información del dispositivo y de su uso para mostrar y medir los anuncios, como se explica más abajo.</li>
+    <li>Las notificaciones están desactivadas hasta que las actives. Si lo haces, tu dispositivo se registra en Apple y en Google Firebase para que podamos enviarte novedades del juego.</li>
+    </ul>
+    </div>
+
+    <h2>1. INFORMACIÓN GUARDADA EN TU IPHONE</h2>
+    <p>Tu progreso en las etapas, tus estrellas, tu mejor distancia en el modo Infinito, tus elecciones de corredor y atuendo, tus ajustes (sonido, vibración, tema) y los contadores que sirven para espaciar los anuncios se guardan en el almacenamiento propio del juego en tu iPhone. Esta información no se envía a nosotros ni a nadie más. Se incluye en tus copias de seguridad de iCloud o del ordenador de tu iPhone, y borrar el juego la elimina.</p>
+
+    <h3>Recordatorios</h3>
+    <p>Si activas los recordatorios, el juego le pide a iOS que te muestre algunas notificaciones después de que dejes de jugar (por ejemplo «Stage 32 is waiting»). Se crean y programan en tu dispositivo a partir de tu progreso guardado; no se envía nada a nosotros ni a nadie más. Puedes desactivarlos en los ajustes del juego o en los ajustes de notificaciones de tu dispositivo.</p>
+
+    <h3>Novedades del juego (notificaciones push)</h3>
+    <p>Con las notificaciones activadas, el juego también puede recibir novedades, como etapas nuevas o eventos. Para entregarlas, el juego registra tu dispositivo en el servicio de notificaciones push de Apple y en Google Firebase Cloud Messaging. Firebase guarda el token push junto con un identificador de instalación, y recopila el modelo del dispositivo, el idioma, la zona horaria, la versión de iOS y la de la app para entregar los mensajes y gestionar las suscripciones. No se registra nada hasta que dices que sí. Puedes desactivar las notificaciones en cualquier momento con NOTIFICATIONS en los ajustes del juego o en los ajustes de notificaciones de tu dispositivo. Consulta la <a href="https://firebase.google.com/support/privacy">información de privacidad de Firebase</a>.</p>
+
+    <h2>2. PUBLICIDAD (GOOGLE ADMOB)</h2>
+    <p>El juego es gratis y se financia con anuncios de Google AdMob (Google LLC, o Google Ireland Limited para los usuarios del EEE y Suiza). Para mostrar y medir los anuncios, el SDK de Google Mobile Ads incluido en el juego puede recopilar:</p>
+    <ul>
+    <li><b>Identificadores del dispositivo:</b> el identificador para proveedores (IDFV) y, solo si permites el rastreo, el identificador para anunciantes (IDFA).</li>
+    <li><b>La dirección IP,</b> que puede usarse para estimar tu ubicación general (como tu país o tu ciudad).</li>
+    <li><b>Datos de anuncios y de uso,</b> como qué anuncios se mostraron, los toques en anuncios, las reproducciones de vídeo y los inicios de la app.</li>
+    <li><b>Datos de diagnóstico,</b> como informes de fallos e información de rendimiento del SDK de anuncios.</li>
+    </ul>
+    <p>Google usa esta información para mostrar anuncios, limitar cuántas veces ves el mismo anuncio, medir el rendimiento de los anuncios, prevenir el fraude y, si lo has permitido, mostrarte anuncios más relevantes. El juego le pide a Google que no muestre anuncios dirigidos a un público adulto.</p>
+    <p>Más información en <a href="https://policies.google.com/technologies/partner-sites?hl=es">Cómo utiliza Google la información de sitios web o aplicaciones que utilizan sus servicios</a> y en la <a href="https://policies.google.com/privacy?hl=es">Política de privacidad de Google</a>.</p>
+
+    <h2>3. TUS OPCIONES</h2>
+    <ul>
+    <li><b>Rastreo:</b> la primera vez que abres el juego, iOS te pregunta si Inki Run puede rastrearte. Si eliges «Pedir a la app que no rastree», el IDFA no se comparte y los anuncios no se personalizan mediante rastreo. Puedes cambiarlo en cualquier momento en <b>Ajustes › Privacidad y seguridad › Rastreo</b>.</li>
+    <li><b>EEE, Reino Unido y Suiza:</b> el formulario de consentimiento de Google aparece la primera vez que abres el juego. Puedes revisar o cambiar tus opciones en cualquier momento con <b>AD CHOICES</b> en los ajustes del juego.</li>
+    <li><b>Anuncios personalizados:</b> también puedes restablecer o limitar la personalización de anuncios en los ajustes de tu dispositivo y en <a href="https://adssettings.google.com">adssettings.google.com</a>.</li>
+    </ul>
+    <p>El juego funciona igual elijas lo que elijas.</p>
+
+    <h2>4. NIÑOS</h2>
+    <p>Inki Run está pensado para el público general y no va dirigido a menores de 13 años. No recopilamos a sabiendas información personal de niños. Si crees que un niño ha proporcionado información personal a través del juego, contáctanos y te ayudaremos.</p>
+
+    <h2>5. COMUNICACIÓN, VENTA Y CONSERVACIÓN</h2>
+    <p>No vendemos tu información personal y no recibimos ni guardamos información personal tuya en ningún servidor. La información que recopila Google mediante el SDK de anuncios y Firebase Cloud Messaging la gestiona y conserva Google según sus propias políticas. La información guardada en tu iPhone se queda ahí hasta que borras el juego.</p>
+
+    <h2>6. TUS DERECHOS</h2>
+    <p>Según dónde vivas (por ejemplo, conforme al RGPD en Europa, la Ley 25 en Quebec o la CCPA en California), puedes tener derecho a acceder a tu información personal, corregirla o eliminarla, y a oponerte a su uso o limitarlo. Como no tenemos información personal tuya, lo mejor es dirigir las solicitudes sobre datos publicitarios a Google mediante los enlaces anteriores, pero siempre puedes contactarnos y te ayudaremos.</p>
+
+    <h2>7. CAMBIOS</h2>
+    <p>Si esta política cambia, la nueva versión se publicará en esta página con una nueva fecha de «Última actualización».</p>
+
+    <h2>8. CONTACTO</h2>
+    <p>Preguntas sobre privacidad: <a href="mailto:supportwordduel@gmail.com?subject=Inki%20Run%20privacidad">supportwordduel@gmail.com</a></p>
+    </article>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="../../../es/"><svg class="logo-tile" viewBox="0 0 40 40" aria-hidden="true"><g transform="rotate(-8 20 20)"><rect class="s" x="7.5" y="7.5" width="28" height="28" rx="7"/><rect class="t" x="4.5" y="4.5" width="28" height="28" rx="7" stroke-width="2.6"/><path class="f" d="M12.5 10.5h12.2v4.1h-7.6v3h6.6v3.9h-6.6v7h-4.6z"/></g></svg><span>Favalia</span></a>
+        <p>Juegos pequeños y cuidados para iPhone y iPad. Un pulgar para jugar, un minuto para aprender.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Juegos</h4>
+        <ul>
+          <li><a href="../../../es/word-duel/">Word Duel</a></li>
+          <li><a href="../../../es/inki-run/">Inki Run</a></li>
+          <li><a href="../../../es/inki-ace/">Inki Ace</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Ayuda</h4>
+        <ul>
+          <li><a href="../../../es/support/">Soporte</a></li>
+          <li><a href="https://worddue-production.up.railway.app/es/privacy">Privacidad de Word Duel</a></li>
+          <li><a href="../../../es/inki-run/privacy/">Privacidad de Inki Run</a></li>
+          <li><a href="../../../es/inki-ace/privacy/">Privacidad de Inki Ace</a></li>
+          <li><a href="../../../es/privacy/">Privacidad del sitio</a></li>
+          <li><button class="link-btn" type="button" data-consent-open>Configuración de cookies</button></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Escríbenos</h4>
+        <ul>
+          <li><a href="mailto:supportwordduel@gmail.com">supportwordduel@gmail.com</a></li>
+          <li><a href="../../../es/#studio">Sobre el estudio</a></li>
+        </ul>
+        <div class="foot-lang" role="group" aria-label="Idioma">
+          <a href="../../../inki-run/privacy/" hreflang="en" lang="en" data-lang-switch="en">English</a>
+          <a href="../../../fr/inki-run/privacy/" hreflang="fr" lang="fr" data-lang-switch="fr">Français</a>
+          <a href="./" hreflang="es" lang="es" data-lang-switch="es" aria-current="true">Español</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-word" aria-hidden="true">Favalia</div>
+  </div>
+  <div class="wrap foot-legal">
+    <span>© <span data-year>2026</span> Favalia · <button class="link-btn" type="button" data-consent-open>Configuración de cookies</button> · <strong class="made">¡Hecho con orgullo en Montreal, Quebec! <span aria-hidden="true">⚜</span></strong></span>
+    <span>Apple, el logotipo de Apple, iPhone y iPad son marcas comerciales de Apple Inc., registradas en EE. UU. y otros países. App Store es una marca de servicio de Apple Inc.</span>
+  </div>
+</footer>
+<script src="../../../assets/js/consent.js?v=ab2a3d40" data-privacy="../../../es/privacy/" defer></script>
+<script src="../../../assets/js/site.js?v=1b4f1c9e" defer></script>
+
+</body>
+</html>

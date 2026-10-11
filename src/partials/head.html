@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{lang}}">
 <head>
 <meta charset="utf-8">
+{{langredirect}}
 <!-- Consent first: Google Analytics 4 ({{site:ga4}}) and Tag Manager ({{site:gtm}}) only load after the visitor
      agrees (assets/js/consent.js shows the banner). Google Consent Mode v2 starts with everything denied. -->
 <script>
@@ -50,7 +51,8 @@ gtag('set', 'ads_data_redaction', true);
 <meta name="theme-color" content="#0f0f10" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Favalia">
-<meta property="og:locale" content="en_CA">
+<meta property="og:locale" content="{{locale}}">
+{{hreflang}}
 <meta property="og:title" content="{{page:ogTitle}}">
 <meta property="og:description" content="{{page:description}}">
 <meta property="og:url" content="{{page:url}}">

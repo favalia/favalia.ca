@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+
+<!-- Consent first: Google Analytics 4 (G-HVNQKNVL5X) and Tag Manager (GTM-NFJ4XBCJ) only load after the visitor
+     agrees (assets/js/consent.js shows the banner). Google Consent Mode v2 starts with everything denied. -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+  analytics_storage: 'denied', personalization_storage: 'denied',
+  functionality_storage: 'granted', security_storage: 'granted'
+});
+gtag('set', 'ads_data_redaction', true);
+(function (w, d) {
+  var GA = 'G-HVNQKNVL5X', GTM = 'GTM-NFJ4XBCJ', KEY = 'favalia-consent', VERSION = 1, MAX_AGE = 365 * 864e5;
+  var loaded = {}, choice = null;
+  function add(src) { var s = d.createElement('script'); s.async = true; s.src = src; d.head.appendChild(s); }
+  function apply(c) {
+    gtag('consent', 'update', {
+      analytics_storage: c.analytics ? 'granted' : 'denied',
+      ad_storage: c.marketing ? 'granted' : 'denied',
+      ad_user_data: c.marketing ? 'granted' : 'denied',
+      ad_personalization: c.marketing ? 'granted' : 'denied'
+    });
+    if (c.analytics && !loaded.ga) { loaded.ga = 1; add('https://www.googletagmanager.com/gtag/js?id=' + GA); gtag('js', new Date()); gtag('config', GA); }
+    if ((c.analytics || c.marketing) && !loaded.gtm) { loaded.gtm = 1; w.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); add('https://www.googletagmanager.com/gtm.js?id=' + GTM); }
+    w.dataLayer.push({ event: 'favalia_consent', consent_analytics: !!c.analytics, consent_marketing: !!c.marketing });
+  }
+  try { choice = JSON.parse(localStorage.getItem(KEY)); } catch (e) {}
+  if (!choice || choice.v !== VERSION || !(Date.now() - choice.t < MAX_AGE)) choice = null;
+  w.favaliaConsent = {
+    get: function () { return choice; },
+    save: function (analytics, marketing) {
+      choice = { v: VERSION, t: Date.now(), analytics: !!analytics, marketing: !!marketing };
+      try { localStorage.setItem(KEY, JSON.stringify(choice)); } catch (e) {}
+      apply(choice);
+      return choice;
+    }
+  };
+  if (choice) apply(choice);
+})(window, document);
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Favalia · Juegos para iPhone y iPad: Word Duel, Inki Run, Inki Ace</title>
+<meta name="description" content="Favalia es un estudio de juegos independiente de Montreal. Adivina palabras en Word Duel, dibuja el camino en Inki Run y vuela en Inki Ace. Gratis en iPhone y iPad, con demos jugables aquí mismo.">
+<link rel="canonical" href="https://favalia.ca/es/">
+<meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f0f10" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Favalia">
+<meta property="og:locale" content="es_ES">
+<link rel="alternate" hreflang="en" href="https://favalia.ca/">
+<link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/">
+<link rel="alternate" hreflang="es" href="https://favalia.ca/es/">
+<link rel="alternate" hreflang="x-default" href="https://favalia.ca/">
+<meta property="og:locale:alternate" content="en_CA">
+<meta property="og:locale:alternate" content="fr_CA">
+<meta property="og:title" content="Favalia: Adivina. Dibuja. Vuela.">
+<meta property="og:description" content="Favalia es un estudio de juegos independiente de Montreal. Adivina palabras en Word Duel, dibuja el camino en Inki Run y vuela en Inki Ace. Gratis en iPhone y iPad, con demos jugables aquí mismo.">
+<meta property="og:url" content="https://favalia.ca/es/">
+<meta property="og:image" content="https://favalia.ca/assets/img/og/favalia-es.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Favalia: Adivina. Dibuja. Vuela.">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700;800&family=Nunito:wght@800;900&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css?v=651d44ea">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('favalia-theme');if(t==='light'||t==='dark')d.dataset.theme=t;}catch(e){}})();</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Favalia", "url": "https://favalia.ca/", "logo": "https://favalia.ca/apple-touch-icon.png", "email": "supportwordduel@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Montréal", "addressRegion": "Québec", "addressCountry": "CA"}}</script>
+</head>
+<body class="">
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Menú principal">
+    <a class="brand" href="../es/" aria-label="Inicio de Favalia"><svg class="logo-tile" viewBox="0 0 40 40" aria-hidden="true"><g transform="rotate(-8 20 20)"><rect class="s" x="7.5" y="7.5" width="28" height="28" rx="7"/><rect class="t" x="4.5" y="4.5" width="28" height="28" rx="7" stroke-width="2.6"/><path class="f" d="M12.5 10.5h12.2v4.1h-7.6v3h6.6v3.9h-6.6v7h-4.6z"/></g></svg><span>Favalia</span></a>
+    <ul class="nav-links">
+      <li><a href="../es/word-duel/"><img src="../assets/img/word-duel/icon.webp" alt="" width="22" height="22">Word Duel</a></li>
+      <li><a href="../es/inki-run/"><img src="../assets/img/inki-run/icon.webp" alt="" width="22" height="22">Inki Run</a></li>
+      <li><a href="../es/inki-ace/"><img src="../assets/img/inki-ace/icon.webp" alt="" width="22" height="22">Inki Ace</a></li>
+      <li><a href="../es/support/">Soporte</a></li>
+    </ul>
+    <div class="nav-tools">
+      <div class="lang-nav" role="group" aria-label="Idioma">
+        <a href="../" hreflang="en" lang="en" title="English" data-lang-switch="en">EN</a>
+        <a href="../fr/" hreflang="fr" lang="fr" title="Français" data-lang-switch="fr">FR</a>
+        <a href="./" hreflang="es" lang="es" title="Español" data-lang-switch="es" aria-current="true">ES</a>
+      </div>
+      <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Cambiar tema"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.6A8.3 8.3 0 0 1 9.4 4a8.3 8.3 0 1 0 10.6 10.6z"/><path d="M16.5 3.5l.5 1.5 1.5.5-1.5.5-.5 1.5-.5-1.5-1.5-.5 1.5-.5z" fill="currentColor" stroke-width="1"/></svg></button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-controls="site-menu" aria-expanded="false" aria-label="Abrir el menú"><svg class="bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+  </nav>
+</header>
+<div class="mobile-menu" id="site-menu" hidden>
+  <a href="../es/word-duel/"><img src="../assets/img/word-duel/icon.webp" alt="" width="44" height="44"><span>Word Duel<small>Juego de palabras · En el App Store</small></span></a>
+  <a href="../es/inki-run/"><img src="../assets/img/inki-run/icon.webp" alt="" width="44" height="44"><span>Inki Run<small>Carrera de dibujo · Próximamente</small></span></a>
+  <a href="../es/inki-ace/"><img src="../assets/img/inki-ace/icon.webp" alt="" width="44" height="44"><span>Inki Ace<small>Combate aéreo · Próximamente</small></span></a>
+  <a href="../es/support/"><span>Soporte<small>Ayuda, privacidad y contacto</small></span></a>
+  <div class="mm-lang" role="group" aria-label="Idioma">
+    <a href="../" hreflang="en" lang="en" data-lang-switch="en">English</a>
+    <a href="../fr/" hreflang="fr" lang="fr" data-lang-switch="fr">Français</a>
+    <a href="./" hreflang="es" lang="es" data-lang-switch="es" aria-current="true">Español</a>
+  </div>
+  <p class="mm-foot">Juegos para iPhone y iPad · <a href="mailto:supportwordduel@gmail.com" style="all:unset;cursor:pointer;text-decoration:underline">supportwordduel@gmail.com</a></p>
+</div>
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="tag">Estudio de juegos independiente</span>
+        <h1 class="hero-title ht-tight" aria-label="Adivina. Dibuja. Vuela.">
+          <span class="ht-line ht-spell" aria-hidden="true"><span class="ht-tiles"><b style="--i:0">A</b><b style="--i:1">D</b><b style="--i:2">I</b><b style="--i:3">V</b><b style="--i:4">I</b><b style="--i:5">N</b><b style="--i:6">A</b></span>.</span>
+          <span class="ht-line ht-draw" aria-hidden="true"><span class="ht-word">Dibuja<svg class="ht-ground" viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path d="M0 6C18 3.5 36 7.5 56 5.2S88 4 100 5.5" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg><span class="ht-runner"><svg class="runner" viewBox="0 0 24 32" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="15" cy="5.6" r="3.5"/><path d="M11.4 3.4h8.6M14.2 9.4 11.6 19"/><g class="f1"><path d="M11.6 19l4 4.6-1.4 6.6M11.6 19 8 24l-4 1.4M13.2 12l3.8 3 3.6-2.6M13.2 12 9 14l-1.5 4"/></g><g class="f2"><path d="M11.6 19l-2 5.6 1 6M11.6 19l3.5 4 3.6-1.4M13.2 12l3.4 2.6 1.4 3.6M13.2 12l-3.7 3-3-2.6"/></g></svg></span></span>.</span>
+          <span class="ht-line ht-fly" aria-hidden="true"><span class="ht-word">Vuela</span>.<svg class="ht-jet" viewBox="0 0 150 90" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="trail" d="M2 84C40 80 70 66 98 46" stroke-width="3.4"/><path class="trail" d="M2 74C36 70 64 57 90 38" stroke-width="3.4"/><g class="plane"><g transform="translate(116 30) rotate(54) scale(1.5)" stroke-width="2"><polygon points="0,-21 2.6,-15 4,-6 16,4 16,8.5 4,6.5 3.6,11 9.5,16.5 9.5,19.5 0.8,17.5 -0.8,17.5 -9.5,19.5 -9.5,16.5 -3.6,11 -4,6.5 -16,8.5 -16,4 -4,-6 -2.6,-15" fill="var(--paper)"/><ellipse cx="0" cy="-9" rx="1.8" ry="4.4"/><path d="M-10 6h4M6 6h4"/></g></g></svg></span>
+        </h1>
+        <p class="lede">Favalia crea juegos pequeños y cuidados para iPhone y iPad. Un pulgar para jugar, un minuto para aprender y un largo camino hasta la cima.</p>
+        <div class="hero-ctas">
+          <a class="btn" href="#games">Conoce los juegos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M12 4v15M6 13l6 6 6-6"/></svg></a>
+          <a class="btn btn--ghost" href="#arcade">Juega en tu navegador</a>
+        </div>
+        <div class="hero-games">
+          <a href="word-duel/"><img src="../assets/img/word-duel/icon.webp" alt="" width="44" height="44"><span><b>Word Duel</b><small>En el App Store</small></span></a>
+          <a href="inki-run/"><img src="../assets/img/inki-run/icon.webp" alt="" width="44" height="44"><span><b>Inki Run</b><small>Próximamente</small></span></a>
+          <a href="inki-ace/"><img src="../assets/img/inki-ace/icon.webp" alt="" width="44" height="44"><span><b>Inki Ace</b><small>Próximamente</small></span></a>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <svg class="doodle doodle--cloud" viewBox="0 0 120 50" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 44h108M16 44a13 13 0 0 1 15-17 19 19 0 0 1 36-7 15 15 0 0 1 29 9 11 11 0 0 1 11 15"/></svg>
+        <div class="device ha-ia"><div class="screen"><img src="../assets/img/inki-ace/02-giant-bosses.webp" alt="" width="720" height="1565"></div></div>
+        <div class="device ha-wd"><div class="screen"><img src="../assets/img/word-duel/3-perfect.webp" alt="" width="720" height="1564"></div></div>
+        <div class="device device--land ha-ir"><div class="screen"><img src="../assets/img/inki-run/01-draw-the-way.webp" alt="" width="1434" height="660"></div></div>
+        <div class="sticker"><span><b style="font-size:1.4em">Gratis</b>en iPhone<br>y iPad</span></div>
+        <svg class="doodle doodle--stars" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"><path d="M20 6l4 10 10 1-8 7 3 10-9-6-9 6 3-10-8-7 10-1z"/><path d="M48 34l2.5 6 6 .5-4.6 4 1.6 6-5.5-3.5-5.5 3.5 1.6-6-4.6-4 6-.5z"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee-band" aria-hidden="true">
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>Word Duel <i>✦</i> Inki Run <i>✦</i> Inki Ace <i>✦</i> 500 niveles <i>✦</i> 120 etapas <i>✦</i> 100 etapas <i>✦</i> 10 jefes <i>✦</i> 25 aeronaves <i>✦</i> 7 vehículos <i>✦</i> 3 idiomas <i>✦</i></span>
+        <span>Word Duel <i>✦</i> Inki Run <i>✦</i> Inki Ace <i>✦</i> 500 niveles <i>✦</i> 120 etapas <i>✦</i> 100 etapas <i>✦</i> 10 jefes <i>✦</i> 25 aeronaves <i>✦</i> 7 vehículos <i>✦</i> 3 idiomas <i>✦</i></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Games -->
+  <section class="section" id="games">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div>
+          <span class="tag">Los juegos</span>
+          <h2 class="h2">Tres juegos.<br>Un pulgar.</h2>
+        </div>
+        <p>Toca letras, dibuja líneas, mantén y arrastra. Cada juego de Favalia es gratis en iPhone y iPad, se aprende en un minuto y se pone cada vez más difícil, de la mejor manera.</p>
+      </div>
+
+      <div class="games">
+        <!-- Word Duel -->
+        <article class="gp gp--wd" data-reveal aria-labelledby="gp-wd">
+          <div class="confetti-dots" aria-hidden="true"></div>
+          <span class="float-tile float-tile--r" style="--s:40px;right:5%;top:8%;--r:-10deg;--d:6.5s" aria-hidden="true">S</span>
+          <span class="float-tile" style="--s:52px;right:40%;bottom:9%;--r:-12deg;--d:7s" aria-hidden="true">W</span>
+          <span class="float-tile float-tile--o" style="--s:44px;right:6%;bottom:12%;--r:14deg;--d:8s" aria-hidden="true">A</span>
+          <span class="float-tile float-tile--g" style="--s:46px;right:41%;top:9%;--r:10deg;--d:6s" aria-hidden="true">D</span>
+          <div class="gp-copy">
+            <div class="gp-head">
+              <img class="gp-icon" src="../assets/img/word-duel/icon.webp" alt="" width="76" height="76" loading="lazy">
+              <div><span class="gp-kicker">Juego de palabras · En el App Store</span><h3 id="gp-wd">Word Duel</h3></div>
+            </div>
+            <p class="gp-pitch">Una palabra oculta. Seis corazones. Una letra cada vez. Las letras correctas vuelan a sus rayas; las incorrectas caen entre tus fallos y se llevan un corazón.</p>
+            <ul class="gp-points">
+              <li>Palabras en solitario sin reloj, y puntuación doble si son perfectas</li>
+              <li>Reta a un amigo o a un rival al azar: a 3, 5 o 7 palabras</li>
+              <li>500 niveles y 71 avatares, en español, inglés o francés</li>
+            </ul>
+            <div class="gp-cta"><a class="appstore" href="https://apps.apple.com/app/word-duel-letter-battle/id6814167260" aria-label="Descarga Word Duel en el App Store"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/es-mx" alt="Descárgalo en el App Store" height="54" loading="lazy"></a><a class="arrow-link" href="word-duel/">Descubre Word Duel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a></div>
+          </div>
+          <div class="gp-media">
+            <div class="device"><div class="screen"><video data-autoplay muted loop playsinline preload="none" poster="../assets/video/word-duel-poster.webp" aria-label="Partida de Word Duel"><source src="../assets/video/word-duel.mp4" type="video/mp4"></video></div></div>
+          </div>
+        </article>
+
+        <!-- Inki Run -->
+        <article class="gp gp--ink gp--ir" data-reveal aria-labelledby="gp-ir">
+          <svg class="cloud" style="left:5%;top:7%;width:120px" viewBox="0 0 120 50" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 44h108M16 44a13 13 0 0 1 15-17 19 19 0 0 1 36-7 15 15 0 0 1 29 9 11 11 0 0 1 11 15"/></svg>
+          <svg class="cloud" style="right:9%;top:11%;width:86px" viewBox="0 0 120 50" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 44h108M16 44a13 13 0 0 1 15-17 19 19 0 0 1 36-7 15 15 0 0 1 29 9 11 11 0 0 1 11 15"/></svg>
+          <span class="gp-runner" aria-hidden="true"><svg class="runner" viewBox="0 0 24 32" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="15" cy="5.6" r="3.5"/><path d="M11.4 3.4h8.6M14.2 9.4 11.6 19"/><g class="f1"><path d="M11.6 19l4 4.6-1.4 6.6M11.6 19 8 24l-4 1.4M13.2 12l3.8 3 3.6-2.6M13.2 12 9 14l-1.5 4"/></g><g class="f2"><path d="M11.6 19l-2 5.6 1 6M11.6 19l3.5 4 3.6-1.4M13.2 12l3.4 2.6 1.4 3.6M13.2 12l-3.7 3-3-2.6"/></g></svg></span>
+          <div class="gp-copy">
+            <div class="gp-head">
+              <img class="gp-icon" src="../assets/img/inki-run/icon.webp" alt="" width="76" height="76" loading="lazy">
+              <div><span class="gp-kicker">Carrera de dibujo · Próximamente</span><h3 id="gp-ir">Inki Run</h3></div>
+            </div>
+            <p class="gp-pitch">Tu corredor nunca salta. Tú dibujas el camino: puentes sobre los agujeros, rampas sobre las rocas, techos contra las piedras que caen y muros que frenan los coches.</p>
+            <ul class="gp-points">
+              <li>120 etapas en 12 capítulos, cada uno con un Sprint y una carrera de Jefe</li>
+              <li>7 vehículos, de la bici al hoverboard, y cada uno aguanta un golpe por ti</li>
+              <li>Modo Infinito: una vida, cada vez más rápido</li>
+            </ul>
+            <div class="gp-cta"><span class="soon">Próximamente en el App Store</span><a class="arrow-link" href="inki-run/">Descubre Inki Run <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a></div>
+          </div>
+          <div class="gp-media">
+            <div class="device device--land"><div class="screen"><video data-autoplay muted loop playsinline preload="none" poster="../assets/video/inki-run-poster.webp" aria-label="Partida de Inki Run"><source src="../assets/video/inki-run.mp4" type="video/mp4"></video></div></div>
+          </div>
+        </article>
+
+        <!-- Inki Ace -->
+        <article class="gp gp--ink gp--ia" data-reveal aria-labelledby="gp-ia">
+          <svg class="contrail" viewBox="0 0 1200 600" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M-20 560C320 520 640 330 1220 70" vector-effect="non-scaling-stroke"/><path d="M-20 590C330 548 660 360 1220 100" vector-effect="non-scaling-stroke"/></svg>
+          <svg class="cloud" style="left:40%;top:6%;width:110px" viewBox="0 0 120 50" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 44h108M16 44a13 13 0 0 1 15-17 19 19 0 0 1 36-7 15 15 0 0 1 29 9 11 11 0 0 1 11 15"/></svg>
+          <div class="gp-copy">
+            <div class="gp-head">
+              <img class="gp-icon" src="../assets/img/inki-ace/icon.webp" alt="" width="76" height="76" loading="lazy">
+              <div><span class="gp-kicker">Combate aéreo arcade · Próximamente</span><h3 id="gp-ia">Inki Ace</h3></div>
+            </div>
+            <p class="gp-pitch">Mantén y arrastra para volar. Tus armas hacen el resto. Reposta en gasolineras en el cielo, atrapa armas en pleno vuelo y enfréntate a 10 jefes en 100 etapas.</p>
+            <ul class="gp-points">
+              <li>10 mundos, de Harbor Bay a la Blot Citadel, con tormentas de arena, ventiscas y lava</li>
+              <li>25 aeronaves: aviones clásicos, helicópteros, cazas y naves del futuro</li>
+              <li>Misiones especiales: rescates, bombardeos, escoltas y reconocimiento</li>
+            </ul>
+            <div class="gp-cta"><span class="soon">Próximamente en el App Store</span><a class="arrow-link" href="inki-ace/">Descubre Inki Ace <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a></div>
+          </div>
+          <div class="gp-media">
+            <div class="device"><div class="screen"><video data-autoplay muted loop playsinline preload="none" poster="../assets/video/inki-ace-poster.webp" aria-label="Partida de Inki Ace"><source src="../assets/video/inki-ace.mp4" type="video/mp4"></video></div></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Arcade -->
+  <section class="section section--alt" id="arcade">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div>
+          <span class="tag">Pruébalo antes de descargar</span>
+          <h2 class="h2">Juega<br>aquí mismo.</h2>
+        </div>
+        <p>Cada juego tiene una pequeña demo jugable en su página. Sin descargas ni registros: solo tu ratón, tu trackpad o tu dedo.</p>
+      </div>
+      <div class="arcade">
+        <a class="arcade-card" href="word-duel/#play" data-reveal>
+          <div class="art art--wd" aria-hidden="true">
+            <svg viewBox="0 0 320 200">
+              <g font-family="Nunito, system-ui, sans-serif" font-weight="900" font-size="26" text-anchor="middle">
+                <g fill="#fff"><rect x="58" y="54" width="34" height="38" rx="8"/><rect x="100" y="54" width="34" height="38" rx="8"/><rect x="184" y="54" width="34" height="38" rx="8"/><rect x="226" y="54" width="34" height="38" rx="8"/></g>
+                <g fill="#2a1d5c"><text x="75" y="82">P</text><text x="117" y="82">L</text><text x="201" y="82">E</text><text x="243" y="82">T</text></g>
+                <g fill="#27c48b"><rect x="58" y="100" width="34" height="4" rx="2"/><rect x="100" y="100" width="34" height="4" rx="2"/><rect x="184" y="100" width="34" height="4" rx="2"/><rect x="226" y="100" width="34" height="4" rx="2"/></g>
+                <g fill="rgba(255,255,255,.45)"><rect x="142" y="100" width="34" height="4" rx="2"/></g>
+                <g fill="#ffc3ce"><rect x="118" y="128" width="24" height="26" rx="6"/><rect x="148" y="128" width="24" height="26" rx="6"/></g>
+                <g fill="#c3244a" font-size="15"><text x="130" y="147">Q</text><text x="160" y="147">Z</text></g>
+                <g fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2" stroke-dasharray="4 4"><rect x="178" y="128" width="24" height="26" rx="6"/></g>
+              </g>
+              <g fill="#ff5a78"><path d="M26 30c0-6 8-8 10-2 2-6 10-4 10 2 0 6-10 11-10 11s-10-5-10-11z"/><path d="M52 30c0-6 8-8 10-2 2-6 10-4 10 2 0 6-10 11-10 11s-10-5-10-11z"/></g>
+            </svg>
+          </div>
+          <h3>Word Duel</h3>
+          <p>Adivina la palabra letra a letra antes de que se acaben tus seis corazones.</p>
+          <span class="go">Jugar la demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="arcade-card" href="inki-run/#play" data-reveal style="--delay:80ms">
+          <div class="art" aria-hidden="true">
+            <svg viewBox="0 0 320 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 140h100v22M210 140v22M210 140h100" stroke-width="3"/>
+              <path d="M96 138C140 132 176 134 226 138" stroke-width="5"/>
+              <circle cx="226" cy="138" r="3.5" fill="currentColor"/>
+              <g transform="translate(140 98) scale(1.25)" stroke-width="2.4"><circle cx="15" cy="5.6" r="3.5"/><path d="M11.4 3.4h8.6M14.2 9.4 11.6 19M11.6 19l4 4.6-1.4 6.6M11.6 19 8 24l-4 1.4M13.2 12l3.8 3 3.6-2.6M13.2 12 9 14l-1.5 4"/></g>
+              <path d="M40 170h10M70 178h16M240 172h12M270 180h20" stroke-width="2.4"/>
+              <path d="M210 60h70M218 60a9 9 0 0 1 10-12 13 13 0 0 1 25-5 10 10 0 0 1 20 6" stroke-width="2.4" opacity=".5"/>
+            </svg>
+          </div>
+          <h3>Inki Run</h3>
+          <p>Dibuja puentes y rampas para un corredor que nunca salta. El tiempo va más lento mientras dibujas.</p>
+          <span class="go">Jugar la demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="arcade-card" href="inki-ace/#play" data-reveal style="--delay:160ms">
+          <div class="art" aria-hidden="true">
+            <svg viewBox="0 0 320 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2">
+              <g transform="translate(160 150) scale(1.5)"><polygon points="0,-21 2.6,-15 4,-6 16,4 16,8.5 4,6.5 3.6,11 9.5,16.5 9.5,19.5 0.8,17.5 -0.8,17.5 -9.5,19.5 -9.5,16.5 -3.6,11 -4,6.5 -16,8.5 -16,4 -4,-6 -2.6,-15" fill="var(--paper)"/><ellipse cx="0" cy="-9" rx="1.8" ry="4.4"/></g>
+              <path d="M155 106v-8M165 106v-8M155 84v-8M165 84v-8M155 62v-8M165 62v-8" stroke-width="2.6"/>
+              <g transform="translate(110 40)"><ellipse rx="4.2" ry="13" fill="var(--paper)"/><path d="M-16-1h32l-1 6h-30z" fill="var(--paper)"/></g>
+              <g transform="translate(220 52)"><ellipse rx="4.2" ry="13" fill="var(--paper)"/><path d="M-16-1h32l-1 6h-30z" fill="var(--paper)"/></g>
+              <circle cx="200" cy="96" r="5.5"/><circle cx="200" cy="96" r="2" fill="currentColor"/>
+              <circle cx="96" cy="88" r="5.5"/><circle cx="96" cy="88" r="2" fill="currentColor"/>
+              <path d="M30 40h60M36 40a8 8 0 0 1 9-11 12 12 0 0 1 23-4 9 9 0 0 1 18 5" opacity=".5"/>
+              <path d="M250 140q4-4 8 0t8 0M40 160q4-4 8 0t8 0M270 180q4-4 8 0t8 0" opacity=".5"/>
+            </svg>
+          </div>
+          <h3>Inki Ace</h3>
+          <p>Mantén y arrastra para volar, atrapa combustible antes de quedarte sin nada y esquiva la tinta.</p>
+          <span class="go">Jugar la demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Principles -->
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div>
+          <span class="tag">Cómo hacemos juegos</span>
+          <h2 class="h2">Fácil de empezar.<br>Difícil de soltar.</h2>
+        </div>
+        <p>Cada juego nace de una idea que se explica en una frase. Después pasamos meses haciéndolo justo, claro y ágil, para que el reto sea el juego y nunca los controles.</p>
+      </div>
+      <div class="principles" data-reveal>
+        <div class="principle">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="13" y="3" width="22" height="42" rx="5"/><circle cx="24" cy="26" r="3.2" fill="currentColor"/><circle cx="24" cy="26" r="9" stroke-dasharray="3 4"/></svg>
+          <h3>Un pulgar</h3>
+          <p>Toca una letra, dibuja una línea, mantén y arrastra. Si sabes usar un teléfono, sabes jugar.</p>
+        </div>
+        <div class="principle">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="27" r="16"/><path d="M20 4h8M24 4v7M24 27V17M24 27l7 5"/></svg>
+          <h3>Se aprende en un minuto</h3>
+          <p>Cada juego te enseña a jugar: una primera palabra guiada, una carrera de práctica, una escuela de vuelo.</p>
+        </div>
+        <div class="principle">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="M24 7a17 17 0 0 0 0 34z" fill="currentColor"/></svg>
+          <h3>De día o de noche</h3>
+          <p>Modo claro y oscuro en cada juego, para que las partidas nocturnas no cansen la vista.</p>
+        </div>
+        <div class="principle">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 22V6h16l22 22-16 16z"/><circle cx="13.5" cy="14.5" r="3"/><path d="M22 30l8-8M26 34l8-8" opacity=".55"/></svg>
+          <h3>Gratis</h3>
+          <p>Descarga gratis en iPhone y iPad, sin necesidad de cuenta para empezar a jugar.</p>
+        </div>
+      </div>
+      <div class="stats" data-reveal>
+        <div class="stat"><b>500</b><span>Niveles para subir<br>en Word Duel</span></div>
+        <div class="stat"><b>120</b><span>Etapas para dibujar<br>en Inki Run</span></div>
+        <div class="stat"><b>100</b><span>Etapas para volar<br>en Inki Ace</span></div>
+        <div class="stat"><b>25</b><span>Aeronaves en el<br>hangar de Inki Ace</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Studio -->
+  <section class="section section--tight section--alt" id="studio">
+    <div class="wrap studio" data-reveal>
+      <blockquote>«Si pierdes, que sea por tu línea. Nunca por una trampa barata.»</blockquote>
+      <div class="studio-copy">
+        <span class="tag tag--line">El estudio</span>
+        <p style="margin-top:18px">Favalia es un pequeño estudio independiente de Montreal, Quebec. Diseñamos, dibujamos y programamos cada juego nosotros mismos, y comprobamos que cada etapa se pueda superar antes de publicarla.</p>
+        <p>Nos gustan los juegos que se entienden al instante y esconden una profundidad sorprendente: duelos que se deciden por una sola letra, diez jefes dibujados a tinta y un corredor que confía en ti en cada línea.</p>
+        <a class="btn btn--ghost" href="mailto:supportwordduel@gmail.com?subject=Hola%20Favalia">Escríbenos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="wrap">
+      <div>
+        <h2>De bolsillo. Gratis.<br>Cuando quieras.</h2>
+        <p>Tres juegos para iPhone y iPad, gratis. Empieza con una palabra, una línea o un despegue.</p>
+      </div>
+      <div class="actions">
+        <a class="appstore" href="https://apps.apple.com/app/word-duel-letter-battle/id6814167260" aria-label="Descarga Word Duel en el App Store"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/es-mx" alt="Descárgalo en el App Store" height="54" loading="lazy"></a>
+        <a class="btn btn--ghost" href="#games">Ver todos los juegos</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="../es/"><svg class="logo-tile" viewBox="0 0 40 40" aria-hidden="true"><g transform="rotate(-8 20 20)"><rect class="s" x="7.5" y="7.5" width="28" height="28" rx="7"/><rect class="t" x="4.5" y="4.5" width="28" height="28" rx="7" stroke-width="2.6"/><path class="f" d="M12.5 10.5h12.2v4.1h-7.6v3h6.6v3.9h-6.6v7h-4.6z"/></g></svg><span>Favalia</span></a>
+        <p>Juegos pequeños y cuidados para iPhone y iPad. Un pulgar para jugar, un minuto para aprender.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Juegos</h4>
+        <ul>
+          <li><a href="../es/word-duel/">Word Duel</a></li>
+          <li><a href="../es/inki-run/">Inki Run</a></li>
+          <li><a href="../es/inki-ace/">Inki Ace</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Ayuda</h4>
+        <ul>
+          <li><a href="../es/support/">Soporte</a></li>
+          <li><a href="https://worddue-production.up.railway.app/es/privacy">Privacidad de Word Duel</a></li>
+          <li><a href="../es/inki-run/privacy/">Privacidad de Inki Run</a></li>
+          <li><a href="../es/inki-ace/privacy/">Privacidad de Inki Ace</a></li>
+          <li><a href="../es/privacy/">Privacidad del sitio</a></li>
+          <li><button class="link-btn" type="button" data-consent-open>Configuración de cookies</button></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Escríbenos</h4>
+        <ul>
+          <li><a href="mailto:supportwordduel@gmail.com">supportwordduel@gmail.com</a></li>
+          <li><a href="../es/#studio">Sobre el estudio</a></li>
+        </ul>
+        <div class="foot-lang" role="group" aria-label="Idioma">
+          <a href="../" hreflang="en" lang="en" data-lang-switch="en">English</a>
+          <a href="../fr/" hreflang="fr" lang="fr" data-lang-switch="fr">Français</a>
+          <a href="./" hreflang="es" lang="es" data-lang-switch="es" aria-current="true">Español</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-word" aria-hidden="true">Favalia</div>
+  </div>
+  <div class="wrap foot-legal">
+    <span>© <span data-year>2026</span> Favalia · <button class="link-btn" type="button" data-consent-open>Configuración de cookies</button> · <strong class="made">¡Hecho con orgullo en Montreal, Quebec! <span aria-hidden="true">⚜</span></strong></span>
+    <span>Apple, el logotipo de Apple, iPhone y iPad son marcas comerciales de Apple Inc., registradas en EE. UU. y otros países. App Store es una marca de servicio de Apple Inc.</span>
+  </div>
+</footer>
+<script src="../assets/js/consent.js?v=ab2a3d40" data-privacy="../es/privacy/" defer></script>
+<script src="../assets/js/site.js?v=1b4f1c9e" defer></script>
+
+</body>
+</html>

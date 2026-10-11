@@ -3,6 +3,9 @@
 The website of **Favalia**, an independent game studio: a home page for our games, a page for each game
 (Word Duel, Inki Run, Inki Ace) with a small playable demo, and support and privacy pages.
 
+The whole site is in **English** (`/`), **French** (`/fr/`) and **Spanish** (`/es/`). Visitors switch with
+EN · FR · ES in the header; a first visit from a French or Spanish browser opens that language.
+
 Plain HTML, CSS and JavaScript with no framework. Hosted on GitHub Pages at **https://favalia.ca**.
 ## Privacy and consent
 
@@ -36,14 +39,16 @@ python3 tools/build.py
 
 | What | Where |
 | --- | --- |
-| Page content | `src/pages/*.html` (first line: the page's settings as JSON) |
+| Page content | `src/pages/en|fr|es/*.html`, one file per page and language (first line: the page's settings as JSON) |
+| Shared words (menu, footer, buttons) | `src/i18n.json` |
 | Header, menu, footer | `src/partials/` |
 | Studio details and per-game settings | `src/site.json` |
 | Styles | `assets/css/site.css` |
-| Browser demos | `assets/js/demo-*.js` |
+| Browser demos | `assets/js/demo-*.js` (their text and Word Duel's word lists are inside, per language) |
 
-The build writes `index.html`, `word-duel/`, `inki-run/`, `inki-ace/`, `support/`, `404.html` and
-`sitemap.xml`; edit `src/` rather than those files.
+The build writes the pages for all three languages (`index.html`, `fr/`, `es/`, `word-duel/` ...), `404.html` and
+`sitemap.xml`; edit `src/` rather than those files. When you change a page, change it in all three languages;
+the build warns if a page is missing in one of them.
 
 When a game launches, set its `appStoreId` in `src/site.json` and rebuild: every "Coming soon" for that
 game turns into the App Store badge.

@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+
+<!-- Consent first: Google Analytics 4 (G-HVNQKNVL5X) and Tag Manager (GTM-NFJ4XBCJ) only load after the visitor
+     agrees (assets/js/consent.js shows the banner). Google Consent Mode v2 starts with everything denied. -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+  analytics_storage: 'denied', personalization_storage: 'denied',
+  functionality_storage: 'granted', security_storage: 'granted'
+});
+gtag('set', 'ads_data_redaction', true);
+(function (w, d) {
+  var GA = 'G-HVNQKNVL5X', GTM = 'GTM-NFJ4XBCJ', KEY = 'favalia-consent', VERSION = 1, MAX_AGE = 365 * 864e5;
+  var loaded = {}, choice = null;
+  function add(src) { var s = d.createElement('script'); s.async = true; s.src = src; d.head.appendChild(s); }
+  function apply(c) {
+    gtag('consent', 'update', {
+      analytics_storage: c.analytics ? 'granted' : 'denied',
+      ad_storage: c.marketing ? 'granted' : 'denied',
+      ad_user_data: c.marketing ? 'granted' : 'denied',
+      ad_personalization: c.marketing ? 'granted' : 'denied'
+    });
+    if (c.analytics && !loaded.ga) { loaded.ga = 1; add('https://www.googletagmanager.com/gtag/js?id=' + GA); gtag('js', new Date()); gtag('config', GA); }
+    if ((c.analytics || c.marketing) && !loaded.gtm) { loaded.gtm = 1; w.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); add('https://www.googletagmanager.com/gtm.js?id=' + GTM); }
+    w.dataLayer.push({ event: 'favalia_consent', consent_analytics: !!c.analytics, consent_marketing: !!c.marketing });
+  }
+  try { choice = JSON.parse(localStorage.getItem(KEY)); } catch (e) {}
+  if (!choice || choice.v !== VERSION || !(Date.now() - choice.t < MAX_AGE)) choice = null;
+  w.favaliaConsent = {
+    get: function () { return choice; },
+    save: function (analytics, marketing) {
+      choice = { v: VERSION, t: Date.now(), analytics: !!analytics, marketing: !!marketing };
+      try { localStorage.setItem(KEY, JSON.stringify(choice)); } catch (e) {}
+      apply(choice);
+      return choice;
+    }
+  };
+  if (choice) apply(choice);
+})(window, document);
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Inki Run · Trace la voie. Sauve le coureur. · Favalia</title>
+<meta name="description" content="Ton coureur ne saute jamais. C&#x27;est toi qui traces la voie : ponts, rampes, toits et murs, en 120 étapes, avec 7 véhicules et un mode Infini. Pour iPhone et iPad. Essaie la démo dans ton navigateur.">
+<link rel="canonical" href="https://favalia.ca/fr/inki-run/">
+<meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f0f10" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Favalia">
+<meta property="og:locale" content="fr_CA">
+<link rel="alternate" hreflang="en" href="https://favalia.ca/inki-run/">
+<link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/inki-run/">
+<link rel="alternate" hreflang="es" href="https://favalia.ca/es/inki-run/">
+<link rel="alternate" hreflang="x-default" href="https://favalia.ca/inki-run/">
+<meta property="og:locale:alternate" content="en_CA">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:title" content="Inki Run : ton coureur ne saute jamais. C&#x27;est toi qui traces la voie.">
+<meta property="og:description" content="Ton coureur ne saute jamais. C&#x27;est toi qui traces la voie : ponts, rampes, toits et murs, en 120 étapes, avec 7 véhicules et un mode Infini. Pour iPhone et iPad. Essaie la démo dans ton navigateur.">
+<meta property="og:url" content="https://favalia.ca/fr/inki-run/">
+<meta property="og:image" content="https://favalia.ca/assets/img/og/inki-run-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Inki Run : ton coureur ne saute jamais. C&#x27;est toi qui traces la voie.">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="manifest" href="../../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700;800&family=Nunito:wght@800;900&display=swap">
+<link rel="stylesheet" href="../../assets/css/site.css?v=651d44ea">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('favalia-theme');if(t==='light'||t==='dark')d.dataset.theme=t;}catch(e){}})();</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MobileApplication", "name": "Inki Run", "alternateName": "Inki Run: Trace la voie. Sauve le coureur.", "description": "Ton coureur ne saute jamais. C'est toi qui traces la voie : ponts, rampes, toits et murs, en 120 étapes, avec 7 véhicules et un mode Infini. Pour iPhone et iPad. Essaie la démo dans ton navigateur.", "url": "https://favalia.ca/fr/inki-run/", "inLanguage": "fr", "image": "https://favalia.ca/assets/img/inki-run/icon.png", "operatingSystem": "iOS, iPadOS", "applicationCategory": "GameApplication", "applicationSubCategory": "Course à dessiner", "contentRating": "4+", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@type": "Organization", "name": "Favalia", "url": "https://favalia.ca/", "logo": "https://favalia.ca/apple-touch-icon.png", "email": "supportwordduel@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Montréal", "addressRegion": "Québec", "addressCountry": "CA"}}, "publisher": {"@type": "Organization", "name": "Favalia", "url": "https://favalia.ca/", "logo": "https://favalia.ca/apple-touch-icon.png", "email": "supportwordduel@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Montréal", "addressRegion": "Québec", "addressCountry": "CA"}}}</script>
+</head>
+<body class="">
+<a class="skip-link" href="#main">Aller au contenu</a>
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Menu principal">
+    <a class="brand" href="../../fr/" aria-label="Accueil Favalia"><svg class="logo-tile" viewBox="0 0 40 40" aria-hidden="true"><g transform="rotate(-8 20 20)"><rect class="s" x="7.5" y="7.5" width="28" height="28" rx="7"/><rect class="t" x="4.5" y="4.5" width="28" height="28" rx="7" stroke-width="2.6"/><path class="f" d="M12.5 10.5h12.2v4.1h-7.6v3h6.6v3.9h-6.6v7h-4.6z"/></g></svg><span>Favalia</span></a>
+    <ul class="nav-links">
+      <li><a href="../../fr/word-duel/"><img src="../../assets/img/word-duel/icon.webp" alt="" width="22" height="22">Word Duel</a></li>
+      <li><a href="../../fr/inki-run/" aria-current="page"><img src="../../assets/img/inki-run/icon.webp" alt="" width="22" height="22">Inki Run</a></li>
+      <li><a href="../../fr/inki-ace/"><img src="../../assets/img/inki-ace/icon.webp" alt="" width="22" height="22">Inki Ace</a></li>
+      <li><a href="../../fr/support/">Soutien</a></li>
+    </ul>
+    <div class="nav-tools">
+      <div class="lang-nav" role="group" aria-label="Langue">
+        <a href="../../inki-run/" hreflang="en" lang="en" title="English" data-lang-switch="en">EN</a>
+        <a href="./" hreflang="fr" lang="fr" title="Français" data-lang-switch="fr" aria-current="true">FR</a>
+        <a href="../../es/inki-run/" hreflang="es" lang="es" title="Español" data-lang-switch="es">ES</a>
+      </div>
+      <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Changer de thème"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.6A8.3 8.3 0 0 1 9.4 4a8.3 8.3 0 1 0 10.6 10.6z"/><path d="M16.5 3.5l.5 1.5 1.5.5-1.5.5-.5 1.5-.5-1.5-1.5-.5 1.5-.5z" fill="currentColor" stroke-width="1"/></svg></button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-controls="site-menu" aria-expanded="false" aria-label="Ouvrir le menu"><svg class="bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+  </nav>
+</header>
+<div class="mobile-menu" id="site-menu" hidden>
+  <a href="../../fr/word-duel/"><img src="../../assets/img/word-duel/icon.webp" alt="" width="44" height="44"><span>Word Duel<small>Jeu de mots · Sur l'App Store</small></span></a>
+  <a href="../../fr/inki-run/"><img src="../../assets/img/inki-run/icon.webp" alt="" width="44" height="44"><span>Inki Run<small>Course à dessiner · Bientôt disponible</small></span></a>
+  <a href="../../fr/inki-ace/"><img src="../../assets/img/inki-ace/icon.webp" alt="" width="44" height="44"><span>Inki Ace<small>Combat aérien · Bientôt disponible</small></span></a>
+  <a href="../../fr/support/"><span>Soutien<small>Aide, confidentialité et contact</small></span></a>
+  <div class="mm-lang" role="group" aria-label="Langue">
+    <a href="../../inki-run/" hreflang="en" lang="en" data-lang-switch="en">English</a>
+    <a href="./" hreflang="fr" lang="fr" data-lang-switch="fr" aria-current="true">Français</a>
+    <a href="../../es/inki-run/" hreflang="es" lang="es" data-lang-switch="es">Español</a>
+  </div>
+  <p class="mm-foot">Jeux pour iPhone et iPad · <a href="mailto:supportwordduel@gmail.com" style="all:unset;cursor:pointer;text-decoration:underline">supportwordduel@gmail.com</a></p>
+</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="mini-runner" viewBox="0 0 24 32"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="15" cy="5.6" r="3.5"/><path d="M11.4 3.4h8.6M14.2 9.4 11.6 19M11.6 19l4 4.6-1.4 6.6M11.6 19 8 24l-4 1.4M13.2 12l3.8 3 3.6-2.6M13.2 12 9 14l-1.5 4"/></g></symbol>
+</svg>
+<main id="main">
+
+  <section class="g-hero ink-hero">
+    <svg class="cloud" style="left:44%;top:7%;width:130px" viewBox="0 0 120 50" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 44h108M16 44a13 13 0 0 1 15-17 19 19 0 0 1 36-7 15 15 0 0 1 29 9 11 11 0 0 1 11 15"/></svg>
+    <svg class="cloud" style="right:4%;top:16%;width:90px" viewBox="0 0 120 50" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 44h108M16 44a13 13 0 0 1 15-17 19 19 0 0 1 36-7 15 15 0 0 1 29 9 11 11 0 0 1 11 15"/></svg>
+    <div class="ground" aria-hidden="true"></div>
+    <span class="gp-runner" aria-hidden="true"><svg class="runner" viewBox="0 0 24 32" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="15" cy="5.6" r="3.5"/><path d="M11.4 3.4h8.6M14.2 9.4 11.6 19"/><g class="f1"><path d="M11.6 19l4 4.6-1.4 6.6M11.6 19 8 24l-4 1.4M13.2 12l3.8 3 3.6-2.6M13.2 12 9 14l-1.5 4"/></g><g class="f2"><path d="M11.6 19l-2 5.6 1 6M11.6 19l3.5 4 3.6-1.4M13.2 12l3.4 2.6 1.4 3.6M13.2 12l-3.7 3-3-2.6"/></g></svg></span>
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Fil d'Ariane"><a href="../">Favalia</a><span aria-hidden="true">/</span><a href="../#games">Jeux</a><span aria-hidden="true">/</span><span aria-current="page">Inki Run</span></nav>
+      <div class="g-hero-grid">
+        <div>
+          <h1 class="ink-word" aria-label="Inki Run">
+            <span class="ln" aria-hidden="true">Inki</span>
+            <span class="ln ln--runner" aria-hidden="true">Run<svg class="runner" viewBox="0 0 24 32" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="15" cy="5.6" r="3.5"/><path d="M11.4 3.4h8.6M14.2 9.4 11.6 19"/><g class="f1"><path d="M11.6 19l4 4.6-1.4 6.6M11.6 19 8 24l-4 1.4M13.2 12l3.8 3 3.6-2.6M13.2 12 9 14l-1.5 4"/></g><g class="f2"><path d="M11.6 19l-2 5.6 1 6M11.6 19l3.5 4 3.6-1.4M13.2 12l3.4 2.6 1.4 3.6M13.2 12l-3.7 3-3-2.6"/></g></svg></span>
+            <svg class="underline" viewBox="0 0 600 14" preserveAspectRatio="none" aria-hidden="true"><path d="M4 8C150 4 300 10 596 6" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>
+          </h1>
+          <p class="g-sub">Trace la voie. Sauve le coureur.</p>
+          <p class="g-pitch">Ton coureur ne saute jamais. C'est toi qui traces la voie : des ponts au-dessus des trous, des rampes par-dessus les rochers et les arbres, des toits contre les pierres qui tombent et des murs qui arrêtent les oiseaux et les voitures.</p>
+          <div class="g-ctas">
+            <span class="soon">Bientôt sur l'App Store</span>
+            <a class="btn btn--ghost" href="#play">Essaie la démo</a>
+          </div>
+          <div class="chips">
+            <span class="chip">Gratuit</span><span class="chip">iPhone et iPad</span><span class="chip">Dès 4 ans</span><span class="chip">Jour et nuit</span>
+          </div>
+        </div>
+        <div class="g-media">
+          <div class="device device--land"><div class="screen"><video data-autoplay muted loop playsinline preload="none" poster="../../assets/video/inki-run-poster.webp" aria-label="Partie d'Inki Run"><source src="../../assets/video/inki-run.mp4" type="video/mp4"></video></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="play">
+    <div class="wrap">
+      <div class="play-head" data-reveal>
+        <div><span class="tag">Démo jouable</span><h2 class="h2" style="margin-top:18px">Trace la voie.</h2></div>
+        <p>Appuie et glisse pour dessiner. Commence tes ponts un peu avant le trou, et tes rampes au sol. Le temps ralentit pendant que tu dessines, et chaque ligne coûte ✎1.</p>
+      </div>
+      <div class="demo-frame ir-demo" data-ir-demo data-reveal>
+        <div class="demo-stage">
+          <canvas aria-label="Démo d'Inki Run. Trace des lignes pour faire passer le coureur au-dessus des trous et des rochers." tabindex="-1"></canvas>
+          <div class="demo-overlay" data-overlay><noscript><p>Active JavaScript pour jouer à la démo.</p></noscript></div>
+        </div>
+        <div class="demo-foot"><span>Souris, pavé tactile ou doigt</span><span>Obstacle passé : +1 ✎</span><span>Le jeu complet : 120 étapes · 7 véhicules · mode Infini</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div><span class="tag">Comment ça marche</span><h2 class="h2">Tu dessines.<br>Il court dessus.</h2></div>
+        <p>Les lignes ne portent ton coureur que par le dessus. De côté, il les traverse : un mur arrête une voiture, mais jamais lui.</p>
+      </div>
+      <div class="rules" data-reveal>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 72h66v12M134 72v12M134 72h62" stroke-width="3"/><path d="M56 70Q100 75 148 70" stroke-width="5"/><use href="#mini-runner" x="88" y="40" width="24" height="32"/></svg>
+          <b>Trous</b><p>Trace un pont d'un bord à l'autre.</p>
+        </div>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 72h192" stroke-width="3"/><path d="M112 72V49q0-8 8-8h14q8 0 8 8v23" stroke-width="3" fill="var(--card)"/><path d="M60 72L110 34H158" stroke-width="5"/><use href="#mini-runner" x="120" y="2" width="24" height="32"/></svg>
+          <b>Rochers et arbres</b><p>Pars du sol et trace une rampe qui monte et passe par-dessus.</p>
+        </div>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 72h192" stroke-width="3"/><path d="M100 72l6-14 6 14 6-14 6 14 6-14 6 14" stroke-width="3"/><path d="M68 72L96 48H150" stroke-width="5"/><use href="#mini-runner" x="112" y="16" width="24" height="32"/></svg>
+          <b>Pics et cactus</b><p>Passe par-dessus. Si ta ligne les dépasse, tu es sauf.</p>
+        </div>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 72h192" stroke-width="3"/><path d="M66 32H150" stroke-width="5"/><path d="M92 4l6 6-6 6-6-6z M126 0l6 6-6 6-6-6z" stroke-width="2.6" fill="currentColor"/><path d="M92 18v8M126 14v12" stroke-width="2" stroke-dasharray="3 4"/><use href="#mini-runner" x="96" y="40" width="24" height="32"/></svg>
+          <b>Chutes de pierres</b><p>Trace un toit au-dessus de la tête de ton coureur.</p>
+        </div>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 72h192" stroke-width="3"/><path d="M126 72V32" stroke-width="5"/><path d="M140 64v-7l8-1 6-8h18l6 8h6v8z" stroke-width="2.6" fill="var(--card)"/><circle cx="150" cy="66" r="5" stroke-width="2.6" fill="var(--card)"/><circle cx="176" cy="66" r="5" stroke-width="2.6" fill="var(--card)"/><use href="#mini-runner" x="62" y="40" width="24" height="32"/></svg>
+          <b>Oiseaux et voitures</b><p>Trace un mur. Ils rebondissent dessus, et ton coureur passe à travers.</p>
+        </div>
+      </div>
+      <p class="rules-note">Le temps ralentit tant que ton doigt est sur l'écran. Chaque ligne coûte de l'encre : attrape des étoiles pour en gagner.</p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div><span class="tag">Au programme</span><h2 class="h2">De quoi<br>dessiner.</h2></div>
+        <p>Des dessins nets en noir et blanc, un coureur qui te fait entièrement confiance, et beaucoup de route devant toi.</p>
+      </div>
+      <div class="features">
+        <div class="feature" data-reveal><span class="big">120</span><h3>Étapes</h3><p>12 chapitres, de « Learning the Ropes » à « Legend », chacun avec un Sprint et une course de Boss. Trois étoiles à gagner à chaque étape.</p></div>
+        <div class="feature" data-reveal style="--delay:60ms"><span class="big">7</span><h3>Véhicules</h3><p>Vélo, tricycle, trottinette, planche à roulettes, monocycle, gyropode et hoverboard. Chacun se conduit différemment, et chacun encaisse un coup pour toi.</p></div>
+        <div class="feature" data-reveal style="--delay:120ms"><span class="big">∞</span><h3>Mode Infini</h3><p>Une seule vie, pas de ligne d'arrivée, de plus en plus vite. Jusqu'où iras-tu ?</p></div>
+        <div class="feature" data-reveal><span class="big">6</span><h3>Coureurs</h3><p>Sam, Mia, Leo, Zoe, Gramps et Rex, avec chapeaux, lunettes, foulards, capes, chaussures et équipement de véhicule.</p></div>
+        <div class="feature" data-reveal style="--delay:60ms"><span class="big">☀ ☾</span><h3>Jour ou nuit</h3><p>Des dessins nets en noir et blanc qui suivent ton appareil, ou choisis le jour ou la nuit.</p></div>
+        <div class="feature" data-reveal style="--delay:120ms"><span class="big">1 min</span><h3>Apprends en jouant</h3><p>Ta première course est un entraînement qui passe par chaque obstacle, avec un indice au ralenti pour chacun.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap shots-wrap" data-rail>
+      <div class="sec-head" data-reveal>
+        <div><span class="tag">Captures d'écran</span><h2 class="h2">Le jeu en images</h2></div>
+        <div class="shots-nav">
+          <button class="icon-btn" type="button" data-rail-step="-1" aria-label="Captures précédentes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button class="icon-btn" type="button" data-rail-step="1" aria-label="Captures suivantes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+      </div>
+      <div class="shots shots--land">
+        <button class="shot" type="button" data-lightbox="../../assets/img/inki-run/01-draw-the-way.webp"><img src="../../assets/img/inki-run/01-draw-the-way.webp" alt="Une rampe tracée par-dessus un arbre" width="1434" height="660" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../../assets/img/inki-run/02-ramps-over-rocks.webp"><img src="../../assets/img/inki-run/02-ramps-over-rocks.webp" alt="Une rampe tracée par-dessus un rocher" width="1434" height="660" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../../assets/img/inki-run/03-roofs-stop-stones.webp"><img src="../../assets/img/inki-run/03-roofs-stop-stones.webp" alt="Un toit tracé sous des pierres qui tombent" width="1434" height="660" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../../assets/img/inki-run/04-walls-stop-cars.webp"><img src="../../assets/img/inki-run/04-walls-stop-cars.webp" alt="Un mur qui arrête une voiture" width="1434" height="660" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../../assets/img/inki-run/05-ride-bikes-more.webp"><img src="../../assets/img/inki-run/05-ride-bikes-more.webp" alt="À vélo sur un pont" width="1434" height="660" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../../assets/img/inki-run/06-endless-mode.webp"><img src="../../assets/img/inki-run/06-endless-mode.webp" alt="Le mode Infini, de nuit" width="1434" height="660" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../../assets/img/inki-run/07-120-stages.webp"><img src="../../assets/img/inki-run/07-120-stages.webp" alt="La carte des 120 étapes" width="1434" height="660" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../../assets/img/inki-run/08-pick-your-runner.webp"><img src="../../assets/img/inki-run/08-pick-your-runner.webp" alt="La garde-robe, où tu choisis ton coureur" width="1434" height="660" loading="lazy"></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap" style="max-width:920px">
+      <div data-reveal><span class="tag">Questions</span><h2 class="h2" style="margin:18px 0 32px">Bon à savoir</h2></div>
+      <div class="faq" data-reveal>
+        <details>
+          <summary>Ma ligne était juste là, mais j'ai quand même chuté</summary>
+          <div class="answer"><ul>
+            <li>Commence tes rampes <b>au sol</b>, avant l'obstacle : ton coureur ne peut pas sauter sur une ligne.</li>
+            <li>Les lignes ne portent ton coureur que par le dessus. De côté, il les traverse.</li>
+            <li>Garde des rampes douces quand tu es sur un véhicule : vélos et gyropodes ne montent pas les lignes trop raides.</li>
+            <li>Le temps ralentit tant que ton doigt est sur l'écran, alors prends ton temps.</li>
+          </ul></div>
+        </details>
+        <details>
+          <summary>Je n'ai plus d'encre</summary>
+          <div class="answer"><p>Chaque ligne coûte ✎1. Continue de courir, attrape des étoiles (★) et bloque pierres, oiseaux et voitures avec tes lignes pour en gagner.</p></div>
+        </details>
+        <details>
+          <summary>À quoi sert un véhicule ?</summary>
+          <div class="answer"><p>Un véhicule encaisse un coup pour toi : il se brise, ton coureur fait un salto par-dessus l'obstacle et continue sans perdre de cœur. Tomber dans un trou coûte quand même un cœur.</p></div>
+        </details>
+        <details>
+          <summary>Quand les pubs apparaissent-elles ?</summary>
+          <div class="answer"><p>Une pub s'affiche toutes les 5 étapes terminées, gagnées ou perdues. En mode Infini, après une chute, tu peux choisir de regarder une pub pour continuer ta course, jusqu'à deux fois par course. Les pubs n'interrompent jamais une course.</p></div>
+        </details>
+        <details>
+          <summary>Où ma progression est-elle sauvegardée ?</summary>
+          <div class="answer"><p>Les étapes, les étoiles, ta meilleure distance en mode Infini et tes tenues sont sauvegardées sur ton appareil. Elles reviennent avec une sauvegarde iCloud ou sur ordinateur, mais supprimer l'app les efface. Il n'y a pas de compte.</p></div>
+        </details>
+      </div>
+      <div class="faq-foot">
+        <a class="arrow-link" href="support/">Toutes les questions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        <a class="arrow-link" href="privacy/">Politique de confidentialité <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="cta-band">
+    <div class="wrap">
+      <div><h2>Bientôt sur<br>l'App Store.</h2><p>Tu veux savoir le jour où Inki Run sort ? Écris-nous et on te répondra dès sa sortie.</p></div>
+      <div class="actions">
+        <a class="btn" href="mailto:supportwordduel@gmail.com?subject=Pr%C3%A9viens-moi%20de%20la%20sortie%20d%27Inki%20Run">Préviens-moi</a>
+        <a class="btn btn--ghost" href="#play">Essaie la démo</a>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div data-reveal style="margin-bottom:28px"><span class="tag">Aussi chez Favalia</span></div>
+      <div class="more">
+        <a href="../word-duel/" data-reveal><img src="../../assets/img/word-duel/icon.webp" alt="" width="76" height="76" loading="lazy"><span><b>Word Duel</b><small>Devine le mot. Défie tes amis.</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        <a href="../inki-ace/" data-reveal style="--delay:80ms"><img src="../../assets/img/inki-ace/icon.webp" alt="" width="76" height="76" loading="lazy"><span><b>Inki Ace</b><small>Combat aérien d'arcade à l'encre.</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="../../fr/"><svg class="logo-tile" viewBox="0 0 40 40" aria-hidden="true"><g transform="rotate(-8 20 20)"><rect class="s" x="7.5" y="7.5" width="28" height="28" rx="7"/><rect class="t" x="4.5" y="4.5" width="28" height="28" rx="7" stroke-width="2.6"/><path class="f" d="M12.5 10.5h12.2v4.1h-7.6v3h6.6v3.9h-6.6v7h-4.6z"/></g></svg><span>Favalia</span></a>
+        <p>De petits jeux soignés pour iPhone et iPad. Un pouce pour jouer, une minute pour apprendre.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Jeux</h4>
+        <ul>
+          <li><a href="../../fr/word-duel/">Word Duel</a></li>
+          <li><a href="../../fr/inki-run/">Inki Run</a></li>
+          <li><a href="../../fr/inki-ace/">Inki Ace</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Aide</h4>
+        <ul>
+          <li><a href="../../fr/support/">Soutien</a></li>
+          <li><a href="https://worddue-production.up.railway.app/fr/privacy">Confidentialité Word Duel</a></li>
+          <li><a href="../../fr/inki-run/privacy/">Confidentialité Inki Run</a></li>
+          <li><a href="../../fr/inki-ace/privacy/">Confidentialité Inki Ace</a></li>
+          <li><a href="../../fr/privacy/">Confidentialité du site</a></li>
+          <li><button class="link-btn" type="button" data-consent-open>Paramètres des témoins</button></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Écris-nous</h4>
+        <ul>
+          <li><a href="mailto:supportwordduel@gmail.com">supportwordduel@gmail.com</a></li>
+          <li><a href="../../fr/#studio">À propos du studio</a></li>
+        </ul>
+        <div class="foot-lang" role="group" aria-label="Langue">
+          <a href="../../inki-run/" hreflang="en" lang="en" data-lang-switch="en">English</a>
+          <a href="./" hreflang="fr" lang="fr" data-lang-switch="fr" aria-current="true">Français</a>
+          <a href="../../es/inki-run/" hreflang="es" lang="es" data-lang-switch="es">Español</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-word" aria-hidden="true">Favalia</div>
+  </div>
+  <div class="wrap foot-legal">
+    <span>© <span data-year>2026</span> Favalia · <button class="link-btn" type="button" data-consent-open>Paramètres des témoins</button> · <strong class="made">Fièrement conçu à Montréal, au Québec ! <span aria-hidden="true">⚜</span></strong></span>
+    <span>Apple, le logo Apple, iPhone et iPad sont des marques d'Apple Inc., déposées aux États-Unis et dans d'autres pays. App Store est une marque de service d'Apple Inc.</span>
+  </div>
+</footer>
+<script src="../../assets/js/consent.js?v=ab2a3d40" data-privacy="../../fr/privacy/" defer></script>
+<script src="../../assets/js/site.js?v=1b4f1c9e" defer></script>
+<script src="../../assets/js/demo-inki-run.js?v=72eecff8" defer></script>
+</body>
+</html>

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+
 <!-- Consent first: Google Analytics 4 (G-HVNQKNVL5X) and Tag Manager (GTM-NFJ4XBCJ) only load after the visitor
      agrees (assets/js/consent.js shows the banner). Google Consent Mode v2 starts with everything denied. -->
 <script>
@@ -51,6 +52,7 @@ gtag('set', 'ads_data_redaction', true);
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Favalia">
 <meta property="og:locale" content="en_CA">
+
 <meta property="og:title" content="Page not found · Favalia">
 <meta property="og:description" content="This page fell in a hole. Head back to Favalia&#x27;s games.">
 <meta property="og:url" content="https://favalia.ca/404.html">
@@ -67,7 +69,7 @@ gtag('set', 'ads_data_redaction', true);
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700;800&family=Nunito:wght@800;900&display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v=4f63396b">
+<link rel="stylesheet" href="/assets/css/site.css?v=651d44ea">
 <script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('favalia-theme');if(t==='light'||t==='dark')d.dataset.theme=t;}catch(e){}})();</script>
 
 </head>
@@ -83,6 +85,11 @@ gtag('set', 'ads_data_redaction', true);
       <li><a href="/support/">Support</a></li>
     </ul>
     <div class="nav-tools">
+      <div class="lang-nav" role="group" aria-label="Language">
+        <a href="/" hreflang="en" lang="en" title="English" data-lang-switch="en" aria-current="true">EN</a>
+        <a href="/fr/" hreflang="fr" lang="fr" title="Français" data-lang-switch="fr">FR</a>
+        <a href="/es/" hreflang="es" lang="es" title="Español" data-lang-switch="es">ES</a>
+      </div>
       <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch theme"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.6A8.3 8.3 0 0 1 9.4 4a8.3 8.3 0 1 0 10.6 10.6z"/><path d="M16.5 3.5l.5 1.5 1.5.5-1.5.5-.5 1.5-.5-1.5-1.5-.5 1.5-.5z" fill="currentColor" stroke-width="1"/></svg></button>
       <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-controls="site-menu" aria-expanded="false" aria-label="Open menu"><svg class="bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     </div>
@@ -93,6 +100,11 @@ gtag('set', 'ads_data_redaction', true);
   <a href="/inki-run/"><img src="/assets/img/inki-run/icon.webp" alt="" width="44" height="44"><span>Inki Run<small>Drawing runner · Coming soon</small></span></a>
   <a href="/inki-ace/"><img src="/assets/img/inki-ace/icon.webp" alt="" width="44" height="44"><span>Inki Ace<small>Plane shooter · Coming soon</small></span></a>
   <a href="/support/"><span>Support<small>Help, privacy and contact</small></span></a>
+  <div class="mm-lang" role="group" aria-label="Language">
+    <a href="/" hreflang="en" lang="en" data-lang-switch="en" aria-current="true">English</a>
+    <a href="/fr/" hreflang="fr" lang="fr" data-lang-switch="fr">Français</a>
+    <a href="/es/" hreflang="es" lang="es" data-lang-switch="es">Español</a>
+  </div>
   <p class="mm-foot">Games for iPhone and iPad · <a href="mailto:supportwordduel@gmail.com" style="all:unset;cursor:pointer;text-decoration:underline">supportwordduel@gmail.com</a></p>
 </div>
 <main id="main" class="lost">
@@ -105,8 +117,14 @@ gtag('set', 'ads_data_redaction', true);
       <path d="M232 60l6-10M246 66l10-6M222 54l-2-12" stroke-width="3"/>
     </svg>
     <h1>404</h1>
-    <p>This page fell in a hole. Nobody drew a bridge in time.</p>
-    <a class="btn" href="/">Back to the games</a>
+    <p>This page fell in a hole. Nobody drew a bridge in time.<br>
+      <span lang="fr">Cette page est tombée dans un trou. Personne n'a tracé de pont à temps.</span><br>
+      <span lang="es">Esta página se cayó en un agujero. Nadie dibujó un puente a tiempo.</span></p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center">
+      <a class="btn" href="/">Back to the games</a>
+      <a class="btn btn--ghost" href="/fr/" lang="fr">Retour aux jeux</a>
+      <a class="btn btn--ghost" href="/es/" lang="es">Volver a los juegos</a>
+    </div>
   </div>
 </main>
 <footer class="site-footer">
@@ -141,6 +159,11 @@ gtag('set', 'ads_data_redaction', true);
           <li><a href="mailto:supportwordduel@gmail.com">supportwordduel@gmail.com</a></li>
           <li><a href="/#studio">About the studio</a></li>
         </ul>
+        <div class="foot-lang" role="group" aria-label="Language">
+          <a href="/" hreflang="en" lang="en" data-lang-switch="en" aria-current="true">English</a>
+          <a href="/fr/" hreflang="fr" lang="fr" data-lang-switch="fr">Français</a>
+          <a href="/es/" hreflang="es" lang="es" data-lang-switch="es">Español</a>
+        </div>
       </div>
     </div>
     <div class="foot-word" aria-hidden="true">Favalia</div>
@@ -150,8 +173,8 @@ gtag('set', 'ads_data_redaction', true);
     <span>Apple, the Apple logo, iPhone and iPad are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</span>
   </div>
 </footer>
-<script src="/assets/js/consent.js?v=dc34e2cd" data-privacy="/privacy/" defer></script>
-<script src="/assets/js/site.js?v=708f73c2" defer></script>
+<script src="/assets/js/consent.js?v=ab2a3d40" data-privacy="/privacy/" defer></script>
+<script src="/assets/js/site.js?v=1b4f1c9e" defer></script>
 
 </body>
 </html>

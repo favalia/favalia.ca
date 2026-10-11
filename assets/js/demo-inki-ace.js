@@ -9,6 +9,43 @@
   const overlay = host.querySelector("[data-overlay]");
   const ctx = canvas.getContext("2d");
 
+  const LANG = ["fr", "es"].includes((document.documentElement.lang || "").slice(0, 2)) ? document.documentElement.lang.slice(0, 2) : "en";
+  const LOCALE = { en: "en-CA", fr: "fr-CA", es: "es-ES" }[LANG];
+  const TX = {
+    en: {
+      tag: "Inki Ace · Demo", title: "Take off",
+      intro: "Hold and drag anywhere on the sky to fly. Your guns fire on their own. Catch parachute fuel cans before the tank runs dry, and grab the <b>S</b> and <b>M</b> crates for new guns.",
+      fly: "Fly", keys: "Keyboard: arrow keys or WASD", again: "Fly again",
+      hold: "☝ Hold &amp; drag to fly", paused: "Paused · hold to fly on",
+      best: "New best", over: "Mission over", noFuel: "Out of fuel", shot: "Shot down",
+      score: (s, k, b) => `${s} pts · ${k} down · Best ${b}`,
+      tipFuel: "Catch the parachute fuel cans. Helicopters and bombers often drop one.",
+      tipShot: "Keep moving: bullets are aimed at where you are, not where you're going.",
+      fuel: "FUEL", low: "LOW!", plusFuel: "+FUEL", keep: "HOLD TO KEEP FLYING",
+    },
+    fr: {
+      tag: "Inki Ace · Démo", title: "Décollage",
+      intro: "Maintiens et glisse n'importe où dans le ciel pour voler. Tes canons tirent tout seuls. Attrape les bidons de carburant en parachute avant que le réservoir soit vide, et prends les caisses <b>S</b> et <b>M</b> pour changer d'arme.",
+      fly: "Décoller", keys: "Clavier\u00a0: flèches ou ZQSD", again: "Repartir",
+      hold: "☝ Maintiens et glisse pour voler", paused: "Pause · maintiens pour repartir",
+      best: "Nouveau record", over: "Fin de mission", noFuel: "Panne sèche", shot: "Abattu",
+      score: (s, k, b) => `${s} pts · ${k} abattus · Record ${b}`,
+      tipFuel: "Attrape les bidons de carburant en parachute. Les hélicoptères et les bombardiers en lâchent souvent un.",
+      tipShot: "Bouge sans arrêt\u00a0: les tirs visent l'endroit où tu es, pas celui où tu vas.",
+      fuel: "CARBURANT", low: "BAS\u202f!", plusFuel: "+CARBURANT", keep: "MAINTIENS POUR VOLER",
+    },
+    es: {
+      tag: "Inki Ace · Demo", title: "Despegue",
+      intro: "Mantén pulsado y arrastra en cualquier parte del cielo para volar. Tus armas disparan solas. Atrapa los bidones de combustible con paracaídas antes de que se vacíe el tanque y recoge las cajas <b>S</b> y <b>M</b> para cambiar de arma.",
+      fly: "Volar", keys: "Teclado: flechas o WASD", again: "Volar otra vez",
+      hold: "☝ Mantén y arrastra para volar", paused: "En pausa · mantén pulsado para seguir",
+      best: "Nuevo récord", over: "Misión terminada", noFuel: "Sin combustible", shot: "Derribado",
+      score: (s, k, b) => `${s} pts · ${k} derribados · Récord ${b}`,
+      tipFuel: "Atrapa los bidones de combustible con paracaídas. Los helicópteros y bombarderos suelen soltar uno.",
+      tipShot: "No te quedes quieto: las balas apuntan a donde estás, no a donde vas.",
+      fuel: "COMBUSTIBLE", low: "¡BAJO!", plusFuel: "+COMBUSTIBLE", keep: "MANTÉN PULSADO PARA VOLAR",
+    },
+  }[LANG];
   const W = 360, H = 600;
   const FONT = '800 13px "JetBrains Mono", ui-monospace, Menlo, monospace';
   const SMALL = '800 10px "JetBrains Mono", ui-monospace, Menlo, monospace';
@@ -193,7 +230,7 @@
         if (p.type === "fuel") {
           player.fuel = Math.min(100, player.fuel + 38);
           score += 50;
-          texts.push({ x: p.x, y: p.y, t: 0, s: "+FUEL" });
+          texts.push({ x: p.x, y: p.y, t: 0, s: TX.plusFuel });
         } else {
           if (p.letter === player.weapon) player.lv = Math.min(3, player.lv + 1);
           else player.weapon = p.letter;
@@ -240,11 +277,11 @@
     const isBest = score > best;
     if (isBest) { best = score; store.set("favalia.inkiace.best", String(best)); }
     showOverlay(`
-      <span class="tag">${isBest ? "New best" : "Mission over"}</span>
-      <h3>${why === "fuel" ? "Out of fuel" : "Shot down"}</h3>
-      <p class="score">${score.toLocaleString()} pts · ${kills} down · Best ${best.toLocaleString()}</p>
-      <p>${why === "fuel" ? "Catch the parachute fuel cans. Helicopters and bombers often drop one." : "Keep moving: bullets are aimed at where you are, not where you're going."}</p>
-      <button class="btn" type="button" data-fly>Fly again</button>`);
+      <span class="tag">${isBest ? TX.best : TX.over}</span>
+      <h3>${why === "fuel" ? TX.noFuel : TX.shot}</h3>
+      <p class="score">${TX.score(score.toLocaleString(LOCALE), kills, best.toLocaleString(LOCALE))}</p>
+      <p>${why === "fuel" ? TX.tipFuel : TX.tipShot}</p>
+      <button class="btn" type="button" data-fly>${TX.again}</button>`);
     setTouch();
   }
 
@@ -275,7 +312,8 @@
   canvas.addEventListener("pointercancel", release);
   canvas.addEventListener("contextmenu", (e) => e.preventDefault());
 
-  const KEYMAP = { ArrowLeft: "left", ArrowRight: "right", ArrowUp: "up", ArrowDown: "down", a: "left", d: "right", w: "up", s: "down", A: "left", D: "right", W: "up", S: "down" };
+  // WASD, plus ZQSD for French AZERTY keyboards.
+  const KEYMAP = { ArrowLeft: "left", ArrowRight: "right", ArrowUp: "up", ArrowDown: "down", a: "left", d: "right", w: "up", s: "down", A: "left", D: "right", W: "up", S: "down", q: "left", Q: "left", z: "up", Z: "up" };
   let onScreen = false;
   addEventListener("keydown", (e) => {
     const k = KEYMAP[e.key];
@@ -302,7 +340,7 @@
   }
   function wait() {
     state = "waiting";
-    overlay.innerHTML = '<span class="demo-pill">☝ Hold &amp; drag to fly</span>';
+    overlay.innerHTML = `<span class="demo-pill">${TX.hold}</span>`;
     overlay.classList.add("is-pass");
     overlay.hidden = false;
     setTouch();
@@ -310,7 +348,7 @@
   function pause() {
     state = "paused";
     holding = false;
-    overlay.innerHTML = '<span class="demo-pill">Paused · hold to fly on</span>';
+    overlay.innerHTML = `<span class="demo-pill">${TX.paused}</span>`;
     overlay.classList.add("is-pass");
     overlay.hidden = false;
   }
@@ -561,8 +599,8 @@
     ctx.font = SMALL;
     ctx.textAlign = "left";
     ctx.textBaseline = "middle";
-    ctx.fillText(`FUEL ${Math.ceil(player.fuel)}%`, 90, 44.5);
-    if (player.fuel < 25 && Math.floor(t * 3) % 2 === 0) ctx.fillText("LOW!", 90, 58);
+    ctx.fillText(`${TX.fuel} ${Math.ceil(player.fuel)}%`, 90, 44.5);
+    if (player.fuel < 25 && Math.floor(t * 3) % 2 === 0) ctx.fillText(TX.low, 90, 58);
     ctx.textAlign = "right";
     ctx.font = FONT;
     ctx.fillText(String(score).padStart(6, "0"), W - 12, 22);
@@ -571,7 +609,7 @@
     if (state === "run" && !holding && !keyboardMode && ts < 0.95) {
       ctx.textAlign = "center";
       ctx.font = FONT;
-      ctx.fillText("HOLD TO KEEP FLYING", W / 2, H / 2);
+      ctx.fillText(TX.keep, W / 2, H / 2);
     }
   }
 
@@ -614,11 +652,11 @@
     new IntersectionObserver(([e]) => { visible = e.isIntersecting; onScreen = e.intersectionRatio > 0.3; }, { threshold: [0, 0.3, 0.6] }).observe(stage);
   }
   showOverlay(`
-    <span class="tag">Inki Ace · Demo</span>
-    <h3>Take off</h3>
-    <p>Hold and drag anywhere on the sky to fly. Your guns fire on their own. Catch parachute fuel cans before the tank runs dry, and grab the <b>S</b> and <b>M</b> crates for new guns.</p>
-    <button class="btn" type="button" data-fly>Fly</button>
-    <p class="muted" style="font-size:14px">Keyboard: arrow keys or WASD</p>`);
+    <span class="tag">${TX.tag}</span>
+    <h3>${TX.title}</h3>
+    <p>${TX.intro}</p>
+    <button class="btn" type="button" data-fly>${TX.fly}</button>
+    <p class="muted" style="font-size:14px">${TX.keys}</p>`);
   setTouch();
   requestAnimationFrame(frame);
 

@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+
+<!-- Consent first: Google Analytics 4 (G-HVNQKNVL5X) and Tag Manager (GTM-NFJ4XBCJ) only load after the visitor
+     agrees (assets/js/consent.js shows the banner). Google Consent Mode v2 starts with everything denied. -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+  analytics_storage: 'denied', personalization_storage: 'denied',
+  functionality_storage: 'granted', security_storage: 'granted'
+});
+gtag('set', 'ads_data_redaction', true);
+(function (w, d) {
+  var GA = 'G-HVNQKNVL5X', GTM = 'GTM-NFJ4XBCJ', KEY = 'favalia-consent', VERSION = 1, MAX_AGE = 365 * 864e5;
+  var loaded = {}, choice = null;
+  function add(src) { var s = d.createElement('script'); s.async = true; s.src = src; d.head.appendChild(s); }
+  function apply(c) {
+    gtag('consent', 'update', {
+      analytics_storage: c.analytics ? 'granted' : 'denied',
+      ad_storage: c.marketing ? 'granted' : 'denied',
+      ad_user_data: c.marketing ? 'granted' : 'denied',
+      ad_personalization: c.marketing ? 'granted' : 'denied'
+    });
+    if (c.analytics && !loaded.ga) { loaded.ga = 1; add('https://www.googletagmanager.com/gtag/js?id=' + GA); gtag('js', new Date()); gtag('config', GA); }
+    if ((c.analytics || c.marketing) && !loaded.gtm) { loaded.gtm = 1; w.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); add('https://www.googletagmanager.com/gtm.js?id=' + GTM); }
+    w.dataLayer.push({ event: 'favalia_consent', consent_analytics: !!c.analytics, consent_marketing: !!c.marketing });
+  }
+  try { choice = JSON.parse(localStorage.getItem(KEY)); } catch (e) {}
+  if (!choice || choice.v !== VERSION || !(Date.now() - choice.t < MAX_AGE)) choice = null;
+  w.favaliaConsent = {
+    get: function () { return choice; },
+    save: function (analytics, marketing) {
+      choice = { v: VERSION, t: Date.now(), analytics: !!analytics, marketing: !!marketing };
+      try { localStorage.setItem(KEY, JSON.stringify(choice)); } catch (e) {}
+      apply(choice);
+      return choice;
+    }
+  };
+  if (choice) apply(choice);
+})(window, document);
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Word Duel: Batalla de letras · Adivina la palabra, reta a tus amigos · Favalia</title>
+<meta name="description" content="Una palabra oculta. Seis corazones. Una letra cada vez. Juega en solitario o reta a tus amigos con las mismas palabras, en español, inglés o francés. Gratis en iPhone y iPad. Prueba la demo aquí.">
+<link rel="canonical" href="https://favalia.ca/es/word-duel/">
+<meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f0f10" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Favalia">
+<meta property="og:locale" content="es_ES">
+<link rel="alternate" hreflang="en" href="https://favalia.ca/word-duel/">
+<link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/word-duel/">
+<link rel="alternate" hreflang="es" href="https://favalia.ca/es/word-duel/">
+<link rel="alternate" hreflang="x-default" href="https://favalia.ca/word-duel/">
+<meta property="og:locale:alternate" content="en_CA">
+<meta property="og:locale:alternate" content="fr_CA">
+<meta property="og:title" content="Word Duel: una palabra oculta, seis corazones, una letra cada vez">
+<meta property="og:description" content="Una palabra oculta. Seis corazones. Una letra cada vez. Juega en solitario o reta a tus amigos con las mismas palabras, en español, inglés o francés. Gratis en iPhone y iPad. Prueba la demo aquí.">
+<meta property="og:url" content="https://favalia.ca/es/word-duel/">
+<meta property="og:image" content="https://favalia.ca/assets/img/og/word-duel-es.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Word Duel: una palabra oculta, seis corazones, una letra cada vez">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="apple-itunes-app" content="app-id=6814167260">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="manifest" href="../../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700;800&family=Nunito:wght@800;900&display=swap">
+<link rel="stylesheet" href="../../assets/css/site.css?v=651d44ea">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('favalia-theme');if(t==='light'||t==='dark')d.dataset.theme=t;}catch(e){}})();</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MobileApplication", "name": "Word Duel", "alternateName": "Word Duel: Batalla de letras", "description": "Una palabra oculta. Seis corazones. Una letra cada vez. Juega en solitario o reta a tus amigos con las mismas palabras, en español, inglés o francés. Gratis en iPhone y iPad. Prueba la demo aquí.", "url": "https://favalia.ca/es/word-duel/", "inLanguage": "es", "image": "https://favalia.ca/assets/img/word-duel/icon.png", "operatingSystem": "iOS, iPadOS", "applicationCategory": "GameApplication", "applicationSubCategory": "Juego de palabras", "contentRating": "4+", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@type": "Organization", "name": "Favalia", "url": "https://favalia.ca/", "logo": "https://favalia.ca/apple-touch-icon.png", "email": "supportwordduel@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Montréal", "addressRegion": "Québec", "addressCountry": "CA"}}, "publisher": {"@type": "Organization", "name": "Favalia", "url": "https://favalia.ca/", "logo": "https://favalia.ca/apple-touch-icon.png", "email": "supportwordduel@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Montréal", "addressRegion": "Québec", "addressCountry": "CA"}}, "installUrl": "https://apps.apple.com/app/word-duel-letter-battle/id6814167260", "downloadUrl": "https://apps.apple.com/app/word-duel-letter-battle/id6814167260"}</script>
+</head>
+<body class="">
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Menú principal">
+    <a class="brand" href="../../es/" aria-label="Inicio de Favalia"><svg class="logo-tile" viewBox="0 0 40 40" aria-hidden="true"><g transform="rotate(-8 20 20)"><rect class="s" x="7.5" y="7.5" width="28" height="28" rx="7"/><rect class="t" x="4.5" y="4.5" width="28" height="28" rx="7" stroke-width="2.6"/><path class="f" d="M12.5 10.5h12.2v4.1h-7.6v3h6.6v3.9h-6.6v7h-4.6z"/></g></svg><span>Favalia</span></a>
+    <ul class="nav-links">
+      <li><a href="../../es/word-duel/" aria-current="page"><img src="../../assets/img/word-duel/icon.webp" alt="" width="22" height="22">Word Duel</a></li>
+      <li><a href="../../es/inki-run/"><img src="../../assets/img/inki-run/icon.webp" alt="" width="22" height="22">Inki Run</a></li>
+      <li><a href="../../es/inki-ace/"><img src="../../assets/img/inki-ace/icon.webp" alt="" width="22" height="22">Inki Ace</a></li>
+      <li><a href="../../es/support/">Soporte</a></li>
+    </ul>
+    <div class="nav-tools">
+      <div class="lang-nav" role="group" aria-label="Idioma">
+        <a href="../../word-duel/" hreflang="en" lang="en" title="English" data-lang-switch="en">EN</a>
+        <a href="../../fr/word-duel/" hreflang="fr" lang="fr" title="Français" data-lang-switch="fr">FR</a>
+        <a href="./" hreflang="es" lang="es" title="Español" data-lang-switch="es" aria-current="true">ES</a>
+      </div>
+      <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Cambiar tema"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.6A8.3 8.3 0 0 1 9.4 4a8.3 8.3 0 1 0 10.6 10.6z"/><path d="M16.5 3.5l.5 1.5 1.5.5-1.5.5-.5 1.5-.5-1.5-1.5-.5 1.5-.5z" fill="currentColor" stroke-width="1"/></svg></button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-controls="site-menu" aria-expanded="false" aria-label="Abrir el menú"><svg class="bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+  </nav>
+</header>
+<div class="mobile-menu" id="site-menu" hidden>
+  <a href="../../es/word-duel/"><img src="../../assets/img/word-duel/icon.webp" alt="" width="44" height="44"><span>Word Duel<small>Juego de palabras · En el App Store</small></span></a>
+  <a href="../../es/inki-run/"><img src="../../assets/img/inki-run/icon.webp" alt="" width="44" height="44"><span>Inki Run<small>Carrera de dibujo · Próximamente</small></span></a>
+  <a href="../../es/inki-ace/"><img src="../../assets/img/inki-ace/icon.webp" alt="" width="44" height="44"><span>Inki Ace<small>Combate aéreo · Próximamente</small></span></a>
+  <a href="../../es/support/"><span>Soporte<small>Ayuda, privacidad y contacto</small></span></a>
+  <div class="mm-lang" role="group" aria-label="Idioma">
+    <a href="../../word-duel/" hreflang="en" lang="en" data-lang-switch="en">English</a>
+    <a href="../../fr/word-duel/" hreflang="fr" lang="fr" data-lang-switch="fr">Français</a>
+    <a href="./" hreflang="es" lang="es" data-lang-switch="es" aria-current="true">Español</a>
+  </div>
+  <p class="mm-foot">Juegos para iPhone y iPad · <a href="mailto:supportwordduel@gmail.com" style="all:unset;cursor:pointer;text-decoration:underline">supportwordduel@gmail.com</a></p>
+</div>
+<main id="main">
+
+  <section class="g-hero wd-hero">
+    <div class="confetti-dots" aria-hidden="true"></div>
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Ruta de navegación"><a href="../">Favalia</a><span aria-hidden="true">/</span><a href="../#games">Juegos</a><span aria-hidden="true">/</span><span aria-current="page">Word Duel</span></nav>
+      <div class="g-hero-grid">
+        <div>
+          <h1 class="wd-logo" aria-label="Word Duel">
+            <span class="row" aria-hidden="true"><b style="--i:0">W</b><b style="--i:1">O</b><b style="--i:2">R</b><b style="--i:3">D</b></span>
+            <span class="row" aria-hidden="true"><b style="--i:4">D</b><b style="--i:5">U</b><b style="--i:6">E</b><b style="--i:7">L</b></span>
+          </h1>
+          <p class="g-sub">Batalla de letras</p>
+          <p class="g-pitch">Una palabra oculta. Seis corazones. Una letra cada vez. Toca una letra y volará a cada raya donde va. Si fallas, cae entre tus fallos y se lleva un corazón.</p>
+          <div class="g-ctas">
+            <a class="appstore" href="https://apps.apple.com/app/word-duel-letter-battle/id6814167260" aria-label="Descarga Word Duel en el App Store"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/es-mx" alt="Descárgalo en el App Store" height="54" loading="lazy"></a>
+            <a class="btn btn--clear" href="#play">Prueba la demo</a>
+          </div>
+          <div class="chips">
+            <span class="chip">Gratis</span><span class="chip">iPhone y iPad</span><span class="chip">Desde 4 años</span><span class="chip">English · Français · Español</span>
+          </div>
+        </div>
+        <div class="g-media">
+          <div class="device"><div class="screen"><video data-autoplay muted loop playsinline preload="none" poster="../../assets/video/word-duel-poster.webp" aria-label="Partida de Word Duel"><source src="../../assets/video/word-duel.mp4" type="video/mp4"></video></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="play">
+    <div class="wrap play-layout">
+      <div data-reveal>
+        <span class="tag">Demo jugable</span>
+        <h2 class="h2" style="margin-top:18px">Adivina<br>la palabra.</h2>
+        <p class="lede" style="margin-top:18px">Elige letras en el teclado (o escríbelas). Seis fallos y la palabra se pierde. Resuélvela sin un solo fallo y tu puntuación se duplica.</p>
+        <div class="legend">
+          <div><svg viewBox="0 0 56 40" aria-hidden="true"><rect x="12" y="2" width="32" height="34" rx="8" fill="#27c48b"/><text x="28" y="27" fill="#fff" font-family="Nunito, system-ui" font-weight="900" font-size="20" text-anchor="middle">E</text></svg><p><b>Letra correcta</b><span>Vuela a cada raya donde va.</span></p></div>
+          <div><svg viewBox="0 0 56 40" aria-hidden="true"><rect x="12" y="2" width="32" height="34" rx="8" fill="#ffc3ce"/><text x="28" y="27" fill="#c3244a" font-family="Nunito, system-ui" font-weight="900" font-size="20" text-anchor="middle">Q</text></svg><p><b>Letra incorrecta</b><span>Cae entre tus fallos y se lleva un corazón.</span></p></div>
+          <div><svg viewBox="0 0 56 40" aria-hidden="true"><g fill="#f6b93b"><path d="M10 12l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 25.4l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z"/><path d="M28 6l3 6.2 6.8.9-5 4.7 1.2 6.7-6-3.2-6 3.2 1.2-6.7-5-4.7 6.8-.9z"/><path d="M46 12l2.6 5.4 5.9.8-4.3 4.1 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z"/></g></svg><p><b>Palabra perfecta</b><span>Sin ningún fallo duplicas tu puntuación.</span></p></div>
+        </div>
+        <p class="muted" style="margin-top:26px;font-size:15px">La app añade duelos, tres niveles de dificultad, 500 niveles de jugador, avatares, estadísticas y palabras en inglés y francés.</p>
+      </div>
+      <div class="wd-demo" data-wd-demo data-appstore="https://apps.apple.com/app/word-duel-letter-battle/id6814167260">
+        <noscript><p style="padding:24px;text-align:center">Activa JavaScript para jugar la demo.</p></noscript>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div><span class="tag">Dos formas de jugar</span><h2 class="h2">En solitario.<br>O en duelo.</h2></div>
+        <p>Juega a tu ritmo o pon tus letras en juego contra un amigo. Mismas palabras, mismo reloj, y deciden los puntos.</p>
+      </div>
+      <div class="features">
+        <div class="feature" data-reveal><span class="big">Sin reloj</span><h3>Juega en solitario</h3><p>Las palabras en solitario no tienen reloj. Tómate tu tiempo, busca la palabra perfecta y encadena rachas. No necesitas cuenta: abre la app y juega.</p></div>
+        <div class="feature" data-reveal style="--delay:60ms"><span class="big">3 · 5 · 7</span><h3>Reta a un amigo con las mismas palabras</h3><p>A 3, 5 o 7 palabras. Los dos tienen las mismas palabras y los mismos dos minutos cada uno. Reta a un amigo, envía un enlace o enfréntate a un rival de tu nivel.</p></div>
+        <div class="feature" data-reveal style="--delay:120ms"><span class="big">×1 ×1.5 ×2</span><h3>Tres niveles</h3><p>Palabras cotidianas, de fáciles a difíciles. Las más difíciles dan más puntos, y una palabra perfecta lo duplica todo.</p></div>
+        <div class="feature" data-reveal><span class="big">1.ª letra</span><h3>Descubre cómo juegas de verdad</h3><p>Con qué frecuencia acierta tu primera letra, y la segunda, y la tercera, además de tus fallos por palabra, tus mejores categorías y tu racha más larga.</p></div>
+        <div class="feature" data-reveal style="--delay:60ms"><span class="big">ES EN FR</span><h3>Tu idioma</h3><p>Las palabras, el teclado (con la tecla Ñ en español y AZERTY en francés) y toda la app siguen tu idioma. No hacen falta tildes.</p></div>
+        <div class="feature" data-reveal style="--delay:120ms"><span class="big">500</span><h3>Niveles para subir</h3><p>Gana XP con cada palabra. Desbloquea 71 avatares, cinco insignias de Bronce a Diamante y estilos para tus fichas, tu teclado y tu confeti.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight section--alt">
+    <div class="wrap shots-wrap" data-rail>
+      <div class="sec-head" data-reveal>
+        <div><span class="tag">Capturas</span><h2 class="h2">Míralo en acción</h2></div>
+        <div class="shots-nav">
+          <button class="icon-btn" type="button" data-rail-step="-1" aria-label="Capturas anteriores"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button class="icon-btn" type="button" data-rail-step="1" aria-label="Capturas siguientes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+      </div>
+      <div class="shots shots--portrait">
+        <button class="shot" type="button" data-lightbox="../../assets/img/word-duel/6-home.webp"><img src="../../assets/img/word-duel/6-home.webp" alt="Pantalla de inicio con tu nivel, tu racha y un botón para jugar una palabra" width="720" height="1564" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../../assets/img/word-duel/2-game.webp"><img src="../../assets/img/word-duel/2-game.webp" alt="Una palabra en curso: G, A y R encontradas, Q y Z falladas" width="720" height="1564" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../../assets/img/word-duel/3-perfect.webp"><img src="../../assets/img/word-duel/3-perfect.webp" alt="Una palabra perfecta, PLANET, que vale 2100 puntos" width="720" height="1564" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../../assets/img/word-duel/4-duels.webp"><img src="../../assets/img/word-duel/4-duels.webp" alt="Un duelo a 3 palabras entre dos jugadores" width="720" height="1564" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../../assets/img/word-duel/5-stats.webp"><img src="../../assets/img/word-duel/5-stats.webp" alt="Estadísticas: letra a letra y fallos por palabra" width="720" height="1564" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../../assets/img/word-duel/1-name.webp"><img src="../../assets/img/word-duel/1-name.webp" alt="El logo de Word Duel" width="720" height="1564" loading="lazy"></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap" style="max-width:920px">
+      <div data-reveal><span class="tag">Preguntas</span><h2 class="h2" style="margin:18px 0 32px">Lo que hay que saber</h2></div>
+      <div class="faq" data-reveal>
+        <details>
+          <summary>¿Word Duel es gratis?</summary>
+          <div class="answer"><p>Sí, Word Duel es gratis. Las compras opcionales quitan los anuncios (al mes o para siempre) o dan monedas, que te dan un corazón más en una palabra. Las monedas nunca son necesarias para jugar. Los precios se muestran en el App Store antes de comprar.</p></div>
+        </details>
+        <details>
+          <summary>¿Necesito una cuenta?</summary>
+          <div class="answer"><p>No para jugar en solitario: abre la app y juega. Con una cuenta puedes retar a tus amigos, enfrentarte a rivales, aparecer en la clasificación y conservar tu progreso. Tu progreso en solitario se mantiene al registrarte.</p></div>
+        </details>
+        <details>
+          <summary>¿Cómo se decide un duelo?</summary>
+          <div class="answer"><p>Tú y tu rival tienen las mismas palabras, con dos minutos cada uno por palabra. Los puntos dependen de lo rápido que resuelves, de las pocas letras que desperdicias y de si lo lograste sin un solo fallo. Gana el total más alto, y todos reciben una puntuación en la clasificación.</p></div>
+        </details>
+        <details>
+          <summary>¿En qué idiomas puedo jugar?</summary>
+          <div class="answer"><p>En español, inglés y francés. Elige tu idioma y las palabras, el teclado y toda la app cambian con él. Las tildes son opcionales mientras juegas: la respuesta las muestra al final.</p></div>
+        </details>
+        <details>
+          <summary>Necesito ayuda con mi cuenta o una compra</summary>
+          <div class="answer"><p>Visita el <a href="https://worddue-production.up.railway.app/es/support">soporte de Word Duel</a> o escribe a <a href="mailto:supportwordduel@gmail.com?subject=Word%20Duel">supportwordduel@gmail.com</a>. Incluye tu nombre de jugador y lo que pasó.</p></div>
+        </details>
+      </div>
+      <div class="faq-foot">
+        <a class="arrow-link" href="https://worddue-production.up.railway.app/es/support">Soporte <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        <a class="arrow-link" href="https://worddue-production.up.railway.app/es/privacy">Política de privacidad <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        <a class="arrow-link" href="https://worddue-production.up.railway.app/terms">Términos de uso (en inglés) <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <div>
+        <h2>¿Listo para un duelo?</h2>
+        <p>Descarga Word Duel gratis, juega tu primera palabra en segundos y luego reta a un amigo con las mismas palabras.</p>
+      </div>
+      <div class="actions"><a class="appstore" href="https://apps.apple.com/app/word-duel-letter-battle/id6814167260" aria-label="Descarga Word Duel en el App Store"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/es-mx" alt="Descárgalo en el App Store" height="54" loading="lazy"></a><a class="btn btn--ghost" href="#play">Prueba la demo</a></div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div data-reveal style="margin-bottom:28px"><span class="tag">Más de Favalia</span></div>
+      <div class="more">
+        <a href="../inki-run/" data-reveal><img src="../../assets/img/inki-run/icon.webp" alt="" width="76" height="76" loading="lazy"><span><b>Inki Run</b><small>Dibuja líneas. Salva al corredor.</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        <a href="../inki-ace/" data-reveal style="--delay:80ms"><img src="../../assets/img/inki-ace/icon.webp" alt="" width="76" height="76" loading="lazy"><span><b>Inki Ace</b><small>Combate aéreo arcade a tinta.</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="../../es/"><svg class="logo-tile" viewBox="0 0 40 40" aria-hidden="true"><g transform="rotate(-8 20 20)"><rect class="s" x="7.5" y="7.5" width="28" height="28" rx="7"/><rect class="t" x="4.5" y="4.5" width="28" height="28" rx="7" stroke-width="2.6"/><path class="f" d="M12.5 10.5h12.2v4.1h-7.6v3h6.6v3.9h-6.6v7h-4.6z"/></g></svg><span>Favalia</span></a>
+        <p>Juegos pequeños y cuidados para iPhone y iPad. Un pulgar para jugar, un minuto para aprender.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Juegos</h4>
+        <ul>
+          <li><a href="../../es/word-duel/">Word Duel</a></li>
+          <li><a href="../../es/inki-run/">Inki Run</a></li>
+          <li><a href="../../es/inki-ace/">Inki Ace</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Ayuda</h4>
+        <ul>
+          <li><a href="../../es/support/">Soporte</a></li>
+          <li><a href="https://worddue-production.up.railway.app/es/privacy">Privacidad de Word Duel</a></li>
+          <li><a href="../../es/inki-run/privacy/">Privacidad de Inki Run</a></li>
+          <li><a href="../../es/inki-ace/privacy/">Privacidad de Inki Ace</a></li>
+          <li><a href="../../es/privacy/">Privacidad del sitio</a></li>
+          <li><button class="link-btn" type="button" data-consent-open>Configuración de cookies</button></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Escríbenos</h4>
+        <ul>
+          <li><a href="mailto:supportwordduel@gmail.com">supportwordduel@gmail.com</a></li>
+          <li><a href="../../es/#studio">Sobre el estudio</a></li>
+        </ul>
+        <div class="foot-lang" role="group" aria-label="Idioma">
+          <a href="../../word-duel/" hreflang="en" lang="en" data-lang-switch="en">English</a>
+          <a href="../../fr/word-duel/" hreflang="fr" lang="fr" data-lang-switch="fr">Français</a>
+          <a href="./" hreflang="es" lang="es" data-lang-switch="es" aria-current="true">Español</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-word" aria-hidden="true">Favalia</div>
+  </div>
+  <div class="wrap foot-legal">
+    <span>© <span data-year>2026</span> Favalia · <button class="link-btn" type="button" data-consent-open>Configuración de cookies</button> · <strong class="made">¡Hecho con orgullo en Montreal, Quebec! <span aria-hidden="true">⚜</span></strong></span>
+    <span>Apple, el logotipo de Apple, iPhone y iPad son marcas comerciales de Apple Inc., registradas en EE. UU. y otros países. App Store es una marca de servicio de Apple Inc.</span>
+  </div>
+</footer>
+<script src="../../assets/js/consent.js?v=ab2a3d40" data-privacy="../../es/privacy/" defer></script>
+<script src="../../assets/js/site.js?v=1b4f1c9e" defer></script>
+<script src="../../assets/js/demo-word-duel.js?v=d28e4dad" defer></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!--{
+  "out": "inki-run/index.html",
+  "title": "Inki Run · Dibuja líneas. Salva al corredor. · Favalia",
+  "ogTitle": "Inki Run: tu corredor nunca salta. Tú dibujas el camino.",
+  "description": "Tu corredor nunca salta. Tú dibujas el camino: puentes, rampas, techos y muros en 120 etapas, con 7 vehículos y un modo Infinito. Para iPhone y iPad. Prueba la demo en tu navegador.",
+  "og": "inki-run",
+  "nav": "inki-run",
+  "jsonld": "game:inki-run",
+  "scripts": [
+    "demo-inki-run.js"
+  ]
+}-->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="mini-runner" viewBox="0 0 24 32"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="15" cy="5.6" r="3.5"/><path d="M11.4 3.4h8.6M14.2 9.4 11.6 19M11.6 19l4 4.6-1.4 6.6M11.6 19 8 24l-4 1.4M13.2 12l3.8 3 3.6-2.6M13.2 12 9 14l-1.5 4"/></g></symbol>
+</svg>
+<main id="main">
+
+  <section class="g-hero ink-hero">
+    <svg class="cloud" style="left:44%;top:7%;width:130px" viewBox="0 0 120 50" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 44h108M16 44a13 13 0 0 1 15-17 19 19 0 0 1 36-7 15 15 0 0 1 29 9 11 11 0 0 1 11 15"/></svg>
+    <svg class="cloud" style="right:4%;top:16%;width:90px" viewBox="0 0 120 50" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 44h108M16 44a13 13 0 0 1 15-17 19 19 0 0 1 36-7 15 15 0 0 1 29 9 11 11 0 0 1 11 15"/></svg>
+    <div class="ground" aria-hidden="true"></div>
+    <span class="gp-runner" aria-hidden="true">{{svg:runner}}</span>
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Ruta de navegación"><a href="../">Favalia</a><span aria-hidden="true">/</span><a href="../#games">Juegos</a><span aria-hidden="true">/</span><span aria-current="page">Inki Run</span></nav>
+      <div class="g-hero-grid">
+        <div>
+          <h1 class="ink-word" aria-label="Inki Run">
+            <span class="ln" aria-hidden="true">Inki</span>
+            <span class="ln ln--runner" aria-hidden="true">Run{{svg:runner}}</span>
+            <svg class="underline" viewBox="0 0 600 14" preserveAspectRatio="none" aria-hidden="true"><path d="M4 8C150 4 300 10 596 6" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>
+          </h1>
+          <p class="g-sub">Dibuja líneas. Salva al corredor.</p>
+          <p class="g-pitch">Tu corredor nunca salta. Tú dibujas el camino: puentes sobre los agujeros, rampas sobre rocas y árboles, techos contra las piedras que caen y muros que frenan a los pájaros y los coches.</p>
+          <div class="g-ctas">
+            {{cta:inki-run}}
+            <a class="btn btn--ghost" href="#play">Prueba la demo</a>
+          </div>
+          <div class="chips">
+            <span class="chip">Gratis</span><span class="chip">iPhone y iPad</span><span class="chip">Desde 4 años</span><span class="chip">Día y noche</span>
+          </div>
+        </div>
+        <div class="g-media">
+          <div class="device device--land"><div class="screen"><video data-autoplay muted loop playsinline preload="none" poster="{{root}}assets/video/inki-run-poster.webp" aria-label="Partida de Inki Run"><source src="{{root}}assets/video/inki-run.mp4" type="video/mp4"></video></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="play">
+    <div class="wrap">
+      <div class="play-head" data-reveal>
+        <div><span class="tag">Demo jugable</span><h2 class="h2" style="margin-top:18px">Dibuja el camino.</h2></div>
+        <p>Pulsa y arrastra para dibujar. Empieza los puentes un poco antes del agujero, y las rampas en el suelo. El tiempo va más lento mientras dibujas, y cada línea cuesta ✎1.</p>
+      </div>
+      <div class="demo-frame ir-demo" data-ir-demo data-reveal>
+        <div class="demo-stage">
+          <canvas aria-label="Demo de Inki Run. Dibuja líneas para que el corredor supere agujeros y rocas." tabindex="-1"></canvas>
+          <div class="demo-overlay" data-overlay><noscript><p>Activa JavaScript para jugar la demo.</p></noscript></div>
+        </div>
+        <div class="demo-foot"><span>Ratón, trackpad o dedo</span><span>Obstáculo superado: +1 ✎</span><span>El juego completo: 120 etapas · 7 vehículos · modo Infinito</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div><span class="tag">Cómo funciona</span><h2 class="h2">Tú dibujas.<br>Él corre encima.</h2></div>
+        <p>Las líneas solo sostienen a tu corredor por arriba. De lado las atraviesa, así que un muro frena un coche pero nunca a él.</p>
+      </div>
+      <div class="rules" data-reveal>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 72h66v12M134 72v12M134 72h62" stroke-width="3"/><path d="M56 70Q100 75 148 70" stroke-width="5"/><use href="#mini-runner" x="88" y="40" width="24" height="32"/></svg>
+          <b>Agujeros</b><p>Dibuja un puente de borde a borde.</p>
+        </div>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 72h192" stroke-width="3"/><path d="M112 72V49q0-8 8-8h14q8 0 8 8v23" stroke-width="3" fill="var(--card)"/><path d="M60 72L110 34H158" stroke-width="5"/><use href="#mini-runner" x="120" y="2" width="24" height="32"/></svg>
+          <b>Rocas y árboles</b><p>Empieza en el suelo y dibuja una rampa que suba y pase por encima.</p>
+        </div>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 72h192" stroke-width="3"/><path d="M100 72l6-14 6 14 6-14 6 14 6-14 6 14" stroke-width="3"/><path d="M68 72L96 48H150" stroke-width="5"/><use href="#mini-runner" x="112" y="16" width="24" height="32"/></svg>
+          <b>Pinchos y cactus</b><p>Pasa por encima. Si tu línea los supera, estás a salvo.</p>
+        </div>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 72h192" stroke-width="3"/><path d="M66 32H150" stroke-width="5"/><path d="M92 4l6 6-6 6-6-6z M126 0l6 6-6 6-6-6z" stroke-width="2.6" fill="currentColor"/><path d="M92 18v8M126 14v12" stroke-width="2" stroke-dasharray="3 4"/><use href="#mini-runner" x="96" y="40" width="24" height="32"/></svg>
+          <b>Piedras que caen</b><p>Dibuja un techo sobre la cabeza de tu corredor.</p>
+        </div>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 72h192" stroke-width="3"/><path d="M126 72V32" stroke-width="5"/><path d="M140 64v-7l8-1 6-8h18l6 8h6v8z" stroke-width="2.6" fill="var(--card)"/><circle cx="150" cy="66" r="5" stroke-width="2.6" fill="var(--card)"/><circle cx="176" cy="66" r="5" stroke-width="2.6" fill="var(--card)"/><use href="#mini-runner" x="62" y="40" width="24" height="32"/></svg>
+          <b>Pájaros y coches</b><p>Dibuja un muro. Ellos rebotan; tu corredor pasa a través.</p>
+        </div>
+      </div>
+      <p class="rules-note">El tiempo va más lento mientras tu dedo está en la pantalla. Cada línea cuesta tinta, así que atrapa estrellas para ganar más.</p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div><span class="tag">Qué incluye</span><h2 class="h2">Mucho<br>que dibujar.</h2></div>
+        <p>Dibujos nítidos en blanco y negro, un corredor que confía en ti por completo y mucho camino por delante.</p>
+      </div>
+      <div class="features">
+        <div class="feature" data-reveal><span class="big">120</span><h3>Etapas</h3><p>12 capítulos, de «Learning the Ropes» a «Legend», cada uno con un Sprint y una carrera de Jefe. Tres estrellas que ganar en cada etapa.</p></div>
+        <div class="feature" data-reveal style="--delay:60ms"><span class="big">7</span><h3>Vehículos</h3><p>Bici, triciclo, patinete, monopatín, monociclo, segway y hoverboard. Cada uno se maneja distinto, y cada uno aguanta un golpe por ti.</p></div>
+        <div class="feature" data-reveal style="--delay:120ms"><span class="big">∞</span><h3>Modo Infinito</h3><p>Una vida, sin meta, cada vez más rápido. ¿Hasta dónde llegarás?</p></div>
+        <div class="feature" data-reveal><span class="big">6</span><h3>Corredores</h3><p>Sam, Mia, Leo, Zoe, Gramps y Rex, con sombreros, gafas, bufandas, capas, zapatillas y equipo para los vehículos.</p></div>
+        <div class="feature" data-reveal style="--delay:60ms"><span class="big">☀ ☾</span><h3>Día o noche</h3><p>Dibujos nítidos en blanco y negro que siguen a tu dispositivo, o elige día o noche.</p></div>
+        <div class="feature" data-reveal style="--delay:120ms"><span class="big">1 min</span><h3>Aprende jugando</h3><p>Tu primera carrera es una práctica que pasa por cada obstáculo, con una pista a cámara lenta en cada uno.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap shots-wrap" data-rail>
+      <div class="sec-head" data-reveal>
+        <div><span class="tag">Capturas</span><h2 class="h2">Míralo correr</h2></div>
+        <div class="shots-nav">
+          <button class="icon-btn" type="button" data-rail-step="-1" aria-label="Capturas anteriores">{{svg:chev-left}}</button>
+          <button class="icon-btn" type="button" data-rail-step="1" aria-label="Capturas siguientes">{{svg:chev-right}}</button>
+        </div>
+      </div>
+      <div class="shots shots--land">
+        <button class="shot" type="button" data-lightbox="{{root}}assets/img/inki-run/01-draw-the-way.webp"><img src="{{root}}assets/img/inki-run/01-draw-the-way.webp" alt="Una rampa dibujada sobre un árbol" width="1434" height="660" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="{{root}}assets/img/inki-run/02-ramps-over-rocks.webp"><img src="{{root}}assets/img/inki-run/02-ramps-over-rocks.webp" alt="Una rampa dibujada sobre una roca" width="1434" height="660" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="{{root}}assets/img/inki-run/03-roofs-stop-stones.webp"><img src="{{root}}assets/img/inki-run/03-roofs-stop-stones.webp" alt="Un techo dibujado bajo piedras que caen" width="1434" height="660" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="{{root}}assets/img/inki-run/04-walls-stop-cars.webp"><img src="{{root}}assets/img/inki-run/04-walls-stop-cars.webp" alt="Un muro que frena un coche" width="1434" height="660" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="{{root}}assets/img/inki-run/05-ride-bikes-more.webp"><img src="{{root}}assets/img/inki-run/05-ride-bikes-more.webp" alt="En bici sobre un puente" width="1434" height="660" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="{{root}}assets/img/inki-run/06-endless-mode.webp"><img src="{{root}}assets/img/inki-run/06-endless-mode.webp" alt="El modo Infinito de noche" width="1434" height="660" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="{{root}}assets/img/inki-run/07-120-stages.webp"><img src="{{root}}assets/img/inki-run/07-120-stages.webp" alt="El mapa de las 120 etapas" width="1434" height="660" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="{{root}}assets/img/inki-run/08-pick-your-runner.webp"><img src="{{root}}assets/img/inki-run/08-pick-your-runner.webp" alt="El vestuario, donde eliges a tu corredor" width="1434" height="660" loading="lazy"></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap" style="max-width:920px">
+      <div data-reveal><span class="tag">Preguntas</span><h2 class="h2" style="margin:18px 0 32px">Lo que hay que saber</h2></div>
+      <div class="faq" data-reveal>
+        <details>
+          <summary>Mi línea estaba justo ahí, pero aun así me estrellé</summary>
+          <div class="answer"><ul>
+            <li>Empieza las rampas <b>en el suelo</b>, antes del obstáculo: tu corredor no puede saltar a una línea.</li>
+            <li>Las líneas solo sostienen a tu corredor por arriba. De lado, las atraviesa.</li>
+            <li>Haz rampas suaves cuando vayas en un vehículo: las bicis y los segways no suben líneas empinadas.</li>
+            <li>El tiempo va más lento mientras tu dedo está en la pantalla, así que tómate un momento.</li>
+          </ul></div>
+        </details>
+        <details>
+          <summary>Me quedé sin tinta</summary>
+          <div class="answer"><p>Cada línea cuesta ✎1. Sigue corriendo, atrapa estrellas (★) y bloquea piedras, pájaros y coches con tus líneas para ganar más.</p></div>
+        </details>
+        <details>
+          <summary>¿Para qué sirve un vehículo?</summary>
+          <div class="answer"><p>Un vehículo aguanta un golpe por ti: se rompe, tu corredor da una voltereta sobre el obstáculo y sigue corriendo sin perder un corazón. Caer en un agujero sigue costando un corazón.</p></div>
+        </details>
+        <details>
+          <summary>¿Cuándo aparecen los anuncios?</summary>
+          <div class="answer"><p>Se muestra un anuncio cada 5 etapas terminadas, ganadas o perdidas. En el modo Infinito, tras un choque puedes elegir ver un anuncio para seguir tu carrera, hasta dos veces por carrera. Los anuncios nunca interrumpen una carrera.</p></div>
+        </details>
+        <details>
+          <summary>¿Dónde se guarda mi progreso?</summary>
+          <div class="answer"><p>Las etapas, las estrellas, tu mejor distancia en el modo Infinito y tus atuendos se guardan en tu dispositivo. Vuelven con una copia de seguridad de iCloud o del ordenador, pero borrar la app los elimina. No hay cuenta.</p></div>
+        </details>
+      </div>
+      <div class="faq-foot">
+        <a class="arrow-link" href="support/">Todas las preguntas {{svg:arrow}}</a>
+        <a class="arrow-link" href="privacy/">Política de privacidad {{svg:arrow}}</a>
+      </div>
+    </div>
+  </section>
+
+  <!--live:inki-run-->
+  <section class="cta-band">
+    <div class="wrap">
+      <div><h2>Tu corredor<br>te espera.</h2><p>Descarga Inki Run gratis en iPhone y iPad y dibuja tu primer puente en segundos.</p></div>
+      <div class="actions">{{cta:inki-run}}<a class="btn btn--ghost" href="#play">Prueba la demo</a></div>
+    </div>
+  </section>
+  <!--else-->
+  <section class="cta-band">
+    <div class="wrap">
+      <div><h2>Próximamente<br>en el App Store.</h2><p>¿Quieres saber el día que sale Inki Run? Escríbenos y te avisaremos cuando esté disponible.</p></div>
+      <div class="actions">
+        <a class="btn" href="mailto:{{site:email}}?subject=Av%C3%ADsame%20cuando%20salga%20Inki%20Run">Avísame</a>
+        <a class="btn btn--ghost" href="#play">Prueba la demo</a>
+      </div>
+    </div>
+  </section>
+  <!--/live-->
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div data-reveal style="margin-bottom:28px"><span class="tag">Más de Favalia</span></div>
+      <div class="more">
+        <a href="../word-duel/" data-reveal><img src="{{root}}assets/img/word-duel/icon.webp" alt="" width="76" height="76" loading="lazy"><span><b>Word Duel</b><small>Adivina la palabra. Reta a tus amigos.</small></span>{{svg:arrow}}</a>
+        <a href="../inki-ace/" data-reveal style="--delay:80ms"><img src="{{root}}assets/img/inki-ace/icon.webp" alt="" width="76" height="76" loading="lazy"><span><b>Inki Ace</b><small>Combate aéreo arcade a tinta.</small></span>{{svg:arrow}}</a>
+      </div>
+    </div>
+  </section>
+</main>
