@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+
+<!-- Consent first: Google Analytics 4 (G-HVNQKNVL5X) and Tag Manager (GTM-NFJ4XBCJ) only load after the visitor
+     agrees (assets/js/consent.js shows the banner). Google Consent Mode v2 starts with everything denied. -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+  analytics_storage: 'denied', personalization_storage: 'denied',
+  functionality_storage: 'granted', security_storage: 'granted'
+});
+gtag('set', 'ads_data_redaction', true);
+(function (w, d) {
+  var GA = 'G-HVNQKNVL5X', GTM = 'GTM-NFJ4XBCJ', KEY = 'favalia-consent', VERSION = 1, MAX_AGE = 365 * 864e5;
+  var loaded = {}, choice = null;
+  function add(src) { var s = d.createElement('script'); s.async = true; s.src = src; d.head.appendChild(s); }
+  function apply(c) {
+    gtag('consent', 'update', {
+      analytics_storage: c.analytics ? 'granted' : 'denied',
+      ad_storage: c.marketing ? 'granted' : 'denied',
+      ad_user_data: c.marketing ? 'granted' : 'denied',
+      ad_personalization: c.marketing ? 'granted' : 'denied'
+    });
+    if (c.analytics && !loaded.ga) { loaded.ga = 1; add('https://www.googletagmanager.com/gtag/js?id=' + GA); gtag('js', new Date()); gtag('config', GA); }
+    if ((c.analytics || c.marketing) && !loaded.gtm) { loaded.gtm = 1; w.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); add('https://www.googletagmanager.com/gtm.js?id=' + GTM); }
+    w.dataLayer.push({ event: 'favalia_consent', consent_analytics: !!c.analytics, consent_marketing: !!c.marketing });
+  }
+  try { choice = JSON.parse(localStorage.getItem(KEY)); } catch (e) {}
+  if (!choice || choice.v !== VERSION || !(Date.now() - choice.t < MAX_AGE)) choice = null;
+  w.favaliaConsent = {
+    get: function () { return choice; },
+    save: function (analytics, marketing) {
+      choice = { v: VERSION, t: Date.now(), analytics: !!analytics, marketing: !!marketing };
+      try { localStorage.setItem(KEY, JSON.stringify(choice)); } catch (e) {}
+      apply(choice);
+      return choice;
+    }
+  };
+  if (choice) apply(choice);
+})(window, document);
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Términos de uso de Word Duel · Favalia</title>
+<meta name="description" content="Las reglas para usar Word Duel: jugar limpio, tu jugador, las monedas, los anuncios y la opción sin anuncios, y los cambios en el juego.">
+<link rel="canonical" href="https://favalia.ca/es/word-duel/terms/">
+<meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f0f10" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Favalia">
+<meta property="og:locale" content="es_ES">
+<link rel="alternate" hreflang="en" href="https://favalia.ca/word-duel/terms/">
+<link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/word-duel/terms/">
+<link rel="alternate" hreflang="es" href="https://favalia.ca/es/word-duel/terms/">
+<link rel="alternate" hreflang="x-default" href="https://favalia.ca/word-duel/terms/">
+<meta property="og:locale:alternate" content="en_CA">
+<meta property="og:locale:alternate" content="fr_CA">
+<meta property="og:title" content="Términos de uso de Word Duel · Favalia">
+<meta property="og:description" content="Las reglas para usar Word Duel: jugar limpio, tu jugador, las monedas, los anuncios y la opción sin anuncios, y los cambios en el juego.">
+<meta property="og:url" content="https://favalia.ca/es/word-duel/terms/">
+<meta property="og:image" content="https://favalia.ca/assets/img/og/word-duel-es.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Términos de uso de Word Duel · Favalia">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
+<link rel="manifest" href="../../../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700;800&family=Nunito:wght@800;900&display=swap">
+<link rel="stylesheet" href="../../../assets/css/site.css?v=651d44ea">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('favalia-theme');if(t==='light'||t==='dark')d.dataset.theme=t;}catch(e){}})();</script>
+
+</head>
+<body class="">
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Menú principal">
+    <a class="brand" href="../../../es/" aria-label="Inicio de Favalia"><svg class="logo-tile" viewBox="0 0 40 40" aria-hidden="true"><g transform="rotate(-8 20 20)"><rect class="s" x="7.5" y="7.5" width="28" height="28" rx="7"/><rect class="t" x="4.5" y="4.5" width="28" height="28" rx="7" stroke-width="2.6"/><path class="f" d="M12.5 10.5h12.2v4.1h-7.6v3h6.6v3.9h-6.6v7h-4.6z"/></g></svg><span>Favalia</span></a>
+    <ul class="nav-links">
+      <li><a href="../../../es/word-duel/" aria-current="page"><img src="../../../assets/img/word-duel/icon.webp" alt="" width="22" height="22">Word Duel</a></li>
+      <li><a href="../../../es/inki-run/"><img src="../../../assets/img/inki-run/icon.webp" alt="" width="22" height="22">Inki Run</a></li>
+      <li><a href="../../../es/inki-ace/"><img src="../../../assets/img/inki-ace/icon.webp" alt="" width="22" height="22">Inki Ace</a></li>
+      <li><a href="../../../es/support/">Soporte</a></li>
+    </ul>
+    <div class="nav-tools">
+      <div class="lang-nav" role="group" aria-label="Idioma">
+        <a href="../../../word-duel/terms/" hreflang="en" lang="en" title="English" data-lang-switch="en">EN</a>
+        <a href="../../../fr/word-duel/terms/" hreflang="fr" lang="fr" title="Français" data-lang-switch="fr">FR</a>
+        <a href="./" hreflang="es" lang="es" title="Español" data-lang-switch="es" aria-current="true">ES</a>
+      </div>
+      <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Cambiar tema"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.6A8.3 8.3 0 0 1 9.4 4a8.3 8.3 0 1 0 10.6 10.6z"/><path d="M16.5 3.5l.5 1.5 1.5.5-1.5.5-.5 1.5-.5-1.5-1.5-.5 1.5-.5z" fill="currentColor" stroke-width="1"/></svg></button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-controls="site-menu" aria-expanded="false" aria-label="Abrir el menú"><svg class="bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+  </nav>
+</header>
+<div class="mobile-menu" id="site-menu" hidden>
+  <a href="../../../es/word-duel/"><img src="../../../assets/img/word-duel/icon.webp" alt="" width="44" height="44"><span>Word Duel<small>Juego de palabras · En el App Store</small></span></a>
+  <a href="../../../es/inki-run/"><img src="../../../assets/img/inki-run/icon.webp" alt="" width="44" height="44"><span>Inki Run<small>Carrera de dibujo · Próximamente</small></span></a>
+  <a href="../../../es/inki-ace/"><img src="../../../assets/img/inki-ace/icon.webp" alt="" width="44" height="44"><span>Inki Ace<small>Combate aéreo · Próximamente</small></span></a>
+  <a href="../../../es/support/"><span>Soporte<small>Ayuda, privacidad y contacto</small></span></a>
+  <div class="mm-lang" role="group" aria-label="Idioma">
+    <a href="../../../word-duel/terms/" hreflang="en" lang="en" data-lang-switch="en">English</a>
+    <a href="../../../fr/word-duel/terms/" hreflang="fr" lang="fr" data-lang-switch="fr">Français</a>
+    <a href="./" hreflang="es" lang="es" data-lang-switch="es" aria-current="true">Español</a>
+  </div>
+  <p class="mm-foot">Juegos para iPhone y iPad · <a href="mailto:supportwordduel@gmail.com" style="all:unset;cursor:pointer;text-decoration:underline">supportwordduel@gmail.com</a></p>
+</div>
+<main id="main">
+  <section class="doc-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Ruta de navegación"><a href="../../">Favalia</a><span aria-hidden="true">/</span><a href="../">Word Duel</a><span aria-hidden="true">/</span><span aria-current="page">Términos de uso</span></nav>
+      <div class="row"><img src="../../../assets/img/word-duel/icon.webp" alt="" width="60" height="60"><span class="tag">Word Duel · Términos de uso</span></div>
+      <h1>Términos de uso</h1>
+      <p class="meta">Última actualización: 23 de octubre de 2026</p>
+      <nav class="doc-tabs" aria-label="Páginas de Word Duel"><a href="../">El juego</a><a href="../support/">Soporte</a><a href="../privacy/">Política de privacidad</a><a href="../terms/" aria-current="page">Términos de uso</a></nav>
+    </div>
+  </section>
+  <div class="wrap">
+    <article class="doc">
+<p>Estos términos se aplican cuando juegas a Word Duel («el juego»), hecho por Favalia («nosotros»), en iPhone, iPad o Android.</p>
+
+    <h2>1. JUGAR</h2>
+    <p>Word Duel es un juego de palabras gratuito. Juega limpio: nada de juego automatizado, nada de interferir en los duelos de otros jugadores y ningún intento de entrar en las cuentas de otras personas. Las cuentas que lo hagan se cierran.</p>
+
+    <h2>2. TU JUGADOR</h2>
+    <p>Eres responsable de no compartir tu contraseña. Elige un nombre de jugador aceptable para los demás: los nombres que suplanten a alguien o que sirvan para acosar se cambiarán o eliminarán. Puedes eliminar tu jugador en cualquier momento desde la app, y con él se borra todo.</p>
+
+    <h2>3. MONEDAS, ANUNCIOS Y SIN ANUNCIOS</h2>
+    <ul>
+    <li>Las monedas son parte del juego, no dinero. Sirven para comprar corazones extra. No tienen valor monetario, no se pueden cambiar por dinero ni transferir entre jugadores, y no las reembolsamos.</li>
+    <li>Las monedas se ganan jugando o se compran en la app. Las compras las gestiona Apple en iPhone y iPad, y Google Play en Android, y se cargan a la cuenta con la que compras; los reembolsos dependen de ellos, según su proceso habitual.</li>
+    <li>Los anuncios se pueden quitar de dos formas: una suscripción mensual (4,99 US$ al mes) o un desbloqueo único (49,99 US$); la tienda muestra el precio en tu moneda antes de comprar. El plan mensual se renueva solo hasta que lo canceles en tu cuenta de Apple o en tus suscripciones de Google Play, y cancelar detiene el siguiente pago sin reembolsar el periodo actual. El desbloqueo único nunca se renueva. Ambos pertenecen a la cuenta que los compró y se pueden restaurar en tus otros dispositivos de la misma tienda; en iPhone y iPad, el desbloqueo único se comparte con tu grupo de En familia.</li>
+    <li>Invitar a un amigo os da 15 monedas a cada uno cuando haya creado su jugador. Invitarte a ti mismo, o crear cuentas para cobrar el premio, no da monedas, y puede hacerte perder la cuenta.</li>
+    <li>Las monedas compradas en la app se quedan en la cuenta con la que se compraron; eliminar la cuenta acaba con ellas.</li>
+    </ul>
+
+    <h2>4. CAMBIOS EN EL JUEGO</h2>
+    <p>Un juego se equilibra: las listas de palabras, la puntuación, los precios y las recompensas pueden cambiar. Se pueden añadir o retirar funciones. Si un cambio fuera a quitarte algo que pagaste, te lo diremos antes.</p>
+
+    <h2>5. SIN PROMESAS QUE NO PODAMOS CUMPLIR</h2>
+    <p>Word Duel se ofrece tal como es. Hacemos lo posible para que funcione y tu progreso esté a salvo, pero no podemos garantizar que nunca deje de estar disponible ni que nunca se pierda nada. Nada de esto te quita los derechos que te da la ley donde vives.</p>
+
+    <h2>6. CONTACTO</h2>
+    <p>Favalia, <a href="mailto:supportwordduel@gmail.com?subject=Word%20Duel">supportwordduel@gmail.com</a>.</p>
+
+    <p class="muted" style="font-size:15px">Esta traducción se ofrece para tu comodidad. Si difiere de la versión en inglés, prevalece la versión en inglés.</p>
+    </article>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="../../../es/"><svg class="logo-tile" viewBox="0 0 40 40" aria-hidden="true"><g transform="rotate(-8 20 20)"><rect class="s" x="7.5" y="7.5" width="28" height="28" rx="7"/><rect class="t" x="4.5" y="4.5" width="28" height="28" rx="7" stroke-width="2.6"/><path class="f" d="M12.5 10.5h12.2v4.1h-7.6v3h6.6v3.9h-6.6v7h-4.6z"/></g></svg><span>Favalia</span></a>
+        <p>Juegos pequeños y cuidados para iPhone y iPad. Un pulgar para jugar, un minuto para aprender.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Juegos</h4>
+        <ul>
+          <li><a href="../../../es/word-duel/">Word Duel</a></li>
+          <li><a href="../../../es/inki-run/">Inki Run</a></li>
+          <li><a href="../../../es/inki-ace/">Inki Ace</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Ayuda</h4>
+        <ul>
+          <li><a href="../../../es/support/">Soporte</a></li>
+          <li><a href="../../../es/word-duel/privacy/">Privacidad de Word Duel</a></li>
+          <li><a href="../../../es/inki-run/privacy/">Privacidad de Inki Run</a></li>
+          <li><a href="../../../es/inki-ace/privacy/">Privacidad de Inki Ace</a></li>
+          <li><a href="../../../es/privacy/">Privacidad del sitio</a></li>
+          <li><button class="link-btn" type="button" data-consent-open>Configuración de cookies</button></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Escríbenos</h4>
+        <ul>
+          <li><a href="mailto:supportwordduel@gmail.com">supportwordduel@gmail.com</a></li>
+          <li><a href="../../../es/#studio">Sobre el estudio</a></li>
+        </ul>
+        <div class="foot-lang" role="group" aria-label="Idioma">
+          <a href="../../../word-duel/terms/" hreflang="en" lang="en" data-lang-switch="en">English</a>
+          <a href="../../../fr/word-duel/terms/" hreflang="fr" lang="fr" data-lang-switch="fr">Français</a>
+          <a href="./" hreflang="es" lang="es" data-lang-switch="es" aria-current="true">Español</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-word" aria-hidden="true">Favalia</div>
+  </div>
+  <div class="wrap foot-legal">
+    <span>© <span data-year>2026</span> Favalia · <button class="link-btn" type="button" data-consent-open>Configuración de cookies</button> · <strong class="made">¡Hecho con orgullo en Montreal, Quebec! <span aria-hidden="true">⚜</span></strong></span>
+    <span>Apple, el logotipo de Apple, iPhone y iPad son marcas comerciales de Apple Inc., registradas en EE. UU. y otros países. App Store es una marca de servicio de Apple Inc.</span>
+  </div>
+</footer>
+<script src="../../../assets/js/consent.js?v=ab2a3d40" data-privacy="../../../es/privacy/" defer></script>
+<script src="../../../assets/js/site.js?v=1b4f1c9e" defer></script>
+
+</body>
+</html>

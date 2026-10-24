@@ -135,6 +135,51 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/support/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/support/"/>
   </url>
+  <url><loc>https://favalia.ca/word-duel/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/word-duel/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/word-duel/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/word-duel/privacy/"/>
+  </url>
+  <url><loc>https://favalia.ca/fr/word-duel/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/word-duel/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/word-duel/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/word-duel/privacy/"/>
+  </url>
+  <url><loc>https://favalia.ca/es/word-duel/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/word-duel/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/word-duel/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/word-duel/privacy/"/>
+  </url>
+  <url><loc>https://favalia.ca/word-duel/support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/word-duel/support/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/word-duel/support/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/word-duel/support/"/>
+  </url>
+  <url><loc>https://favalia.ca/fr/word-duel/support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/word-duel/support/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/word-duel/support/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/word-duel/support/"/>
+  </url>
+  <url><loc>https://favalia.ca/es/word-duel/support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/word-duel/support/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/word-duel/support/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/word-duel/support/"/>
+  </url>
+  <url><loc>https://favalia.ca/word-duel/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/word-duel/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/word-duel/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/word-duel/terms/"/>
+  </url>
+  <url><loc>https://favalia.ca/fr/word-duel/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/word-duel/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/word-duel/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/word-duel/terms/"/>
+  </url>
+  <url><loc>https://favalia.ca/es/word-duel/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/word-duel/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/word-duel/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/word-duel/terms/"/>
+  </url>
   <url><loc>https://favalia.ca/word-duel/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/word-duel/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/word-duel/"/>

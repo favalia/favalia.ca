@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>(function(){var A={fr:'../../fr/word-duel/support/',es:'../../es/word-duel/support/'},p=null;try{p=localStorage.getItem('favalia-lang')}catch(e){}if(p||document.referrer.indexOf(location.host)>-1)return;var n=navigator.languages||[navigator.language||''];for(var i=0;i<n.length;i++){var c=String(n[i]).slice(0,2).toLowerCase();if(c==='en')return;if(A[c]){location.replace(A[c]+location.hash);return}}})();</script>
+<!-- Consent first: Google Analytics 4 (G-HVNQKNVL5X) and Tag Manager (GTM-NFJ4XBCJ) only load after the visitor
+     agrees (assets/js/consent.js shows the banner). Google Consent Mode v2 starts with everything denied. -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+  analytics_storage: 'denied', personalization_storage: 'denied',
+  functionality_storage: 'granted', security_storage: 'granted'
+});
+gtag('set', 'ads_data_redaction', true);
+(function (w, d) {
+  var GA = 'G-HVNQKNVL5X', GTM = 'GTM-NFJ4XBCJ', KEY = 'favalia-consent', VERSION = 1, MAX_AGE = 365 * 864e5;
+  var loaded = {}, choice = null;
+  function add(src) { var s = d.createElement('script'); s.async = true; s.src = src; d.head.appendChild(s); }
+  function apply(c) {
+    gtag('consent', 'update', {
+      analytics_storage: c.analytics ? 'granted' : 'denied',
+      ad_storage: c.marketing ? 'granted' : 'denied',
+      ad_user_data: c.marketing ? 'granted' : 'denied',
+      ad_personalization: c.marketing ? 'granted' : 'denied'
+    });
+    if (c.analytics && !loaded.ga) { loaded.ga = 1; add('https://www.googletagmanager.com/gtag/js?id=' + GA); gtag('js', new Date()); gtag('config', GA); }
+    if ((c.analytics || c.marketing) && !loaded.gtm) { loaded.gtm = 1; w.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); add('https://www.googletagmanager.com/gtm.js?id=' + GTM); }
+    w.dataLayer.push({ event: 'favalia_consent', consent_analytics: !!c.analytics, consent_marketing: !!c.marketing });
+  }
+  try { choice = JSON.parse(localStorage.getItem(KEY)); } catch (e) {}
+  if (!choice || choice.v !== VERSION || !(Date.now() - choice.t < MAX_AGE)) choice = null;
+  w.favaliaConsent = {
+    get: function () { return choice; },
+    save: function (analytics, marketing) {
+      choice = { v: VERSION, t: Date.now(), analytics: !!analytics, marketing: !!marketing };
+      try { localStorage.setItem(KEY, JSON.stringify(choice)); } catch (e) {}
+      apply(choice);
+      return choice;
+    }
+  };
+  if (choice) apply(choice);
+})(window, document);
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Word Duel Support · Favalia</title>
+<meta name="description" content="Help with Word Duel: how to play, duels and friends, coins and ad-free, refunds, notifications, deleting your account and how to reach us.">
+<link rel="canonical" href="https://favalia.ca/word-duel/support/">
+<meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f0f10" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Favalia">
+<meta property="og:locale" content="en_CA">
+<link rel="alternate" hreflang="en" href="https://favalia.ca/word-duel/support/">
+<link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/word-duel/support/">
+<link rel="alternate" hreflang="es" href="https://favalia.ca/es/word-duel/support/">
+<link rel="alternate" hreflang="x-default" href="https://favalia.ca/word-duel/support/">
+<meta property="og:locale:alternate" content="fr_CA">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:title" content="Word Duel Support · Favalia">
+<meta property="og:description" content="Help with Word Duel: how to play, duels and friends, coins and ad-free, refunds, notifications, deleting your account and how to reach us.">
+<meta property="og:url" content="https://favalia.ca/word-duel/support/">
+<meta property="og:image" content="https://favalia.ca/assets/img/og/word-duel.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Word Duel Support · Favalia">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="manifest" href="../../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700;800&family=Nunito:wght@800;900&display=swap">
+<link rel="stylesheet" href="../../assets/css/site.css?v=651d44ea">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('favalia-theme');if(t==='light'||t==='dark')d.dataset.theme=t;}catch(e){}})();</script>
+
+</head>
+<body class="">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Main">
+    <a class="brand" href="../../" aria-label="Favalia home"><svg class="logo-tile" viewBox="0 0 40 40" aria-hidden="true"><g transform="rotate(-8 20 20)"><rect class="s" x="7.5" y="7.5" width="28" height="28" rx="7"/><rect class="t" x="4.5" y="4.5" width="28" height="28" rx="7" stroke-width="2.6"/><path class="f" d="M12.5 10.5h12.2v4.1h-7.6v3h6.6v3.9h-6.6v7h-4.6z"/></g></svg><span>Favalia</span></a>
+    <ul class="nav-links">
+      <li><a href="../../word-duel/" aria-current="page"><img src="../../assets/img/word-duel/icon.webp" alt="" width="22" height="22">Word Duel</a></li>
+      <li><a href="../../inki-run/"><img src="../../assets/img/inki-run/icon.webp" alt="" width="22" height="22">Inki Run</a></li>
+      <li><a href="../../inki-ace/"><img src="../../assets/img/inki-ace/icon.webp" alt="" width="22" height="22">Inki Ace</a></li>
+      <li><a href="../../support/">Support</a></li>
+    </ul>
+    <div class="nav-tools">
+      <div class="lang-nav" role="group" aria-label="Language">
+        <a href="./" hreflang="en" lang="en" title="English" data-lang-switch="en" aria-current="true">EN</a>
+        <a href="../../fr/word-duel/support/" hreflang="fr" lang="fr" title="Français" data-lang-switch="fr">FR</a>
+        <a href="../../es/word-duel/support/" hreflang="es" lang="es" title="Español" data-lang-switch="es">ES</a>
+      </div>
+      <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch theme"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.6A8.3 8.3 0 0 1 9.4 4a8.3 8.3 0 1 0 10.6 10.6z"/><path d="M16.5 3.5l.5 1.5 1.5.5-1.5.5-.5 1.5-.5-1.5-1.5-.5 1.5-.5z" fill="currentColor" stroke-width="1"/></svg></button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-controls="site-menu" aria-expanded="false" aria-label="Open menu"><svg class="bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+  </nav>
+</header>
+<div class="mobile-menu" id="site-menu" hidden>
+  <a href="../../word-duel/"><img src="../../assets/img/word-duel/icon.webp" alt="" width="44" height="44"><span>Word Duel<small>Word game · On the App Store</small></span></a>
+  <a href="../../inki-run/"><img src="../../assets/img/inki-run/icon.webp" alt="" width="44" height="44"><span>Inki Run<small>Drawing runner · Coming soon</small></span></a>
+  <a href="../../inki-ace/"><img src="../../assets/img/inki-ace/icon.webp" alt="" width="44" height="44"><span>Inki Ace<small>Plane shooter · Coming soon</small></span></a>
+  <a href="../../support/"><span>Support<small>Help, privacy and contact</small></span></a>
+  <div class="mm-lang" role="group" aria-label="Language">
+    <a href="./" hreflang="en" lang="en" data-lang-switch="en" aria-current="true">English</a>
+    <a href="../../fr/word-duel/support/" hreflang="fr" lang="fr" data-lang-switch="fr">Français</a>
+    <a href="../../es/word-duel/support/" hreflang="es" lang="es" data-lang-switch="es">Español</a>
+  </div>
+  <p class="mm-foot">Games for iPhone and iPad · <a href="mailto:supportwordduel@gmail.com" style="all:unset;cursor:pointer;text-decoration:underline">supportwordduel@gmail.com</a></p>
+</div>
+<main id="main">
+  <section class="doc-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Favalia</a><span aria-hidden="true">/</span><a href="../">Word Duel</a><span aria-hidden="true">/</span><span aria-current="page">Support</span></nav>
+      <div class="row"><img src="../../assets/img/word-duel/icon.webp" alt="" width="60" height="60"><span class="tag">Word Duel · Support</span></div>
+      <h1>Need a hand?</h1>
+      <p class="meta">Stuck, charged twice, or want your account gone? Here's how to reach a person.</p>
+      <nav class="doc-tabs" aria-label="Word Duel pages"><a href="../">The game</a><a href="../support/" aria-current="page">Support</a><a href="../privacy/">Privacy Policy</a><a href="../terms/">Terms of Use</a></nav>
+    </div>
+  </section>
+  <div class="wrap">
+    <article class="doc">
+<div class="note">
+    <p><b>Email</b></p>
+    <p><a class="mail" href="mailto:supportwordduel@gmail.com?subject=Word%20Duel">supportwordduel@gmail.com</a></p>
+    <p class="muted" style="font-size:15px">Tell us your player name, your phone or tablet, and what happened (a screenshot helps). We answer as quickly as we can.</p>
+    </div>
+
+    <h2>PLAYING</h2>
+    <h3>How do I play?</h3>
+    <p>Guess the hidden word one letter at a time: right letters land on the dashes, wrong ones cost a heart. <b>Settings › How to play</b> walks you through a word step by step.</p>
+    <h3>How do duels and friends work?</h3>
+    <p>Open <b>Duels</b>. On <b>Duels</b> you start a new duel, play your turn and see your results; on <b>Friends</b> you find players by name, answer friend requests and tap <b>Duel</b> beside a friend to challenge them. You both get the same words, and the most points wins.</p>
+    <h3>Changing the language</h3>
+    <p><b>Settings › Language</b>. English, French or Spanish: the words, the keyboard and every screen switch at once.</p>
+
+    <h2>COINS, ADS &amp; PURCHASES</h2>
+    <h3>My coins didn't arrive</h3>
+    <p>Open the app again with a connection: a purchase that couldn't reach us is sent again by itself. If they are still missing, write to us with the date and we'll sort it out.</p>
+    <h3>Ads are still showing after going ad-free</h3>
+    <p><b>Profile › Restore purchase</b>, signed in to the same Apple Account (iPhone, iPad) or Google account (Android) you bought it with.</p>
+    <h3>Coins are missing after changing phone</h3>
+    <p>Coins bought while playing as a guest live on that device and can't be moved. Create a player and everything you earn or buy from then on follows you to any phone.</p>
+    <h3>Refunds</h3>
+    <p>Purchases go through Apple or Google Play, so refunds do too: on iPhone and iPad at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>, on Android from your <a href="https://play.google.com/store/account/orderhistory">Google Play order history</a>.</p>
+
+    <h2>ACCOUNT &amp; NOTIFICATIONS</h2>
+    <h3>Notifications</h3>
+    <p>In <b>Settings</b>: <b>Reminders and news</b> is a daily nudge to play (never on days you've already played) and now and then news about the game; <b>Duels and friends</b> tells you when a friend challenges you or asks to be friends. If they won't turn on, allow notifications for Word Duel in your device's settings.</p>
+    <h3>Deleting your account</h3>
+    <p>In the app, signed in: <b>Profile › Delete my account</b>. It removes your player and everything with it. You can also write to <a href="mailto:supportwordduel@gmail.com?subject=Word%20Duel">supportwordduel@gmail.com</a> and we'll do it for you.</p>
+
+    </article>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="../../"><svg class="logo-tile" viewBox="0 0 40 40" aria-hidden="true"><g transform="rotate(-8 20 20)"><rect class="s" x="7.5" y="7.5" width="28" height="28" rx="7"/><rect class="t" x="4.5" y="4.5" width="28" height="28" rx="7" stroke-width="2.6"/><path class="f" d="M12.5 10.5h12.2v4.1h-7.6v3h6.6v3.9h-6.6v7h-4.6z"/></g></svg><span>Favalia</span></a>
+        <p>Small, polished games for iPhone and iPad. One thumb to play, a minute to learn.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Games</h4>
+        <ul>
+          <li><a href="../../word-duel/">Word Duel</a></li>
+          <li><a href="../../inki-run/">Inki Run</a></li>
+          <li><a href="../../inki-ace/">Inki Ace</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/">Support</a></li>
+          <li><a href="../../word-duel/privacy/">Word Duel privacy</a></li>
+          <li><a href="../../inki-run/privacy/">Inki Run privacy</a></li>
+          <li><a href="../../inki-ace/privacy/">Inki Ace privacy</a></li>
+          <li><a href="../../privacy/">Website privacy</a></li>
+          <li><button class="link-btn" type="button" data-consent-open>Cookie settings</button></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Say hello</h4>
+        <ul>
+          <li><a href="mailto:supportwordduel@gmail.com">supportwordduel@gmail.com</a></li>
+          <li><a href="../../#studio">About the studio</a></li>
+        </ul>
+        <div class="foot-lang" role="group" aria-label="Language">
+          <a href="./" hreflang="en" lang="en" data-lang-switch="en" aria-current="true">English</a>
+          <a href="../../fr/word-duel/support/" hreflang="fr" lang="fr" data-lang-switch="fr">Français</a>
+          <a href="../../es/word-duel/support/" hreflang="es" lang="es" data-lang-switch="es">Español</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-word" aria-hidden="true">Favalia</div>
+  </div>
+  <div class="wrap foot-legal">
+    <span>© <span data-year>2026</span> Favalia · <button class="link-btn" type="button" data-consent-open>Cookie settings</button> · <strong class="made">Proudly made in Montréal, Québec! <span aria-hidden="true">⚜</span></strong></span>
+    <span>Apple, the Apple logo, iPhone and iPad are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</span>
+  </div>
+</footer>
+<script src="../../assets/js/consent.js?v=ab2a3d40" data-privacy="../../privacy/" defer></script>
+<script src="../../assets/js/site.js?v=1b4f1c9e" defer></script>
+
+</body>
+</html>

@@ -12,17 +12,9 @@
       },
       "appStoreId": "6814167260",
       "appStoreSlug": "word-duel-letter-battle",
-      "support": {
-        "en": "https://worddue-production.up.railway.app/support",
-        "fr": "https://worddue-production.up.railway.app/fr/support",
-        "es": "https://worddue-production.up.railway.app/es/support"
-      },
-      "privacy": {
-        "en": "https://worddue-production.up.railway.app/privacy",
-        "fr": "https://worddue-production.up.railway.app/fr/privacy",
-        "es": "https://worddue-production.up.railway.app/es/privacy"
-      },
-      "terms": "https://worddue-production.up.railway.app/terms",
+      "support": "word-duel/support/",
+      "privacy": "word-duel/privacy/",
+      "terms": "word-duel/terms/",
       "genre": {
         "en": "Word game",
         "fr": "Jeu de mots",
