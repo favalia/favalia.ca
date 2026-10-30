@@ -674,26 +674,9 @@ h1, h2, h3, h4, p, ul, ol, figure { margin: 0; }
 :root[data-theme="dark"] .bj-stars { display: block; }
 :root[data-theme="dark"] .bj-sun { background: radial-gradient(circle at 62% 38%, transparent 42%, #fff4c9 43%); box-shadow: 0 0 60px 10px rgba(255, 244, 201, .25); }
 
-/* The BORIJ title: chunky round letters, one colour each, with the game's dark outline */
-.bj-word {
-  --o: var(--bj-out);
-  display: flex; gap: .02em;
-  font: 900 clamp(76px, 12.5vw, 160px)/.9 var(--f-round); letter-spacing: 0; text-transform: uppercase;
-}
-.bj-word b {
-  display: inline-block; color: var(--c);
-  text-shadow:
-    .05em 0 0 var(--o), -.05em 0 0 var(--o), 0 .05em 0 var(--o), 0 -.05em 0 var(--o),
-    .036em .036em 0 var(--o), -.036em .036em 0 var(--o), .036em -.036em 0 var(--o), -.036em -.036em 0 var(--o),
-    0 .12em 0 var(--o);
-  rotate: var(--r, 0deg);
-  animation: tile-pop .6s var(--ease) both; animation-delay: calc(var(--i) * 80ms + 120ms);
-}
-.bj-word b:nth-child(1) { --c: #ff5a4e; --r: -5deg; }
-.bj-word b:nth-child(2) { --c: #ffb01f; --r: 3deg; }
-.bj-word b:nth-child(3) { --c: #3fc36e; --r: -3deg; }
-.bj-word b:nth-child(4) { --c: #3fa9f5; --r: 4deg; }
-.bj-word b:nth-child(5) { --c: #a77bf3; --r: -4deg; }
+/* The BORIJ logo (the game's own picture: pink letters and the puppy sitting at the end) */
+.bj-logo { margin: 0; line-height: 0; }
+.bj-logo img { display: block; width: min(100%, 540px); height: auto; animation: tile-pop .7s var(--ease) .1s both; }
 .bj-meaning { margin-top: 26px; font: 700 13px/1.4 var(--f-display); letter-spacing: .08em; text-transform: uppercase; opacity: .85; }
 .bj-hero { padding-bottom: clamp(110px, 14vw, 180px); }
 @media (max-width: 960px) {
@@ -709,8 +692,7 @@ h1, h2, h3, h4, p, ul, ol, figure { margin: 0; }
 /* Home panel */
 .gp--bj { grid-template-columns: .92fr 1.08fr; padding-bottom: clamp(90px, 11vw, 130px); }
 .gp--bj .gp-points li::before { background: var(--bj-line); }
-.gp--bj h3.bj-word { font: 900 clamp(46px, 5.4vw, 68px)/.95 var(--f-round); letter-spacing: 0; text-transform: uppercase; }
-.gp--bj .bj-word b { animation: none; }
+.gp--bj .bj-logo img { width: min(100%, 300px); animation: none; }
 
 /* Run home to your puppy */
 .bj-split { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
