@@ -674,9 +674,9 @@ h1, h2, h3, h4, p, ul, ol, figure { margin: 0; }
 :root[data-theme="dark"] .bj-stars { display: block; }
 :root[data-theme="dark"] .bj-sun { background: radial-gradient(circle at 62% 38%, transparent 42%, #fff4c9 43%); box-shadow: 0 0 60px 10px rgba(255, 244, 201, .25); }
 
-/* The BORIJ logo (the game's own picture: pink letters and the puppy sitting at the end) */
+/* The BORIJ logo (the game's own picture: round pink letters with a dark outline) */
 .bj-logo { margin: 0; line-height: 0; }
-.bj-logo img { display: block; width: min(100%, 540px); height: auto; animation: tile-pop .7s var(--ease) .1s both; }
+.bj-logo img { display: block; width: min(100%, 420px); height: auto; animation: tile-pop .7s var(--ease) .1s both; }
 .bj-meaning { margin-top: 26px; font: 700 13px/1.4 var(--f-display); letter-spacing: .08em; text-transform: uppercase; opacity: .85; }
 .bj-hero { padding-bottom: clamp(110px, 14vw, 180px); }
 @media (max-width: 960px) {
@@ -692,7 +692,7 @@ h1, h2, h3, h4, p, ul, ol, figure { margin: 0; }
 /* Home panel */
 .gp--bj { grid-template-columns: .92fr 1.08fr; padding-bottom: clamp(90px, 11vw, 130px); }
 .gp--bj .gp-points li::before { background: var(--bj-line); }
-.gp--bj .bj-logo img { width: min(100%, 300px); animation: none; }
+.gp--bj .bj-logo img { width: min(100%, 220px); animation: none; }
 
 /* Run home to your puppy */
 .bj-split { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
