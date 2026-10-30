@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://favalia.ca/borij/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/borij/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/borij/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/borij/privacy/"/>
+  </url>
+  <url><loc>https://favalia.ca/fr/borij/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/borij/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/borij/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/borij/privacy/"/>
+  </url>
+  <url><loc>https://favalia.ca/es/borij/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/borij/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/borij/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/borij/privacy/"/>
+  </url>
+  <url><loc>https://favalia.ca/borij/support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/borij/support/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/borij/support/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/borij/support/"/>
+  </url>
+  <url><loc>https://favalia.ca/fr/borij/support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/borij/support/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/borij/support/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/borij/support/"/>
+  </url>
+  <url><loc>https://favalia.ca/es/borij/support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/borij/support/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/borij/support/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/borij/support/"/>
+  </url>
+  <url><loc>https://favalia.ca/borij/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/borij/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/borij/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/borij/"/>
+  </url>
+  <url><loc>https://favalia.ca/fr/borij/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/borij/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/borij/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/borij/"/>
+  </url>
+  <url><loc>https://favalia.ca/es/borij/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/borij/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/borij/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://favalia.ca/es/borij/"/>
+  </url>
   <url><loc>https://favalia.ca/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://favalia.ca/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/"/>

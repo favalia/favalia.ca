@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>(function(){var A={fr:'../../fr/borij/privacy/',es:'../../es/borij/privacy/'},p=null;try{p=localStorage.getItem('favalia-lang')}catch(e){}if(p||document.referrer.indexOf(location.host)>-1)return;var n=navigator.languages||[navigator.language||''];for(var i=0;i<n.length;i++){var c=String(n[i]).slice(0,2).toLowerCase();if(c==='en')return;if(A[c]){location.replace(A[c]+location.hash);return}}})();</script>
+<!-- Consent first: Google Analytics 4 (G-HVNQKNVL5X) and Tag Manager (GTM-NFJ4XBCJ) only load after the visitor
+     agrees (assets/js/consent.js shows the banner). Google Consent Mode v2 starts with everything denied. -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+  analytics_storage: 'denied', personalization_storage: 'denied',
+  functionality_storage: 'granted', security_storage: 'granted'
+});
+gtag('set', 'ads_data_redaction', true);
+(function (w, d) {
+  var GA = 'G-HVNQKNVL5X', GTM = 'GTM-NFJ4XBCJ', KEY = 'favalia-consent', VERSION = 1, MAX_AGE = 365 * 864e5;
+  var loaded = {}, choice = null;
+  function add(src) { var s = d.createElement('script'); s.async = true; s.src = src; d.head.appendChild(s); }
+  function apply(c) {
+    gtag('consent', 'update', {
+      analytics_storage: c.analytics ? 'granted' : 'denied',
+      ad_storage: c.marketing ? 'granted' : 'denied',
+      ad_user_data: c.marketing ? 'granted' : 'denied',
+      ad_personalization: c.marketing ? 'granted' : 'denied'
+    });
+    if (c.analytics && !loaded.ga) { loaded.ga = 1; add('https://www.googletagmanager.com/gtag/js?id=' + GA); gtag('js', new Date()); gtag('config', GA); }
+    if ((c.analytics || c.marketing) && !loaded.gtm) { loaded.gtm = 1; w.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); add('https://www.googletagmanager.com/gtm.js?id=' + GTM); }
+    w.dataLayer.push({ event: 'favalia_consent', consent_analytics: !!c.analytics, consent_marketing: !!c.marketing });
+  }
+  try { choice = JSON.parse(localStorage.getItem(KEY)); } catch (e) {}
+  if (!choice || choice.v !== VERSION || !(Date.now() - choice.t < MAX_AGE)) choice = null;
+  w.favaliaConsent = {
+    get: function () { return choice; },
+    save: function (analytics, marketing) {
+      choice = { v: VERSION, t: Date.now(), analytics: !!analytics, marketing: !!marketing };
+      try { localStorage.setItem(KEY, JSON.stringify(choice)); } catch (e) {}
+      apply(choice);
+      return choice;
+    }
+  };
+  if (choice) apply(choice);
+})(window, document);
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Borij Privacy Policy · Favalia</title>
+<meta name="description" content="How Borij handles your information: what is saved on your device, game analytics and crash reports from Google Firebase, ads from Google AdMob, Game Center, purchases, notifications and your choices.">
+<link rel="canonical" href="https://favalia.ca/borij/privacy/">
+<meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f0f10" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Favalia">
+<meta property="og:locale" content="en_CA">
+<link rel="alternate" hreflang="en" href="https://favalia.ca/borij/privacy/">
+<link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/borij/privacy/">
+<link rel="alternate" hreflang="es" href="https://favalia.ca/es/borij/privacy/">
+<link rel="alternate" hreflang="x-default" href="https://favalia.ca/borij/privacy/">
+<meta property="og:locale:alternate" content="fr_CA">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:title" content="Borij Privacy Policy · Favalia">
+<meta property="og:description" content="How Borij handles your information: what is saved on your device, game analytics and crash reports from Google Firebase, ads from Google AdMob, Game Center, purchases, notifications and your choices.">
+<meta property="og:url" content="https://favalia.ca/borij/privacy/">
+<meta property="og:image" content="https://favalia.ca/assets/img/og/borij.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Borij Privacy Policy · Favalia">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="manifest" href="../../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700;800&family=Nunito:wght@800;900&display=swap">
+<link rel="stylesheet" href="../../assets/css/site.css?v=270b1104">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('favalia-theme');if(t==='light'||t==='dark')d.dataset.theme=t;}catch(e){}})();</script>
+
+</head>
+<body class="">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Main">
+    <a class="brand" href="../../" aria-label="Favalia home"><svg class="logo-tile" viewBox="0 0 40 40" aria-hidden="true"><g transform="rotate(-8 20 20)"><rect class="s" x="7.5" y="7.5" width="28" height="28" rx="7"/><rect class="t" x="4.5" y="4.5" width="28" height="28" rx="7" stroke-width="2.6"/><path class="f" d="M12.5 10.5h12.2v4.1h-7.6v3h6.6v3.9h-6.6v7h-4.6z"/></g></svg><span>Favalia</span></a>
+    <ul class="nav-links">
+      <li><a href="../../word-duel/"><img src="../../assets/img/word-duel/icon.webp" alt="" width="22" height="22">Word Duel</a></li>
+      <li><a href="../../inki-run/"><img src="../../assets/img/inki-run/icon.webp" alt="" width="22" height="22">Inki Run</a></li>
+      <li><a href="../../inki-ace/"><img src="../../assets/img/inki-ace/icon.webp" alt="" width="22" height="22">Inki Ace</a></li>
+      <li><a href="../../borij/" aria-current="page"><img src="../../assets/img/borij/icon.webp" alt="" width="22" height="22">Borij</a></li>
+      <li><a href="../../support/">Support</a></li>
+    </ul>
+    <div class="nav-tools">
+      <div class="lang-nav" role="group" aria-label="Language">
+        <a href="./" hreflang="en" lang="en" title="English" data-lang-switch="en" aria-current="true">EN</a>
+        <a href="../../fr/borij/privacy/" hreflang="fr" lang="fr" title="Français" data-lang-switch="fr">FR</a>
+        <a href="../../es/borij/privacy/" hreflang="es" lang="es" title="Español" data-lang-switch="es">ES</a>
+      </div>
+      <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch theme"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.6A8.3 8.3 0 0 1 9.4 4a8.3 8.3 0 1 0 10.6 10.6z"/><path d="M16.5 3.5l.5 1.5 1.5.5-1.5.5-.5 1.5-.5-1.5-1.5-.5 1.5-.5z" fill="currentColor" stroke-width="1"/></svg></button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-controls="site-menu" aria-expanded="false" aria-label="Open menu"><svg class="bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+  </nav>
+</header>
+<div class="mobile-menu" id="site-menu" hidden>
+  <a href="../../word-duel/"><img src="../../assets/img/word-duel/icon.webp" alt="" width="44" height="44"><span>Word Duel<small>Word game · On the App Store</small></span></a>
+  <a href="../../inki-run/"><img src="../../assets/img/inki-run/icon.webp" alt="" width="44" height="44"><span>Inki Run<small>Drawing runner · On the App Store</small></span></a>
+  <a href="../../inki-ace/"><img src="../../assets/img/inki-ace/icon.webp" alt="" width="44" height="44"><span>Inki Ace<small>Plane shooter · Coming soon</small></span></a>
+  <a href="../../borij/"><img src="../../assets/img/borij/icon.webp" alt="" width="44" height="44"><span>Borij<small>Draw and run · Coming soon</small></span></a>
+  <a href="../../support/"><span>Support<small>Help, privacy and contact</small></span></a>
+  <div class="mm-lang" role="group" aria-label="Language">
+    <a href="./" hreflang="en" lang="en" data-lang-switch="en" aria-current="true">English</a>
+    <a href="../../fr/borij/privacy/" hreflang="fr" lang="fr" data-lang-switch="fr">Français</a>
+    <a href="../../es/borij/privacy/" hreflang="es" lang="es" data-lang-switch="es">Español</a>
+  </div>
+  <p class="mm-foot">Games for iPhone and iPad · <a href="mailto:supportwordduel@gmail.com" style="all:unset;cursor:pointer;text-decoration:underline">supportwordduel@gmail.com</a></p>
+</div>
+<main id="main">
+  <section class="doc-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Favalia</a><span aria-hidden="true">/</span><a href="../">Borij</a><span aria-hidden="true">/</span><span aria-current="page">Privacy Policy</span></nav>
+      <div class="row"><img src="../../assets/img/borij/icon.webp" alt="" width="60" height="60"><span class="tag">Borij · Privacy Policy</span></div>
+      <h1>Your privacy</h1>
+      <p class="meta">Last updated: 29 October 2026</p>
+      <nav class="doc-tabs" aria-label="Borij pages"><a href="../">The game</a><a href="../support/">Support</a><a href="../privacy/" aria-current="page">Privacy Policy</a></nav>
+    </div>
+  </section>
+  <div class="wrap">
+    <article class="doc">
+    <p>Borij (“the game”) is made by Favalia (“we”, “us”). This policy explains what information the game uses, why, and the choices you have.</p>
+
+    <div class="note">
+    <p><b>The short version</b></p>
+    <ul>
+    <li>There is no account or sign-in. We don't collect your name, email, contacts, photos or precise location.</li>
+    <li>Your progress, your wardrobe and your puppy (its name too) are saved only on your device.</li>
+    <li>The game counts how it is played and reports crashes through Google Firebase, without any advertising identifier, so we can make it better.</li>
+    <li>The game shows ads from Google AdMob, unless you have BORIJ PLUS. Google may collect some device and usage information to show and measure ads, as explained below.</li>
+    <li>Game Center is optional. Purchases and subscriptions are handled by Apple; we never see your payment details.</li>
+    <li>Notifications are off until you turn them on.</li>
+    </ul>
+    </div>
+
+    <h2>1. INFORMATION SAVED ON YOUR DEVICE</h2>
+    <p>Your mission progress, stars, treats, best Marathon and Daily Run distances, day streak, daily quests, your runner and outfits, your puppy's name and looks, your settings (sound, music, vibration, theme) and counters used to space out ads are stored in the game's own storage on your iPhone or iPad. This information is not sent to us. It is included in your own iCloud or computer backups of your device, and deleting the game deletes it.</p>
+
+    <h3>Reminders</h3>
+    <p>If you turn on notifications, the game asks iOS to show you a few reminders after you stop playing (for example “Biscuit is waiting at Mission 12”). They are created and scheduled on your device from your saved progress and your puppy's name; nothing is sent to us or anyone else.</p>
+
+    <h3>Game news (push notifications)</h3>
+    <p>With notifications on, the game can also receive news, such as new missions or events. To deliver them, the game registers your device with the Apple Push Notification service and with Google Firebase Cloud Messaging. Firebase records the push token with an installation identifier, and collects the device model, language, time zone, iOS version and app version to deliver messages. Nothing is registered until you say yes. You can turn notifications off at any time with NOTIFICATIONS in the game's Settings or in your device's notification settings.</p>
+
+    <h2>2. GAME ANALYTICS AND CRASH REPORTS (GOOGLE FIREBASE)</h2>
+    <p>To see where players get stuck and what to improve, the game uses Google Analytics for Firebase and Firebase Crashlytics (Google LLC, or Google Ireland Limited for users in the EEA and Switzerland).</p>
+    <ul>
+    <li><b>Game events:</b> the first-time practice, missions and runs started and finished (which mission and world, distance, stars, the obstacle that ended a run), daily quests and streak days, treats earned and spent, which optional ads were watched, when the BORIJ PLUS screen was opened, which product was bought, and your answer to the notifications question.</li>
+    <li><b>Collected automatically by Firebase:</b> a random identifier for this installation of the game, app version, device model, iOS version, language, country and region (estimated from your IP address, which Google doesn't keep), when the game was first opened, and session counts and length.</li>
+    <li><b>Crash reports:</b> if the game crashes, Crashlytics sends a report with the technical details of the crash, the device model and iOS version, free memory and disk space, a random installation identifier and the mission or run being played.</li>
+    <li><b>Remote settings:</b> the game downloads game settings from Firebase Remote Config (for example how many treats a win earns or how often ads appear). This uses the same installation identifier.</li>
+    </ul>
+    <p>Firebase in the game never collects the advertising identifier (IDFA), and its advertising features (ad storage, ad user data and ad personalisation) are turned off: this information is not used for advertising, and we look at it only as totals and trends. Google keeps analytics events for a limited period (2 months by default) and crash reports for 90 days. In the EEA, the UK and Switzerland, analytics follows the choice you make in Google's consent form. See the <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a>.</p>
+
+    <h2>3. ADVERTISING (GOOGLE ADMOB)</h2>
+    <p>The game is free and supported by ads provided by Google AdMob. With BORIJ PLUS, the ads SDK isn't started at all. Otherwise, to show and measure ads, the Google Mobile Ads SDK in the game may collect:</p>
+    <ul>
+    <li><b>Device identifiers:</b> the Identifier for Vendors (IDFV) and, only if you allow tracking, the Identifier for Advertisers (IDFA).</li>
+    <li><b>IP address,</b> which may be used to estimate your general location (such as your country or city).</li>
+    <li><b>Ad and usage data,</b> such as which ads were shown, taps on ads, video views and app launches.</li>
+    <li><b>Diagnostic data,</b> such as crash logs and performance information from the ads SDK.</li>
+    </ul>
+    <p>Google uses this information to deliver ads, limit how often you see the same ad, measure ad performance, prevent fraud and, where you have allowed it, show ads that are more relevant to you. The game asks Google not to show ads meant for mature audiences.</p>
+    <p>Learn more in <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+    <h2>4. GAME CENTER</h2>
+    <p>Game Center is Apple's service and is optional. If you are signed in to Game Center on your device, the game sends your best Marathon distance, today's Daily Run distance and your total stars to its leaderboards, and reports the achievements you earn. Apple shows them to other players according to your Game Center settings and handles them under the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>. We don't receive your Apple Account details.</p>
+
+    <h2>5. PURCHASES AND SUBSCRIPTIONS</h2>
+    <p>BORIJ PLUS (a subscription) and Remove Ads (a one-time purchase) are sold and billed by Apple through the App Store. We never receive your name, Apple Account or payment details. The game asks Apple's StoreKit, on your device, which of them you own, so it can turn the ads off and unlock what you paid for. Subscriptions renew automatically until you cancel them in your Apple Account settings (Settings › your name › Subscriptions).</p>
+
+    <h2>6. SHARING A RESULT</h2>
+    <p>When you tap Share, the game makes a picture of your result on your device and opens the iOS share sheet. Nothing is sent unless you choose where to send it.</p>
+
+    <h2>7. YOUR CHOICES</h2>
+    <ul>
+    <li><b>Tracking:</b> iOS may ask whether Borij may track you. If you choose “Ask App Not to Track”, the IDFA is not shared and ads are not personalised using tracking. You can change this at any time in <b>Settings › Privacy &amp; Security › Tracking</b>.</li>
+    <li><b>EEA, UK and Switzerland:</b> Google's consent form is shown the first time you open the game, before any tracking question, and covers both ads and analytics. You can review or change your choices at any time from <b>AD CHOICES</b> in the game's Settings.</li>
+    <li><b>Personalised ads:</b> you can also reset or limit ad personalisation in your device's settings and at <a href="https://adssettings.google.com">adssettings.google.com</a>.</li>
+    <li><b>Notifications</b> and <b>Game Center</b> are off unless you turn them on.</li>
+    </ul>
+    <p>The game plays the same whatever you choose.</p>
+
+    <h2>8. CHILDREN</h2>
+    <p>Borij is made for a general audience and is not directed at children under 13. We don't knowingly collect personal information from children. If you believe a child has provided personal information through the game, contact us and we will help.</p>
+
+    <h2>9. SHARING, SALE AND RETENTION</h2>
+    <p>We don't sell your personal information, and we don't receive or store personal information about you on any server of our own. Information collected by Google (Firebase and AdMob) is handled and kept by Google under its own policies and the retention periods above, and Game Center and purchase information by Apple. Information saved on your device stays there until you delete the game.</p>
+
+    <h2>10. YOUR RIGHTS</h2>
+    <p>Depending on where you live (for example under Québec's Law 25, the GDPR in Europe or the CCPA in California), you may have rights to access, correct or delete personal information and to object to or limit its use. Because we don't hold personal information about you directly, requests about advertising data are best made to Google through the links above, but you're always welcome to contact us and we'll help, including with analytics data linked to your installation.</p>
+
+    <h2>11. CHANGES</h2>
+    <p>If this policy changes, the new version will be posted on this page with a new “Last updated” date.</p>
+
+    <h2>12. CONTACT</h2>
+    <p>Questions about privacy: <a href="mailto:supportwordduel@gmail.com?subject=Borij%20privacy">supportwordduel@gmail.com</a></p>
+
+    </article>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="../../"><svg class="logo-tile" viewBox="0 0 40 40" aria-hidden="true"><g transform="rotate(-8 20 20)"><rect class="s" x="7.5" y="7.5" width="28" height="28" rx="7"/><rect class="t" x="4.5" y="4.5" width="28" height="28" rx="7" stroke-width="2.6"/><path class="f" d="M12.5 10.5h12.2v4.1h-7.6v3h6.6v3.9h-6.6v7h-4.6z"/></g></svg><span>Favalia</span></a>
+        <p>Small, polished games for iPhone and iPad. One thumb to play, a minute to learn.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Games</h4>
+        <ul>
+          <li><a href="../../word-duel/">Word Duel</a></li>
+          <li><a href="../../inki-run/">Inki Run</a></li>
+          <li><a href="../../inki-ace/">Inki Ace</a></li>
+          <li><a href="../../borij/">Borij</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../../support/">Support</a></li>
+          <li><a href="../../word-duel/privacy/">Word Duel privacy</a></li>
+          <li><a href="../../inki-run/privacy/">Inki Run privacy</a></li>
+          <li><a href="../../inki-ace/privacy/">Inki Ace privacy</a></li>
+          <li><a href="../../borij/privacy/">Borij privacy</a></li>
+          <li><a href="../../privacy/">Website privacy</a></li>
+          <li><button class="link-btn" type="button" data-consent-open>Cookie settings</button></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Say hello</h4>
+        <ul>
+          <li><a href="mailto:supportwordduel@gmail.com">supportwordduel@gmail.com</a></li>
+          <li><a href="../../#studio">About the studio</a></li>
+        </ul>
+        <div class="foot-lang" role="group" aria-label="Language">
+          <a href="./" hreflang="en" lang="en" data-lang-switch="en" aria-current="true">English</a>
+          <a href="../../fr/borij/privacy/" hreflang="fr" lang="fr" data-lang-switch="fr">Français</a>
+          <a href="../../es/borij/privacy/" hreflang="es" lang="es" data-lang-switch="es">Español</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-word" aria-hidden="true">Favalia</div>
+  </div>
+  <div class="wrap foot-legal">
+    <span>© <span data-year>2026</span> Favalia · <button class="link-btn" type="button" data-consent-open>Cookie settings</button> · <strong class="made">Proudly made in Montréal, Québec! <span aria-hidden="true">⚜</span></strong></span>
+    <span>Apple, the Apple logo, iPhone and iPad are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</span>
+  </div>
+</footer>
+<script src="../../assets/js/consent.js?v=ab2a3d40" data-privacy="../../privacy/" defer></script>
+<script src="../../assets/js/site.js?v=644f72cd" defer></script>
+
+</body>
+</html>

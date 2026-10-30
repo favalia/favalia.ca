@@ -29,7 +29,7 @@
         "fr": "Trace la voie. Sauve le coureur.",
         "es": "Dibuja líneas. Salva al corredor."
       },
-      "appStoreId": null,
+      "appStoreId": "6816118632",
       "appStoreSlug": "inki-run",
       "support": "inki-run/support/",
       "privacy": "inki-run/privacy/",
@@ -57,6 +57,24 @@
         "es": "Combate aéreo arcade"
       },
       "age": "13+"
+    },
+    "borij": {
+      "name": "Borij",
+      "subtitle": {
+        "en": "Draw lines. Reach your puppy.",
+        "fr": "Trace la voie. Retrouve ton chiot.",
+        "es": "Dibuja líneas. Llega a tu perrito."
+      },
+      "appStoreId": null,
+      "appStoreSlug": "borij",
+      "support": "borij/support/",
+      "privacy": "borij/privacy/",
+      "genre": {
+        "en": "Draw-and-run adventure",
+        "fr": "Aventure à dessiner",
+        "es": "Aventura de dibujo"
+      },
+      "age": "4+"
     }
   },
   "city": "Montréal",

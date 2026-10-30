@@ -19,10 +19,11 @@
   html[lang="fr"] .og-studio .hero-title, html[lang="es"] .og-studio .hero-title { font-size: 84px; }
   .og-studio .tag { position: absolute; left: 64px; top: 52px; }
   .og-studio .icons { position: absolute; right: 70px; top: 120px; width: 380px; height: 380px; }
-  .og-studio .icons img { position: absolute; width: 196px; height: 196px; border-radius: 44px; box-shadow: 0 0 0 2px #1b1b1d, 10px 10px 0 #1b1b1d; }
-  .og-studio .i1 { left: 0; top: 30px; rotate: -10deg; }
+  .og-studio .icons img { position: absolute; width: 172px; height: 172px; border-radius: 39px; box-shadow: 0 0 0 2px #1b1b1d, 9px 9px 0 #1b1b1d; }
+  .og-studio .i1 { left: 0; top: 18px; rotate: -10deg; }
   .og-studio .i2 { right: 0; top: 0; rotate: 8deg; }
-  .og-studio .i3 { left: 92px; bottom: 0; rotate: -2deg; }
+  .og-studio .i3 { left: 14px; bottom: 0; rotate: 5deg; }
+  .og-studio .i4 { right: 10px; bottom: 14px; rotate: -6deg; }
   /* Creative-based */
   .og-art { background-size: cover; background-position: center; }
   .og-art .badge { position: absolute; left: 50%; bottom: 40px; translate: -50% 0; background: #1b1b1d; color: #fff; padding: 12px 18px; font: 800 18px/1 var(--f-display); letter-spacing: .14em; text-transform: uppercase; }
@@ -34,6 +35,17 @@
   .og-ir .g-sub { position: absolute; left: 68px; top: 384px; margin: 0; font-size: 22px; max-width: 470px; line-height: 1.45; }
   .og-ir .device { position: absolute; right: 56px; top: 150px; width: 560px; rotate: -3deg; }
   .og-ir .ground { position: absolute; left: 0; right: 0; bottom: 0; height: 40px; border-top: 3px solid #1b1b1d; }
+  /* Borij */
+  .card.og-bj { background: linear-gradient(180deg, var(--sky-1), var(--sky-2) 82%); }
+  .og-bj .bj-sun { right: 60px; top: 34px; width: 96px; }
+  .og-bj .bj-hills { height: 110px; }
+  .og-bj .head { position: absolute; left: 64px; top: 70px; display: flex; align-items: center; gap: 22px; }
+  .og-bj .head img { width: 104px; height: 104px; border-radius: 24px; box-shadow: 0 0 0 2px #2a2238, 6px 6px 0 #2a2238; }
+  .og-bj .bj-word { font-size: 128px; }
+  .og-bj .bj-word b { animation: none; }
+  .og-bj .g-sub { position: absolute; left: 68px; top: 246px; margin: 0; font-size: 28px; max-width: 470px; line-height: 1.4; }
+  .og-bj .device { position: absolute; right: 52px; top: 168px; width: 560px; rotate: 3deg; z-index: 2; }
+  .og-bj .foot, .og-bj .url { z-index: 3; }
 </style>
 </head>
 <body>
@@ -44,7 +56,7 @@
     <span class="ht-line">Draw it.</span>
     <span class="ht-line">Fly it.</span>
   </h1>
-  <div class="icons"><img class="i1" src="../assets/img/inki-ace/icon.png" alt=""><img class="i2" src="../assets/img/word-duel/icon.png" alt=""><img class="i3" src="../assets/img/inki-run/icon.png" alt=""></div>
+  <div class="icons"><img class="i1" src="../assets/img/inki-ace/icon.png" alt=""><img class="i2" src="../assets/img/word-duel/icon.png" alt=""><img class="i3" src="../assets/img/inki-run/icon.png" alt=""><img class="i4" src="../assets/img/borij/icon.png" alt=""></div>
   <div class="foot"><svg viewBox="0 0 40 40"><g transform="rotate(-8 20 20)"><rect x="7.5" y="7.5" width="28" height="28" rx="7" fill="#1b1b1d"/><rect x="4.5" y="4.5" width="28" height="28" rx="7" fill="#ffd84a" stroke="#1b1b1d" stroke-width="2.6"/><path d="M12.5 10.5h12.2v4.1h-7.6v3h6.6v3.9h-6.6v7h-4.6z" fill="#1b1b1d"/></g></svg>Favalia</div>
   <div class="url">favalia.ca</div>
 </div>
@@ -56,13 +68,24 @@
   <div class="device device--land"><div class="screen"><img src="../assets/img/inki-run/01-draw-the-way.webp" alt=""></div></div>
   <div class="ground"></div>
 </div>
+<div class="card og-bj bj-sky" id="borij" hidden>
+  <span class="bj-sun"></span>
+  <svg class="bj-cloud" style="left:40%;top:40px;width:130px;animation:none" viewBox="0 0 120 60"><path d="M22 52a15 15 0 0 1 2-30 22 22 0 0 1 40-9 18 18 0 0 1 31 11 14 14 0 0 1 3 28z"/></svg>
+  <svg class="bj-cloud" style="left:3%;top:330px;width:90px;animation:none" viewBox="0 0 120 60"><path d="M22 52a15 15 0 0 1 2-30 22 22 0 0 1 40-9 18 18 0 0 1 31 11 14 14 0 0 1 3 28z"/></svg>
+  <div class="head"><img src="../assets/img/borij/icon.png" alt=""><h1 class="bj-word"><b>B</b><b>O</b><b>R</b><b>I</b><b>J</b></h1></div>
+  <p class="g-sub">Draw lines. Reach your puppy.</p>
+  <div class="device device--land"><div class="screen"><img src="../assets/img/borij/01-draw-the-way.webp" alt=""></div></div>
+  <svg class="bj-hills" viewBox="0 0 1440 120" preserveAspectRatio="none"><path class="h1" d="M0 58C130 26 250 30 380 50S620 82 760 56 1000 18 1130 38 1340 68 1440 44V120H0z"/><path class="h2" d="M0 84C160 64 300 72 450 84S720 98 880 82 1190 62 1440 78V120H0z"/><rect class="soil" y="98" width="1440" height="22"/></svg>
+  <div class="foot"><svg viewBox="0 0 40 40"><g transform="rotate(-8 20 20)"><rect x="7.5" y="7.5" width="28" height="28" rx="7" fill="#1b1b1d"/><rect x="4.5" y="4.5" width="28" height="28" rx="7" fill="#ffd84a" stroke="#1b1b1d" stroke-width="2.6"/><path d="M12.5 10.5h12.2v4.1h-7.6v3h6.6v3.9h-6.6v7h-4.6z" fill="#1b1b1d"/></g></svg>Favalia</div>
+  <div class="url">favalia.ca/borij</div>
+</div>
 <script>
   var q = new URLSearchParams(location.search);
   var g = q.get("g") || "favalia", l = q.get("l") || "en";
   var T = {
-    en: { tag: "Independent game studio", tiles: "SPELL", lines: ["it.", "Draw it.", "Fly it."], wd: "Free on iPhone &amp; iPad", ia: "Arcade doodle plane shooter", ir: "Draw lines. Save the runner.", url: "favalia.ca" },
-    fr: { tag: "Studio de jeux indépendant", tiles: "DEVINE", lines: [".", "Dessine.", "Pilote."], wd: "Gratuit sur iPhone et iPad", ia: "Combat aérien d'arcade à l'encre", ir: "Trace la voie. Sauve le coureur.", url: "favalia.ca/fr" },
-    es: { tag: "Estudio de juegos independiente", tiles: "ADIVINA", lines: [".", "Dibuja.", "Vuela."], wd: "Gratis en iPhone y iPad", ia: "Combate aéreo arcade a tinta", ir: "Dibuja líneas. Salva al corredor.", url: "favalia.ca/es" }
+    en: { tag: "Independent game studio", tiles: "SPELL", lines: ["it.", "Draw it.", "Fly it."], wd: "Free on iPhone &amp; iPad", ia: "Arcade doodle plane shooter", ir: "Draw lines. Save the runner.", bj: "Draw lines. Reach your puppy.", url: "favalia.ca" },
+    fr: { tag: "Studio de jeux indépendant", tiles: "DEVINE", lines: [".", "Dessine.", "Pilote."], wd: "Gratuit sur iPhone et iPad", ia: "Combat aérien d'arcade à l'encre", ir: "Trace la voie. Sauve le coureur.", bj: "Trace la voie. Retrouve ton chiot.", url: "favalia.ca/fr" },
+    es: { tag: "Estudio de juegos independiente", tiles: "ADIVINA", lines: [".", "Dibuja.", "Vuela."], wd: "Gratis en iPhone y iPad", ia: "Combate aéreo arcade a tinta", ir: "Dibuja líneas. Salva al corredor.", bj: "Dibuja líneas. Llega a tu perrito.", url: "favalia.ca/es" }
   }[l];
   document.documentElement.lang = l;
   document.querySelector("#favalia .tag").textContent = T.tag;
@@ -74,6 +97,8 @@
   document.querySelector("#word-duel .badge").innerHTML = T.wd;
   document.querySelector("#inki-ace .badge").textContent = T.ia;
   document.querySelector("#inki-run .g-sub").textContent = T.ir;
+  document.querySelector("#borij .g-sub").textContent = T.bj;
+  document.querySelector("#borij .url").textContent = T.url.replace(/\/(fr|es)$/, "") + (l === "en" ? "/borij" : "/" + l + "/borij");
   document.querySelectorAll(".card").forEach(function (c) { c.hidden = c.id !== g; });
 </script>
 </body>

@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>(function(){var A={fr:'../fr/borij/',es:'../es/borij/'},p=null;try{p=localStorage.getItem('favalia-lang')}catch(e){}if(p||document.referrer.indexOf(location.host)>-1)return;var n=navigator.languages||[navigator.language||''];for(var i=0;i<n.length;i++){var c=String(n[i]).slice(0,2).toLowerCase();if(c==='en')return;if(A[c]){location.replace(A[c]+location.hash);return}}})();</script>
+<!-- Consent first: Google Analytics 4 (G-HVNQKNVL5X) and Tag Manager (GTM-NFJ4XBCJ) only load after the visitor
+     agrees (assets/js/consent.js shows the banner). Google Consent Mode v2 starts with everything denied. -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+  analytics_storage: 'denied', personalization_storage: 'denied',
+  functionality_storage: 'granted', security_storage: 'granted'
+});
+gtag('set', 'ads_data_redaction', true);
+(function (w, d) {
+  var GA = 'G-HVNQKNVL5X', GTM = 'GTM-NFJ4XBCJ', KEY = 'favalia-consent', VERSION = 1, MAX_AGE = 365 * 864e5;
+  var loaded = {}, choice = null;
+  function add(src) { var s = d.createElement('script'); s.async = true; s.src = src; d.head.appendChild(s); }
+  function apply(c) {
+    gtag('consent', 'update', {
+      analytics_storage: c.analytics ? 'granted' : 'denied',
+      ad_storage: c.marketing ? 'granted' : 'denied',
+      ad_user_data: c.marketing ? 'granted' : 'denied',
+      ad_personalization: c.marketing ? 'granted' : 'denied'
+    });
+    if (c.analytics && !loaded.ga) { loaded.ga = 1; add('https://www.googletagmanager.com/gtag/js?id=' + GA); gtag('js', new Date()); gtag('config', GA); }
+    if ((c.analytics || c.marketing) && !loaded.gtm) { loaded.gtm = 1; w.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); add('https://www.googletagmanager.com/gtm.js?id=' + GTM); }
+    w.dataLayer.push({ event: 'favalia_consent', consent_analytics: !!c.analytics, consent_marketing: !!c.marketing });
+  }
+  try { choice = JSON.parse(localStorage.getItem(KEY)); } catch (e) {}
+  if (!choice || choice.v !== VERSION || !(Date.now() - choice.t < MAX_AGE)) choice = null;
+  w.favaliaConsent = {
+    get: function () { return choice; },
+    save: function (analytics, marketing) {
+      choice = { v: VERSION, t: Date.now(), analytics: !!analytics, marketing: !!marketing };
+      try { localStorage.setItem(KEY, JSON.stringify(choice)); } catch (e) {}
+      apply(choice);
+      return choice;
+    }
+  };
+  if (choice) apply(choice);
+})(window, document);
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Borij · Draw lines. Reach your puppy. · Favalia</title>
+<meta name="description" content="Your runner never jumps. Draw bridges, ramps, shields and walls to get them home to their puppy: 120 missions in four worlds, Marathon and a new Daily Run every day. For iPhone and iPad.">
+<link rel="canonical" href="https://favalia.ca/borij/">
+<meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f0f10" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Favalia">
+<meta property="og:locale" content="en_CA">
+<link rel="alternate" hreflang="en" href="https://favalia.ca/borij/">
+<link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/borij/">
+<link rel="alternate" hreflang="es" href="https://favalia.ca/es/borij/">
+<link rel="alternate" hreflang="x-default" href="https://favalia.ca/borij/">
+<meta property="og:locale:alternate" content="fr_CA">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:title" content="Borij: draw the way home to your puppy.">
+<meta property="og:description" content="Your runner never jumps. Draw bridges, ramps, shields and walls to get them home to their puppy: 120 missions in four worlds, Marathon and a new Daily Run every day. For iPhone and iPad.">
+<meta property="og:url" content="https://favalia.ca/borij/">
+<meta property="og:image" content="https://favalia.ca/assets/img/og/borij.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Borij: draw the way home to your puppy.">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700;800&family=Nunito:wght@800;900&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css?v=270b1104">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('favalia-theme');if(t==='light'||t==='dark')d.dataset.theme=t;}catch(e){}})();</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MobileApplication", "name": "Borij", "alternateName": "Borij: Draw lines. Reach your puppy.", "description": "Your runner never jumps. Draw bridges, ramps, shields and walls to get them home to their puppy: 120 missions in four worlds, Marathon and a new Daily Run every day. For iPhone and iPad.", "url": "https://favalia.ca/borij/", "inLanguage": "en", "image": "https://favalia.ca/assets/img/borij/icon.png", "operatingSystem": "iOS, iPadOS", "applicationCategory": "GameApplication", "applicationSubCategory": "Draw-and-run adventure", "contentRating": "4+", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@type": "Organization", "name": "Favalia", "url": "https://favalia.ca/", "logo": "https://favalia.ca/apple-touch-icon.png", "email": "supportwordduel@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Montréal", "addressRegion": "Québec", "addressCountry": "CA"}}, "publisher": {"@type": "Organization", "name": "Favalia", "url": "https://favalia.ca/", "logo": "https://favalia.ca/apple-touch-icon.png", "email": "supportwordduel@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Montréal", "addressRegion": "Québec", "addressCountry": "CA"}}}</script>
+</head>
+<body class="">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Main">
+    <a class="brand" href="../" aria-label="Favalia home"><svg class="logo-tile" viewBox="0 0 40 40" aria-hidden="true"><g transform="rotate(-8 20 20)"><rect class="s" x="7.5" y="7.5" width="28" height="28" rx="7"/><rect class="t" x="4.5" y="4.5" width="28" height="28" rx="7" stroke-width="2.6"/><path class="f" d="M12.5 10.5h12.2v4.1h-7.6v3h6.6v3.9h-6.6v7h-4.6z"/></g></svg><span>Favalia</span></a>
+    <ul class="nav-links">
+      <li><a href="../word-duel/"><img src="../assets/img/word-duel/icon.webp" alt="" width="22" height="22">Word Duel</a></li>
+      <li><a href="../inki-run/"><img src="../assets/img/inki-run/icon.webp" alt="" width="22" height="22">Inki Run</a></li>
+      <li><a href="../inki-ace/"><img src="../assets/img/inki-ace/icon.webp" alt="" width="22" height="22">Inki Ace</a></li>
+      <li><a href="../borij/" aria-current="page"><img src="../assets/img/borij/icon.webp" alt="" width="22" height="22">Borij</a></li>
+      <li><a href="../support/">Support</a></li>
+    </ul>
+    <div class="nav-tools">
+      <div class="lang-nav" role="group" aria-label="Language">
+        <a href="./" hreflang="en" lang="en" title="English" data-lang-switch="en" aria-current="true">EN</a>
+        <a href="../fr/borij/" hreflang="fr" lang="fr" title="Français" data-lang-switch="fr">FR</a>
+        <a href="../es/borij/" hreflang="es" lang="es" title="Español" data-lang-switch="es">ES</a>
+      </div>
+      <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch theme"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.6A8.3 8.3 0 0 1 9.4 4a8.3 8.3 0 1 0 10.6 10.6z"/><path d="M16.5 3.5l.5 1.5 1.5.5-1.5.5-.5 1.5-.5-1.5-1.5-.5 1.5-.5z" fill="currentColor" stroke-width="1"/></svg></button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-controls="site-menu" aria-expanded="false" aria-label="Open menu"><svg class="bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+  </nav>
+</header>
+<div class="mobile-menu" id="site-menu" hidden>
+  <a href="../word-duel/"><img src="../assets/img/word-duel/icon.webp" alt="" width="44" height="44"><span>Word Duel<small>Word game · On the App Store</small></span></a>
+  <a href="../inki-run/"><img src="../assets/img/inki-run/icon.webp" alt="" width="44" height="44"><span>Inki Run<small>Drawing runner · On the App Store</small></span></a>
+  <a href="../inki-ace/"><img src="../assets/img/inki-ace/icon.webp" alt="" width="44" height="44"><span>Inki Ace<small>Plane shooter · Coming soon</small></span></a>
+  <a href="../borij/"><img src="../assets/img/borij/icon.webp" alt="" width="44" height="44"><span>Borij<small>Draw and run · Coming soon</small></span></a>
+  <a href="../support/"><span>Support<small>Help, privacy and contact</small></span></a>
+  <div class="mm-lang" role="group" aria-label="Language">
+    <a href="./" hreflang="en" lang="en" data-lang-switch="en" aria-current="true">English</a>
+    <a href="../fr/borij/" hreflang="fr" lang="fr" data-lang-switch="fr">Français</a>
+    <a href="../es/borij/" hreflang="es" lang="es" data-lang-switch="es">Español</a>
+  </div>
+  <p class="mm-foot">Games for iPhone and iPad · <a href="mailto:supportwordduel@gmail.com" style="all:unset;cursor:pointer;text-decoration:underline">supportwordduel@gmail.com</a></p>
+</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="mini-runner" viewBox="0 0 24 32"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="15" cy="5.6" r="3.5"/><path d="M11.4 3.4h8.6M14.2 9.4 11.6 19M11.6 19l4 4.6-1.4 6.6M11.6 19 8 24l-4 1.4M13.2 12l3.8 3 3.6-2.6M13.2 12 9 14l-1.5 4"/></g></symbol>
+  <symbol id="bj-cloud" viewBox="0 0 120 60"><path d="M22 52a15 15 0 0 1 2-30 22 22 0 0 1 40-9 18 18 0 0 1 31 11 14 14 0 0 1 3 28z"/></symbol>
+</svg>
+<main id="main">
+
+  <section class="g-hero bj-hero">
+    <div class="bj-stars" aria-hidden="true"></div>
+    <span class="bj-sun" style="right:7%;top:9%" aria-hidden="true"></span>
+    <svg class="bj-cloud" style="left:38%;top:6%;width:140px;--d:10s" aria-hidden="true"><use href="#bj-cloud"/></svg>
+    <svg class="bj-cloud" style="left:4%;top:58%;width:100px;--d:8s" aria-hidden="true"><use href="#bj-cloud"/></svg>
+    <svg class="bj-cloud" style="right:18%;top:22%;width:90px;--d:12s" aria-hidden="true"><use href="#bj-cloud"/></svg>
+    <svg class="bj-hills" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path class="h1" d="M0 58C130 26 250 30 380 50S620 82 760 56 1000 18 1130 38 1340 68 1440 44V120H0z"/><path class="h2" d="M0 84C160 64 300 72 450 84S720 98 880 82 1190 62 1440 78V120H0z"/><rect class="soil" y="98" width="1440" height="22"/><g class="pebble"><circle cx="120" cy="110" r="3"/><circle cx="410" cy="106" r="2.5"/><circle cx="690" cy="112" r="3"/><circle cx="980" cy="107" r="2.5"/><circle cx="1260" cy="111" r="3"/></g></svg>
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="../">Favalia</a><span aria-hidden="true">/</span><a href="../#games">Games</a><span aria-hidden="true">/</span><span aria-current="page">Borij</span></nav>
+      <div class="g-hero-grid">
+        <div>
+          <h1 class="bj-word" aria-label="Borij"><b style="--i:0" aria-hidden="true">B</b><b style="--i:1" aria-hidden="true">O</b><b style="--i:2" aria-hidden="true">R</b><b style="--i:3" aria-hidden="true">I</b><b style="--i:4" aria-hidden="true">J</b></h1>
+          <p class="g-sub">Draw lines. Reach your puppy.</p>
+          <p class="g-pitch">Your runner never jumps, and only wants one thing: to get home to their puppy. You hold the pencil. Draw bridges over holes, ramps over rocks, shields against falling stones and walls that stop cars.</p>
+          <div class="g-ctas">
+            <span class="soon">Coming soon to the App Store</span>
+            <a class="btn btn--ghost" href="#shots">See it run</a>
+          </div>
+          <div class="chips">
+            <span class="chip">Free</span><span class="chip">iPhone &amp; iPad</span><span class="chip">Ages 4+</span><span class="chip">Plays offline</span>
+          </div>
+          <p class="bj-meaning">Borij means “run!” in Mazandarani.</p>
+        </div>
+        <div class="g-media">
+          <div class="device device--land"><div class="screen"><video data-autoplay muted loop playsinline preload="none" poster="../assets/video/borij-poster.webp" aria-label="Borij gameplay"><source src="../assets/video/borij.mp4" type="video/mp4"></video></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div><span class="tag">How it works</span><h2 class="h2">Draw it.<br>They run on it.</h2></div>
+        <p>Lines only carry your runner from above. From the side, your runner passes right through them, so a wall stops a taxi but never stops your runner.</p>
+      </div>
+      <div class="rules rules--bj" data-reveal>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 72h66v12M134 72v12M134 72h62" stroke-width="3"/><path class="drawn" d="M56 70Q100 75 148 70" stroke-width="5"/><use href="#mini-runner" x="88" y="40" width="24" height="32"/></svg>
+          <b>Holes &amp; ponds</b><p>Draw a bridge from edge to edge.</p>
+        </div>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 72h192" stroke-width="3"/><path d="M112 72V49q0-8 8-8h14q8 0 8 8v23" stroke-width="3" fill="var(--card)"/><path class="drawn" d="M60 72L110 34H158" stroke-width="5"/><use href="#mini-runner" x="120" y="2" width="24" height="32"/></svg>
+          <b>Rocks &amp; trees</b><p>Start on the ground and draw a ramp up and over.</p>
+        </div>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 72h192" stroke-width="3"/><path d="M100 72l6-14 6 14 6-14 6 14 6-14 6 14" stroke-width="3"/><path class="drawn" d="M68 72L96 48H150" stroke-width="5"/><use href="#mini-runner" x="112" y="16" width="24" height="32"/></svg>
+          <b>Spikes &amp; cacti</b><p>Go over the top. If your line clears it, you're safe.</p>
+        </div>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 72h192" stroke-width="3"/><path class="drawn" d="M66 32H150" stroke-width="5"/><circle cx="92" cy="9" r="6" stroke-width="2.6" fill="var(--card)"/><circle cx="126" cy="5" r="6" stroke-width="2.6" fill="var(--card)"/><path d="M92 18v8M126 14v12" stroke-width="2" stroke-dasharray="3 4"/><use href="#mini-runner" x="96" y="40" width="24" height="32"/></svg>
+          <b>Stones &amp; snowballs</b><p>Draw a shield above your runner's head.</p>
+        </div>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 72h192" stroke-width="3"/><path class="drawn" d="M126 72V32" stroke-width="5"/><path d="M140 64v-7l8-1 6-8h18l6 8h6v8z" stroke-width="2.6" fill="var(--card)"/><circle cx="150" cy="66" r="5" stroke-width="2.6" fill="var(--card)"/><circle cx="176" cy="66" r="5" stroke-width="2.6" fill="var(--card)"/><use href="#mini-runner" x="62" y="40" width="24" height="32"/></svg>
+          <b>Birds &amp; taxis</b><p>Draw a wall. They bounce off; your runner passes right through.</p>
+        </div>
+      </div>
+      <p class="rules-note">Time slows down while your finger is on the screen. Every line costs ink: grab the pens on the way, and earn more the further you run.</p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap bj-split">
+      <div class="bj-frame" data-reveal><img src="../assets/img/borij/02-run-home-to-your-puppy.webp" alt="The runner hugging their puppy at the finish flag" width="1434" height="659" loading="lazy" style="transform:scale(1.5);transform-origin:38% 60%"></div>
+      <div data-reveal>
+        <span class="tag">The goal</span>
+        <h2 class="h2" style="margin-top:18px">Run home<br>to your puppy.</h2>
+        <p class="lede" style="margin-top:20px">At the end of every mission, your puppy is waiting. The reunion is the best part: a run, a leap, a big hug.</p>
+        <ul class="bj-list">
+          <li><span aria-hidden="true">🐾</span><p><b>Name it.</b> Biscuit is only the start.</p></li>
+          <li><span aria-hidden="true">🎨</span><p><b>Pick its coat.</b> Eight of them, from golden to dalmatian and midnight.</p></li>
+          <li><span aria-hidden="true">🎀</span><p><b>Dress it up.</b> Collars, bandanas, a bow tie, a bell, and hats from a bow to a crown.</p></li>
+          <li><span aria-hidden="true">💨</span><p><b>Chase it.</b> In Marathon your puppy runs ahead every 300 m, leaping everything in its way.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div><span class="tag">Four worlds</span><h2 class="h2">120 missions.<br>Four worlds.</h2></div>
+        <p>Twelve chapters, each with a short sprint and a long boss run, and three stars to earn on every mission.</p>
+      </div>
+      <div class="bj-worlds">
+        <article class="bj-world" data-reveal style="--w:#a7e08a"><div class="pic" style="--x:30%"><img src="../assets/img/borij/01-draw-the-way.webp" alt="" width="1434" height="659" loading="lazy"></div><div class="txt"><h3>Spring</h3><p>Green hills, ponds, rocks and trees, and stones falling from the sky.</p></div></article>
+        <article class="bj-world" data-reveal style="--w:#ffd27a;--delay:60ms"><div class="pic" style="--x:10%"><img src="../assets/img/borij/03-desert.webp" alt="" width="1434" height="659" loading="lazy"></div><div class="txt"><h3>Desert</h3><p>Sahara dunes, pyramids, cacti and long, hot gaps to bridge.</p></div></article>
+        <article class="bj-world" data-reveal style="--w:#cfeaff;--delay:120ms"><div class="pic" style="--x:20%"><img src="../assets/img/borij/04-snow.webp" alt="" width="1434" height="659" loading="lazy"></div><div class="txt"><h3>Snowy</h3><p>Snowmen, ice spikes and snowballs tumbling down the mountain.</p></div></article>
+        <article class="bj-world" data-reveal style="--w:#d6c6ff;--delay:180ms"><div class="pic" style="--x:12%"><img src="../assets/img/borij/05-downtown.webp" alt="" width="1434" height="659" loading="lazy"></div><div class="txt"><h3>Downtown</h3><p>Taxis, pigeons, cones, dumpsters and flower pots falling from balconies.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div><span class="tag">What's inside</span><h2 class="h2">Something new<br>every day.</h2></div>
+        <p>Every run earns treats for the wardrobe, and there's always a reason to come back tomorrow.</p>
+      </div>
+      <div class="features">
+        <div class="feature" data-reveal><span class="big">∞</span><h3>Marathon</h3><p>One life, no finish line. Magnets pull pens in, shields take a hit for you, and your puppy is always one step ahead.</p></div>
+        <div class="feature" data-reveal style="--delay:60ms"><span class="big">1/day</span><h3>Daily Run</h3><p>A new course every day, the same for everyone, with its own Game Center leaderboard.</p></div>
+        <div class="feature" data-reveal style="--delay:120ms"><span class="big">3</span><h3>Daily quests</h3><p>Three quests a day and a day streak, each paid in treats.</p></div>
+        <div class="feature" data-reveal><span class="big">18</span><h3>Runners</h3><p>Nine girls and nine boys, plus tops, dresses, shoes, hats and much more to mix and match.</p></div>
+        <div class="feature" data-reveal style="--delay:60ms"><span class="big">7</span><h3>Rides</h3><p>From bicycle to hoverboard, three models each. Every ride takes a hit for you.</p></div>
+        <div class="feature" data-reveal style="--delay:120ms"><span class="big">✎</span><h3>Show me the way</h3><p>Stuck on a mission? See every line it needs, then draw along.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="shots">
+    <div class="wrap shots-wrap" data-rail>
+      <div class="sec-head" data-reveal>
+        <div><span class="tag">Screenshots</span><h2 class="h2">See it run</h2></div>
+        <div class="shots-nav">
+          <button class="icon-btn" type="button" data-rail-step="-1" aria-label="Previous screenshots"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button class="icon-btn" type="button" data-rail-step="1" aria-label="Next screenshots"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+      </div>
+      <div class="shots shots--land">
+        <button class="shot" type="button" data-lightbox="../assets/img/borij/01-draw-the-way.webp"><img src="../assets/img/borij/01-draw-the-way.webp" alt="A ramp drawn over a rock in the spring hills" width="1434" height="659" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../assets/img/borij/02-run-home-to-your-puppy.webp"><img src="../assets/img/borij/02-run-home-to-your-puppy.webp" alt="The runner hugging their puppy at the end of a mission" width="1434" height="659" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../assets/img/borij/03-desert.webp"><img src="../assets/img/borij/03-desert.webp" alt="A line drawn over cacti in the desert" width="1434" height="659" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../assets/img/borij/04-snow.webp"><img src="../assets/img/borij/04-snow.webp" alt="Shields drawn under falling snowballs" width="1434" height="659" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../assets/img/borij/05-downtown.webp"><img src="../assets/img/borij/05-downtown.webp" alt="A skateboard jump downtown" width="1434" height="659" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../assets/img/borij/06-marathon.webp"><img src="../assets/img/borij/06-marathon.webp" alt="Marathon on a hoverboard with a shield, the puppy running ahead" width="1434" height="659" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../assets/img/borij/07-dress-your-puppy.webp"><img src="../assets/img/borij/07-dress-your-puppy.webp" alt="The wardrobe's puppy tab: a puppy in a party hat and bow tie" width="1434" height="659" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../assets/img/borij/08-every-day.webp"><img src="../assets/img/borij/08-every-day.webp" alt="The menu with the Daily Run, quests and the day streak" width="1434" height="659" loading="lazy"></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap" style="max-width:920px">
+      <div data-reveal><span class="tag">Questions</span><h2 class="h2" style="margin:18px 0 32px">Good to know</h2></div>
+      <div class="faq" data-reveal>
+        <details>
+          <summary>My line was right there, but I still crashed</summary>
+          <div class="answer"><ul>
+            <li>Start ramps <b>on the ground</b> before the obstacle: your runner can't jump up onto a line.</li>
+            <li>Lines only carry your runner from above. From the side, your runner passes through them.</li>
+            <li>Keep ramps gentle when riding: bikes and segways can't climb steep lines.</li>
+            <li>Still stuck? <b>SHOW ME THE WAY</b> shows every line the mission needs.</li>
+          </ul></div>
+        </details>
+        <details>
+          <summary>I ran out of ink</summary>
+          <div class="answer"><p>Every line costs ✎1. Grab the pens on the way (a rare ×3 pen is worth three), and the further you run, the more ink you earn: at 50 m, 100 m, 200 m and beyond.</p></div>
+        </details>
+        <details>
+          <summary>When do ads appear?</summary>
+          <div class="answer"><p>Never during a run, and not at all in your first 8 missions. After that, a full-screen ad plays after every 3 finished missions and every 2 Marathon runs. Other ads only play if you choose them: to keep running after your last life, to see the way, to double your treats or to try something on for one run.</p></div>
+        </details>
+        <details>
+          <summary>What is BORIJ PLUS?</summary>
+          <div class="answer"><p>An optional subscription, $19.99 a year or $3.99 a month in the US (prices vary by country): no ads at all, double treats, and 40% of the wardrobe unlocked. If you only want the full-screen ads gone, <b>Remove Ads</b> is a single $4.99 purchase. Subscriptions renew automatically until you cancel them in your Apple Account settings.</p></div>
+        </details>
+        <details>
+          <summary>Where is my progress saved?</summary>
+          <div class="answer"><p>Missions, stars, treats, your wardrobe and your puppy are saved on your device. They come back with an iCloud or computer backup of it, but deleting the app deletes them. Purchases come back with Restore Purchases. There is no account.</p></div>
+        </details>
+      </div>
+      <div class="faq-foot">
+        <a class="arrow-link" href="support/">All support questions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        <a class="arrow-link" href="privacy/">Privacy Policy <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="cta-band">
+    <div class="wrap">
+      <div><h2>Coming soon to<br>the App Store.</h2><p>Want to know the day Borij launches? Send us a note and we'll write back when it's out.</p></div>
+      <div class="actions">
+        <a class="btn" href="mailto:supportwordduel@gmail.com?subject=Tell%20me%20when%20Borij%20launches">Tell me at launch</a>
+        <a class="btn btn--ghost" href="#shots">See it run</a>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div data-reveal style="margin-bottom:28px"><span class="tag">More from Favalia</span></div>
+      <div class="more">
+        <a href="../word-duel/" data-reveal><img src="../assets/img/word-duel/icon.webp" alt="" width="76" height="76" loading="lazy"><span><b>Word Duel</b><small>Guess the word. Duel your friends.</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        <a href="../inki-run/" data-reveal style="--delay:80ms"><img src="../assets/img/inki-run/icon.webp" alt="" width="76" height="76" loading="lazy"><span><b>Inki Run</b><small>Draw lines. Save the runner.</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        <a href="../inki-ace/" data-reveal style="--delay:160ms"><img src="../assets/img/inki-ace/icon.webp" alt="" width="76" height="76" loading="lazy"><span><b>Inki Ace</b><small>Arcade doodle plane shooter.</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="../"><svg class="logo-tile" viewBox="0 0 40 40" aria-hidden="true"><g transform="rotate(-8 20 20)"><rect class="s" x="7.5" y="7.5" width="28" height="28" rx="7"/><rect class="t" x="4.5" y="4.5" width="28" height="28" rx="7" stroke-width="2.6"/><path class="f" d="M12.5 10.5h12.2v4.1h-7.6v3h6.6v3.9h-6.6v7h-4.6z"/></g></svg><span>Favalia</span></a>
+        <p>Small, polished games for iPhone and iPad. One thumb to play, a minute to learn.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Games</h4>
+        <ul>
+          <li><a href="../word-duel/">Word Duel</a></li>
+          <li><a href="../inki-run/">Inki Run</a></li>
+          <li><a href="../inki-ace/">Inki Ace</a></li>
+          <li><a href="../borij/">Borij</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="../support/">Support</a></li>
+          <li><a href="../word-duel/privacy/">Word Duel privacy</a></li>
+          <li><a href="../inki-run/privacy/">Inki Run privacy</a></li>
+          <li><a href="../inki-ace/privacy/">Inki Ace privacy</a></li>
+          <li><a href="../borij/privacy/">Borij privacy</a></li>
+          <li><a href="../privacy/">Website privacy</a></li>
+          <li><button class="link-btn" type="button" data-consent-open>Cookie settings</button></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Say hello</h4>
+        <ul>
+          <li><a href="mailto:supportwordduel@gmail.com">supportwordduel@gmail.com</a></li>
+          <li><a href="../#studio">About the studio</a></li>
+        </ul>
+        <div class="foot-lang" role="group" aria-label="Language">
+          <a href="./" hreflang="en" lang="en" data-lang-switch="en" aria-current="true">English</a>
+          <a href="../fr/borij/" hreflang="fr" lang="fr" data-lang-switch="fr">Français</a>
+          <a href="../es/borij/" hreflang="es" lang="es" data-lang-switch="es">Español</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-word" aria-hidden="true">Favalia</div>
+  </div>
+  <div class="wrap foot-legal">
+    <span>© <span data-year>2026</span> Favalia · <button class="link-btn" type="button" data-consent-open>Cookie settings</button> · <strong class="made">Proudly made in Montréal, Québec! <span aria-hidden="true">⚜</span></strong></span>
+    <span>Apple, the Apple logo, iPhone and iPad are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</span>
+  </div>
+</footer>
+<script src="../assets/js/consent.js?v=ab2a3d40" data-privacy="../privacy/" defer></script>
+<script src="../assets/js/site.js?v=644f72cd" defer></script>
+
+</body>
+</html>

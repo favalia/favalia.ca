@@ -1,7 +1,7 @@
 # favalia.ca
 
 The website of **Favalia**, an independent game studio: a home page for our games, a page for each game
-(Word Duel, Inki Run, Inki Ace) with a small playable demo, and support and privacy pages.
+(Word Duel, Inki Run, Inki Ace with a small playable demo each, and Borij), and support and privacy pages.
 
 The whole site is in **English** (`/`), **French** (`/fr/`) and **Spanish** (`/es/`). Visitors switch with
 EN · FR · ES in the header; a first visit from a French or Spanish browser opens that language.

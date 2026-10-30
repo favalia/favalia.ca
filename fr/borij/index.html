@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+
+<!-- Consent first: Google Analytics 4 (G-HVNQKNVL5X) and Tag Manager (GTM-NFJ4XBCJ) only load after the visitor
+     agrees (assets/js/consent.js shows the banner). Google Consent Mode v2 starts with everything denied. -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+  analytics_storage: 'denied', personalization_storage: 'denied',
+  functionality_storage: 'granted', security_storage: 'granted'
+});
+gtag('set', 'ads_data_redaction', true);
+(function (w, d) {
+  var GA = 'G-HVNQKNVL5X', GTM = 'GTM-NFJ4XBCJ', KEY = 'favalia-consent', VERSION = 1, MAX_AGE = 365 * 864e5;
+  var loaded = {}, choice = null;
+  function add(src) { var s = d.createElement('script'); s.async = true; s.src = src; d.head.appendChild(s); }
+  function apply(c) {
+    gtag('consent', 'update', {
+      analytics_storage: c.analytics ? 'granted' : 'denied',
+      ad_storage: c.marketing ? 'granted' : 'denied',
+      ad_user_data: c.marketing ? 'granted' : 'denied',
+      ad_personalization: c.marketing ? 'granted' : 'denied'
+    });
+    if (c.analytics && !loaded.ga) { loaded.ga = 1; add('https://www.googletagmanager.com/gtag/js?id=' + GA); gtag('js', new Date()); gtag('config', GA); }
+    if ((c.analytics || c.marketing) && !loaded.gtm) { loaded.gtm = 1; w.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); add('https://www.googletagmanager.com/gtm.js?id=' + GTM); }
+    w.dataLayer.push({ event: 'favalia_consent', consent_analytics: !!c.analytics, consent_marketing: !!c.marketing });
+  }
+  try { choice = JSON.parse(localStorage.getItem(KEY)); } catch (e) {}
+  if (!choice || choice.v !== VERSION || !(Date.now() - choice.t < MAX_AGE)) choice = null;
+  w.favaliaConsent = {
+    get: function () { return choice; },
+    save: function (analytics, marketing) {
+      choice = { v: VERSION, t: Date.now(), analytics: !!analytics, marketing: !!marketing };
+      try { localStorage.setItem(KEY, JSON.stringify(choice)); } catch (e) {}
+      apply(choice);
+      return choice;
+    }
+  };
+  if (choice) apply(choice);
+})(window, document);
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Borij · Trace la voie. Retrouve ton chiot. · Favalia</title>
+<meta name="description" content="Ton coureur ne saute jamais. Trace ponts, rampes, boucliers et murs pour le ramener à son chiot : 120 missions dans quatre mondes, le Marathon et une nouvelle Course du jour chaque jour. Pour iPhone et iPad.">
+<link rel="canonical" href="https://favalia.ca/fr/borij/">
+<meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f0f10" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Favalia">
+<meta property="og:locale" content="fr_CA">
+<link rel="alternate" hreflang="en" href="https://favalia.ca/borij/">
+<link rel="alternate" hreflang="fr" href="https://favalia.ca/fr/borij/">
+<link rel="alternate" hreflang="es" href="https://favalia.ca/es/borij/">
+<link rel="alternate" hreflang="x-default" href="https://favalia.ca/borij/">
+<meta property="og:locale:alternate" content="en_CA">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:title" content="Borij : trace le chemin du retour vers ton chiot.">
+<meta property="og:description" content="Ton coureur ne saute jamais. Trace ponts, rampes, boucliers et murs pour le ramener à son chiot : 120 missions dans quatre mondes, le Marathon et une nouvelle Course du jour chaque jour. Pour iPhone et iPad.">
+<meta property="og:url" content="https://favalia.ca/fr/borij/">
+<meta property="og:image" content="https://favalia.ca/assets/img/og/borij-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Borij : trace le chemin du retour vers ton chiot.">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="manifest" href="../../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700;800&family=Nunito:wght@800;900&display=swap">
+<link rel="stylesheet" href="../../assets/css/site.css?v=270b1104">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('favalia-theme');if(t==='light'||t==='dark')d.dataset.theme=t;}catch(e){}})();</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MobileApplication", "name": "Borij", "alternateName": "Borij: Trace la voie. Retrouve ton chiot.", "description": "Ton coureur ne saute jamais. Trace ponts, rampes, boucliers et murs pour le ramener à son chiot : 120 missions dans quatre mondes, le Marathon et une nouvelle Course du jour chaque jour. Pour iPhone et iPad.", "url": "https://favalia.ca/fr/borij/", "inLanguage": "fr", "image": "https://favalia.ca/assets/img/borij/icon.png", "operatingSystem": "iOS, iPadOS", "applicationCategory": "GameApplication", "applicationSubCategory": "Aventure à dessiner", "contentRating": "4+", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@type": "Organization", "name": "Favalia", "url": "https://favalia.ca/", "logo": "https://favalia.ca/apple-touch-icon.png", "email": "supportwordduel@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Montréal", "addressRegion": "Québec", "addressCountry": "CA"}}, "publisher": {"@type": "Organization", "name": "Favalia", "url": "https://favalia.ca/", "logo": "https://favalia.ca/apple-touch-icon.png", "email": "supportwordduel@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Montréal", "addressRegion": "Québec", "addressCountry": "CA"}}}</script>
+</head>
+<body class="">
+<a class="skip-link" href="#main">Aller au contenu</a>
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Menu principal">
+    <a class="brand" href="../../fr/" aria-label="Accueil Favalia"><svg class="logo-tile" viewBox="0 0 40 40" aria-hidden="true"><g transform="rotate(-8 20 20)"><rect class="s" x="7.5" y="7.5" width="28" height="28" rx="7"/><rect class="t" x="4.5" y="4.5" width="28" height="28" rx="7" stroke-width="2.6"/><path class="f" d="M12.5 10.5h12.2v4.1h-7.6v3h6.6v3.9h-6.6v7h-4.6z"/></g></svg><span>Favalia</span></a>
+    <ul class="nav-links">
+      <li><a href="../../fr/word-duel/"><img src="../../assets/img/word-duel/icon.webp" alt="" width="22" height="22">Word Duel</a></li>
+      <li><a href="../../fr/inki-run/"><img src="../../assets/img/inki-run/icon.webp" alt="" width="22" height="22">Inki Run</a></li>
+      <li><a href="../../fr/inki-ace/"><img src="../../assets/img/inki-ace/icon.webp" alt="" width="22" height="22">Inki Ace</a></li>
+      <li><a href="../../fr/borij/" aria-current="page"><img src="../../assets/img/borij/icon.webp" alt="" width="22" height="22">Borij</a></li>
+      <li><a href="../../fr/support/">Soutien</a></li>
+    </ul>
+    <div class="nav-tools">
+      <div class="lang-nav" role="group" aria-label="Langue">
+        <a href="../../borij/" hreflang="en" lang="en" title="English" data-lang-switch="en">EN</a>
+        <a href="./" hreflang="fr" lang="fr" title="Français" data-lang-switch="fr" aria-current="true">FR</a>
+        <a href="../../es/borij/" hreflang="es" lang="es" title="Español" data-lang-switch="es">ES</a>
+      </div>
+      <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Changer de thème"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.6A8.3 8.3 0 0 1 9.4 4a8.3 8.3 0 1 0 10.6 10.6z"/><path d="M16.5 3.5l.5 1.5 1.5.5-1.5.5-.5 1.5-.5-1.5-1.5-.5 1.5-.5z" fill="currentColor" stroke-width="1"/></svg></button>
+      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-controls="site-menu" aria-expanded="false" aria-label="Ouvrir le menu"><svg class="bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+  </nav>
+</header>
+<div class="mobile-menu" id="site-menu" hidden>
+  <a href="../../fr/word-duel/"><img src="../../assets/img/word-duel/icon.webp" alt="" width="44" height="44"><span>Word Duel<small>Jeu de mots · Sur l'App Store</small></span></a>
+  <a href="../../fr/inki-run/"><img src="../../assets/img/inki-run/icon.webp" alt="" width="44" height="44"><span>Inki Run<small>Course à dessiner · Sur l'App Store</small></span></a>
+  <a href="../../fr/inki-ace/"><img src="../../assets/img/inki-ace/icon.webp" alt="" width="44" height="44"><span>Inki Ace<small>Combat aérien · Bientôt disponible</small></span></a>
+  <a href="../../fr/borij/"><img src="../../assets/img/borij/icon.webp" alt="" width="44" height="44"><span>Borij<small>Dessine et cours · Bientôt disponible</small></span></a>
+  <a href="../../fr/support/"><span>Soutien<small>Aide, confidentialité et contact</small></span></a>
+  <div class="mm-lang" role="group" aria-label="Langue">
+    <a href="../../borij/" hreflang="en" lang="en" data-lang-switch="en">English</a>
+    <a href="./" hreflang="fr" lang="fr" data-lang-switch="fr" aria-current="true">Français</a>
+    <a href="../../es/borij/" hreflang="es" lang="es" data-lang-switch="es">Español</a>
+  </div>
+  <p class="mm-foot">Jeux pour iPhone et iPad · <a href="mailto:supportwordduel@gmail.com" style="all:unset;cursor:pointer;text-decoration:underline">supportwordduel@gmail.com</a></p>
+</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="mini-runner" viewBox="0 0 24 32"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="15" cy="5.6" r="3.5"/><path d="M11.4 3.4h8.6M14.2 9.4 11.6 19M11.6 19l4 4.6-1.4 6.6M11.6 19 8 24l-4 1.4M13.2 12l3.8 3 3.6-2.6M13.2 12 9 14l-1.5 4"/></g></symbol>
+  <symbol id="bj-cloud" viewBox="0 0 120 60"><path d="M22 52a15 15 0 0 1 2-30 22 22 0 0 1 40-9 18 18 0 0 1 31 11 14 14 0 0 1 3 28z"/></symbol>
+</svg>
+<main id="main">
+
+  <section class="g-hero bj-hero">
+    <div class="bj-stars" aria-hidden="true"></div>
+    <span class="bj-sun" style="right:7%;top:9%" aria-hidden="true"></span>
+    <svg class="bj-cloud" style="left:38%;top:6%;width:140px;--d:10s" aria-hidden="true"><use href="#bj-cloud"/></svg>
+    <svg class="bj-cloud" style="left:4%;top:58%;width:100px;--d:8s" aria-hidden="true"><use href="#bj-cloud"/></svg>
+    <svg class="bj-cloud" style="right:18%;top:22%;width:90px;--d:12s" aria-hidden="true"><use href="#bj-cloud"/></svg>
+    <svg class="bj-hills" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path class="h1" d="M0 58C130 26 250 30 380 50S620 82 760 56 1000 18 1130 38 1340 68 1440 44V120H0z"/><path class="h2" d="M0 84C160 64 300 72 450 84S720 98 880 82 1190 62 1440 78V120H0z"/><rect class="soil" y="98" width="1440" height="22"/><g class="pebble"><circle cx="120" cy="110" r="3"/><circle cx="410" cy="106" r="2.5"/><circle cx="690" cy="112" r="3"/><circle cx="980" cy="107" r="2.5"/><circle cx="1260" cy="111" r="3"/></g></svg>
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Fil d'Ariane"><a href="../">Favalia</a><span aria-hidden="true">/</span><a href="../#games">Jeux</a><span aria-hidden="true">/</span><span aria-current="page">Borij</span></nav>
+      <div class="g-hero-grid">
+        <div>
+          <h1 class="bj-word" aria-label="Borij"><b style="--i:0" aria-hidden="true">B</b><b style="--i:1" aria-hidden="true">O</b><b style="--i:2" aria-hidden="true">R</b><b style="--i:3" aria-hidden="true">I</b><b style="--i:4" aria-hidden="true">J</b></h1>
+          <p class="g-sub">Trace la voie. Retrouve ton chiot.</p>
+          <p class="g-pitch">Ton coureur ne saute jamais et ne veut qu'une chose : rentrer retrouver son chiot. C'est toi qui tiens le crayon. Trace des ponts au-dessus des trous, des rampes par-dessus les rochers, des boucliers contre les pierres qui tombent et des murs qui arrêtent les voitures.</p>
+          <div class="g-ctas">
+            <span class="soon">Bientôt sur l'App Store</span>
+            <a class="btn btn--ghost" href="#shots">Voir en action</a>
+          </div>
+          <div class="chips">
+            <span class="chip">Gratuit</span><span class="chip">iPhone et iPad</span><span class="chip">Dès 4 ans</span><span class="chip">Hors ligne</span>
+          </div>
+          <p class="bj-meaning">Borij veut dire « cours ! » en mazandarani.</p>
+        </div>
+        <div class="g-media">
+          <div class="device device--land"><div class="screen"><video data-autoplay muted loop playsinline preload="none" poster="../../assets/video/borij-poster.webp" aria-label="Extrait de jeu de Borij"><source src="../../assets/video/borij.mp4" type="video/mp4"></video></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div><span class="tag">Comment ça marche</span><h2 class="h2">Tu dessines.<br>Il court dessus.</h2></div>
+        <p>Les lignes ne portent ton coureur que par le dessus. Par le côté, il passe à travers : un mur arrête un taxi, mais jamais ton coureur.</p>
+      </div>
+      <div class="rules rules--bj" data-reveal>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 72h66v12M134 72v12M134 72h62" stroke-width="3"/><path class="drawn" d="M56 70Q100 75 148 70" stroke-width="5"/><use href="#mini-runner" x="88" y="40" width="24" height="32"/></svg>
+          <b>Trous et mares</b><p>Trace un pont d'un bord à l'autre.</p>
+        </div>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 72h192" stroke-width="3"/><path d="M112 72V49q0-8 8-8h14q8 0 8 8v23" stroke-width="3" fill="var(--card)"/><path class="drawn" d="M60 72L110 34H158" stroke-width="5"/><use href="#mini-runner" x="120" y="2" width="24" height="32"/></svg>
+          <b>Rochers et arbres</b><p>Pars du sol et trace une rampe qui monte et passe par-dessus.</p>
+        </div>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 72h192" stroke-width="3"/><path d="M100 72l6-14 6 14 6-14 6 14 6-14 6 14" stroke-width="3"/><path class="drawn" d="M68 72L96 48H150" stroke-width="5"/><use href="#mini-runner" x="112" y="16" width="24" height="32"/></svg>
+          <b>Pics et cactus</b><p>Passe par-dessus. Si ta ligne les dépasse, tu es sauf.</p>
+        </div>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 72h192" stroke-width="3"/><path class="drawn" d="M66 32H150" stroke-width="5"/><circle cx="92" cy="9" r="6" stroke-width="2.6" fill="var(--card)"/><circle cx="126" cy="5" r="6" stroke-width="2.6" fill="var(--card)"/><path d="M92 18v8M126 14v12" stroke-width="2" stroke-dasharray="3 4"/><use href="#mini-runner" x="96" y="40" width="24" height="32"/></svg>
+          <b>Pierres et boules de neige</b><p>Trace un bouclier au-dessus de la tête de ton coureur.</p>
+        </div>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 72h192" stroke-width="3"/><path class="drawn" d="M126 72V32" stroke-width="5"/><path d="M140 64v-7l8-1 6-8h18l6 8h6v8z" stroke-width="2.6" fill="var(--card)"/><circle cx="150" cy="66" r="5" stroke-width="2.6" fill="var(--card)"/><circle cx="176" cy="66" r="5" stroke-width="2.6" fill="var(--card)"/><use href="#mini-runner" x="62" y="40" width="24" height="32"/></svg>
+          <b>Oiseaux et taxis</b><p>Trace un mur. Ils rebondissent dessus, et ton coureur passe à travers.</p>
+        </div>
+      </div>
+      <p class="rules-note">Le temps ralentit tant que ton doigt est sur l'écran. Chaque ligne coûte de l'encre : ramasse les crayons en chemin, et plus tu cours loin, plus tu en gagnes.</p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap bj-split">
+      <div class="bj-frame" data-reveal><img src="../../assets/img/borij/02-run-home-to-your-puppy.webp" alt="Le coureur serre son chiot dans ses bras au drapeau d'arrivée" width="1434" height="659" loading="lazy" style="transform:scale(1.5);transform-origin:38% 60%"></div>
+      <div data-reveal>
+        <span class="tag">Le but</span>
+        <h2 class="h2" style="margin-top:18px">Cours retrouver<br>ton chiot.</h2>
+        <p class="lede" style="margin-top:20px">À la fin de chaque mission, ton chiot t'attend. Les retrouvailles, c'est le meilleur moment : une course, un bond, un gros câlin.</p>
+        <ul class="bj-list">
+          <li><span aria-hidden="true">🐾</span><p><b>Donne-lui un nom.</b> Biscuit, ce n'est qu'un début.</p></li>
+          <li><span aria-hidden="true">🎨</span><p><b>Choisis son pelage.</b> Il y en a huit, du doré au dalmatien et au minuit.</p></li>
+          <li><span aria-hidden="true">🎀</span><p><b>Habille-le.</b> Colliers, bandanas, nœud papillon, clochette, et des chapeaux, du ruban à la couronne.</p></li>
+          <li><span aria-hidden="true">💨</span><p><b>Rattrape-le.</b> Au Marathon, ton chiot file devant tous les 300 m en sautant par-dessus tout ce qui le gêne.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div><span class="tag">Quatre mondes</span><h2 class="h2">120 missions.<br>Quatre mondes.</h2></div>
+        <p>Douze chapitres, chacun avec un sprint court et une longue course de boss, et trois étoiles à gagner à chaque mission.</p>
+      </div>
+      <div class="bj-worlds">
+        <article class="bj-world" data-reveal style="--w:#a7e08a"><div class="pic" style="--x:30%"><img src="../../assets/img/borij/01-draw-the-way.webp" alt="" width="1434" height="659" loading="lazy"></div><div class="txt"><h3>Printemps</h3><p>Collines vertes, mares, rochers et arbres, et des pierres qui tombent du ciel.</p></div></article>
+        <article class="bj-world" data-reveal style="--w:#ffd27a;--delay:60ms"><div class="pic" style="--x:10%"><img src="../../assets/img/borij/03-desert.webp" alt="" width="1434" height="659" loading="lazy"></div><div class="txt"><h3>Désert</h3><p>Dunes du Sahara, pyramides, cactus et de longs trous brûlants à franchir.</p></div></article>
+        <article class="bj-world" data-reveal style="--w:#cfeaff;--delay:120ms"><div class="pic" style="--x:20%"><img src="../../assets/img/borij/04-snow.webp" alt="" width="1434" height="659" loading="lazy"></div><div class="txt"><h3>Enneigé</h3><p>Bonshommes de neige, pics de glace et boules de neige qui dévalent la montagne.</p></div></article>
+        <article class="bj-world" data-reveal style="--w:#d6c6ff;--delay:180ms"><div class="pic" style="--x:12%"><img src="../../assets/img/borij/05-downtown.webp" alt="" width="1434" height="659" loading="lazy"></div><div class="txt"><h3>Centre-ville</h3><p>Taxis, pigeons, cônes, conteneurs et pots de fleurs qui tombent des balcons.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div><span class="tag">Au programme</span><h2 class="h2">Du nouveau<br>chaque jour.</h2></div>
+        <p>Chaque course rapporte des friandises pour la garde-robe, et il y a toujours une raison de revenir demain.</p>
+      </div>
+      <div class="features">
+        <div class="feature" data-reveal><span class="big">∞</span><h3>Marathon</h3><p>Une vie, pas de ligne d'arrivée. Les aimants attirent les crayons, les boucliers encaissent un choc pour toi, et ton chiot a toujours un pas d'avance.</p></div>
+        <div class="feature" data-reveal style="--delay:60ms"><span class="big">1/jour</span><h3>Course du jour</h3><p>Un nouveau parcours chaque jour, le même pour tout le monde, avec son propre classement Game Center.</p></div>
+        <div class="feature" data-reveal style="--delay:120ms"><span class="big">3</span><h3>Défis du jour</h3><p>Trois défis par jour et une série de jours d'affilée, tous payés en friandises.</p></div>
+        <div class="feature" data-reveal><span class="big">18</span><h3>Coureurs</h3><p>Neuf filles et neuf garçons, et des hauts, des robes, des chaussures, des chapeaux et bien plus à combiner.</p></div>
+        <div class="feature" data-reveal style="--delay:60ms"><span class="big">7</span><h3>Véhicules</h3><p>Du vélo à l'hoverboard, trois modèles chacun. Chaque véhicule encaisse un choc pour toi.</p></div>
+        <div class="feature" data-reveal style="--delay:120ms"><span class="big">✎</span><h3>Montre-moi le chemin</h3><p>Bloqué sur une mission ? Vois toutes les lignes qu'il lui faut, puis trace par-dessus.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="shots">
+    <div class="wrap shots-wrap" data-rail>
+      <div class="sec-head" data-reveal>
+        <div><span class="tag">Captures d'écran</span><h2 class="h2">En action</h2></div>
+        <div class="shots-nav">
+          <button class="icon-btn" type="button" data-rail-step="-1" aria-label="Captures précédentes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button class="icon-btn" type="button" data-rail-step="1" aria-label="Captures suivantes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+      </div>
+      <div class="shots shots--land">
+        <button class="shot" type="button" data-lightbox="../../assets/img/borij/01-draw-the-way.webp"><img src="../../assets/img/borij/01-draw-the-way.webp" alt="Une rampe tracée par-dessus un rocher dans les collines du printemps" width="1434" height="659" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../../assets/img/borij/02-run-home-to-your-puppy.webp"><img src="../../assets/img/borij/02-run-home-to-your-puppy.webp" alt="Le coureur serre son chiot dans ses bras à la fin d'une mission" width="1434" height="659" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../../assets/img/borij/03-desert.webp"><img src="../../assets/img/borij/03-desert.webp" alt="Une ligne tracée par-dessus des cactus dans le désert" width="1434" height="659" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../../assets/img/borij/04-snow.webp"><img src="../../assets/img/borij/04-snow.webp" alt="Des boucliers tracés sous des boules de neige qui tombent" width="1434" height="659" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../../assets/img/borij/05-downtown.webp"><img src="../../assets/img/borij/05-downtown.webp" alt="Un saut en skateboard au centre-ville" width="1434" height="659" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../../assets/img/borij/06-marathon.webp"><img src="../../assets/img/borij/06-marathon.webp" alt="Le Marathon en hoverboard avec un bouclier, le chiot qui court devant" width="1434" height="659" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../../assets/img/borij/07-dress-your-puppy.webp"><img src="../../assets/img/borij/07-dress-your-puppy.webp" alt="L'onglet chiot de la garde-robe : un chiot avec un chapeau de fête et un nœud papillon" width="1434" height="659" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="../../assets/img/borij/08-every-day.webp"><img src="../../assets/img/borij/08-every-day.webp" alt="Le menu avec la Course du jour, les défis et la série de jours" width="1434" height="659" loading="lazy"></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap" style="max-width:920px">
+      <div data-reveal><span class="tag">Questions</span><h2 class="h2" style="margin:18px 0 32px">Bon à savoir</h2></div>
+      <div class="faq" data-reveal>
+        <details>
+          <summary>Ma ligne était juste là, mais j'ai quand même chuté</summary>
+          <div class="answer"><ul>
+            <li>Fais partir tes rampes <b>du sol</b>, avant l'obstacle : ton coureur ne peut pas sauter sur une ligne.</li>
+            <li>Les lignes ne portent ton coureur que par le dessus. Par le côté, il passe à travers.</li>
+            <li>En véhicule, garde des rampes douces : les vélos et les gyropodes ne montent pas les lignes trop raides.</li>
+            <li>Toujours bloqué ? <b>MONTRE-MOI LE CHEMIN</b> affiche toutes les lignes dont la mission a besoin.</li>
+          </ul></div>
+        </details>
+        <details>
+          <summary>Je n'ai plus d'encre</summary>
+          <div class="answer"><p>Chaque ligne coûte ✎1. Ramasse les crayons en chemin (un rare crayon ×3 en vaut trois), et plus tu cours loin, plus tu gagnes d'encre : à 50 m, 100 m, 200 m et au-delà.</p></div>
+        </details>
+        <details>
+          <summary>Quand les pubs apparaissent-elles ?</summary>
+          <div class="answer"><p>Jamais pendant une course, et pas du tout pendant tes 8 premières missions. Ensuite, une pub plein écran passe toutes les 3 missions terminées et tous les 2 Marathons. Les autres pubs ne passent que si tu les choisis : pour continuer à courir après ta dernière vie, voir le chemin, doubler tes friandises ou essayer quelque chose le temps d'une course.</p></div>
+        </details>
+        <details>
+          <summary>C'est quoi, BORIJ PLUS ?</summary>
+          <div class="answer"><p>Un abonnement facultatif, à 19,99 $ US par an ou 3,99 $ US par mois aux États-Unis (les prix varient selon le pays) : aucune pub, des friandises doublées et 40 % de la garde-robe débloquée. Si tu veux seulement te débarrasser des pubs plein écran, <b>Supprimer les pubs</b> est un achat unique de 4,99 $ US. Les abonnements se renouvellent automatiquement jusqu'à ce que tu les résilies dans les réglages de ton compte Apple.</p></div>
+        </details>
+        <details>
+          <summary>Où ma progression est-elle sauvegardée ?</summary>
+          <div class="answer"><p>Les missions, les étoiles, les friandises, ta garde-robe et ton chiot sont sauvegardés sur ton appareil. Ils reviennent avec une sauvegarde iCloud ou sur ordinateur, mais supprimer l'app les efface. Tes achats reviennent avec Restaurer les achats. Il n'y a pas de compte.</p></div>
+        </details>
+      </div>
+      <div class="faq-foot">
+        <a class="arrow-link" href="support/">Toutes les questions <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        <a class="arrow-link" href="privacy/">Politique de confidentialité <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="cta-band">
+    <div class="wrap">
+      <div><h2>Bientôt sur<br>l'App Store.</h2><p>Tu veux savoir le jour où Borij sort ? Écris-nous et on te répondra dès sa sortie.</p></div>
+      <div class="actions">
+        <a class="btn" href="mailto:supportwordduel@gmail.com?subject=Pr%C3%A9viens-moi%20de%20la%20sortie%20de%20Borij">Préviens-moi</a>
+        <a class="btn btn--ghost" href="#shots">Voir en action</a>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div data-reveal style="margin-bottom:28px"><span class="tag">Aussi chez Favalia</span></div>
+      <div class="more">
+        <a href="../word-duel/" data-reveal><img src="../../assets/img/word-duel/icon.webp" alt="" width="76" height="76" loading="lazy"><span><b>Word Duel</b><small>Devine le mot. Défie tes amis.</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        <a href="../inki-run/" data-reveal style="--delay:80ms"><img src="../../assets/img/inki-run/icon.webp" alt="" width="76" height="76" loading="lazy"><span><b>Inki Run</b><small>Trace la voie. Sauve le coureur.</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        <a href="../inki-ace/" data-reveal style="--delay:160ms"><img src="../../assets/img/inki-ace/icon.webp" alt="" width="76" height="76" loading="lazy"><span><b>Inki Ace</b><small>Combat aérien d'arcade à l'encre.</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="../../fr/"><svg class="logo-tile" viewBox="0 0 40 40" aria-hidden="true"><g transform="rotate(-8 20 20)"><rect class="s" x="7.5" y="7.5" width="28" height="28" rx="7"/><rect class="t" x="4.5" y="4.5" width="28" height="28" rx="7" stroke-width="2.6"/><path class="f" d="M12.5 10.5h12.2v4.1h-7.6v3h6.6v3.9h-6.6v7h-4.6z"/></g></svg><span>Favalia</span></a>
+        <p>De petits jeux soignés pour iPhone et iPad. Un pouce pour jouer, une minute pour apprendre.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Jeux</h4>
+        <ul>
+          <li><a href="../../fr/word-duel/">Word Duel</a></li>
+          <li><a href="../../fr/inki-run/">Inki Run</a></li>
+          <li><a href="../../fr/inki-ace/">Inki Ace</a></li>
+          <li><a href="../../fr/borij/">Borij</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Aide</h4>
+        <ul>
+          <li><a href="../../fr/support/">Soutien</a></li>
+          <li><a href="../../fr/word-duel/privacy/">Confidentialité Word Duel</a></li>
+          <li><a href="../../fr/inki-run/privacy/">Confidentialité Inki Run</a></li>
+          <li><a href="../../fr/inki-ace/privacy/">Confidentialité Inki Ace</a></li>
+          <li><a href="../../fr/borij/privacy/">Confidentialité Borij</a></li>
+          <li><a href="../../fr/privacy/">Confidentialité du site</a></li>
+          <li><button class="link-btn" type="button" data-consent-open>Paramètres des témoins</button></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Écris-nous</h4>
+        <ul>
+          <li><a href="mailto:supportwordduel@gmail.com">supportwordduel@gmail.com</a></li>
+          <li><a href="../../fr/#studio">À propos du studio</a></li>
+        </ul>
+        <div class="foot-lang" role="group" aria-label="Langue">
+          <a href="../../borij/" hreflang="en" lang="en" data-lang-switch="en">English</a>
+          <a href="./" hreflang="fr" lang="fr" data-lang-switch="fr" aria-current="true">Français</a>
+          <a href="../../es/borij/" hreflang="es" lang="es" data-lang-switch="es">Español</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-word" aria-hidden="true">Favalia</div>
+  </div>
+  <div class="wrap foot-legal">
+    <span>© <span data-year>2026</span> Favalia · <button class="link-btn" type="button" data-consent-open>Paramètres des témoins</button> · <strong class="made">Fièrement conçu à Montréal, au Québec ! <span aria-hidden="true">⚜</span></strong></span>
+    <span>Apple, le logo Apple, iPhone et iPad sont des marques d'Apple Inc., déposées aux États-Unis et dans d'autres pays. App Store est une marque de service d'Apple Inc.</span>
+  </div>
+</footer>
+<script src="../../assets/js/consent.js?v=ab2a3d40" data-privacy="../../fr/privacy/" defer></script>
+<script src="../../assets/js/site.js?v=644f72cd" defer></script>
+
+</body>
+</html>

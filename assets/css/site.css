@@ -243,12 +243,12 @@ h1, h2, h3, h4, p, ul, ol, figure { margin: 0; }
 .mobile-menu a small { display: block; margin-top: 6px; font: 600 13px/1.2 var(--f-body); letter-spacing: 0; text-transform: none; color: var(--muted); }
 .mobile-menu .mm-foot { margin-top: auto; padding-top: 28px; color: var(--muted); font-size: 14px; }
 
-@media (max-width: 920px) {
+@media (max-width: 1100px) {
   .nav-links { display: none; }
   .menu-btn { display: grid; }
   .nav-tools { margin-left: auto; }
 }
-@media (min-width: 921px) { .mobile-menu { display: none !important; } }
+@media (min-width: 1101px) { .mobile-menu { display: none !important; } }
 
 /* ---------- Logo tile ---------- */
 .logo-tile .t { fill: var(--hi); stroke: #1b1b1d; }
@@ -342,7 +342,7 @@ h1, h2, h3, h4, p, ul, ol, figure { margin: 0; }
 @keyframes bob { 50% { transform: translate(2px, -4px) rotate(-2deg); } }
 
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
-.hero-games { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 38px; padding-top: 26px; border-top: 1px solid var(--rule); }
+.hero-games { display: grid; grid-template-columns: repeat(2, minmax(0, max-content)); gap: 14px 40px; margin-top: 38px; padding-top: 26px; border-top: 1px solid var(--rule); }
 .hero-games a { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
 .hero-games img { width: 44px; height: 44px; border-radius: 11px; box-shadow: 0 0 0 1px var(--rule); transition: transform .2s var(--ease); }
 .hero-games a:hover img { transform: rotate(-6deg) scale(1.08); }
@@ -625,6 +625,116 @@ h1, h2, h3, h4, p, ul, ol, figure { margin: 0; }
 .ink-hero .gp-runner { bottom: calc(clamp(48px, 6vw, 70px) + 3px); animation-duration: 14s; }
 .ia-word .jet { display: inline-block; width: 1.05em; height: .9em; vertical-align: -.08em; margin-left: .12em; overflow: visible; }
 
+/* Borij world: a cartoon sky, rolling hills and orange marker lines (a night sky in dark mode) */
+.bj-hero, .gp--bj, .bj-sky {
+  --sky-1: #3fa6f2; --sky-2: #c4e9ff; --cloud: #fff; --hill-1: #8fd66f; --hill-2: #55b85a; --soil: #c98a4f; --soil-2: #b0733e;
+  --bj-out: #2a2238; --bj-line: #ff8a1f;
+  --bj-btn: #1b1b1d; --bj-btn-fg: #fff; --bj-ghost: rgba(255, 255, 255, .55);
+  background: linear-gradient(180deg, var(--sky-1), var(--sky-2) 82%);
+  color: #1b1b1d;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) :is(.bj-hero, .gp--bj, .bj-sky) {
+    --sky-1: #0a1433; --sky-2: #2a3c78; --cloud: rgba(255, 255, 255, .14); --hill-1: #2f6a4b; --hill-2: #1f4c37; --soil: #5b3b27; --soil-2: #4a2f1f;
+    --bj-btn: #f1efe8; --bj-btn-fg: #0f0f10; --bj-ghost: transparent;
+    color: #f1efe8;
+  }
+}
+:root[data-theme="dark"] :is(.bj-hero, .gp--bj, .bj-sky) {
+  --sky-1: #0a1433; --sky-2: #2a3c78; --cloud: rgba(255, 255, 255, .14); --hill-1: #2f6a4b; --hill-2: #1f4c37; --soil: #5b3b27; --soil-2: #4a2f1f;
+    --bj-btn: #f1efe8; --bj-btn-fg: #0f0f10; --bj-ghost: transparent;
+  color: #f1efe8;
+}
+:is(.bj-hero, .gp--bj, .bj-sky) :focus-visible { outline-color: currentColor; }
+:is(.bj-hero, .gp--bj) .btn { --bg: var(--bj-btn); --fg: var(--bj-btn-fg); --bd: var(--bj-btn); --sh: var(--bj-btn); }
+:is(.bj-hero, .gp--bj) .btn--ghost { --bg: var(--bj-ghost); --fg: var(--bj-btn); }
+.bj-sun {
+  position: absolute; z-index: 0; width: clamp(70px, 9vw, 120px); aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle at 40% 38%, #fff6b0, #ffd23f 55%, #ffb01f);
+  box-shadow: 0 0 0 18px rgba(255, 214, 80, .22), 0 0 80px 30px rgba(255, 210, 63, .45);
+}
+.bj-cloud { position: absolute; z-index: 0; fill: var(--cloud); animation: float var(--d, 9s) ease-in-out infinite; }
+.bj-hills { position: absolute; z-index: 1; left: 0; bottom: 0; width: 100%; height: clamp(70px, 9vw, 120px); }
+.bj-hills .h1 { fill: var(--hill-1); }
+.bj-hills .h2 { fill: var(--hill-2); }
+.bj-hills .soil { fill: var(--soil); }
+.bj-hills .pebble { fill: var(--soil-2); }
+/* Stars keep to the sky on the right, away from the text */
+.bj-stars { position: absolute; inset: 0; z-index: 0; pointer-events: none; display: none;
+  background-image:
+    radial-gradient(1.6px 1.6px at 56% 8%, #fff 98%, transparent), radial-gradient(1.2px 1.2px at 61% 28%, #fff 98%, transparent),
+    radial-gradient(1.8px 1.8px at 68% 5%, #fff 98%, transparent), radial-gradient(1.2px 1.2px at 74% 22%, #fff 98%, transparent),
+    radial-gradient(1.6px 1.6px at 81% 36%, #fff 98%, transparent), radial-gradient(1.2px 1.2px at 88% 52%, #fff 98%, transparent),
+    radial-gradient(1.8px 1.8px at 95% 30%, #fff 98%, transparent), radial-gradient(1.2px 1.2px at 64% 48%, #fff 98%, transparent);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .bj-stars { display: block; }
+  :root:not([data-theme="light"]) .bj-sun { background: radial-gradient(circle at 62% 38%, transparent 42%, #fff4c9 43%); box-shadow: 0 0 60px 10px rgba(255, 244, 201, .25); }
+}
+:root[data-theme="dark"] .bj-stars { display: block; }
+:root[data-theme="dark"] .bj-sun { background: radial-gradient(circle at 62% 38%, transparent 42%, #fff4c9 43%); box-shadow: 0 0 60px 10px rgba(255, 244, 201, .25); }
+
+/* The BORIJ title: chunky round letters, one colour each, with the game's dark outline */
+.bj-word {
+  --o: var(--bj-out);
+  display: flex; gap: .02em;
+  font: 900 clamp(76px, 12.5vw, 160px)/.9 var(--f-round); letter-spacing: 0; text-transform: uppercase;
+}
+.bj-word b {
+  display: inline-block; color: var(--c);
+  text-shadow:
+    .05em 0 0 var(--o), -.05em 0 0 var(--o), 0 .05em 0 var(--o), 0 -.05em 0 var(--o),
+    .036em .036em 0 var(--o), -.036em .036em 0 var(--o), .036em -.036em 0 var(--o), -.036em -.036em 0 var(--o),
+    0 .12em 0 var(--o);
+  rotate: var(--r, 0deg);
+  animation: tile-pop .6s var(--ease) both; animation-delay: calc(var(--i) * 80ms + 120ms);
+}
+.bj-word b:nth-child(1) { --c: #ff5a4e; --r: -5deg; }
+.bj-word b:nth-child(2) { --c: #ffb01f; --r: 3deg; }
+.bj-word b:nth-child(3) { --c: #3fc36e; --r: -3deg; }
+.bj-word b:nth-child(4) { --c: #3fa9f5; --r: 4deg; }
+.bj-word b:nth-child(5) { --c: #a77bf3; --r: -4deg; }
+.bj-meaning { margin-top: 26px; font: 700 13px/1.4 var(--f-display); letter-spacing: .08em; text-transform: uppercase; opacity: .85; }
+.bj-hero { padding-bottom: clamp(110px, 14vw, 180px); }
+@media (max-width: 960px) {
+  .bj-hero .bj-cloud { display: none; }
+  .bj-stars { visibility: hidden; }
+  .bj-hero .bj-sun { top: 14px !important; right: 14px !important; width: 52px; box-shadow: 0 0 0 10px rgba(255, 214, 80, .22), 0 0 40px 14px rgba(255, 210, 63, .4); }
+}
+.bj-hero .g-media .device { rotate: 2deg; }
+.bj-hero .chip { background: rgba(255, 255, 255, .45); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .bj-hero .chip { background: transparent; } }
+:root[data-theme="dark"] .bj-hero .chip { background: transparent; }
+
+/* Home panel */
+.gp--bj { grid-template-columns: .92fr 1.08fr; padding-bottom: clamp(90px, 11vw, 130px); }
+.gp--bj .gp-points li::before { background: var(--bj-line); }
+.gp--bj h3.bj-word { font: 900 clamp(46px, 5.4vw, 68px)/.95 var(--f-round); letter-spacing: 0; text-transform: uppercase; }
+.gp--bj .bj-word b { animation: none; }
+
+/* Run home to your puppy */
+.bj-split { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
+.bj-frame { position: relative; border-radius: 26px; overflow: hidden; border: 3px solid var(--ink); box-shadow: 8px 8px 0 var(--ink); rotate: -1.2deg; background: var(--card); }
+.bj-frame img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.bj-list { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 12px; }
+.bj-list li { display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: start; color: var(--ink-2); }
+.bj-list li span { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--hi); color: #1b1b1d; border: 2px solid var(--ink); font-size: 16px; }
+.bj-list b { color: var(--ink); }
+@media (max-width: 900px) { .bj-split { grid-template-columns: 1fr; } .bj-frame { rotate: 0deg; } }
+
+/* Four worlds */
+.bj-worlds { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(14px, 2vw, 22px); }
+.bj-world { background: var(--card); border: 2.5px solid var(--ink); border-radius: 22px; overflow: hidden; box-shadow: 6px 6px 0 var(--ink); transition: transform .18s var(--ease), box-shadow .18s var(--ease); }
+.bj-world:hover { transform: translate(-3px, -3px); box-shadow: 9px 9px 0 var(--ink); }
+.bj-world .pic { overflow: hidden; aspect-ratio: 4 / 3; border-bottom: 2.5px solid var(--ink); }
+.bj-world .pic img { width: 100%; height: 100%; object-fit: cover; object-position: var(--x, 30%) 50%; transform: scale(1.24); transform-origin: var(--x, 30%) 100%; }
+.bj-world .txt { padding: 18px 18px 22px; }
+.bj-world h3 { display: inline-block; margin-bottom: 10px; padding: 6px 10px 5px; border-radius: 999px; background: var(--w); color: #1b1b1d; font: 800 13px/1 var(--f-display); letter-spacing: .12em; text-transform: uppercase; }
+.bj-world p { color: var(--ink-2); font-size: 15px; }
+@media (max-width: 1000px) { .bj-worlds { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 540px) { .bj-worlds { grid-template-columns: 1fr; } }
+.rules--bj .drawn { stroke: #ff8a1f; }
+
 /* ---------- Play section ---------- */
 .play-head { display: grid; grid-template-columns: 1fr auto; gap: 18px 40px; align-items: end; margin-bottom: 36px; }
 .play-head p { color: var(--ink-2); max-width: 32em; font-size: 18px; }
@@ -747,7 +857,7 @@ h1, h2, h3, h4, p, ul, ol, figure { margin: 0; }
 .faq-foot { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center; }
 
 /* ---------- More games ---------- */
-.more { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(16px, 2.4vw, 28px); }
+.more { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); gap: clamp(16px, 2.4vw, 28px); }
 .more a {
   display: grid; grid-template-columns: auto 1fr auto; gap: 20px; align-items: center;
   padding: 22px; background: var(--card); border: 2.5px solid var(--ink); text-decoration: none;
@@ -759,7 +869,6 @@ h1, h2, h3, h4, p, ul, ol, figure { margin: 0; }
 .more small { display: block; color: var(--ink-2); font-size: 15px; margin-top: 4px; }
 .more svg { width: 24px; height: 24px; transition: transform .2s var(--ease); }
 .more a:hover svg { transform: translateX(4px); }
-@media (max-width: 760px) { .more { grid-template-columns: 1fr; } }
 
 /* ---------- Docs (support / privacy) ---------- */
 .doc-hero { padding-block: clamp(28px, 5vw, 56px) clamp(28px, 4vw, 44px); border-bottom: 2.5px solid var(--ink); }
@@ -782,7 +891,7 @@ h1, h2, h3, h4, p, ul, ol, figure { margin: 0; }
 .note .mail { font: 800 clamp(17px, 2.2vw, 22px)/1.3 var(--f-display); word-break: break-word; }
 
 /* Support hub cards */
-.hub { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2.4vw, 28px); }
+.hub { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(16px, 2.4vw, 28px); max-width: 980px; }
 .hub-card { background: var(--card); border: 2.5px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); padding: 24px; display: grid; gap: 14px; align-content: start; }
 .hub-card img { width: 64px; height: 64px; border-radius: 22.5%; box-shadow: 0 0 0 1px var(--rule); }
 .hub-card h2 { font: 800 22px/1.1 var(--f-display); text-transform: uppercase; }

@@ -43,6 +43,11 @@ for f in "$IA"/AppStore/screenshots/captures/iphone/*.png; do
 done
 webp "$IA/AppStore/creatives/header.png" assets/img/inki-ace/header.webp 1920 80
 
+BJ="$DOCS/inki-run-color"
+icon "$BJ/ColorRunner/Assets.xcassets/AppIcon.appiconset/icon-1024.png" assets/img/borij/icon
+icon "$BJ/ColorRunner/Assets.xcassets/AppIcon.appiconset/icon-1024-dark.png" assets/img/borij/icon-dark
+# Borij's screenshots and video come from simulator captures (see the private notes), not from a folder.
+
 # Video posters (first frames, written by tools/encode-video.swift) as WebP.
 for g in inki-run inki-ace; do
   if [[ -f "assets/video/$g-poster.jpg" ]]; then
