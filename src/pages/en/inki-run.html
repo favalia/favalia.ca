@@ -2,7 +2,7 @@
   "out": "inki-run/index.html",
   "title": "Inki Run · Draw lines. Save the runner. · Favalia",
   "ogTitle": "Inki Run: your runner never jumps. You draw the way.",
-  "description": "Your runner never jumps. You draw the way: bridges, ramps, roofs and walls in 120 stages, 7 rides and Endless mode. For iPhone and iPad. Play the demo in your browser.",
+  "description": "Your runner never jumps. You draw the way: bridges, ramps, roofs and walls in 120 stages through eight places, with 7 rides and Endless mode. For iPhone and iPad. Play the demo in your browser.",
   "og": "inki-run",
   "nav": "inki-run",
   "jsonld": "game:inki-run",
@@ -87,12 +87,35 @@
           <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 72h192" stroke-width="3"/><path d="M126 72V32" stroke-width="5"/><path d="M140 64v-7l8-1 6-8h18l6 8h6v8z" stroke-width="2.6" fill="var(--card)"/><circle cx="150" cy="66" r="5" stroke-width="2.6" fill="var(--card)"/><circle cx="176" cy="66" r="5" stroke-width="2.6" fill="var(--card)"/><use href="#mini-runner" x="62" y="40" width="24" height="32"/></svg>
           <b>Birds &amp; cars</b><p>Draw a wall. They bounce off; your runner passes right through.</p>
         </div>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 72h120V44h72" stroke-width="3"/><path d="M124 52l6 3M124 63l5 2" stroke-width="2"/><path d="M62 72L122 42" stroke-width="5"/><use href="#mini-runner" x="84" y="22" width="24" height="32"/></svg>
+          <b>Cliffs</b><p>Hills and drops he takes by himself. A cliff needs a ramp up to its top edge.</p>
+        </div>
       </div>
       <p class="rules-note">Time slows down while your finger is on the screen. Every line costs ink, so grab stars to earn more.</p>
     </div>
   </section>
 
-  <section class="section section--alt">
+  <section class="section section--alt" id="places">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <div><span class="tag">Eight places</span><h2 class="h2">Up, down<br>and through.</h2></div>
+        <p>From stage 21 the road climbs hills, drops off edges and runs into tunnels that come out somewhere new. In Endless mode, a new place every few hundred metres.</p>
+      </div>
+      <div class="ir-places">
+        <article class="ir-place" data-reveal style="--delay:0ms"><div class="pic"><img src="{{root}}assets/img/inki-run/place-meadow.webp" alt="" width="1434" height="660" loading="lazy"></div><div class="txt"><h3>Meadow</h3><p>Gentle hills, windmills and barns.</p></div></article>
+        <article class="ir-place" data-reveal style="--delay:60ms"><div class="pic"><img src="{{root}}assets/img/inki-run/place-mountains.webp" alt="" width="1434" height="660" loading="lazy"></div><div class="txt"><h3>Mountains</h3><p>Snowy peaks and big cliffs to ramp up.</p></div></article>
+        <article class="ir-place" data-reveal style="--delay:120ms"><div class="pic"><img src="{{root}}assets/img/inki-run/place-desert.webp" alt="" width="1434" height="660" loading="lazy"></div><div class="txt"><h3>Desert</h3><p>Dunes, pyramids and cacti in the sun.</p></div></article>
+        <article class="ir-place" data-reveal style="--delay:180ms"><div class="pic"><img src="{{root}}assets/img/inki-run/place-forest.webp" alt="" width="1434" height="660" loading="lazy"></div><div class="txt"><h3>Forest</h3><p>Tall pines and thorny bushes.</p></div></article>
+        <article class="ir-place" data-reveal style="--delay:0ms"><div class="pic"><img src="{{root}}assets/img/inki-run/place-city.webp" alt="" width="1434" height="660" loading="lazy"></div><div class="txt"><h3>City</h3><p>Rooftops, cars and water towers.</p></div></article>
+        <article class="ir-place" data-reveal style="--delay:60ms"><div class="pic"><img src="{{root}}assets/img/inki-run/place-coast.webp" alt="" width="1434" height="660" loading="lazy"></div><div class="txt"><h3>Coast</h3><p>Palms, sailboats and a lighthouse.</p></div></article>
+        <article class="ir-place" data-reveal style="--delay:120ms"><div class="pic"><img src="{{root}}assets/img/inki-run/place-canyon.webp" alt="" width="1434" height="660" loading="lazy"></div><div class="txt"><h3>Canyon</h3><p>Mesas, arches and long drops.</p></div></article>
+        <article class="ir-place" data-reveal style="--delay:180ms"><div class="pic"><img src="{{root}}assets/img/inki-run/place-cave.webp" alt="" width="1434" height="660" loading="lazy"></div><div class="txt"><h3>Cave</h3><p>Deep underground, under the stalactites.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
     <div class="wrap">
       <div class="sec-head" data-reveal>
         <div><span class="tag">What's inside</span><h2 class="h2">Plenty<br>to draw.</h2></div>
@@ -120,6 +143,7 @@
       </div>
       <div class="shots shots--land">
         <button class="shot" type="button" data-lightbox="{{root}}assets/img/inki-run/01-draw-the-way.webp"><img src="{{root}}assets/img/inki-run/01-draw-the-way.webp" alt="A ramp drawn over a tree" width="1434" height="660" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="{{root}}assets/img/inki-run/place-tunnel.webp"><img src="{{root}}assets/img/inki-run/place-tunnel.webp" alt="Running into a tunnel to the cave" width="1434" height="660" loading="lazy"></button>
         <button class="shot" type="button" data-lightbox="{{root}}assets/img/inki-run/02-ramps-over-rocks.webp"><img src="{{root}}assets/img/inki-run/02-ramps-over-rocks.webp" alt="A ramp drawn over a rock" width="1434" height="660" loading="lazy"></button>
         <button class="shot" type="button" data-lightbox="{{root}}assets/img/inki-run/03-roofs-stop-stones.webp"><img src="{{root}}assets/img/inki-run/03-roofs-stop-stones.webp" alt="A roof drawn under falling stones" width="1434" height="660" loading="lazy"></button>
         <button class="shot" type="button" data-lightbox="{{root}}assets/img/inki-run/04-walls-stop-cars.webp"><img src="{{root}}assets/img/inki-run/04-walls-stop-cars.webp" alt="A wall stopping a car" width="1434" height="660" loading="lazy"></button>
@@ -139,6 +163,7 @@
           <summary>My line was right there, but I still crashed</summary>
           <div class="answer"><ul>
             <li>Start ramps <b>on the ground</b> before the obstacle: your runner can't jump up onto a line.</li>
+            <li>A cliff is like a rock: start the ramp on the ground and end it at the top edge.</li>
             <li>Lines only carry your runner from above. From the side, he passes through them.</li>
             <li>Keep ramps gentle when riding: bikes and segways can't climb steep lines.</li>
             <li>Time slows down while your finger is on the screen, so take a moment.</li>

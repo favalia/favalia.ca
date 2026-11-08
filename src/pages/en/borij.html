@@ -2,7 +2,7 @@
   "out": "borij/index.html",
   "title": "Borij · Draw lines. Reach your puppy. · Favalia",
   "ogTitle": "Borij: draw the way home to your puppy.",
-  "description": "Your runner never jumps. Draw bridges, ramps, shields and walls to get them home to their puppy: 120 missions in four worlds, Marathon and a new Daily Run every day. For iPhone and iPad.",
+  "description": "Your runner never jumps. Draw bridges, ramps, shields and walls to get them home to their puppy: 120 missions in eight places, Marathon and a new Daily Run every day. For iPhone and iPad.",
   "og": "borij",
   "nav": "borij",
   "jsonld": "game:borij"
@@ -70,6 +70,10 @@
           <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 72h192" stroke-width="3"/><path class="drawn" d="M126 72V32" stroke-width="5"/><path d="M140 64v-7l8-1 6-8h18l6 8h6v8z" stroke-width="2.6" fill="var(--card)"/><circle cx="150" cy="66" r="5" stroke-width="2.6" fill="var(--card)"/><circle cx="176" cy="66" r="5" stroke-width="2.6" fill="var(--card)"/><use href="#mini-runner" x="62" y="40" width="24" height="32"/></svg>
           <b>Birds &amp; taxis</b><p>Draw a wall. They bounce off; your runner passes right through.</p>
         </div>
+        <div class="rule">
+          <svg viewBox="0 0 200 86" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 72h120V44h72" stroke-width="3"/><path d="M124 52l6 3M124 63l5 2" stroke-width="2"/><path class="drawn" d="M62 72L122 42" stroke-width="5"/><use href="#mini-runner" x="84" y="22" width="24" height="32"/></svg>
+          <b>Cliffs</b><p>Hills and drops your runner takes alone. A cliff needs a ramp up to its top edge.</p>
+        </div>
       </div>
       <p class="rules-note">Time slows down while your finger is on the screen. Every line costs ink: grab the pens on the way, and earn more the further you run.</p>
     </div>
@@ -95,14 +99,18 @@
   <section class="section">
     <div class="wrap">
       <div class="sec-head" data-reveal>
-        <div><span class="tag">Four worlds</span><h2 class="h2">120 missions.<br>Four worlds.</h2></div>
-        <p>Twelve chapters, each with a short sprint and a long boss run, and three stars to earn on every mission.</p>
+        <div><span class="tag">Eight places</span><h2 class="h2">120 missions.<br>Eight places.</h2></div>
+        <p>Twelve chapters, each with a short sprint and a long boss run. From mission 21 the land climbs, drops and runs into tunnels that come out somewhere new.</p>
       </div>
       <div class="bj-worlds">
         <article class="bj-world" data-reveal style="--w:#a7e08a"><div class="pic" style="--x:30%"><img src="{{root}}assets/img/borij/01-draw-the-way.webp" alt="" width="1434" height="659" loading="lazy"></div><div class="txt"><h3>Spring</h3><p>Green hills, ponds, rocks and trees, and stones falling from the sky.</p></div></article>
         <article class="bj-world" data-reveal style="--w:#ffd27a;--delay:60ms"><div class="pic" style="--x:10%"><img src="{{root}}assets/img/borij/03-desert.webp" alt="" width="1434" height="659" loading="lazy"></div><div class="txt"><h3>Desert</h3><p>Sahara dunes, pyramids, cacti and long, hot gaps to bridge.</p></div></article>
         <article class="bj-world" data-reveal style="--w:#cfeaff;--delay:120ms"><div class="pic" style="--x:20%"><img src="{{root}}assets/img/borij/04-snow.webp" alt="" width="1434" height="659" loading="lazy"></div><div class="txt"><h3>Snowy</h3><p>Snowmen, ice spikes and snowballs tumbling down the mountain.</p></div></article>
         <article class="bj-world" data-reveal style="--w:#d6c6ff;--delay:180ms"><div class="pic" style="--x:12%"><img src="{{root}}assets/img/borij/05-downtown.webp" alt="" width="1434" height="659" loading="lazy"></div><div class="txt"><h3>Downtown</h3><p>Taxis, pigeons, cones, dumpsters and flower pots falling from balconies.</p></div></article>
+        <article class="bj-world" data-reveal style="--w:#9bd77a;--delay:0ms"><div class="pic" style="--x:22%"><img src="{{root}}assets/img/borij/09-forest.webp" alt="" width="1434" height="660" loading="lazy"></div><div class="txt"><h3>Forest</h3><p>Tall trees, ferns and toadstools, with leaves drifting down.</p></div></article>
+        <article class="bj-world" data-reveal style="--w:#f6a982;--delay:60ms"><div class="pic" style="--x:22%"><img src="{{root}}assets/img/borij/10-canyon.webp" alt="" width="1434" height="660" loading="lazy"></div><div class="txt"><h3>Canyon</h3><p>Striped red rock, natural arches and long drops to bridge.</p></div></article>
+        <article class="bj-world" data-reveal style="--w:#9fdcf7;--delay:120ms"><div class="pic" style="--x:22%"><img src="{{root}}assets/img/borij/11-coast.webp" alt="" width="1434" height="660" loading="lazy"></div><div class="txt"><h3>Coast</h3><p>Palms on the beach, a lighthouse and sailboats out at sea.</p></div></article>
+        <article class="bj-world" data-reveal style="--w:#c9b8f2;--delay:180ms"><div class="pic" style="--x:22%"><img src="{{root}}assets/img/borij/12-cave.webp" alt="" width="1434" height="660" loading="lazy"></div><div class="txt"><h3>Cave</h3><p>Deep underground: stalactites overhead and glowing crystals.</p></div></article>
       </div>
     </div>
   </section>
@@ -135,6 +143,7 @@
       </div>
       <div class="shots shots--land">
         <button class="shot" type="button" data-lightbox="{{root}}assets/img/borij/01-draw-the-way.webp"><img src="{{root}}assets/img/borij/01-draw-the-way.webp" alt="A ramp drawn over a rock in the spring hills" width="1434" height="659" loading="lazy"></button>
+        <button class="shot" type="button" data-lightbox="{{root}}assets/img/borij/13-tunnel.webp"><img src="{{root}}assets/img/borij/13-tunnel.webp" alt="A tunnel from the desert to the cave" width="1434" height="660" loading="lazy"></button>
         <button class="shot" type="button" data-lightbox="{{root}}assets/img/borij/02-run-home-to-your-puppy.webp"><img src="{{root}}assets/img/borij/02-run-home-to-your-puppy.webp" alt="The runner hugging their puppy at the end of a mission" width="1434" height="659" loading="lazy"></button>
         <button class="shot" type="button" data-lightbox="{{root}}assets/img/borij/03-desert.webp"><img src="{{root}}assets/img/borij/03-desert.webp" alt="A line drawn over cacti in the desert" width="1434" height="659" loading="lazy"></button>
         <button class="shot" type="button" data-lightbox="{{root}}assets/img/borij/04-snow.webp"><img src="{{root}}assets/img/borij/04-snow.webp" alt="Shields drawn under falling snowballs" width="1434" height="659" loading="lazy"></button>
@@ -154,6 +163,7 @@
           <summary>My line was right there, but I still crashed</summary>
           <div class="answer"><ul>
             <li>Start ramps <b>on the ground</b> before the obstacle: your runner can't jump up onto a line.</li>
+            <li>A cliff is like a rock: start the ramp on the ground and end it at the top edge.</li>
             <li>Lines only carry your runner from above. From the side, your runner passes through them.</li>
             <li>Keep ramps gentle when riding: bikes and segways can't climb steep lines.</li>
             <li>Still stuck? <b>SHOW ME THE WAY</b> shows every line the mission needs.</li>
