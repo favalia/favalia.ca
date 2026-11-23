@@ -276,6 +276,8 @@
     holding = false;
     const isBest = score > best;
     if (isBest) { best = score; store.set("favalia.inkiace.best", String(best)); }
+    window.favaliaTrack?.("demo_end", { game: "inki-ace", score, kills, reason: why === "fuel" ? "out_of_fuel" : "shot_down",
+      seconds: Math.round(t), new_best: isBest ? 1 : 0 });
     showOverlay(`
       <span class="tag">${isBest ? TX.best : TX.over}</span>
       <h3>${why === "fuel" ? TX.noFuel : TX.shot}</h3>
@@ -333,6 +335,7 @@
   });
 
   function go() {
+    if (state === "waiting") window.favaliaTrack?.("demo_start", { game: "inki-ace" });
     state = "run";
     letGo = 0;
     overlay.hidden = true;

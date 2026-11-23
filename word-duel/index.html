@@ -40,6 +40,10 @@ gtag('set', 'ads_data_redaction', true);
       return choice;
     }
   };
+  // Game events (App Store clicks, demo plays): sent only once the visitor has said yes to analytics.
+  w.favaliaTrack = function (name, params) {
+    if (choice && choice.analytics) gtag('event', name, params || {});
+  };
   if (choice) apply(choice);
 })(window, document);
 </script>
@@ -129,7 +133,7 @@ gtag('set', 'ads_data_redaction', true);
           <p class="g-sub">Letter Battle</p>
           <p class="g-pitch">A hidden word. Six hearts. One letter at a time. Tap a letter and it flies onto every dash it belongs to. Get it wrong and it drops into your misses, and a heart goes with it.</p>
           <div class="g-ctas">
-            <a class="appstore" href="https://apps.apple.com/app/word-duel-letter-battle/id6814167260" aria-label="Download Word Duel on the App Store"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" height="54" loading="lazy"></a>
+            <a class="appstore" href="https://apps.apple.com/app/word-duel-letter-battle/id6814167260" data-game="word-duel" aria-label="Download Word Duel on the App Store"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" height="54" loading="lazy"></a>
             <a class="btn btn--clear" href="#play">Play the demo</a>
           </div>
           <div class="chips">
@@ -238,7 +242,7 @@ gtag('set', 'ads_data_redaction', true);
         <h2>Ready for a duel?</h2>
         <p>Download Word Duel free, play your first word in seconds, then challenge a friend on the same words.</p>
       </div>
-      <div class="actions"><a class="appstore" href="https://apps.apple.com/app/word-duel-letter-battle/id6814167260" aria-label="Download Word Duel on the App Store"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" height="54" loading="lazy"></a><a class="btn btn--ghost" href="#play">Play the demo</a></div>
+      <div class="actions"><a class="appstore" href="https://apps.apple.com/app/word-duel-letter-battle/id6814167260" data-game="word-duel" aria-label="Download Word Duel on the App Store"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" height="54" loading="lazy"></a><a class="btn btn--ghost" href="#play">Play the demo</a></div>
     </div>
   </section>
 
@@ -302,7 +306,7 @@ gtag('set', 'ads_data_redaction', true);
   </div>
 </footer>
 <script src="../assets/js/consent.js?v=ab2a3d40" data-privacy="../privacy/" defer></script>
-<script src="../assets/js/site.js?v=644f72cd" defer></script>
-<script src="../assets/js/demo-word-duel.js?v=d28e4dad" defer></script>
+<script src="../assets/js/site.js?v=2aaff8ea" defer></script>
+<script src="../assets/js/demo-word-duel.js?v=ee3a2898" defer></script>
 </body>
 </html>

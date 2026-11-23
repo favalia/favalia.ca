@@ -40,6 +40,10 @@ gtag('set', 'ads_data_redaction', true);
       return choice;
     }
   };
+  // Game events (App Store clicks, demo plays): sent only once the visitor has said yes to analytics.
+  w.favaliaTrack = function (name, params) {
+    if (choice && choice.analytics) gtag('event', name, params || {});
+  };
   if (choice) apply(choice);
 })(window, document);
 </script>
@@ -120,7 +124,7 @@ gtag('set', 'ads_data_redaction', true);
       <nav class="crumbs" aria-label="Ruta de navegación"><a href="../">Favalia</a><span aria-hidden="true">/</span><span aria-current="page">Privacidad del sitio</span></nav>
       <span class="tag">Política de privacidad</span>
       <h1 style="margin-top:18px">Privacidad del sitio</h1>
-      <p class="meta">Última actualización: 11 de octubre de 2026</p>
+      <p class="meta">Última actualización: 22 de noviembre de 2026</p>
     </div>
   </section>
 
@@ -151,7 +155,7 @@ gtag('set', 'ads_data_redaction', true);
         <p>Nada que te identifique. El sitio recuerda algunas cosas <b>en tu propio navegador</b> (almacenamiento local): tu elección sobre las cookies, el idioma y el tema de día o de noche que elegiste, y tus mejores puntuaciones en las demos. Nunca salen de tu dispositivo y puedes borrarlas en los ajustes de tu navegador.</p>
         <p>Como en cualquier sitio web, algunos servicios ven tu dirección IP cuando tu navegador carga la página: nuestro alojamiento, <b>GitHub Pages</b> (que guarda registros del servidor por seguridad), <b>Google Fonts</b> (las tipografías) y <b>Apple</b> (la insignia «Descárgalo en el App Store»). Consulta las políticas de privacidad de <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub</a>, <a href="https://policies.google.com/privacy?hl=es">Google</a> y <a href="https://www.apple.com/es/legal/privacy/">Apple</a>.</p>
         <h3>Con tu consentimiento: analítica</h3>
-        <p>Si aceptas la analítica, usamos <b>Google Analytics 4</b> para entender cómo se usa el sitio: páginas vistas, tiempo de permanencia, clics en enlaces (por ejemplo, al App Store), el sitio del que vienes, el tipo de dispositivo y de navegador, el tamaño de pantalla, el idioma y la ubicación aproximada (ciudad y país, deducidos de tu dirección IP; Google Analytics no guarda direcciones IP). Solo lo usamos para mejorar el sitio y ver qué juegos interesan.</p>
+        <p>Si aceptas la analítica, usamos <b>Google Analytics 4</b> para entender cómo se usa el sitio: páginas vistas, tiempo de permanencia, clics en enlaces (por ejemplo, al App Store), cuándo se empieza una demo de juego del sitio y cómo termina (puntuación, motivo y duración), el sitio del que vienes, el tipo de dispositivo y de navegador, el tamaño de pantalla, el idioma y la ubicación aproximada (ciudad y país, deducidos de tu dirección IP; Google Analytics no guarda direcciones IP). Solo lo usamos para mejorar el sitio y ver qué juegos interesan.</p>
         <h3>Con tu consentimiento: marketing</h3>
         <p>Si aceptas el marketing y hacemos campañas publicitarias, las etiquetas publicitarias de Google (a través de Google Tag Manager) pueden registrar si un anuncio te trajo hasta aquí. Está desactivado a menos que lo actives.</p>
 
@@ -241,7 +245,7 @@ gtag('set', 'ads_data_redaction', true);
   </div>
 </footer>
 <script src="../../assets/js/consent.js?v=ab2a3d40" data-privacy="../../es/privacy/" defer></script>
-<script src="../../assets/js/site.js?v=644f72cd" defer></script>
+<script src="../../assets/js/site.js?v=2aaff8ea" defer></script>
 
 </body>
 </html>

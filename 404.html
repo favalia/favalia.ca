@@ -40,6 +40,10 @@ gtag('set', 'ads_data_redaction', true);
       return choice;
     }
   };
+  // Game events (App Store clicks, demo plays): sent only once the visitor has said yes to analytics.
+  w.favaliaTrack = function (name, params) {
+    if (choice && choice.analytics) gtag('event', name, params || {});
+  };
   if (choice) apply(choice);
 })(window, document);
 </script>
@@ -178,7 +182,7 @@ gtag('set', 'ads_data_redaction', true);
   </div>
 </footer>
 <script src="/assets/js/consent.js?v=ab2a3d40" data-privacy="/privacy/" defer></script>
-<script src="/assets/js/site.js?v=644f72cd" defer></script>
+<script src="/assets/js/site.js?v=2aaff8ea" defer></script>
 
 </body>
 </html>

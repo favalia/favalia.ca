@@ -69,7 +69,7 @@ def cta(slug, lang):
     g = games[slug]
     if app_url(slug):
         label = t(lang, "badge.aria").replace("{name}", g["name"])
-        return (f'<a class="appstore" href="{app_url(slug)}" aria-label="{label}">'
+        return (f'<a class="appstore" href="{app_url(slug)}" data-game="{slug}" aria-label="{label}">'
                 f'<img src="{BADGE}{BADGE_LANG[lang]}" alt="{t(lang, "badge.alt")}" height="54" loading="lazy"></a>')
     return f'<span class="soon">{t(lang, "cta.soon")}</span>'
 

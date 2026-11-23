@@ -40,6 +40,10 @@ gtag('set', 'ads_data_redaction', true);
       return choice;
     }
   };
+  // Game events (App Store clicks, demo plays): sent only once the visitor has said yes to analytics.
+  w.favaliaTrack = function (name, params) {
+    if (choice && choice.analytics) gtag('event', name, params || {});
+  };
   if (choice) apply(choice);
 })(window, document);
 </script>
@@ -190,7 +194,7 @@ gtag('set', 'ads_data_redaction', true);
               <li>Défie un ami ou un rival au hasard : en 3, 5 ou 7 mots</li>
               <li>500 niveaux et 71 avatars, en français, en anglais ou en espagnol</li>
             </ul>
-            <div class="gp-cta"><a class="appstore" href="https://apps.apple.com/app/word-duel-letter-battle/id6814167260" aria-label="Télécharger Word Duel dans l'App Store"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/fr-ca" alt="Télécharger dans l'App Store" height="54" loading="lazy"></a><a class="arrow-link" href="word-duel/">Découvrir Word Duel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a></div>
+            <div class="gp-cta"><a class="appstore" href="https://apps.apple.com/app/word-duel-letter-battle/id6814167260" data-game="word-duel" aria-label="Télécharger Word Duel dans l'App Store"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/fr-ca" alt="Télécharger dans l'App Store" height="54" loading="lazy"></a><a class="arrow-link" href="word-duel/">Découvrir Word Duel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a></div>
           </div>
           <div class="gp-media">
             <div class="device"><div class="screen"><video data-autoplay muted loop playsinline preload="none" poster="../assets/video/word-duel-poster.webp" aria-label="Partie de Word Duel"><source src="../assets/video/word-duel.mp4" type="video/mp4"></video></div></div>
@@ -213,7 +217,7 @@ gtag('set', 'ads_data_redaction', true);
               <li>7 véhicules, du vélo à l'hoverboard, et chacun encaisse un coup pour toi</li>
               <li>Mode Infini : une seule vie, de plus en plus vite</li>
             </ul>
-            <div class="gp-cta"><a class="appstore" href="https://apps.apple.com/app/inki-run/id6816118632" aria-label="Télécharger Inki Run dans l'App Store"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/fr-ca" alt="Télécharger dans l'App Store" height="54" loading="lazy"></a><a class="arrow-link" href="inki-run/">Découvrir Inki Run <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a></div>
+            <div class="gp-cta"><a class="appstore" href="https://apps.apple.com/app/inki-run/id6816118632" data-game="inki-run" aria-label="Télécharger Inki Run dans l'App Store"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/fr-ca" alt="Télécharger dans l'App Store" height="54" loading="lazy"></a><a class="arrow-link" href="inki-run/">Découvrir Inki Run <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a></div>
           </div>
           <div class="gp-media">
             <div class="device device--land"><div class="screen"><video data-autoplay muted loop playsinline preload="none" poster="../assets/video/inki-run-poster.webp" aria-label="Partie d'Inki Run"><source src="../assets/video/inki-run.mp4" type="video/mp4"></video></div></div>
@@ -235,7 +239,7 @@ gtag('set', 'ads_data_redaction', true);
               <li>25 appareils : avions classiques, hélicoptères, jets et engins du futur</li>
               <li>Missions spéciales : sauvetages, bombardements, escortes et reconnaissance</li>
             </ul>
-            <div class="gp-cta"><a class="appstore" href="https://apps.apple.com/app/inki-ace/id6818669710" aria-label="Télécharger Inki Ace dans l'App Store"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/fr-ca" alt="Télécharger dans l'App Store" height="54" loading="lazy"></a><a class="arrow-link" href="inki-ace/">Découvrir Inki Ace <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a></div>
+            <div class="gp-cta"><a class="appstore" href="https://apps.apple.com/app/inki-ace/id6818669710" data-game="inki-ace" aria-label="Télécharger Inki Ace dans l'App Store"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/fr-ca" alt="Télécharger dans l'App Store" height="54" loading="lazy"></a><a class="arrow-link" href="inki-ace/">Découvrir Inki Ace <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a></div>
           </div>
           <div class="gp-media">
             <div class="device"><div class="screen"><video data-autoplay muted loop playsinline preload="none" poster="../assets/video/inki-ace-poster.webp" aria-label="Partie d'Inki Ace"><source src="../assets/video/inki-ace.mp4" type="video/mp4"></video></div></div>
@@ -398,7 +402,7 @@ gtag('set', 'ads_data_redaction', true);
         <p>Quatre jeux pour iPhone et iPad, à télécharger gratuitement. Commence par un mot, une ligne ou un décollage.</p>
       </div>
       <div class="actions">
-        <a class="appstore" href="https://apps.apple.com/app/word-duel-letter-battle/id6814167260" aria-label="Télécharger Word Duel dans l'App Store"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/fr-ca" alt="Télécharger dans l'App Store" height="54" loading="lazy"></a>
+        <a class="appstore" href="https://apps.apple.com/app/word-duel-letter-battle/id6814167260" data-game="word-duel" aria-label="Télécharger Word Duel dans l'App Store"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/fr-ca" alt="Télécharger dans l'App Store" height="54" loading="lazy"></a>
         <a class="btn btn--ghost" href="#games">Voir tous les jeux</a>
       </div>
     </div>
@@ -453,7 +457,7 @@ gtag('set', 'ads_data_redaction', true);
   </div>
 </footer>
 <script src="../assets/js/consent.js?v=ab2a3d40" data-privacy="../fr/privacy/" defer></script>
-<script src="../assets/js/site.js?v=644f72cd" defer></script>
+<script src="../assets/js/site.js?v=2aaff8ea" defer></script>
 
 </body>
 </html>

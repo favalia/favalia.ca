@@ -40,6 +40,10 @@ gtag('set', 'ads_data_redaction', true);
       return choice;
     }
   };
+  // Game events (App Store clicks, demo plays): sent only once the visitor has said yes to analytics.
+  w.favaliaTrack = function (name, params) {
+    if (choice && choice.analytics) gtag('event', name, params || {});
+  };
   if (choice) apply(choice);
 })(window, document);
 </script>
@@ -120,7 +124,7 @@ gtag('set', 'ads_data_redaction', true);
       <nav class="crumbs" aria-label="Fil d'Ariane"><a href="../">Favalia</a><span aria-hidden="true">/</span><span aria-current="page">Confidentialité du site</span></nav>
       <span class="tag">Politique de confidentialité</span>
       <h1 style="margin-top:18px">Confidentialité du site</h1>
-      <p class="meta">Dernière mise à jour : 11 octobre 2026</p>
+      <p class="meta">Dernière mise à jour : 22 novembre 2026</p>
     </div>
   </section>
 
@@ -151,7 +155,7 @@ gtag('set', 'ads_data_redaction', true);
         <p>Rien qui permette de vous identifier. Le site mémorise quelques éléments <b>dans votre propre navigateur</b> (stockage local) : votre choix concernant les témoins, la langue et le thème jour/nuit choisis, et vos meilleurs scores dans les démos. Ces données ne quittent jamais votre appareil et vous pouvez les effacer dans les réglages de votre navigateur.</p>
         <p>Comme pour tout site Web, certains services voient votre adresse IP lorsque votre navigateur charge la page : notre hébergeur <b>GitHub Pages</b> (qui conserve des journaux de serveur à des fins de sécurité), <b>Google Fonts</b> (les polices de caractères) et <b>Apple</b> (le badge « Télécharger dans l'App Store »). Consultez les politiques de confidentialité de <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub</a>, de <a href="https://policies.google.com/privacy?hl=fr-CA">Google</a> et d'<a href="https://www.apple.com/ca/fr/legal/privacy/">Apple</a>.</p>
         <h3>Avec votre consentement : mesure d'audience</h3>
-        <p>Si vous acceptez la mesure d'audience, nous utilisons <b>Google Analytics 4</b> pour comprendre l'utilisation du site : pages consultées, temps passé, clics sur des liens (par exemple vers l'App Store), site d'où vous venez, type d'appareil et de navigateur, taille de l'écran, langue et emplacement approximatif (ville et pays, déduits de votre adresse IP; Google Analytics ne conserve pas les adresses IP). Ces données servent uniquement à améliorer le site et à savoir quels jeux suscitent de l'intérêt.</p>
+        <p>Si vous acceptez la mesure d'audience, nous utilisons <b>Google Analytics 4</b> pour comprendre l'utilisation du site : pages consultées, temps passé, clics sur des liens (par exemple vers l'App Store), le lancement d'une démo de jeu du site et sa fin (score, raison de la fin et durée), site d'où vous venez, type d'appareil et de navigateur, taille de l'écran, langue et emplacement approximatif (ville et pays, déduits de votre adresse IP; Google Analytics ne conserve pas les adresses IP). Ces données servent uniquement à améliorer le site et à savoir quels jeux suscitent de l'intérêt.</p>
         <h3>Avec votre consentement : marketing</h3>
         <p>Si vous acceptez le marketing et que nous menons des campagnes publicitaires, les balises publicitaires de Google (par l'intermédiaire de Google Tag Manager) peuvent indiquer si une publicité a mené à votre visite. Cette fonction reste désactivée tant que vous ne l'activez pas.</p>
 
@@ -241,7 +245,7 @@ gtag('set', 'ads_data_redaction', true);
   </div>
 </footer>
 <script src="../../assets/js/consent.js?v=ab2a3d40" data-privacy="../../fr/privacy/" defer></script>
-<script src="../../assets/js/site.js?v=644f72cd" defer></script>
+<script src="../../assets/js/site.js?v=2aaff8ea" defer></script>
 
 </body>
 </html>

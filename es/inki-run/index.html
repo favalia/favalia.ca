@@ -40,6 +40,10 @@ gtag('set', 'ads_data_redaction', true);
       return choice;
     }
   };
+  // Game events (App Store clicks, demo plays): sent only once the visitor has said yes to analytics.
+  w.favaliaTrack = function (name, params) {
+    if (choice && choice.analytics) gtag('event', name, params || {});
+  };
   if (choice) apply(choice);
 })(window, document);
 </script>
@@ -136,7 +140,7 @@ gtag('set', 'ads_data_redaction', true);
           <p class="g-sub">Dibuja líneas. Salva al corredor.</p>
           <p class="g-pitch">Tu corredor nunca salta. Tú dibujas el camino: puentes sobre los agujeros, rampas sobre rocas y árboles, techos contra las piedras que caen y muros que frenan a los pájaros y los coches.</p>
           <div class="g-ctas">
-            <a class="appstore" href="https://apps.apple.com/app/inki-run/id6816118632" aria-label="Descarga Inki Run en el App Store"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/es-mx" alt="Descárgalo en el App Store" height="54" loading="lazy"></a>
+            <a class="appstore" href="https://apps.apple.com/app/inki-run/id6816118632" data-game="inki-run" aria-label="Descarga Inki Run en el App Store"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/es-mx" alt="Descárgalo en el App Store" height="54" loading="lazy"></a>
             <a class="btn btn--ghost" href="#play">Prueba la demo</a>
           </div>
           <div class="chips">
@@ -303,7 +307,7 @@ gtag('set', 'ads_data_redaction', true);
   <section class="cta-band">
     <div class="wrap">
       <div><h2>Tu corredor<br>te espera.</h2><p>Descarga Inki Run gratis en iPhone y iPad y dibuja tu primer puente en segundos.</p></div>
-      <div class="actions"><a class="appstore" href="https://apps.apple.com/app/inki-run/id6816118632" aria-label="Descarga Inki Run en el App Store"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/es-mx" alt="Descárgalo en el App Store" height="54" loading="lazy"></a><a class="btn btn--ghost" href="#play">Prueba la demo</a></div>
+      <div class="actions"><a class="appstore" href="https://apps.apple.com/app/inki-run/id6816118632" data-game="inki-run" aria-label="Descarga Inki Run en el App Store"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/es-mx" alt="Descárgalo en el App Store" height="54" loading="lazy"></a><a class="btn btn--ghost" href="#play">Prueba la demo</a></div>
     </div>
   </section>
   
@@ -368,7 +372,7 @@ gtag('set', 'ads_data_redaction', true);
   </div>
 </footer>
 <script src="../../assets/js/consent.js?v=ab2a3d40" data-privacy="../../es/privacy/" defer></script>
-<script src="../../assets/js/site.js?v=644f72cd" defer></script>
-<script src="../../assets/js/demo-inki-run.js?v=72eecff8" defer></script>
+<script src="../../assets/js/site.js?v=2aaff8ea" defer></script>
+<script src="../../assets/js/demo-inki-run.js?v=22660754" defer></script>
 </body>
 </html>

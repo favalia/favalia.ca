@@ -248,9 +248,11 @@
     wordEl.classList.add("is-bonk");
   }
 
+  let wordStartedAt = 0; // for the analytics event at the end: how long the word took
   function guess(letter) {
     if (done || !LETTER.test(letter) || !keys[letter] || tried.includes(letter)) return;
     tried.push(letter);
+    if (tried.length === 1) { wordStartedAt = performance.now(); window.favaliaTrack?.("demo_start", { game: "word-duel" }); }
     const key = keys[letter];
     key.disabled = true;
     const slots = [...wordEl.children];
@@ -308,6 +310,8 @@
     const title = !won ? TEXT.out : perfect ? TEXT.perfect : m <= 2 ? TEXT.nice : TEXT.phew;
     if (won) { streak += 1; score += total; } else { streak = 0; }
     if (score > best) store.set("favalia.wordduel.best", String(score));
+    window.favaliaTrack?.("demo_end", { game: "word-duel", score: total, misses: m, reason: won ? "solved" : "out_of_misses",
+      stars, seconds: Math.round((performance.now() - wordStartedAt) / 1000) });
 
     const tile = Math.max(22, Math.min(38, Math.floor(300 / word.length) - 5));
     const answer = [...word].map((c) => `<span class="wd-tile">${c}</span>`).join("");

@@ -154,6 +154,24 @@
     if (a) store.set("favalia-lang", a.dataset.langSwitch);
   });
 
+  /* ---------- Analytics: App Store clicks (only sent after a yes to analytics, see head) ---------- */
+  const PLACES = [[".g-hero, .hero", "hero"], ["#games", "games"], ["#arcade", "arcade"], [".cta-band", "cta_band"],
+                  ["[data-wd-demo], .demo", "demo"], [".site-footer", "footer"], [".site-header", "header"]];
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest('a[href*="apps.apple.com"]');
+    if (!a) return;
+    const place = PLACES.find(([sel]) => a.closest(sel));
+    // Text links carry no data-game: name them after the badge with the same App Store number.
+    const id = a.href.match(/\/id(\d+)/)?.[1];
+    const badge = id && document.querySelector(`a.appstore[data-game][href*="/id${id}"]`);
+    window.favaliaTrack?.("app_store_click", {
+      game: a.dataset.game || badge?.dataset.game || (id ? "id" + id : "unknown"),
+      placement: place ? place[1] : "page",
+      language: (root.lang || "en").slice(0, 2),
+      link_url: a.href,
+    });
+  });
+
   /* ---------- Footer year ---------- */
   document.querySelectorAll("[data-year]").forEach((el) => { el.textContent = String(new Date().getFullYear()); });
 })();

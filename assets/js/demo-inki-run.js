@@ -188,6 +188,8 @@
     const m = Math.floor(runner.x / 10);
     const isBest = m > best;
     if (isBest) { best = m; store.set("favalia.inkirun.best", String(best)); }
+    window.favaliaTrack?.("demo_end", { game: "inki-run", score: m, reason, new_best: isBest ? 1 : 0,
+      seconds: Math.round((performance.now() - startedAt) / 1000) });
     const title = reason === "rock" ? TX.crash : TX.fell;
     const tip = reason === "rock" ? TX.tipRock : TX.tipHole;
     showOverlay(`
@@ -242,7 +244,10 @@
 
   overlay.addEventListener("click", (e) => { if (e.target.closest("[data-start]")) start(); });
 
+  let startedAt = 0; // for the analytics event at the end: how long the run lasted
   function start() {
+    startedAt = performance.now();
+    window.favaliaTrack?.("demo_start", { game: "inki-run" });
     reset();
     state = "run";
     overlay.hidden = true;
